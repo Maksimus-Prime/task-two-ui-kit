@@ -1,0 +1,34 @@
+@first-color: #e75735;
+@second-color: #bf3e1f;
+@third-color: #fff;
+
+.button {
+  margin: 10px;
+  padding: 10px 35px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: @third-color;
+  border: 1px solid @first-color;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 @first-color;
+  font-family: 'Conv_Lato-Black', sans-serif;
+
+  color: @first-color;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @first-color;
+    color: @third-color;
+    box-shadow: 0 2px 0 0 @second-color;
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  &:active, &:focus {
+    outline: none;    
+  }
+}
