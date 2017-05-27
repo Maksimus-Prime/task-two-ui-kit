@@ -17,11 +17,8 @@ module.exports = {
   module: {
         loaders: [{
         	test: /\.js$/,
-        	loader: 'babel-loader',
-        	query: {
-        		presets: ['es2015'],
-        		plugins: ['transform-runtime']
-          }
+          exclude: /node_modules/,
+        	loader: 'babel-loader'
         }, {
         	test: /\.pug$/,
         	loader: "pug-loader",
@@ -40,16 +37,15 @@ module.exports = {
         }]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery/dist/jquery.js",
+      jQuery: "jquery/dist/jquery.js"
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './frontend/index.pug'
     }),
-    new ExtractTextPlugin("main.css", {allChunks: true}),
-    new webpack.ProvidePlugin({
-      'jQuery': 'jquery',
-      '$': 'jquery',
-      'jquery': 'jquery'
-    })
+    new ExtractTextPlugin("main.css", {allChunks: true})
   ]
 
 };
