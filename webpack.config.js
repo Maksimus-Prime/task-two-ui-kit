@@ -15,26 +15,26 @@ module.exports = {
 	watch: true,
 
 	module: {
-				loaders: [{
-					test: /\.js$/,
-					exclude: /node_modules/,
-					loader: "babel-loader"
-				}, {
-					test: /\.pug$/,
-					loader: "pug-loader",
-					query: {
-						pretty: true
-					}
-				}, {
-					test: /\.(css|less)$/,
-					loader: ExtractTextPlugin.extract("style-loader","css-loader!autoprefixer-loader!less-loader")
-				}, {
-					test: /\.(jpe?g|png|gif)$/, // убрал svg потому что конфликт между картинками в формате svg и шрифтом svg
-					loader: "file-loader?name=img/[name].[ext]"
-				}, {
-					test: /\.(ttf|eot|otf|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-					loader: "file-loader?name=fonts/[name].[ext]"
-				}]
+		loaders: [{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		}, {
+			test: /\.pug$/,
+			loader: "pug-loader",
+			query: {
+				pretty: true
+			}
+		}, {
+			test: /\.(css|less)$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
+		}, {
+			test: /\.(jpe?g|png|gif)$/, // убрал svg потому что конфликт между картинками в формате svg и шрифтом svg
+			loader: "file-loader?name=img/[name].[ext]"
+		}, {
+			test: /\.(ttf|eot|otf|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+			loader: "file-loader?name=fonts/[name].[ext]"
+		}]
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
