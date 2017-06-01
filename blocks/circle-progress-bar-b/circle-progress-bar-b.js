@@ -1,6 +1,7 @@
 require('./circle-progress-bar-b.less');
+require('jquery');
 
-var ctx = $('.circle-progress-bar-b');
+var ctx = $('.circle-progress-bar-b__value');
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {

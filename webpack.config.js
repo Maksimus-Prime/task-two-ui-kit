@@ -5,10 +5,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-  	main: "./frontend/main"
+    main: "./frontend/main"
   },
   output: {
-  	path: __dirname + '/public',
+    path: __dirname + '/public',
     filename: "[name].js"
   },
 
@@ -16,12 +16,12 @@ module.exports = {
 
   module: {
         loaders: [{
-        	test: /\.js$/,
+          test: /\.js$/,
           exclude: /node_modules/,
-        	loader: 'babel-loader'
+          loader: 'babel-loader'
         }, {
-        	test: /\.pug$/,
-        	loader: "pug-loader",
+          test: /\.pug$/,
+          loader: "pug-loader",
           query: {
             pretty: true
           }
