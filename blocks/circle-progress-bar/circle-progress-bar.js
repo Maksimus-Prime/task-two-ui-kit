@@ -1,4 +1,5 @@
 require('./circle-progress-bar.less');
-require('jquery');
+require('jquery')
 
 console.log('Hi from module "circle-progress-bar.js" !');
+$("body").addClass("Ifitwillworkitwillbegood");

@@ -27,12 +27,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Maksimus-Prime/task-two-ui-kit.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Maksimus-Prime/task-two-ui-kit/issues"
   },
