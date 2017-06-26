@@ -5,5 +5,13 @@ html
 		meta(name="viewport" content="width=device-width")
 		title Main page
 	body
+		include ../blocks/button/button.pug
+		include ../blocks/arrow-button/arrow-button.pug
 		include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
-		+circle-progress-bar-b
+		include ../blocks/circle-progress-bar/circle-progress-bar.pug
+		include ../blocks/stages/stages.pug
+		include ../blocks/slider-a/slider-a.pug
+		include ../blocks/slider-b/slider-b.pug
+		+slider-a
+		+slider-b
+		+stages

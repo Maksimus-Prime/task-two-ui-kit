@@ -1,25 +1,25 @@
-@first-color: #e75735;
-@second-color: #bf3e1f;
-@third-color: #fff;
+@outline-color: #e75735;
+@hover-bottom-color: #bf3e1f;
+@background-color: #fff;
 
 .button {
   margin: 10px;
   padding: 10px 35px;
   font-size: 12px;
   font-weight: bold;
-  background-color: @third-color;
-  border: 1px solid @first-color;
+  background-color: @background-color;
+  border: 1px solid @outline-color;
   border-radius: 5px;
-  box-shadow: 0 2px 0 0 @first-color;
+  box-shadow: 0 2px 0 0 @outline-color;
   font-family: 'Conv_Lato-Black', sans-serif;
 
-  color: @first-color;
+  color: @outline-color;
   text-transform: uppercase;
 
   &:hover {
-    background-color: @first-color;
-    color: @third-color;
-    box-shadow: 0 2px 0 0 @second-color;
+    background-color: @outline-color;
+    color: @background-color;
+    box-shadow: 0 2px 0 0 @hover-bottom-color;
     cursor: pointer;
   }
 

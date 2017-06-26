@@ -4,9 +4,10 @@ function requireAll(requireContext) {
 
 require("jquery");
 require("jquery-ui");
-require("./../node_modules/chart.js/dist/Chart.bundle.min.js");
+require("../node_modules/chart.js/dist/Chart.bundle.min.js");
+require("./vendor/jquery.knob.min.js");
+require("./vendor/SliderPips/dist/jquery-ui-slider-pips.min.js");
 var modules = requireAll(require.context("./../blocks", true, /^\.\/.*\.js$/));
 require.context("./fonts",true,/\.css$/);
 require("./style.less");
-
-console.log("Hi from main.js!");
+require("./vendor/SliderPips/dist/jquery-ui-slider-pips.css");

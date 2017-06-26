@@ -1,5 +1,11 @@
 require('./circle-progress-bar.less');
-require('jquery')
+require('jquery');
 
-console.log('Hi from module "circle-progress-bar.js" !');
-$("body").addClass("Ifitwillworkitwillbegood");
+$('.circle-progress-bar').knob({
+	"thickness": ".06",
+	"bgColor": "#fff",
+	"fgColor": "#e75735",
+	"width": "100",
+	"fontSize": "40px",
+	"readOnly": "false"
+});

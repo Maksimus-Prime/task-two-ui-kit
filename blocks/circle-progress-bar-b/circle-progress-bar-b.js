@@ -5,12 +5,6 @@ var ctx = $('.circle-progress-bar-b__value');
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-    labels: [
-        "first",
-        "second",
-        "third",
-        "fourth"
-    ],
     datasets: [
         {
             data: [10, 25, 40, 45],
@@ -28,6 +22,7 @@ var myDoughnutChart = new Chart(ctx, {
                 borderColor: "#eee"
             }
         }
-    }
+    },
+    showTooltips: false
 }
 });

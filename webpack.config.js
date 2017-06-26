@@ -34,7 +34,8 @@ module.exports = {
 		}, {
 			test: /\.(ttf|eot|otf|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
 			loader: "file-loader?name=fonts/[name].[ext]"
-		}]
+		}],
+		noParse: /node_modules\/chart.js\/dist\/.js$/
 	},
 	plugins: [
 		new webpack.ProvidePlugin({

@@ -1,0 +1,34 @@
+.slider-a {
+	width: 260px;
+	margin: 50px;
+
+	&.ui-slider {
+		height: 5px;
+		border-radius: 10px;
+		border: none;
+		background: #e5e5e5;		
+	}
+
+	& .ui-slider-handle {
+		width: 19.6px;
+		height: 19.6px;
+		border-radius: 50%;
+		top: -9px;
+		border: none;
+		background: #e75735;
+
+		& .ui-slider-tip {
+			width: 35px;
+			height: 23px;
+			border: none;
+			background: #e75735;
+			color: #fff;
+
+			&::before,
+			&::after {
+				border-top-color: #e75735;
+				bottom: -10px;				
+			}
+		}
+	}
+}
