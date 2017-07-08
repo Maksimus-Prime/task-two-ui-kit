@@ -1,0 +1,11 @@
+mixin info-block(name,job,theme)
+	div(class=("green"===theme ? "theme_green " : "")+"info-block")
+		h3.info-block__title=name
+		span.info-block__subtitle=job
+		.info-block__social
+			a(href="#")
+				i.fa.fa-facebook
+			a(href="#")
+				i.fa.fa-twitter
+			a(href="#")
+				i.fa.fa-dribbble

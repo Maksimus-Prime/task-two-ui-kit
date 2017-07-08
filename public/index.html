@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Main page</title>
-  <link href="main.css" rel="stylesheet"></head>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
   <body>
-        <div class="slider-a"></div>
-        <div class="slider-b"></div>
-        <div class="stages"></div>
-  <script type="text/javascript" src="main.js"></script></body>
+        <button class="button theme_green" type="button">Click me</button>
+        <button class="button size_small theme_green" type="button">Button</button>
+        <button class="button" type="button">Free money</button>
+        <div class="tick-box">
+          <input type="checkbox" id="checkbox-vip" name="checkbox-vip" checked="checked">
+          <label for="checkbox-vip"></label>
+        </div>
+        <div class="tick-box">
+          <input type="checkbox" id="checkbox-male" name="checkbox-male">
+          <label for="checkbox-male"></label>
+        </div>
+        <div class="tick-box">
+          <input type="checkbox" id="checkbox-female" name="checkbox-female">
+          <label for="checkbox-female"></label>
+        </div>
+        <div class="toggles">
+          <input type="checkbox" id="checkbox-adult" name="checkbox-adult">
+          <label for="checkbox-adult"></label>
+        </div>
+        <div class="toggles">
+          <input type="checkbox" id="checkbox-sth" name="checkbox-sth" checked="checked">
+          <label for="checkbox-sth"></label>
+        </div>
+        <div class="user-info-block clearfix">
+                <div class="photo-block"><img src="img/photo1.png" alt="photo-block"></div>
+                <div class="info-block">
+                  <h3 class="info-block__title">John Smith</h3><span class="info-block__subtitle">Ux designer</span>
+                  <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                </div>
+        </div>
+        <div class="user-info-block clearfix">
+                <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
+                <div class="theme_green info-block">
+                  <h3 class="info-block__title">Sarah Brown</h3><span class="info-block__subtitle">Developer</span>
+                  <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                </div>
+        </div>
+        <form class="form">
+          <div class="form-line">
+                  <input class="form-element__input" type="text" name="name" placeholder="Your Name">
+                  <div class="alert-box alert-box_theme_error">Error</div>
+          </div>
+          <div class="form-line">
+                  <input class="form-element__input" type="text" name="email" placeholder="Your Email">
+                  <div class="alert-box">Thanks!</div>
+          </div>
+          <div class="form-line">
+                  <textarea class="form-element__textarea" type="textarea" name="message" placeholder="Your Message"></textarea>
+          </div>
+          <div class="form-line">
+                  <button class="button" type="Submit">submit</button>
+          </div>
+        </form>
+        <div class="news clearfix">
+          <div class="news__image"><img src="img/news.png"></div>
+          <div class="news-info">
+            <h2 class="news-info__title">It's all going downhill</h2><span class="news-info__subtitle">24 August 2013</span>
+            <p class="news-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+          </div>
+        </div>
+        <div class="event clearfix">
+          <div class="event__image"><img src="img/event1.png"></div>
+          <div class="event-info">
+            <div class="event-info-date"><b class="event-info-date__day">24</b>Aug
+            </div>
+            <h3 class="event-info__title">This is the title</h3>
+            <p class="event-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="event-info__button">
+                  <button class="button size_small theme_green" type="button">Add to the calendar</button>
+            </div>
+          </div>
+        </div>
+        <div id="map">
+          <!--.map-block-description-->
+          <!--	h1="Meet us!"-->
+          <!--	p="1259 California st San Francisco, CA"	-->
+          <!--	.map-block-description__icons-->
+          <!--		i.fa.fa-map-mapker(aria-hidden="true")-->
+        </div>
+        <div class="messaging">
+          <div class="messaging-header"><img class="messaging-header__chat-icon" src="img/chat-icon.png"><img class="messaging-header__camera-icon" src="img/camera-icon.png">
+            <div class="messaging-header__name">Sarah Brown</div>
+                  <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
+          </div>
+          <div class="messaging-block">
+            <div class="messaging-block__from">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
+            <div class="messaging-block__to">Yeah that sounds great. See you then.</div>
+            <div class="messaging-block__button">
+                    <button class="button theme_green" type="button">Reply</button>
+            </div>
+          </div>
+        </div>
+        <div id="video-placeholder" data-width="600" data-height="400" data-videoid="RN3Mf3oQ6e8"></div>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&amp;callback=initMap"></script>
+  </body>
 </html>

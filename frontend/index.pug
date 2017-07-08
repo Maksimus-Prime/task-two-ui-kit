@@ -4,14 +4,44 @@ html
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width")
 		title Main page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
 	body
 		include ../blocks/button/button.pug
 		include ../blocks/arrow-button/arrow-button.pug
 		include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
 		include ../blocks/circle-progress-bar/circle-progress-bar.pug
-		include ../blocks/stages/stages.pug
 		include ../blocks/slider-a/slider-a.pug
 		include ../blocks/slider-b/slider-b.pug
-		+slider-a
-		+slider-b
-		+stages
+		include ../blocks/stages/stages.pug
+		include ../blocks/toggles/toggles.pug
+		include ../blocks/tick-box/tick-box.pug
+		include ../blocks/user-info-block/user-info-block.pug
+		include ../blocks/alert-box/alert-box.pug
+		include ../blocks/form-element/form-element.pug
+		include ../blocks/form/form.pug
+		include ../blocks/news/news.pug
+		include ../blocks/event/event.pug
+		include ../blocks/map-block/map-block.pug
+		include ../blocks/youtube-video/youtube-video.pug
+		include ../blocks/messaging/messaging.pug
+
+		+button("Click me","button","default","green")
+		+button("Button","button","small","green")
+		+button("Free money","button")
+		+tick-box("vip","active")
+		+tick-box("male")
+		+tick-box("female")
+		+toggles("adult")
+		+toggles("sth","active")
+		+user-info-block("img/photo1.png","John Smith", "Ux designer")
+		+user-info-block("img/photo2.png","Sarah Brown", "Developer", "green")
+		+form
+		+news("img/news.png","It's all going downhill","24 August 2013","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
+		+event("img/event1.png","24","Aug","This is the title","Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+		+map-block
+		+messaging
+		+youtube-video("600","400","RN3Mf3oQ6e8")
+	
+		script(type="text/javascript" src="main.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&callback=initMap")

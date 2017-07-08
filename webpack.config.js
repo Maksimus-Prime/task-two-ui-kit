@@ -44,7 +44,8 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: "./frontend/index.pug"
+			template: "./frontend/index.pug",
+			inject: false
 		}),
 		new ExtractTextPlugin("main.css", {allChunks: true})
 	]

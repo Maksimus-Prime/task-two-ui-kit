@@ -1,2 +1,13 @@
-mixin button(value)
-	button.button=value
+mixin button(value,type,size,theme)
+	-var size = size || "default";
+	if size==="small"
+		if theme==undefined
+			button(type=type+"" class="button size_small")=value
+		else if theme==="green"
+			button(type=type+"" class="button size_small theme_green")=value
+	else if size==="default"
+		if theme==undefined
+			button(type=type+"" class="button")=value
+		else if theme==="green"
+			button(type=type+"" class="button theme_green")=value
+		

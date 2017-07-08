@@ -1,0 +1,80 @@
+.event {
+	width: 288px;
+	height: 212px;
+	background-color: #e5e5e5;
+	margin-bottom: 15px;
+	margin-left: 28px;
+	border-radius: 5px;
+
+	&__image {
+		float: left;
+		clear: left;
+		width: 33%;
+		background: #fff;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+
+		& img {
+			width: 100%;		
+		}
+	}
+
+	&-info {
+		padding: 15px 22px 29px 22px;
+		float: right;
+		clear: right;
+		height: 79.2%;
+		width: 51.7%;
+		color: #fff;
+		overflow: hidden;	
+		background: #4eb7a8;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	
+		&-date {
+			font-size: 30px;
+			font-family: 'Conv_Lato-Light', sans-serif;
+
+			&__day {
+				font-size: 72px;
+				line-height: 72px;
+
+				font-weight: normal;	
+			}			
+		}
+
+		&__title {
+			font-size: 12.5px;
+			font-family: 'Conv_Lato-Black', sans-serif;
+			letter-spacing: 0.625px;
+			text-transform: uppercase;
+			font-weight: normal;
+		}
+
+		&__description {
+			font-family: 'Conv_Lato-Regular', sans-serif;
+			letter-spacing: 0.55px;
+			font-size: 11px;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 18px;			
+		}
+
+		&__button {
+			text-align: center;
+
+			.button {
+		    background-color: #fff;
+		    border: 1px solid #fff; 
+		    box-shadow: 0 2px 0 0 #28a290;
+		    color: #4eb7a8;
+			font-size: 8px;
+
+				&:hover {
+					background-color: #fff;
+					color: #4eb7a8;
+				}
+			}
+		}
+	}
+}

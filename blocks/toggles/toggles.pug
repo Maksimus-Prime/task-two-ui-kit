@@ -1,0 +1,6 @@
+mixin toggles(name,state)
+	.toggles
+		-var name = "checkbox-"+name;
+		-var state = state || false;
+		input(type="checkbox" id=name+"" name=name+"" checked=("active"===state ? "checked" : undefined))
+		label(for=name)

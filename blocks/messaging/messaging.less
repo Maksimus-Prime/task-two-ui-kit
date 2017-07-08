@@ -1,0 +1,105 @@
+.messaging {
+	margin-left: 24px;
+	margin-bottom: 15px;
+	width: 288px;
+	height: 429px;
+	background-color: #f2f2f2;
+	border-radius: 2px;
+
+	&-header {
+		background: linear-gradient(to bottom, #4eb7a8 71%, #46ab9d 71%, #46ab9d 100%);
+		text-align: center;
+		position: relative;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+
+		&__name {
+			margin: 0;
+			padding: 22px 0 56px 0;
+			font-family: "PT Sans", sans-serif;
+			font-size: 34px;
+			color: #fff;			
+		}
+
+		&__chat-icon {
+			position: absolute;
+			bottom: -45px;
+			left: 25px;
+		}
+
+		&__camera-icon {
+			position: absolute;
+			bottom: -44px;
+			right: 25px;
+		}
+		.photo-block {
+			position: absolute;
+			left: 33%;
+			bottom: -38%;
+		}
+	}
+
+	&-block {
+		padding-top: 61px;
+		background-color: #f2f2f2;
+
+		&__from {
+			margin: 0 auto;
+			position: relative;
+			padding: 19px;
+			width: 206px;
+			background-color: #fff;
+			border-radius: 5px;
+			font-family: 'Conv_Lato-Bold', sans-serif;
+			font-size: 13px;
+			color: #868686;
+			margin-bottom: 17px;
+
+			&::before {
+			    content: "";
+			    position: absolute;
+			    top: -4px;
+			    left: 116px;
+			    -webkit-transform: rotate(45deg);
+			    transform: rotate(45deg);
+			    border-radius: 2px 2px;
+			    width: 12px;
+			    height: 12px;
+			    background-color: #fff;
+			}		
+		}
+
+		&__to {
+			margin: 0 auto;
+			padding: 19px;
+			width: 200px;
+			border: 3px solid #fff;
+			background-color: #e5e5e5;
+			border-radius: 5px;
+			font-family: 'Conv_Lato-Bold', sans-serif;
+			font-size: 13px;
+			color: #777777;		
+			margin-bottom: 17px;	
+		}
+		
+		&__button {
+			text-align: center;
+
+			.button {
+				width: 85%;
+			    background-color: #4eb7a8;
+			    border: 1px solid #4eb7a8; 
+			    box-shadow: 0 2px 0 0 #28a290;
+			    color: #fff;
+				font-size: 13px;
+
+					&:hover {
+						background-color: #fff;
+						border: 1px solid #28a290; 
+						color: #4eb7a8;
+					}
+			}
+		}
+
+	}
+}

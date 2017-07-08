@@ -23,7 +23,10 @@
     "webpack": "^1.12.2",
     "webpack-vendor-chunk-plugin": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "script-ext-html-webpack-plugin": "^1.8.3",
+    "youtube-iframe": "^1.0.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

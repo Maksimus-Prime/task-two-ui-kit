@@ -1,0 +1,14 @@
+mixin messaging
+	.messaging
+		include ../button/button.pug
+		include ../photo-block/photo-block.pug
+		.messaging-header
+			img.messaging-header__chat-icon(src="img/chat-icon.png")
+			img.messaging-header__camera-icon(src="img/camera-icon.png")
+			.messaging-header__name="Sarah Brown"
+			+photo-block("img/photo2.png")
+		.messaging-block
+			.messaging-block__from="Hey! So are we cool to meet at the art gallery? Say 8pm"
+			.messaging-block__to="Yeah that sounds great. See you then."
+			.messaging-block__button
+				+button("Reply","button","default","green")

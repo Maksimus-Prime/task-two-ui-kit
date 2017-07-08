@@ -1,0 +1,8 @@
+mixin news(src,title,subtitle,description)
+	.news.clearfix
+		.news__image
+			img(src=(src)? src : "#")
+		.news-info
+			h2.news-info__title=title
+			span.news-info__subtitle=subtitle
+			p.news-info__description=description

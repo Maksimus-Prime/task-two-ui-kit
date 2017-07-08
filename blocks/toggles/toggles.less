@@ -1,0 +1,53 @@
+.toggles {
+	display: inline-block;
+	width: 55px;
+	margin-top: 15px;
+	position: relative;
+
+	& label {
+		width: 55px;
+		height: 23px;
+		position: absolute;
+		background-color: #e5e5e5;
+		top: 0;
+		left: 0;
+		border-radius: 50px;
+		color: #fff;
+		cursor: pointer;
+
+		&::after {
+			content: "";
+			width: 21px;
+			height: 21px;
+			border-radius: 50px;
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			transition: all 0.3s;
+			background-color: #fff;
+		}
+
+		&::before {
+			font-family: "PT Sans", sans-serif;
+			content: "OFF";
+			position: absolute;
+			top: 1px;
+			right: 4px;
+		}
+	}
+
+	& input[type="checkbox"] {
+		visibility: hidden;
+
+		&:checked + label::after {
+			left: 33px;
+		}
+		&:checked + label::before {
+			content: "ON";
+			left: 6px;
+		}
+		&:checked + label {
+			background-color: #4eb7a8;
+		}
+	}
+}
