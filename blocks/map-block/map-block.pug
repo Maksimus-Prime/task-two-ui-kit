@@ -1,7 +1,8 @@
-mixin map-block
-	div#map
-		//.map-block-description
-		//	h1="Meet us!"
-		//	p="1259 California st San Francisco, CA"	
-		//	.map-block-description__icons
-		//		i.fa.fa-map-mapker(aria-hidden="true")
+mixin map-block(id,lat,lng,zoom,marker)
+	.map-block
+		.map(id=id+"" data-lat=lat+"" data-lng=lng+"" data-zoom=zoom+"" data-marker=marker+"")
+		.map-block-description
+			h1="Meet us!"
+			p="1259 California st San Francisco, CA"	
+			.map-block-description__icons
+				i.fa.fa-map-mapker(aria-hidden="true")

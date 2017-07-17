@@ -1,0 +1,55 @@
+.search {
+	width: 100%;
+	font-size: 0;
+
+	&__input {
+		height: 48px;
+		width: 421px;
+		margin: 0;
+		padding: 2px 23px;
+
+		background: #e5e5e5;
+		outline: none;
+		border: 0 none;
+
+		font-size: 26px;
+		line-height: 52px;
+		font-family: "PT Sans", sans-serif;
+		vertical-align: top;
+		
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+	&__button {
+		display: inline-block;
+		height: 38px;
+		padding: 7px 18px;
+		background: #e75735;
+		color: #fff;
+	
+		vertical-align: top;
+		font-size: 25px;
+		line-height: 38px;
+		
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 5px;
+		
+		cursor: pointer;		
+	}
+
+	.theme_fall& {
+		&__input {
+			background-color: #e75735;
+			color: #fff;
+
+			&::placeholder {
+				color: #fff;
+			}
+		}
+
+		&__button {
+			color: #fff;
+		}
+	}
+}

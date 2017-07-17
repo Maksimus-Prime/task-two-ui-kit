@@ -7,13 +7,17 @@
 @green-background-color: #fff;
 
 .button {
-  padding: 10px 35px;
-  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  padding: 16px 56px 16px 56px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  line-height: 22px;
   font-weight: bold;
   background-color: @background-color;
-  border: 1px solid @outline-color;
+  border: 2px solid @outline-color;
   border-radius: 5px;
-  box-shadow: 0 2px 0 0 @outline-color;
+  box-shadow: 0 5px 0 0 @outline-color;
   font-family: 'Conv_Lato-Black', sans-serif;
 
   color: @outline-color;
@@ -22,12 +26,12 @@
   &:hover {
     background-color: @outline-color;
     color: @background-color;
-    box-shadow: 0 2px 0 0 @hover-bottom-color;
+    box-shadow: 0 5px 0 0 @hover-bottom-color;
     cursor: pointer;
   }
 
   &:active {
-    transform: translateY(2px);
+    transform: translateY(5px);
     box-shadow: none;
   }
 
@@ -36,26 +40,109 @@
   }
   
   .size_small& {
-    padding: 5px 17px; // height 24px
-    font-size: 10px;
-    border-radius: 3px;
+    padding: 9px 28px 9px 28px;
+    font-size: 18.3px;
+    line-height: 18.3px;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 @outline-color;
+    
+    &:hover {
+      box-shadow: 0 3px 0 0 @hover-bottom-color;
+    }
+    &:active {
+      transform: translateY(3px);
+      box-shadow: none;
+    }
   }
 
   .theme_green& {
     background-color: @green-background-color;
-    border: 1px solid @green-outline-color; 
-    box-shadow: 0 2px 0 0 @green-outline-color;
+    border: 2px solid @green-outline-color; 
+    box-shadow: 0 5px 0 0 @green-outline-color;
     color: @green-outline-color;
 
       &:hover {
         background-color: @green-outline-color;
         color: @green-background-color;
-        box-shadow: 0 2px 0 0 @green-hover-bottom-color;
-
+        box-shadow: 0 5px 0 0 @green-hover-bottom-color;
+      }
       &:active {
-        transform: translateY(2px);
+        transform: translateY(5px);
         box-shadow: none;
       }
-      }
+  }
+
+  .theme_green.size_small& {
+    box-shadow: 0 3px 0 0 @green-outline-color;
+
+    &:hover {
+      box-shadow: 0 3px 0 0 @green-hover-bottom-color;
+    }
+
+    &:active {
+    transform: translateY(3px);
+    box-shadow: none;
+    }
+    
+  }
+}
+
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate(0);
+}
+/* параметры визуального элемента эффекта */
+.effekt {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+/* абсолютно круглый */
+  border-radius: 50%;
+/* Увеличение или уменьшение размера элемента */
+  transform: scale(0);
+/* располагаем выше других объектов веб-страницы */
+  z-index:9999;
+/* цвет фона элемента */
+  background: rgba(255, 255, 255,.7);
+/* не прозрачный */
+  opacity: 1;
+}
+/* имя, длительность и изменение скорости анимации */
+.effekt.replay {
+  -webkit-animation: ripple 1s cubic-bezier(0.165, 0.85, 0.45, 1);
+  -o-animation: ripple 1s cubic-bezier(0.165, 0.85, 0.45, 1);
+  animation: ripple 1s cubic-bezier(0.165, 0.85, 0.45, 1);
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@-ms-keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2);
   }
 }

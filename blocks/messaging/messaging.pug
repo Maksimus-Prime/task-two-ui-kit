@@ -1,12 +1,14 @@
-mixin messaging
+mixin messaging(name,photo)
 	.messaging
 		include ../button/button.pug
 		include ../photo-block/photo-block.pug
 		.messaging-header
-			img.messaging-header__chat-icon(src="img/chat-icon.png")
-			img.messaging-header__camera-icon(src="img/camera-icon.png")
-			.messaging-header__name="Sarah Brown"
-			+photo-block("img/photo2.png")
+			button.messaging-header__chat-icon(type="button" name="chat")
+				img(src="img/chat-iconn.png")
+			button.messaging-header__camera-icon(type="button" name="camera")
+				img(src="img/camera-iconn.png")
+			.messaging-header__name=name
+			+photo-block(photo)
 		.messaging-block
 			.messaging-block__from="Hey! So are we cool to meet at the art gallery? Say 8pm"
 			.messaging-block__to="Yeah that sounds great. See you then."

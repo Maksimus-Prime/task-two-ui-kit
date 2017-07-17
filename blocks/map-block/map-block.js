@@ -1,15 +1,19 @@
 require("./map-block.less");
 
+
+var selectMap = document.getElementById("map");
+
 function initMap() {
-	var location = {lat: 56.501, lng: 84.992};
+	var location = {lat: (+selectMap.dataset.lat), lng: (+selectMap.dataset.lng)};
 	var map = new google.maps.Map(document.getElementById("map"),{
-		zoom: 14,
+		zoom: (+selectMap.dataset.zoom),
 		center: location
 	});
 	var marker = new google.maps.Marker({
 		map: map,
 		position: location,
-		icon: "img/map-marker-icon.png"
+		icon: (selectMap.dataset.marker+"")
 	});
 }
 
+window.initMap = initMap;

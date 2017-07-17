@@ -1,4 +1,3 @@
-
 ul.progressbar {
   height: 75px;
   padding: 0;
@@ -16,11 +15,12 @@ ul.progressbar li:before {
   content: counter(step);
   counter-increment: step;
   color: #333;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
+  width: 51px;
+  height: 51px;
+  line-height: 51px;
   border-radius: 50%;
   display: block;
+  font-size: 26px;
   text-align: center;
   margin: 0 auto 10px auto;
   background: rgb(216,216,216);
@@ -30,8 +30,8 @@ ul.progressbar li:after {
   background: #ddd;
   position: absolute;
   width: 100%;
-  height: 8px;
-  top: 18px;
+  height: 9px;
+  top: 22px;
   right: -50%;
   z-index: -1;
 }

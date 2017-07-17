@@ -1,0 +1,5 @@
+mixin search(id,state)
+	.search
+		input(type="text" name="search" id=id+"" placeholder=(state=="on")? "Search" : "I've not found what I'm looking for..." class=(state=="on")? "search__input" : "theme_fall search__input")
+		label.search__button(for=id+"")
+			i(class="fa fa-search" aria-hidden="true")

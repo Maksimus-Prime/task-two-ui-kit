@@ -5,10 +5,12 @@ import "jquery-ui/themes/base/slider.css"
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 
+var newSlider = document.getElementById("yoursalary");
+var sliderMin = +newSlider.dataset.min, sliderMax = +newSlider.dataset.max, sliderStep = +newSlider.dataset.step;
 $('.slider-b').slider({
-	min: 0,
-	max: 100,
-	step: 25,
+	min: sliderMin,
+	max: sliderMax,
+	step: sliderStep,
 	range: true
 })
 .slider('pips', {
