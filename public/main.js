@@ -12580,10 +12580,10 @@
 
 	$(".button").click(function (e) {
 		var ripple = $(this);
-		if (ripple.find(".effekt").length == 0) {
-			ripple.append("<span class='effekt'></span>");
+		if (ripple.find(".effect").length == 0) {
+			ripple.append("<span class='effect'></span>");
 		}
-		var efekt = ripple.find(".effekt");
+		var efekt = ripple.find(".effect");
 		efekt.removeClass("replay");
 		if (!efekt.height() && !efekt.width()) {
 			var d = Math.max(ripple.outerWidth(), ripple.outerHeight());
@@ -14887,7 +14887,7 @@
 		"fgColor": "#e75735",
 		"width": "173",
 		"height": "173",
-		"fontSize": "73px",
+		"fontSize": "4.5625rem",
 		"readOnly": "false"
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))

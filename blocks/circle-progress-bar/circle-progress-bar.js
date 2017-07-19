@@ -7,6 +7,6 @@ $('.circle-progress-bar__input').knob({
 	"fgColor": "#e75735",
 	"width": "173",
 	"height": "173",
-	"fontSize": "73px",
+	"fontSize": "4.5625rem",
 	"readOnly": "false"
 });

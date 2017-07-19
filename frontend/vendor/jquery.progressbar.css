@@ -20,7 +20,7 @@ ul.progressbar li:before {
   line-height: 51px;
   border-radius: 50%;
   display: block;
-  font-size: 26px;
+  font-size: 1.625rem;
   text-align: center;
   margin: 0 auto 10px auto;
   background: rgb(216,216,216);

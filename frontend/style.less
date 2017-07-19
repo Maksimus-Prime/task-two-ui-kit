@@ -13,16 +13,16 @@ html {
 	width: 100%;
 	max-width: 1086px;
 	margin: 0 auto;
-	padding: 0 97px;
+	padding: 0 7.2%;
 	
 	&__title {
 		margin: 0;
-		margin: 65px 0;
-   	 	letter-spacing: 2px;
-    	word-spacing: -2px;
+		margin: 6% 0;
+   	 	letter-spacing: 0.125rem;
+    	word-spacing: -0.125rem;
 		padding: 0;
 		font-family: 'Conv_Lato-Black', sans-serif;
-		font-size: 33px;
+		font-size: 2.0625rem;
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -51,9 +51,13 @@ html {
 
 	&-sliders {
 		.slider-a {
+			width: 43.75%;
 			vertical-align: top;
-			margin-right: 82px;
-   			margin-left: 44px;
+			margin-right: 7.5%;
+   			margin-left: 4.05%;
+		}
+		.slider-b {
+			width: 43.75%;
 		}
 	}
 
@@ -129,6 +133,62 @@ html {
 			&__right-block {
 				width: 50%;
 				float: right;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+	html {
+		font-size: 12px;
+	}
+	.layout {
+		&-buttons {
+			.button {
+				display: block;
+				margin: 15px auto;
+			}
+		}
+		&-arrow-buttons {
+			text-align: center;
+			.arrow-button {
+				margin: 15px 20px;
+			}
+		}
+		&-circle-progress-bars {
+			.circle-progress-bar {
+				display: block;
+				margin: 10px 22px;
+			}
+			.circle-progress-bar-b {
+				width: 173px;
+				height: 173px;
+			}
+		}
+		&-sliders {
+			margin-bottom: 60px;
+			.slider-a, .slider-b {
+				width: 100%;
+				display: block;
+				margin: 30px auto;
+			}
+		}
+		&-form-elements {
+			h1.layout__title:first-child {
+				margin-top: 0;
+			}
+			&-container {
+				&__left-block {
+					width: 100%;
+					float: none;
+				}
+					
+				&__right-block {
+					width: 100%;
+					float: none;
+					text-align: center;
+				}
 			}
 		}
 	}

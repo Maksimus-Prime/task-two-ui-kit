@@ -2,10 +2,10 @@ require("./button.less");
 
 $(".button").click(function(e){
 	var ripple = $(this);
-	if(ripple.find(".effekt").length == 0) {
-		ripple.append("<span class='effekt'></span>");
+	if(ripple.find(".effect").length == 0) {
+		ripple.append("<span class='effect'></span>");
 	}
-	var efekt = ripple.find(".effekt");
+	var efekt = ripple.find(".effect");
 	efekt.removeClass("replay");
 	if(!efekt.height() && !efekt.width())
 	{
