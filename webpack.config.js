@@ -37,6 +37,7 @@ module.exports = {
 		}],
 		noParse: /node_modules\/chart.js\/dist\/.js$/
 	},
+
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: "jquery/dist/jquery.js",

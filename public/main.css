@@ -471,6 +471,13 @@ html {
   float: right;
   text-align: center;
 }
+.layout-form-elements-container__right-block .toggles {
+  width: 19.9%;
+  margin-right: 3.7%;
+}
+.layout-form-elements-container__right-block .tick-box {
+  margin-right: 2.7%;
+}
 .layout-search-drop-user-profile-container__left-block {
   width: 50%;
   float: left;
@@ -505,7 +512,7 @@ html {
   width: 50%;
   float: right;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   html {
     font-size: 12px;
   }
@@ -548,18 +555,39 @@ html {
     float: none;
     text-align: center;
   }
+  .layout-search-drop-user-profile-container__left-block {
+    width: 100%;
+    float: none;
+  }
+  .layout-search-drop-user-profile-container__right-block {
+    width: 100%;
+    float: none;
+  }
+  .layout-news-events-container__left-block {
+    width: 100%;
+    float: none;
+  }
+  .layout-news-events-container__right-block {
+    width: 100%;
+    float: none;
+  }
+  .layout-calendar-and-messaging-container__left-block {
+    width: 100%;
+    float: none;
+  }
+  .layout-calendar-and-messaging-container__right-block {
+    width: 100%;
+    float: none;
+  }
 }
 .alert-box {
   display: inline-block;
   position: relative;
-  width: 132px;
-  height: 51px;
-  margin-left: 4px;
+  width: 100%;
   font-family: 'Conv_Lato-Black', sans-serif;
-  font-size: 18px;
-  line-height: 52px;
-  vertical-align: top;
-  border-radius: 5px;
+  font-size: 1.125rem;
+  line-height: 3.25rem;
+  border-radius: 0.625rem;
   text-align: center;
   text-transform: uppercase;
   background: #4eb7a8;
@@ -568,13 +596,13 @@ html {
 .alert-box::before {
   content: "";
   position: absolute;
-  top: 22px;
-  left: -4px;
+  top: 42%;
+  left: -3%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  border-radius: 2px 2px;
-  width: 7px;
-  height: 7px;
+  border-radius: 0.125rem 0.125rem;
+  width: 5.5%;
+  height: 14.5%;
   z-index: -1;
   background-color: #4eb7a8;
 }
@@ -1161,7 +1189,7 @@ a.theme_disabled.arrow-button {
   height: 60px !important;
   margin-left: -152px !important;
   font-family: 'Conv_Lato-Light', sans-serif !important;
-  font-size: 73px !important;
+  font-size: 4.5625rem !important;
 }
 .circle-progress-bar input:focus {
   outline: none;
@@ -1338,24 +1366,24 @@ a.theme_disabled.arrow-button {
 }
 .form-element__input {
   font-family: "PT Sans", sans-serif;
-  font-size: 26px;
-  width: 62%;
-  padding: 9px 23px;
+  font-size: 1.625rem;
+  width: 100%;
+  padding: 1.65% 4.25%;
   color: #888888;
   background-color: #e5e5e5;
   border: 0;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: 0;
 }
 .form-element__textarea {
-  width: 89%;
+  width: 100%;
   min-height: 125px;
-  font-size: 26px;
-  padding: 18px 23px;
+  font-size: 1.625rem;
+  padding: 3.1% 4.2%;
   color: #888888;
   background-color: #e5e5e5;
   border: 0;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   outline: 0;
   font-family: "PT Sans", sans-serif;
   resize: none;
@@ -1364,13 +1392,24 @@ a.theme_disabled.arrow-button {
   width: 100%;
 }
 .form-line {
-  margin-bottom: 22px;
+  margin-bottom: 4%;
 }
 .form-line:last-of-type {
   text-align: right;
 }
+.form-element__input {
+  width: 62%;
+}
+.form-element__textarea {
+  width: 88.5%;
+}
+.form .alert-box {
+  width: 24.3%;
+  margin-left: 0.95%;
+  vertical-align: top;
+}
 .form .button {
-  padding: 16px 60px;
+  padding: 3% 11%;
   margin-right: 3%;
 }
 .info-block {
@@ -2212,7 +2251,6 @@ ul.progressbar li.fail:before {
   width: 41px;
   height: 41px;
   position: relative;
-  margin-right: 15px;
 }
 .tick-box input[type="checkbox"] {
   visibility: hidden;
@@ -2252,7 +2290,6 @@ ul.progressbar li.fail:before {
   display: inline-block;
   width: 108px;
   position: relative;
-  margin-right: 20px;
 }
 .toggles label {
   width: 108px;
