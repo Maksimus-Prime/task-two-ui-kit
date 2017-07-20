@@ -1,7 +1,7 @@
 .info-block {
 	font-family: 'Conv_Lato-Regular', sans-serif;
 	position: relative;
-	width: 300px; /* 163 + 6*/
+	width: 300px;
 	height: 172px;
 	background: #e5e5e5;
 	border-radius: 15px;
@@ -98,4 +98,21 @@
 			background-color: #4eb7a8;		
 		}
 	}
+}
+
+@media screen and (max-width: 720px) {
+	.info-block {
+		&::before {
+			content: "";
+			position: absolute;
+			top: -9px;
+			left: 142px;
+			transform: rotate(45deg);
+			border-radius: 4px 4px;
+			width: 18px;
+			height: 18px;
+			z-index: -1;
+			background-color: #e5e5e5;		
+		}
+	}	
 }
