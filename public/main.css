@@ -1017,7 +1017,6 @@ a.theme_disabled.arrow-button {
 }
 .calendar {
   width: 526px;
-  height: 782px;
 }
 .calendar__header {
   display: inline-block;
@@ -1026,7 +1025,7 @@ a.theme_disabled.arrow-button {
   padding: 15px 9px 11px 0;
   letter-spacing: -5px;
   background-color: #e75735;
-  font-size: 146px;
+  font-size: 9.125rem;
   color: #fff;
   text-align: center;
   border-top-left-radius: 3px;
@@ -1040,7 +1039,7 @@ a.theme_disabled.arrow-button {
   font-family: 'Conv_Lato-Black', sans-serif;
   padding: 32px 2px 31px 38px;
   margin-top: 1px;
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   background-color: #e5e5e5;
@@ -1068,7 +1067,7 @@ a.theme_disabled.arrow-button {
   background: #e75735;
   color: #fff;
   font-family: 'Conv_Lato-Black', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
 }
 .ui-datepicker-header {
@@ -1082,11 +1081,11 @@ a.theme_disabled.arrow-button {
 .ui-datepicker-calendar .ui-state-default {
   width: 71px;
   height: 71px;
-  line-height: 71px;
+  line-height: 4.4375rem;
   margin-top: 2px;
   border: none;
   text-align: center;
-  font-size: 37px;
+  font-size: 2.3125rem;
   color: #868686;
 }
 .ui-datepicker {
@@ -1112,8 +1111,8 @@ a.theme_disabled.arrow-button {
   letter-spacing: 2px;
 }
 .ui-datepicker div.ui-datepicker-title {
-  font-size: 44px;
-  line-height: 65px;
+  font-size: 2.75rem;
+  line-height: 4.0625rem;
   letter-spacing: -2px;
   padding-bottom: 9px;
   font-family: 'Conv_Lato-Light', sans-serif;
@@ -1148,7 +1147,7 @@ a.theme_disabled.arrow-button {
   display: none;
 }
 .selectDay {
-  font-size: 80px;
+  font-size: 5rem;
   text-align: center;
   background-color: #e75735;
   color: #fff;
@@ -1159,15 +1158,15 @@ a.theme_disabled.arrow-button {
   border: solid #fff;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .ui-datepicker-prev .ui-icon {
   border: solid #fff;
   border-width: 0 4px 4px 0;
   display: inline-block;
-  transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .ui-datepicker .ui-datepicker-prev {
   left: 27px;
