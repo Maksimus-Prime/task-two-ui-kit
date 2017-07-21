@@ -587,6 +587,9 @@ html {
     width: 100%;
     float: none;
   }
+  .layout-calendar-and-messaging-container__left-block .calendar {
+    margin-bottom: 20px;
+  }
   .layout-calendar-and-messaging-container__right-block {
     width: 100%;
     float: none;
@@ -1016,14 +1019,14 @@ a.theme_disabled.arrow-button {
   top: .3em;
 }
 .calendar {
-  width: 526px;
+  width: 96.869%;
 }
 .calendar__header {
   display: inline-block;
   font-family: 'Conv_Lato-Light', sans-serif;
-  width: 501px;
-  padding: 15px 9px 11px 0;
-  letter-spacing: -5px;
+  width: 95.25%;
+  padding: 3.15% 1.9% 2% 0;
+  letter-spacing: -0.3125rem;
   background-color: #e75735;
   font-size: 9.125rem;
   color: #fff;
@@ -1032,21 +1035,21 @@ a.theme_disabled.arrow-button {
   border-top-right-radius: 3px;
 }
 .calendar__datepicker {
-  width: 526px;
+  width: 100%;
 }
 .calendar__bottom {
-  width: 470px;
+  width: 89.354%;
   font-family: 'Conv_Lato-Black', sans-serif;
-  padding: 32px 2px 31px 38px;
-  margin-top: 1px;
+  padding: 6% 0.5% 6% 7.2%;
+  margin-top: 0.1%;
   font-size: 1.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   background-color: #e5e5e5;
   color: #868686;
   font-weight: bold;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
@@ -1079,8 +1082,8 @@ a.theme_disabled.arrow-button {
   font-family: 'Conv_Lato-Light', sans-serif;
 }
 .ui-datepicker-calendar .ui-state-default {
-  width: 71px;
-  height: 71px;
+  width: 100%;
+  height: 100%;
   line-height: 4.4375rem;
   margin-top: 2px;
   border: none;
@@ -2413,7 +2416,16 @@ ul.progressbar li.fail:before {
 }
 .youtube-video {
   width: 100%;
-  height: 615px;
+  min-height: 615px;
+}
+.youtube-video {
+  width: 100%;
+  min-height: 615px;
+}
+@media screen and (max-width: 720px) {
+  .youtube-video {
+    min-height: 450px;
+  }
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
