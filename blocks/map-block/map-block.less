@@ -1,48 +1,62 @@
 .map-block {
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 
 	#map {
-		height: 371px;
+		min-height: 371px;
 		width: 100%;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		border-top-left-radius: 0.3125rem;
+		border-top-right-radius: 0.3125rem;
 	}
 
 	&-description {
 		font-family: 'Conv_Lato-Light', sans-serif;
-		padding: 24px 36px 23px 49px;
-		width: 92%; /* При уменьшении размера окна не пропорционально изменяются размеры блока, т.к. не все переведено в проценты */
-		height: 79px;
+		padding: 2.25% 3.5% 3.35% 4.52%;
+		width: 92%;
+		-height: 79px;
 		background: #e75735;
 		color: #fff;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 0.3125rem;
+		border-bottom-right-radius: 0.3125rem;
 
 		& h1 {
 			font-family: 'Conv_Lato-Light', sans-serif;
 			display: inline-block;
 			margin: 0;
-			font-size: 55px;
+			font-size: 3.4375rem;
 			font-weight: normal;
-			margin-right: 39px;			
+			margin-right: 4%;			
 		}
 
 		& p {
 			font-family: 'Conv_Lato-Black', sans-serif;
 			display: inline-block;
-			width: 230px;
+			width: 23.1%;
 			padding: 0;
 			margin: 0;
-			font-size: 23px;
+			font-size: 1.4375rem;
 			text-transform: uppercase;
 			font-weight: bold;				
 		}
 		&__icons {
 			font-family: 'FontAwesome';
 			display: inline-block;
-			margin-left: 280px;
+			margin-left: 28%;
 			vertical-align: top;
-			font-size: 28px;			
+			font-size: 1.75rem;
 		}
 	}		
+}
+
+@media screen and (max-width: 720px) {
+	.map-block {
+		& h1 {
+			display: none;
+		}
+		& p {
+			width: 50%;			
+		}
+		&__icons {
+			margin-left: 28%;
+		}
+	}
 }
