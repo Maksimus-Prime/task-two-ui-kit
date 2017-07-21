@@ -14885,8 +14885,8 @@
 		"thickness": ".1",
 		"bgColor": "#fff",
 		"fgColor": "#e75735",
-		"width": "173",
-		"height": "173",
+		"width": "100%",
+		"height": "100%",
 		"fontSize": "4.5625rem",
 		"readOnly": "false"
 	});
@@ -16428,7 +16428,7 @@
 	                if (which === "first") {
 
 	                    // first Pip on the Slider
-	                    percent = "0%";
+	                    percent = "1%";
 
 	                    classes += " ui-slider-pip-first";
 	                    classes += options.first === "label" ? " ui-slider-pip-label" : "";
@@ -16436,7 +16436,7 @@
 	                } else if (which === "last") {
 
 	                    // last Pip on the Slider
-	                    percent = "100%";
+	                    percent = "102%";
 
 	                    classes += " ui-slider-pip-last";
 	                    classes += options.last === "label" ? " ui-slider-pip-label" : "";
@@ -16444,7 +16444,8 @@
 	                } else {
 
 	                    // all other Pips
-	                    percent = (100 / pips * which).toFixed(4) + "%";
+	                    percent = 102 / pips * which + "%";
+	                    console.log(pips, percent);
 
 	                    classes += options.rest === "label" ? " ui-slider-pip-label" : "";
 	                    classes += options.rest === false ? " ui-slider-pip-hide" : "";
