@@ -514,6 +514,12 @@ html {
   width: 50%;
   float: left;
 }
+.layout-calendar-and-messaging-container__left-block .calendar {
+  width: 96.869%;
+}
+.layout-calendar-and-messaging-container__left-block .messaging {
+  width: 96.869%;
+}
 .layout-calendar-and-messaging-container__right-block {
   width: 50%;
   float: right;
@@ -559,6 +565,12 @@ html {
     width: 100%;
     float: none;
   }
+  .layout-form-elements-container__left-block .form-element__input {
+    width: 65.5%;
+  }
+  .layout-form-elements-container__left-block .form-element__textarea {
+    width: 91.6%;
+  }
   .layout-form-elements-container__right-block {
     width: 100%;
     float: none;
@@ -567,6 +579,9 @@ html {
   .layout-search-drop-user-profile-container__left-block {
     width: 100%;
     float: none;
+  }
+  .layout-search-drop-user-profile-container__left-block .search {
+    width: 84.81%;
   }
   .layout-search-drop-user-profile-container__right-block {
     width: 100%;
@@ -578,21 +593,33 @@ html {
     margin: 0;
     margin-bottom: 20px;
   }
+  .layout-news-events-container__left-block .news {
+    width: 100%;
+  }
   .layout-news-events-container__right-block {
     float: none;
     width: 100%;
     margin: 0;
+  }
+  .layout-news-events-container__right-block .event {
+    width: 100%;
   }
   .layout-calendar-and-messaging-container__left-block {
     width: 100%;
     float: none;
   }
   .layout-calendar-and-messaging-container__left-block .calendar {
+    width: 100%;
+    margin: 0;
     margin-bottom: 20px;
   }
   .layout-calendar-and-messaging-container__right-block {
     width: 100%;
     float: none;
+  }
+  .layout-calendar-and-messaging-container__right-block .messaging {
+    width: 100%;
+    margin: 0;
   }
 }
 .alert-box {
@@ -1019,7 +1046,7 @@ a.theme_disabled.arrow-button {
   top: .3em;
 }
 .calendar {
-  width: 96.869%;
+  width: 97.9%;
 }
 .calendar__header {
   display: inline-block;
@@ -1187,6 +1214,17 @@ a.theme_disabled.arrow-button {
   margin-left: -8px;
   top: 74%;
   margin-top: -8px;
+}
+@media screen and (max-width: 720px) {
+  .calendar__header {
+    width: 98.1%;
+  }
+  .calendar__datepicker .ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+    width: 99.9%;
+  }
+  .calendar__bottom {
+    width: 92.3%;
+  }
 }
 .circle-progress-bar-b {
   display: inline-block;
@@ -1390,7 +1428,7 @@ a.theme_disabled.arrow-button {
 .form-element__input {
   font-family: "PT Sans", sans-serif;
   font-size: 1.625rem;
-  width: 100%;
+  width: 91.5%;
   padding: 1.65% 4.25%;
   color: #888888;
   background-color: #e5e5e5;
@@ -1399,7 +1437,7 @@ a.theme_disabled.arrow-button {
   outline: 0;
 }
 .form-element__textarea {
-  width: 100%;
+  width: 91.6%;
   min-height: 125px;
   font-size: 1.625rem;
   padding: 3.1% 4.2%;
@@ -1585,7 +1623,7 @@ a.theme_disabled.arrow-button {
   }
 }
 .messaging {
-  width: 96.869%;
+  width: 100%;
   background-color: #f2f2f2;
   border-radius: 2px;
 }
@@ -1761,7 +1799,7 @@ a.theme_disabled.arrow-button {
   font-size: 0;
 }
 .search__input {
-  width: 77.5%;
+  width: 84.81%;
   margin: 0;
   padding: 0 4.25%;
   background: #e5e5e5;

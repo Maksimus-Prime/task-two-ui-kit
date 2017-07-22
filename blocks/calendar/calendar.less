@@ -1,5 +1,6 @@
 .calendar {
-	width: 96.869%; // 526 от 543
+	width: 97.9%;
+
 
 	&__header {
 		display: inline-block;
@@ -163,4 +164,21 @@
     margin-left: -8px;
     top: 74%;
     margin-top: -8px;
+}
+
+
+@media screen and (max-width: 720px) {
+	.calendar {
+		&__header {
+			width: 98.1%;
+		}
+		&__datepicker {
+			.ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+				width: 99.9%;
+			}
+		}
+		&__bottom {
+			width: 92.3%;
+		}
+	}	
 }
