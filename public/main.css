@@ -483,6 +483,7 @@ html {
   float: left;
 }
 .layout-search-drop-user-profile-container__left-block .search {
+  width: 97%;
   margin-bottom: 29px;
 }
 .layout-search-drop-user-profile-container__right-block {
@@ -581,11 +582,14 @@ html {
     float: none;
   }
   .layout-search-drop-user-profile-container__left-block .search {
-    width: 84.81%;
+    width: 100%;
   }
   .layout-search-drop-user-profile-container__right-block {
     width: 100%;
     float: none;
+  }
+  .layout-search-drop-user-profile-container__right-block .toggles {
+    margin-right: 15.7%;
   }
   .layout-news-events-container__left-block {
     float: none;
@@ -620,6 +624,16 @@ html {
   .layout-calendar-and-messaging-container__right-block .messaging {
     width: 100%;
     margin: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .layout-form-elements-container__right-block .toggles {
+    margin-right: 9.7%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .layout-form-elements-container__right-block .toggles {
+    margin-right: 15.7%;
   }
 }
 .alert-box {
@@ -1799,7 +1813,7 @@ a.theme_disabled.arrow-button {
   font-size: 0;
 }
 .search__input {
-  width: 84.81%;
+  width: 81.35%;
   margin: 0;
   padding: 0 4.25%;
   background: #e5e5e5;
@@ -1815,7 +1829,8 @@ a.theme_disabled.arrow-button {
 }
 .search__button {
   display: inline-block;
-  padding: 0 3.345%;
+  width: 10.1%;
+  text-align: center;
   background: #e75735;
   color: #fff;
   vertical-align: top;
