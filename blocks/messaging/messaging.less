@@ -41,8 +41,8 @@
 		}
 		.photo-block {
 			position: absolute;
-			width: 25.48%;
-			height: 63.24%;
+			width: 9.5rem;
+			height: 9.5rem;
 			border: 0.5625rem solid #e5e5e5;
 		    left: 32.4%;
 		    bottom: -41.2%;
@@ -70,12 +70,11 @@
 			&::before {
 			    content: "";
 			    position: absolute;
-				top: -9px;
-			    left: 207px;
+				top: -7%;
+			    left: 46%;
 			    transform: rotate(45deg);
 			    border-radius: 3px 3px;
-			    width: 16px;
-			    height: 16px;
+			    padding: 2%;
 			    background-color: #fff;
 			}		
 		}
@@ -113,5 +112,103 @@
 			}
 		}
 
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 8.5rem;
+				height: 8.5rem;
+				border: 0.5625rem solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 890px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 7.5rem;
+				height: 7.5rem;
+				border: 0.5625rem solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 890px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 6.5rem;
+				height: 6.5rem;
+				border: 0.5625rem solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 720px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 15.5rem;
+				height: 15.5rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 630px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 13.5rem;
+				height: 13.5rem;
+				border: 8 solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 540px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 12.5rem;
+				height: 12.5rem;
+				border: 7 solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 540px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 11.5rem;
+				height: 11.5rem;
+				border: 6px solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 440px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 9.5rem;
+				height: 9.5rem;
+				border: 5px solid #e5e5e5;
+			}
+		}
+	}
+}
+@media screen and (max-width: 380px) {
+	.messaging {
+		&-header {
+			.photo-block {
+				width: 8rem;
+				height: 8rem;
+			}
+		}
 	}
 }
