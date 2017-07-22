@@ -486,6 +486,9 @@ html {
   width: 97%;
   margin-bottom: 29px;
 }
+.layout-search-drop-user-profile-container__left-block .drop-down .select2.select2-container.select2-container--default {
+  width: 97.35% !important;
+}
 .layout-search-drop-user-profile-container__right-block {
   width: 50%;
   float: right;
@@ -584,6 +587,9 @@ html {
   .layout-search-drop-user-profile-container__left-block .search {
     width: 100%;
   }
+  .layout-search-drop-user-profile-container__left-block .drop-down .select2.select2-container.select2-container--default {
+    width: 100% !important;
+  }
   .layout-search-drop-user-profile-container__right-block {
     width: 100%;
     float: none;
@@ -627,6 +633,9 @@ html {
   }
 }
 @media screen and (max-width: 550px) {
+  .layout-form-elements-container__left-block .form-element__input {
+    width: 65%;
+  }
   .layout-form-elements-container__right-block .toggles {
     margin-right: 9.7%;
   }
@@ -657,8 +666,7 @@ html {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   border-radius: 0.125rem 0.125rem;
-  width: 5.5%;
-  height: 14.5%;
+  padding: 4%;
   z-index: -1;
   background-color: #4eb7a8;
 }
@@ -1274,7 +1282,7 @@ a.theme_disabled.arrow-button {
   height: 50px;
 }
 .select2.select2-container.select2-container--default {
-  width: 97.35% !important;
+  width: 100% !important;
 }
 .drop-down .select2-selection.select2-selection--single {
   background: #e5e5e5 !important;
@@ -1300,7 +1308,7 @@ a.theme_disabled.arrow-button {
   border-bottom-right-radius: 0.1875rem !important;
   border-top-right-radius: 0.1875rem !important;
   right: 0 !important;
-  width: 12% !important;
+  width: 11.75% !important;
 }
 .drop-down .select2-selection__arrow b {
   width: 22% !important;
@@ -1321,8 +1329,8 @@ a.theme_disabled.arrow-button {
   border-right: none !important;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 15px !important;
-  left: 24px !important;
+  top: 30% !important;
+  left: 38% !important;
 }
 .drop-down option {
   color: #fff;
@@ -1813,7 +1821,7 @@ a.theme_disabled.arrow-button {
   font-size: 0;
 }
 .search__input {
-  width: 81.35%;
+  width: 80%;
   margin: 0;
   padding: 0 4.25%;
   background: #e5e5e5;
@@ -1829,7 +1837,7 @@ a.theme_disabled.arrow-button {
 }
 .search__button {
   display: inline-block;
-  width: 10.1%;
+  width: 11.45%;
   text-align: center;
   background: #e75735;
   color: #fff;
