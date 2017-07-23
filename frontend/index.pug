@@ -18,10 +18,12 @@ html
 			.layout-arrow-buttons
 				include ../blocks/arrow-button/arrow-button.pug
 				h3.layout__title Arrow Buttons
-				+arrow-button("left")
-				+arrow-button("right")
-				+arrow-button("left","disabled")
-				+arrow-button("right","disabled")
+				.layout-arrow-buttons__left-block
+					+arrow-button("left")
+					+arrow-button("right")
+				.layout-arrow-buttons__right-block
+					+arrow-button("left","disabled")
+					+arrow-button("right","disabled")
 			.layout-circle-progress-bars
 				include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
 				include ../blocks/circle-progress-bar/circle-progress-bar.pug

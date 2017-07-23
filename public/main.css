@@ -438,8 +438,14 @@ html {
 .layout-arrow-buttons {
   text-align: center;
 }
+.layout-arrow-buttons__left-block {
+  display: inline-block;
+}
+.layout-arrow-buttons__right-block {
+  display: inline-block;
+}
 .layout-arrow-buttons .arrow-button {
-  margin: 0 22px;
+  margin: 0 10px;
 }
 .layout-circle-progress-bars {
   text-align: center;
@@ -546,8 +552,16 @@ html {
   .layout-arrow-buttons {
     text-align: center;
   }
+  .layout-arrow-buttons__left-block {
+    display: block;
+    margin: 0 auto;
+  }
+  .layout-arrow-buttons__right-block {
+    display: block;
+    margin: 0 auto;
+  }
   .layout-arrow-buttons .arrow-button {
-    margin: 15px 0;
+    margin: 10px 10px;
   }
   .layout-circle-progress-bars .circle-progress-bar {
     display: block;
@@ -633,7 +647,7 @@ html {
     margin: 0;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 560px) {
   .layout-form-elements-container__left-block .form-element__input {
     width: 65%;
   }
@@ -1268,7 +1282,7 @@ a.theme_disabled.arrow-button {
   -top: 0 !important;
   -left: 0 !important;
   font-family: 'Conv_Lato-Light', sans-serif !important;
-  font-size: 3.25rem !important;
+  font-size: 3.2rem !important;
   -line-height: 4.5625rem !important;
 }
 .circle-progress-bar input:focus {
