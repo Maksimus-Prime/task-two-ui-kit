@@ -162,20 +162,30 @@ html {
 				.calendar {
 					width: 96.869%;
 				}
-				.messaging {
-					width: 96.869%;
-				}
 			}
 			&__right-block {
 				width: 50%;
 				float: right;
+				.messaging {
+					width: 96.869%;
+				}				
 			}
 		}
 	}
 }
 
 @media screen and (max-width: 870px) {
-	
+	html {
+		font-size: 14px;
+	}
+	.layout {
+		&-buttons {
+			.button {
+				display: block;
+				margin: 15px auto;
+			}
+		}
+	}
 }
 @media screen and (max-width: 720px) {
 	html {
@@ -184,12 +194,6 @@ html {
 	.layout {
 		&__title {
 			margin: 45px 0;
-		}
-		&-buttons {
-			.button {
-				display: block;
-				margin: 15px auto;
-			}
 		}
 		&-arrow-buttons {
 			text-align: center;
@@ -258,6 +262,9 @@ html {
 					.drop-down {
 						.select2.select2-container.select2-container--default {
 							width: 100% !important;
+						}
+						.select2-selection.select2-selection--single {
+							height: 39px !important;
 						}
 					}
 				}

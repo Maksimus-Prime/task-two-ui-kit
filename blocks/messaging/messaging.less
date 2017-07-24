@@ -1,40 +1,39 @@
 .messaging {
 	width: 100%;
 	background-color: #f2f2f2;
-	border-radius: 2px;
+	border-radius: 0.4375rem;
 
 	&-header {
-		background: linear-gradient(to bottom, #4eb7a8 71%, #46ab9d 71%, #46ab9d 100%);
-		text-align: center;
 		position: relative;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
+		text-align: center;
+		background: linear-gradient(to bottom, #4eb7a8 71%, #46ab9d 71%, #46ab9d 100%);
+		border-top-left-radius: 0.4375rem;
+		border-top-right-radius: 0.4375rem;
 
 		&__name {
 			margin: 0;
 			padding: 5.35% 0 20.5% 0;
-			letter-spacing: -0.1875rem;
-			line-height: 4.75rem;
 			font-family: "PT Sans", sans-serif;
 			font-size: 3.875rem;
+			letter-spacing: -0.1875rem;
+			line-height: 4.75rem;
 			color: #fff;			
 		}
 
 		&__chat-icon {
 			position: absolute;
-			background-color: #f2f2f2;
 			bottom: -41%;
 			left: 8.5%;
-
+			background-color: #f2f2f2;
 			border: none;
 			outline: none;
 		}
 
 		&__camera-icon {
 			position: absolute;
-			background-color: #f2f2f2;
 			bottom: -38%;
 			right: 8.4%;
+			background-color: #f2f2f2;
 			
 			border: none;
 			outline: none;
@@ -53,43 +52,47 @@
 		padding-top: 61px;
 		padding-bottom: 11%;
 		background-color: #f2f2f2;
+		border-bottom-left-radius: 0.4375rem;
+		border-bottom-right-radius: 0.4375rem;
 
 		&__from {
+			position: relative;
+			width: 72.5%;
 			margin: 0 auto;
 			margin-top: 10.2%;
-			position: relative;
 			padding: 5.55% 6% 7.5% 6.1%;
-			width: 72.5%;
-			background-color: #fff;
-			border-radius: 0.75rem;
 			font-family: 'Conv_Lato-Bold', sans-serif;
 			font-size: 1.4375rem;
+			background-color: #fff;
+			border-radius: 0.75rem;
+
 			color: #868686;
 			margin-bottom: 6.2%;
 
 			&::before {
 			    content: "";
+			    padding: 2%;
 			    position: absolute;
 				top: -7%;
 			    left: 46%;
 			    transform: rotate(45deg);
 			    border-radius: 3px 3px;
-			    padding: 2%;
 			    background-color: #fff;
 			}		
 		}
 
 		&__to {
-			margin: 0 auto;
-			padding: 5.45% 6% 12.3% 6.2%;
 			width: 70.5%;
+			margin: 0 auto;
+			margin-bottom: 5.3%;
+			padding: 5.45% 6% 12.3% 6.2%;
 			border: 0.3125rem solid #fff;
 			background-color: #e5e5e5;
 			border-radius: 0.75rem;
 			font-family: 'Conv_Lato-Bold', sans-serif;
 			font-size: 1.4375rem;
 			color: #777777;
-			margin-bottom: 5.3%;
+			
 		}
 		
 		&__button {
