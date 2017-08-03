@@ -1,13 +1,8 @@
-mixin button(value,type,size,theme)
+mixin button(value,type,source,size,theme,link)
 	-var size = size || "default";
-	if size==="small"
-		if theme==undefined
-			button(type=type+"" class="button size_small")=value
-		else if theme==="green"
-			button(type=type+"" class="button size_small theme_green")=value
-	else if size==="default"
-		if theme==undefined
-			button(type=type+"" class="button")=value
-		else if theme==="green"
-			button(type=type+"" class="button theme_green")=value
-		
+	-var source = source || "#";
+	if (source!=="#")
+		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))
+			a(href=source+"")=value
+	else
+		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value

@@ -1,6 +1,9 @@
-mixin tick-box(name,state)
+mixin tick-box(type,name,value,state)
 	.tick-box
-		-var name = "checkbox-"+name;
 		-var state = state || false;
-		input(type="checkbox" id=name+"" name=name+"" checked=("active"===state ? "checked" : undefined))
-		label(for=name)
+		if type==="radio"
+			input(type="radio" id=name+"-"+value+"" name=name+"" checked=(state==="active"? "checked" : undefined))
+			label(for=name+"-"+value+"")
+		else if type==="checkbox"
+			input(type="checkbox" id=value+"" name=value+"" checked=(state==="active"? "checked" : undefined))
+			label(for=value)

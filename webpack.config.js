@@ -3,12 +3,29 @@ const webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const testFolder = './frontend/pages';
+const fs = require('fs');
+var newHtmlWebpckPlgn = [];
+
+
+const htmlWebpckPlgn = fs.readdirSync(testFolder).filter(function(file) {
+	if(~file.indexOf("pug")) {
+		return file;
+	}
+});
+
+htmlWebpckPlgn.forEach(function(currentPage){
+	newHtmlWebpckPlgn.push(currentPage.replace(/\.[^.]+$/, ""));
+});
+
+const pages = newHtmlWebpckPlgn.map(createPage);
+
 module.exports = {
 	entry: {
-		main: "./frontend/main"
+		main: "./frontend/pages/main"
 	},
 	output: {
-		path: __dirname + "/public",
+		path: __dirname + "/public/testsite",
 		filename: "[name].js"
 	},
 
@@ -43,11 +60,14 @@ module.exports = {
 			$: "jquery/dist/jquery.js",
 			jQuery: "jquery/dist/jquery.js"
 		}),
-		new HtmlWebpackPlugin({
-			filename: "index.html",
-			template: "./frontend/index.pug",
-			inject: false
-		}),
 		new ExtractTextPlugin("main.css", {allChunks: true})
-	]
+	].concat(pages)
 };
+
+function createPage(pageName) {
+	return new HtmlWebpackPlugin({
+		filename: `${pageName}.html`,
+		template: `./frontend/pages/${pageName}.pug`,
+		inject: false
+	})
+}

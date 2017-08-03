@@ -6,12 +6,12 @@ require("./slider-a.less");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 
-var newSlider = document.getElementById("price");
-var sliderMin = +newSlider.dataset.min, sliderMax = +newSlider.dataset.max, sliderStep = +newSlider.dataset.step;
-console.log(sliderMin);
-$('.slider-a').slider({
-	min: sliderMin,
-	max: sliderMax,
-	step: sliderStep
-	})
-	.slider('float');
+$('.slider-a').each(function(i){
+	var currenSlider = $(this)[0];
+	$(currenSlider).slider({
+		min: $(currenSlider).data("min"),
+		max: $(currenSlider).data("max"),
+		step: $(currenSlider).data("step")
+		})
+		.slider('float');
+});

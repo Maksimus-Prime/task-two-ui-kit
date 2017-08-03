@@ -10,6 +10,7 @@ ul.progressbar li {
   position: relative;
   text-align: center;
   font-size: 18px;
+  z-index: 1;
 }
 ul.progressbar li:before {
   content: counter(step);

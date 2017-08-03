@@ -1,19 +1,23 @@
 require("./map-block.less");
 
+$('.map').each(function(i){
+	var _self = $(this),
+		lat = $(this).data("lat"),
+		lng = $(this).data("lng"),
+		zoom = $(this).data("zoom"),
+		icon = $(this).data("icon");
+	function initMap() {
+		var location = {lat: lat, lng: lng};
+		var map = new google.maps.Map(_self[0],{
+			zoom: zoom,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			map: map,
+			position: location,
+			icon: icon
+		});
+	}
 
-var selectMap = document.getElementById("map");
-
-function initMap() {
-	var location = {lat: (+selectMap.dataset.lat), lng: (+selectMap.dataset.lng)};
-	var map = new google.maps.Map(document.getElementById("map"),{
-		zoom: (+selectMap.dataset.zoom),
-		center: location
-	});
-	var marker = new google.maps.Marker({
-		map: map,
-		position: location,
-		icon: (selectMap.dataset.marker+"")
-	});
-}
-
-window.initMap = initMap;
+	window.initMap = initMap;
+});
