@@ -20,8 +20,9 @@ html
 				+stages("3","3")
 				p Please check information about yourself, check links
 				+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
-				+button("back","button","signup2.html","default")
-				+button("next","button","index.html","default","green")
+				.button-line
+					+button("back","button","signup2.html","default")
+					+button("next","button","index.html","default","green")
 			.layout-footer
 				p There is someting information about this site
 		script(type="text/javascript" src="main.js")

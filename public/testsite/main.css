@@ -186,7 +186,10 @@ html {
   width: 70%;
   margin: 0 auto;
 }
-.signup3.layout-content .main-form-line:last-child {
+.signup3.layout-content p {
+  text-align: center;
+}
+.signup3.layout-content .button-line {
   text-align: center;
 }
 .signup3.layout-content .user-info-block {
