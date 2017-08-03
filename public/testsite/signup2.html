@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main page</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="layout">
+      <div class="layout-header clearfix">
+        <div class="layout-header__title">
+          <h1>THE BEST MEETING WEBSITE</h1>
+        </div>
+        <div class="layout-header__registration">
+              <button class="button size_small theme_green" type="button"><a href="index.html">Go back</a></button>
+        </div>
+      </div>
+      <div class="layout-content signup2">
+        <p>There will be a form like captcha</p>
+            <div class="stages" data-steps="3" data-current="2"></div><img width="250" height="250" style="border-radius: 50%; background-color: #a5a5a5;">
+        <p>choose a photo</p>
+        <form class="main-form">
+          <div class="main-form-line">
+                <div class="tick-box">
+                  <input type="radio" id="gendor-male" name="gendor" checked="checked">
+                  <label for="gendor-male"></label>
+                </div>
+            <label>Male</label>
+                <div class="tick-box">
+                  <input type="radio" id="gendor-female" name="gendor">
+                  <label for="gendor-female"></label>
+                </div>
+            <label>Female </label>
+          </div>
+          <div class="main-form-line">
+                <input class="form-element__input" type="input" name="job" placeholder="Enter your job">
+                <div class="alert-box">Thanks!</div>
+          </div>
+          <div class="main-form-line">
+                <input class="form-element__input" type="input" name="facebook" placeholder="Enter link to your profile on Facebook">
+                <div class="alert-box">Thanks!</div>
+          </div>
+          <div class="main-form-line">
+                <input class="form-element__input" type="input" name="twitter" placeholder="Enter link to your profile on Twitter">
+                <div class="alert-box alert-box_theme_error">Error</div>
+          </div>
+          <div class="main-form-line">
+                <input class="form-element__input" type="input" name="dribbble" placeholder="Enter link to your profile on Dribbble">
+                <div class="alert-box alert-box_theme_error">Error</div>
+          </div>
+          <div class="main-form-line">
+                <div class="toggles">
+                  <input type="checkbox" id="checkbox-get-information" name="checkbox-get-information" checked="checked">
+                  <label for="checkbox-get-information"></label>
+                </div>
+            <label>Get information about current events</label>
+          </div>
+          <div class="main-form-line">
+                <button class="button" type="button"><a href="signup1.html">back</a></button>
+                <button class="button theme_green" type="button"><a href="signup3.html">next</a></button>
+          </div>
+        </form>
+      </div>
+      <div class="layout-footer">
+        <p>There is someting information about this site</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Main page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
+	body
+		include ../../blocks/button/button.pug
+		include ../../blocks//alert-box/alert-box.pug
+		include ../../blocks//form-element/form-element.pug
+		include ../../blocks/stages/stages.pug
+		include ../../blocks/toggles/toggles.pug
+		include ../../blocks/tick-box/tick-box.pug
+		.layout
+			.layout-header.clearfix
+				.layout-header__title
+					h1 THE BEST MEETING WEBSITE
+				.layout-header__registration
+					+button("Go back","button","index.html","small","green")
+			.layout-content.signup2
+				p There will be a form like captcha
+				+stages("3","2")
+				img(width="250" height="250" style="border-radius: 50%; background-color: #a5a5a5;")
+				p choose a photo
+				form.main-form
+					.main-form-line
+						+tick-box("radio","gendor","male","active")
+						label Male
+						+tick-box("radio","gendor","female")
+						label Female 
+					.main-form-line
+						+form-element("input","job","Enter your job")
+						+alert-box
+					.main-form-line
+						+form-element("input","facebook","Enter link to your profile on Facebook")
+						+alert-box
+					.main-form-line
+						+form-element("input","twitter","Enter link to your profile on Twitter")
+						+alert-box("error")
+					.main-form-line
+						+form-element("input","dribbble","Enter link to your profile on Dribbble")
+						+alert-box("error")
+					.main-form-line
+						+toggles("get-information","active")
+						label Get information about current events
+					.main-form-line
+						+button("back","button","signup1.html","default")
+						+button("next","button","signup3.html","default","green")
+			.layout-footer
+				p There is someting information about this site
+		script(type="text/javascript" src="main.js")

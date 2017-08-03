@@ -1,0 +1,37 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Main page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
+	body
+		include ../../blocks/button/button.pug
+		include ../../blocks//alert-box/alert-box.pug
+		include ../../blocks//form-element/form-element.pug
+		include ../../blocks/stages/stages.pug
+		.layout
+			.layout-header.clearfix
+				.layout-header__title
+					h1 THE BEST MEETING WEBSITE
+				.layout-header__registration
+					+button("Go back","button","index.html","small","green")
+			.layout-content.signup1
+				+stages("3","1")
+				p Please enter your phone or email. We'll send you a message with code
+				form.main-form
+					.main-form-line
+						+form-element("text","phone","Enter your phone")
+						+alert-box("error")
+					.main-form-line
+						+form-element("text","name","Enter your name")
+						+alert-box
+					.main-form-line
+						+form-element("text","code","Enter your code")
+						+alert-box
+					.main-form-line
+						+button("next","button","signup2.html","default","green")
+			.layout-footer
+				p FOOTER There is someting information about this site
+		script(type="text/javascript" src="main.js")

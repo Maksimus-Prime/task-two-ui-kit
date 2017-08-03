@@ -1,0 +1,69 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Test page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
+	body
+		include ../../blocks/button/button.pug
+		include ../../blocks/arrow-button/arrow-button.pug
+		include ../../blocks/alert-box/alert-box.pug
+		include ../../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
+		include ../../blocks/circle-progress-bar/circle-progress-bar.pug
+		include ../../blocks/slider-a/slider-a.pug
+		include ../../blocks/slider-b/slider-b.pug
+		include ../../blocks/stages/stages.pug
+		include ../../blocks/form/form.pug
+		include ../../blocks/toggles/toggles.pug
+		include ../../blocks/tick-box/tick-box.pug
+		include ../../blocks/search/search.pug
+		include ../../blocks/drop-down/drop-down.pug
+		include ../../blocks/user-info-block/user-info-block.pug
+		include ../../blocks/news/news.pug
+		include ../../blocks/event/event.pug
+		include ../../blocks/map-block/map-block.pug
+		include ../../blocks/messaging/messaging.pug
+		include ../../blocks/calendar/calendar.pug
+		include ../../blocks/youtube-video/youtube-video.pug
+		.layout
+			.layout-header.clearfix
+				.layout-header__title
+					h1 THE BEST MEETING WEBSITE
+				.layout-header__registration
+					+button("Go back","button","index.html","small","green")
+			.layout-content.test-block-page
+					//+youtube-video("RN3Mf3oQ6e8")
+					//+messaging("Sarah Brown","img/photo2.png")
+					//+calendar
+					//+map-block("map","56.501","84.992","14","img/map-marker-icon.png")
+					//+news("img/news.png","It's all going downhill","24 August 2013","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
+					//+event("img/event1.png","24","Aug","This is the title","Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+					//+user-info-block("img/photo1.png","John Smith", "Ux designer", "#", "#","#")
+					//+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
+					//+search("search","on")
+					//+search("search","off")
+					//+drop-down("dropdown")
+					//+toggles("noadult")
+					//+toggles("adult","active")
+					//+tick-box("radio","gendor","male","active")
+					//+tick-box("radio","gendor","female")
+					//+stages("5","3")
+					//+slider-b("yoursalary","0","100","25")
+					//+slider-a("price","0","100","1")
+					//+circle-progress-bar-b
+					//+circle-progress-bar("0")
+					//+circle-progress-bar("38")
+					//+circle-progress-bar("62")
+					//+button("Button","button","#","small","green")
+					//+button("Button","button","#","default")
+					//+button("Button","button","#","default")
+					//+arrow-button("left","disabled")
+					//+arrow-button("right")
+					//+arrow-button("left")
+					//+arrow-button("right","disabled")
+			.layout-footer
+				p FOOTER There is someting information about this site
+		script(type="text/javascript" src="main.js")
+		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&callback=initMap")

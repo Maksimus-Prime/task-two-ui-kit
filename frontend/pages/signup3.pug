@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Registration page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
+	body
+		include ../../blocks/user-info-block/user-info-block.pug
+		include ../../blocks/button/button.pug
+		include ../../blocks/stages/stages.pug
+		.layout
+			.layout-header.clearfix
+				.layout-header__title
+					h1 THE BEST MEETING WEBSITE
+				.layout-header__registration
+					+button("Go back","button","index.html","small","green")
+			.layout-content.signup3
+				+stages("3","3")
+				p Please check information about yourself, check links
+				+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
+				+button("back","button","signup2.html","default")
+				+button("next","button","index.html","default","green")
+			.layout-footer
+				p There is someting information about this site
+		script(type="text/javascript" src="main.js")

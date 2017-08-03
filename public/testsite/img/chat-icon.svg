@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.312" height="38.59" viewBox="0 0 36.312 38.59">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8e8d8d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Chat_Icon" data-name="Chat Icon" class="cls-1" d="M715.163,4640.51h18.158a9.083,9.083,0,0,1,9.079,9.08v11.35a9.083,9.083,0,0,1-9.079,9.08H715.163a9.082,9.082,0,0,1-9.079-9.08v-11.35A9.082,9.082,0,0,1,715.163,4640.51Zm7.782,29.18s4.215,7.46,9.4,9.41c0,0-.324-6.16.973-10.05Z" transform="translate(-706.094 -4640.5)"/>
+</svg>

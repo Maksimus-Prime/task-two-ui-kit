@@ -1,0 +1,58 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Main page
+		script(src="https://www.youtube.com/iframe_api")
+		link(rel="stylesheet" href="main.css")
+	body
+		include ../../blocks/button/button.pug
+		include ../../blocks/user-info-block/user-info-block.pug
+		include ../../blocks/search/search.pug
+		include ../../blocks/calendar/calendar.pug
+		.layout
+			.layout-header.clearfix
+				.layout-header__title
+					h1 THE BEST MEETING WEBSITE
+				.layout-header__registration
+					+button("LOG IN","button","login.html","small","green")
+					+button("SIGN UP","button","signup1.html","small")
+			.layout-content.index.clearfix
+				.layout-content-left
+					p.all-events-news
+						a(href="allevents.html") All events and news
+					ul.content-list
+						li.content-list__line.state_active 
+							a(href="event.html") Apple Festival 2017
+						li.content-list__line
+							a(href="event.html") Fish festival 2017
+						li.content-list__line 
+							a(href="#") International Contest Festival “Ax Day”
+						li.content-list__line 
+							a(href="#") Vasnetsovs's Plain Air and Pottery Symposium
+						li.content-list__line 
+							a(href="#") The International Music Festival "Kaliningrad City Jazz"
+					ul.content-list
+						li.content-list__line.theme_event
+							a(href="#") Event dedicated to the attainment of Seraphim's relics
+						li.content-list__line.theme_event
+							a(href="event.html") Kalmyk National Holiday “Zul”
+						li.content-list__line.theme_event 
+							a(href="#") Traditional Even celebration "Bakyldidyak"
+						li.content-list__line.theme_event 
+							a(href="#") Kruzhilinskie Toloki
+						li.content-list__line.theme_event 
+							a(href="#") «Altai wintering»
+					+calendar
+				.layout-content-right
+					p Here you can see people which go to the meeting
+					+search("search","on")
+					+user-info-block("img/photo1.png","John Smith", "Ux designer", "#", "#","#")
+					+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
+					+user-info-block("img/photo1.png","John Smith", "Ux designer", "#", "#","#")
+					+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
+					+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
+			.layout-footer
+				p There is some information about this site
+		script(type="text/javascript" src="main.js")

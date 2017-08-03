@@ -1,0 +1,98 @@
+.allevents.layout-content {
+	.news {
+	}
+	.map-block {
+		height: 520px;
+	}
+	.events-news-list {
+		display: table;
+		width: 100%;
+	    table-layout: fixed;
+
+		&-left {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: left;
+			width: 10%;
+		}
+		&-center {
+			display: table-cell;
+			width: 70%;
+			margin: 0 auto;
+		}
+		&-right {
+			display: table-cell;
+			vertical-align: middle;
+			width: 10%;
+			text-align: right;
+		}
+	}
+}
+@media screen and (max-width: 1040px) {
+
+}
+@media screen and (max-width: 790px) {
+	.allevents.layout-content {
+		.events-news-list {
+			display: table;
+			width: 100%;
+		    table-layout: fixed;
+
+			&-left {
+				display: table-cell;
+				width: 15%;
+			}
+			&-center {
+				display: table-cell;
+				width: 70%;
+				margin: 0 auto;
+			}
+			&-right {
+				display: table-cell;
+				width: 15%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 570px) {
+	.allevents.layout-content {
+		.events-news-list {
+			display: table;
+			width: 100%;
+		    table-layout: fixed;
+
+			&-left {
+				display: table-cell;
+				width: 18%;
+			}
+			&-center {
+				display: table-cell;
+				width: 64%;
+				margin: 0 auto;
+			}
+			&-right {
+				display: table-cell;
+				width: 18%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 490px) {
+	.allevents.layout-content {
+		.events-news-list {
+			display: table;
+			width: 100%;
+		    table-layout: fixed;
+
+			&-left {
+				display: none;
+			}
+			&-center {
+				display: table-cell;
+			}
+			&-right {
+				display: none;
+			}
+		}
+	}
+}
