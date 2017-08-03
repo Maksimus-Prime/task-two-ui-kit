@@ -29,8 +29,6 @@ html {
 			margin-top: 2.1%;
 			text-align: center;
 		}
-
-
 	}
 
 	&-content {
@@ -131,6 +129,17 @@ html {
 		font-size: 14px;
 	}
 }
+@media screen and (max-width: 880px) {
+	.layout {
+		&-content {
+			&-left {
+				.calendar {
+					display: none;
+				}
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 640px) {
 	html {
@@ -146,22 +155,25 @@ html {
 				}
 				.calendar {
 					width: 100%;
+					display: block;
 				}
 			}
 			&-right {
 				float: none;
 				width: 100%;
-
+				
+				.search {
+					width: 100%;
+				}
 			}
-		}
-		.index& {
-			& .layout-content-right {
-				.user-info-block {
-					width: 85%;
-					margin: 0 auto;
-					margin-bottom: 10px;
+			.index& {
+				& .layout-content-right {
+					div.user-info-block {
+						width: 100%;
+					}
 				}
 			}
 		}
+
 	}
 }
