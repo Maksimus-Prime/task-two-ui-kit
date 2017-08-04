@@ -293,6 +293,10 @@ html {
     width: 100%;
   }
 }
+.layout-header__title a {
+  color: #e75735;
+  text-decoration: none;
+}
 .signup3.layout-content .stages {
   width: 70%;
   margin: 0 auto;
@@ -389,6 +393,10 @@ html {
     width: 27%;
   }
 }
+.layout-header__title a {
+  color: #e75735;
+  text-decoration: none;
+}
 .event-page.layout-content .event {
   width: 72%;
   height: 400px;
@@ -404,6 +412,10 @@ html {
   width: 40%;
   vertical-align: top;
   margin-top: 110px;
+}
+.event-page.layout-content .layout-content__note {
+  font-size: 1.21rem;
+  text-align: center;
 }
 .event-page.layout-content .layout-content-join {
   text-align: center;
@@ -423,6 +435,15 @@ html {
     height: 400px;
     margin: 15px auto;
   }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+}
+.layout-header__title a {
+  color: #e75735;
+  text-decoration: none;
 }
 .allevents.layout-content .map-block {
   height: 520px;
@@ -448,6 +469,11 @@ html {
   vertical-align: middle;
   width: 10%;
   text-align: right;
+}
+@media screen and (max-width: 1040px) {
+  html {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 790px) {
   .allevents.layout-content .events-news-list {
@@ -490,6 +516,9 @@ html {
   }
 }
 @media screen and (max-width: 490px) {
+  html {
+    font-size: 12px;
+  }
   .allevents.layout-content .events-news-list {
     display: table;
     width: 100%;
@@ -1343,6 +1372,20 @@ a.theme_disabled.arrow-button {
 .event-info__button .size_small.button {
   padding: 3.3% 0.8%;
 }
+@media screen and (max-width: 360px) {
+  .event-info-date {
+    font-size: 2.8125rem;
+    font-family: 'Conv_Lato-Light', sans-serif;
+    margin-bottom: 8.8%;
+  }
+  .event-info-date__day {
+    font-size: 7.125rem;
+    line-height: 7.125rem;
+    padding-right: 5%;
+    letter-spacing: -0.6875rem;
+    font-weight: normal;
+  }
+}
 .form-element__input {
   font-family: "PT Sans", sans-serif;
   font-size: 1.625rem;
@@ -1557,34 +1600,64 @@ a.theme_disabled.arrow-button {
     margin-right: 30%;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 745px) {
   .map-block h1 {
     display: none;
   }
   .map-block p {
-    width: 35%;
+    width: 50%;
   }
   .map-block-description__icons {
-    margin-left: 43%;
+    margin-left: 28%;
     width: 19%;
   }
   .map-block-description__icons i:nth-child(1) {
     margin-right: 30%;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 530px) {
+  .map-block h1 {
+    display: none;
+  }
+  .map-block p {
+    width: 55%;
+  }
+  .map-block-description__icons {
+    margin-left: 23%;
+    width: 19%;
+  }
+  .map-block-description__icons i:nth-child(1) {
+    margin-right: 24%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .map-block h1 {
+    display: none;
+  }
+  .map-block p {
+    width: 47%;
+  }
+  .map-block-description__icons {
+    margin-left: 22%;
+    width: 19%;
+  }
+  .map-block-description__icons i:nth-child(1) {
+    margin-right: 18%;
+  }
+}
+@media screen and (max-width: 450px) {
   .map-block p {
     width: 45%;
   }
   .map-block-description__icons {
-    margin-left: 25%;
+    margin-left: 20%;
     width: 25%;
   }
   .map-block-description__icons i:nth-child(1) {
-    margin-right: 30%;
+    margin-right: 25%;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 385px) {
   .map-block p {
     width: 50%;
   }
@@ -1593,7 +1666,7 @@ a.theme_disabled.arrow-button {
     width: 30%;
   }
   .map-block-description__icons i:nth-child(1) {
-    margin-right: 30%;
+    margin-right: 20%;
   }
 }
 .messaging {

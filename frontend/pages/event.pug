@@ -17,7 +17,8 @@ html
 		.layout
 			.layout-header.clearfix
 				.layout-header__title
-					h1 THE BEST MEETING WEBSITE
+					h1 
+						a(href="index.html") THE BEST MEETING WEBSITE
 				.layout-header__registration
 					+button("Go back","button","index.html","small","green")
 			.layout-content.event-page
@@ -25,10 +26,10 @@ html
 				.layout-content-join
 					+button("Join","button","#","small","green")
 				.layout-content-slider-bar
-					p At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event
+					p.layout-content__note At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event
 					+slider-a("price","0","100","1")
 					+circle-progress-bar("55")
-				p.about-event Some information about an event
+				p.layout-content__note Some information about an event
 				+youtube-video("RN3Mf3oQ6e8")
 				+map-block("map","56.501","84.992","14","img/map-marker-icon.png")
 			.layout-footer

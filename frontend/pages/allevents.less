@@ -1,3 +1,13 @@
+.layout {
+	&-header {
+		&__title {
+			a {
+				color: #e75735;
+				text-decoration: none;
+			}
+		}
+	}
+}
 .allevents.layout-content {
 	.news {
 	}
@@ -29,7 +39,9 @@
 	}
 }
 @media screen and (max-width: 1040px) {
-
+	html {
+		font-size: 14px;
+	}
 }
 @media screen and (max-width: 790px) {
 	.allevents.layout-content {
@@ -78,6 +90,9 @@
 	}
 }
 @media screen and (max-width: 490px) {
+	html {
+		font-size: 12px;
+	}
 	.allevents.layout-content {
 		.events-news-list {
 			display: table;
