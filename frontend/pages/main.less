@@ -1,10 +1,10 @@
+html {
+	font-size: 16px;
+}
 .clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
-}
-html {
-	font-size: 16px;
 }
 .layout {
 	max-width: 1260px;
@@ -14,14 +14,12 @@ html {
 	background-color: #fff;
 
 	&-header {
-
 		&__title {
 			float: left;
 			width: 70%;
 			margin: 0;
 			color: #e75735;
 		}
-
 		&__registration {
 			float: right;
 			width: 30%;
@@ -35,17 +33,24 @@ html {
 		&-left {
 			width: 35%;
 			float: left;
+			.all-events-news {
+				a {
+					font-size: 1.625rem;
+					color: #4eb7a8;
+				}
+			}
 
 			& .content-list {
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				margin-top: -1px;
 
 				&__line {
 					width: 96.35%%;
 					padding: 10px 5px;
 					border: 1px solid #e75735;
-					font-size: 26px;
+					font-size: 1.625rem;
 
 					&:not(:first-child) {
 						margin-top: -1px;
@@ -56,10 +61,6 @@ html {
 						text-decoration: none;
 					}
 				}
-			}
-
-			& .content-list {
-				margin-top: -1px;
 				&__line.theme_event {
 					border: 1px solid #4eb7a8;
 				}
@@ -75,24 +76,17 @@ html {
 						color: #fff;
 					}
 				}
-			}
-			& .content-list:first-of-type {
-				.content-list__line:first-child {
-					border-top-left-radius: 5px;
-					border-top-right-radius: 5px;
+				&:first-of-type {
+					.content-list__line:first-child {
+						border-top-left-radius: 5px;
+						border-top-right-radius: 5px;
+					}
 				}
-			}
-			& .content-list:last-child {
-				.content-list__line:last-child {
-					border-bottom-left-radius: 5px;
-					border-bottom-right-radius: 5px;
-				}
-			}
-
-			.all-events-news {
-				a {
-					font-size: 26px;
-					color: #4eb7a8;
+				&:last-child {
+					.content-list__line:last-child {
+						border-bottom-left-radius: 5px;
+						border-bottom-right-radius: 5px;
+					}
 				}
 			}
 			.calendar {
@@ -102,6 +96,11 @@ html {
 		&-right {
 			width: 65%;
 			float: right;
+			&__note {
+
+				font-size: 1.21rem;
+				text-align: center;
+			}
 			.search {
 				width: 90%;
 				margin: 0 auto;
@@ -121,6 +120,7 @@ html {
 
 	&-footer {
 		text-align: center;
+		font-size: 1.21rem;
 	}
 }
 

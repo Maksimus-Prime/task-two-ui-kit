@@ -1,21 +1,82 @@
+.layout {
+	&-header {
+		&__title {
+			a {
+				color: #e75735;
+				text-decoration: none;
+			}
+		}
+	}
+}
 .login-page.layout-content {
-	h3, p {
+	.layout-content__note {
+		font-size: 1.21rem;
 		text-align: center;
 	}
-	h3 {
-		text-transform: uppercase;
-	}
 	.main-form {
-		width: 50%;
+		width: 55%;
 		margin: 10px auto;
 		&-line {
 			margin-bottom: 10px;
 			&:last-child {
 				text-align: center;
+			}	
+		}
+		.form-element {
+			&__input {
+				margin-right: 1%;
 			}
 		}
 		.alert-box {
 			width: 27%;
+			vertical-align: top;
+		}
+	}
+}
+@media screen and (max-width: 1040px) {
+	html {
+		font-size: 14px;
+	}
+	.login-page.layout-content {
+		.main-form {
+			width: 65%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 880px) {
+	.login-page.layout-content {
+		.main-form {
+			width: 70%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	html {
+		font-size: 12px;
+	}
+	.login-page.layout-content {
+		.main-form {
+			width: 80%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 530px) {
+	.login-page.layout-content {
+		.main-form {
+			width: 100%;
+			.alert-box {
+				width: 27%;
+			}
 		}
 	}
 }

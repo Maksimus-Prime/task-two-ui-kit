@@ -13,11 +13,12 @@ html
 		.layout
 			.layout-header.clearfix
 				.layout-header__title
-					h1 THE BEST MEETING WEBSITE
+					h1 
+						a(href="index.html") THE BEST MEETING WEBSITE
 				.layout-header__registration
 					+button("Go back","button","index.html","small","green")
 			.layout-content.login-page
-				p Please enter your phone or email. We'll send you a message with code
+				p.layout-content__note Please enter your phone or email. We'll send you a message with code
 				form.main-form
 					.main-form-line
 						+form-element("text","email","Enter your email")

@@ -1,38 +1,114 @@
-.signup2.layout-content {
-	text-align: center;
-	h3, p {
-		text-align: center;
+.layout {
+	&-header {
+		&__title {
+			a {
+				color: #e75735;
+				text-decoration: none;
+			}
+		}
 	}
-	h3 {
-		text-transform: uppercase;
+}
+.signup2.layout-content {
+	.photo-choose-block {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+		&__photo {
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			background-color: #a5a5a5;
+		}
+		&__note {
+			font-size: 1.21rem;
+			text-align: center;
+		}
 	}
 	.main-form {
+		width: 55%;
+		margin: 10px auto;
 		&-line {
+			margin-bottom: 10px;
+			&:last-child {
+				text-align: center;
+			}
 			&:first-child {
 				font-size: 1.625rem;
 				line-height: 41px;
 				text-align: center;
 			}
-			&:last-child {
-				text-align: center;
+		}
+		&-line-get {
+			.toggles {
+				display: inline-block;
+			}
+			label {
+				font-size: 1.21rem;
+				height: 45px;
 			}
 		}
-		.toggles {
-			height: 45px;
-		}
-		.toggles + label {
-			font-size: 1.625rem;
-			line-height: 41px;
-		}
-	}
-	.main-form {
-		width: 50%;
-		margin: 10px auto;
-		&-line {
-			margin-bottom: 10px;
+		.form-element {
+			&__input {
+				margin-right: 1%;
+			}
 		}
 		.alert-box {
 			width: 27%;
+			vertical-align: top;
+		}
+	}
+}
+@media screen and (max-width: 1040px) {
+	html {
+		font-size: 14px;
+	}
+	.signup2.layout-content {
+		.main-form {
+			width: 65%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 880px) {
+	.signup2.layout-content {
+		.main-form {
+			width: 70%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	html {
+		font-size: 12px;
+	}
+	.signup2.layout-content {
+		.main-form {
+			width: 80%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+		.photo-choose-block {
+			width: 80%;
+		}
+	}
+}
+@media screen and (max-width: 530px) {
+	.signup2.layout-content {
+		.main-form {
+			width: 100%;
+			.alert-box {
+				width: 27%;
+			}
+		}
+		.photo-choose-block {
+			width: 100%;
 		}
 	}
 }

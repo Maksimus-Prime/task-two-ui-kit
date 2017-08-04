@@ -20,10 +20,10 @@ html
 				.layout-header__registration
 					+button("Go back","button","index.html","small","green")
 			.layout-content.signup2
-				p There will be a form like captcha
 				+stages("3","2")
-				img(width="250" height="250" style="border-radius: 50%; background-color: #a5a5a5;")
-				p choose a photo
+				.photo-choose-block
+					img.photo-choose-block__photo
+					p.photo-choose-block__note choose a photo
 				form.main-form
 					.main-form-line
 						+tick-box("radio","gendor","male","active")
@@ -42,7 +42,7 @@ html
 					.main-form-line
 						+form-element("input","dribbble","Enter link to your profile on Dribbble")
 						+alert-box("error")
-					.main-form-line
+					.main-form-line-get
 						+toggles("get-information","active")
 						label Get information about current events
 					.main-form-line
