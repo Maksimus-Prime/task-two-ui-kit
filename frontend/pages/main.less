@@ -24,7 +24,7 @@ html {
 			float: right;
 			width: 30%;
 			margin: 0;
-			margin-top: 2.1%;
+			margin-top: 2.3%;
 			text-align: center;
 		}
 	}
@@ -131,6 +131,12 @@ html {
 }
 @media screen and (max-width: 880px) {
 	.layout {
+		&-header {
+			&__registration {
+				width: 30%;
+				margin-top: 3%;
+			}
+		}
 		&-content {
 			&-left {
 				.calendar {
@@ -146,6 +152,12 @@ html {
 		font-size: 12px;
 	}
 	.layout {
+		&-header {
+			&__registration {
+				width: 30%;
+				margin-top: 4%;
+			}
+		}
 		&-content {
 			&-left {
 				float: none;
@@ -175,5 +187,37 @@ html {
 			}
 		}
 
+	}
+}
+@media screen and (max-width: 550px) {
+	html {
+		font-size: 12px;
+	}
+	.layout {
+		&-header {
+			&__registration {
+				width: 30%;
+				margin-top: 4.5%;
+				.button {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 350px) {
+	html {
+		font-size: 12px;
+	}
+	.layout {
+		&-header {
+			&__registration {
+				width: 30%;
+				margin-top: 8%;
+				.button {
+					margin-bottom: 5px;
+				}
+			}
+		}
 	}
 }

@@ -6,3 +6,9 @@ mixin button(value,type,source,size,theme,link)
 			a(href=source+"")=value
 	else
 		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
+
+	//if (source!=="#")
+		a(href=source+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
+			a(href=source+"")
+	//else
+		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value 

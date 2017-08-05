@@ -23,7 +23,7 @@ html {
   float: right;
   width: 30%;
   margin: 0;
-  margin-top: 2.1%;
+  margin-top: 2.3%;
   text-align: center;
 }
 .layout-content-left {
@@ -107,6 +107,10 @@ html {
   }
 }
 @media screen and (max-width: 880px) {
+  .layout-header__registration {
+    width: 30%;
+    margin-top: 3%;
+  }
   .layout-content-left .calendar {
     display: none;
   }
@@ -114,6 +118,10 @@ html {
 @media screen and (max-width: 640px) {
   html {
     font-size: 12px;
+  }
+  .layout-header__registration {
+    width: 30%;
+    margin-top: 4%;
   }
   .layout-content-left {
     float: none;
@@ -135,6 +143,30 @@ html {
   }
   .index.layout-content .layout-content-right div.user-info-block {
     width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+  .layout-header__registration {
+    width: 30%;
+    margin-top: 4.5%;
+  }
+  .layout-header__registration .button {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 12px;
+  }
+  .layout-header__registration {
+    width: 30%;
+    margin-top: 8%;
+  }
+  .layout-header__registration .button {
+    margin-bottom: 5px;
   }
 }
 .layout-header__title a {
@@ -679,6 +711,7 @@ a.theme_disabled.arrow-button {
   border-radius: 0.3125rem;
   box-shadow: 0 0.3125rem 0 0 #e75735;
   font-family: 'Conv_Lato-Black', sans-serif;
+  text-decoration: none;
   color: #e75735;
   text-transform: uppercase;
 }

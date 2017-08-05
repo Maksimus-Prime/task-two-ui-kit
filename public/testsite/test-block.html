@@ -15,6 +15,12 @@
         </div>
         <div class="layout-header__registration">
               <button class="button size_small theme_green" type="button"><a href="index.html">Go back</a></button>
+              <!--if (source!=="#")
+              a(href=source+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
+              	a(href=source+"")
+              -->
+              <!--elsebutton(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value 
+              -->
         </div>
       </div>
       <div class="layout-content test-block-page">
@@ -28,16 +34,7 @@
         <!--+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")-->
         <!--+search("search","on")-->
         <!--search("search","off")-->
-            <form class="drop-down">
-              <select class="drop-down-main stylee" name="dropdown">
-                <option></option>
-                <option class="new-v" value="1">Option 1</option>
-                <option class="new-v" value="2">Option 2</option>
-                <option class="new-v" value="3">Option 3</option>
-                <option class="new-v" value="4">Option 4</option>
-                <option class="new-v" value="5">Option 5</option>
-              </select>
-            </form>
+        <!--+drop-down("dropdown")-->
         <!--+toggles("noadult")-->
         <!--+toggles("adult","active")-->
         <!--+tick-box("radio","gendor","male","active")-->
@@ -51,7 +48,13 @@
         <!--+circle-progress-bar("62")-->
         <!--+button("Button","button","#","small","green")-->
         <!--+button("Button","button","#","default")-->
-        <!--+button("Button","button","#","default")-->
+            <button class="button" type="button"><a href="index.html">Button</a></button>
+            <!--if (source!=="#")
+            a(href=source+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
+            	a(href=source+"")
+            -->
+            <!--elsebutton(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value 
+            -->
         <!--+arrow-button("left","disabled")-->
         <!--+arrow-button("right")-->
         <!--+arrow-button("left")-->
