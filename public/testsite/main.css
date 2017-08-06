@@ -18,6 +18,7 @@ html {
   width: 70%;
   margin: 0;
   color: #e75735;
+  font-family: "PT Sans", sans-serif;
 }
 .layout-header__registration {
   float: right;
@@ -36,6 +37,7 @@ html {
 .layout-content-left .all-events-news a {
   font-size: 1.625rem;
   color: #4eb7a8;
+  font-family: "PT Sans", sans-serif;
 }
 .layout-content-left .content-list {
   list-style: none;
@@ -48,6 +50,7 @@ html {
   padding: 10px 5px;
   border: 1px solid #e75735;
   font-size: 1.625rem;
+  font-family: "PT Sans", sans-serif;
 }
 .layout-content-left .content-list__line:not(:first-child) {
   margin-top: -1px;
@@ -90,6 +93,7 @@ html {
   float: right;
 }
 .layout-content-right__note {
+  font-family: "PT Sans", sans-serif;
   font-size: 1.21rem;
   text-align: center;
 }
@@ -106,6 +110,7 @@ html {
 .layout-footer {
   text-align: center;
   font-size: 1.21rem;
+  font-family: "PT Sans", sans-serif;
 }
 @media screen and (max-width: 1040px) {
   html {
@@ -183,9 +188,14 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-footer {
+  font-family: "PT Sans", sans-serif;
 }
 .signup1.layout-content .layout-content__note {
   font-size: 1.21rem;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
 }
 .signup1.layout-content .main-form {
@@ -246,6 +256,10 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-header {
+  font-family: "PT Sans", sans-serif;
 }
 .signup2.layout-content .photo-choose-block {
   display: block;
@@ -262,6 +276,7 @@ html {
 .signup2.layout-content .photo-choose-block__note {
   font-size: 1.21rem;
   text-align: center;
+  font-family: "PT Sans", sans-serif;
 }
 .signup2.layout-content .main-form {
   width: 55%;
@@ -269,6 +284,7 @@ html {
 }
 .signup2.layout-content .main-form-line {
   margin-bottom: 10px;
+  font-family: "PT Sans", sans-serif;
 }
 .signup2.layout-content .main-form-line:last-child {
   text-align: center;
@@ -287,6 +303,7 @@ html {
 .signup2.layout-content .main-form-line-get label {
   font-size: 1.21rem;
   height: 45px;
+  font-family: "PT Sans", sans-serif;
 }
 .signup2.layout-content .main-form .form-element__input {
   margin-right: 1%;
@@ -342,13 +359,19 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-header {
+  font-family: "PT Sans", sans-serif;
 }
 .signup3.layout-content .stages {
   width: 70%;
   margin: 0 auto;
 }
 .signup3.layout-content p {
+  font-size: 1.21rem;
   text-align: center;
+  font-family: "PT Sans", sans-serif;
 }
 .signup3.layout-content .button-line {
   text-align: center;
@@ -382,10 +405,15 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-footer {
+  font-family: "PT Sans", sans-serif;
 }
 .login-page.layout-content .layout-content__note {
   font-size: 1.21rem;
   text-align: center;
+  font-family: "PT Sans", sans-serif;
 }
 .login-page.layout-content .main-form {
   width: 55%;
@@ -445,6 +473,10 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-footer {
+  font-family: "PT Sans", sans-serif;
 }
 .event-page.layout-content .event {
   width: 72%;
@@ -465,6 +497,7 @@ html {
 .event-page.layout-content .layout-content__note {
   font-size: 1.21rem;
   text-align: center;
+  font-family: "PT Sans", sans-serif;
 }
 .event-page.layout-content .layout-content-join {
   text-align: center;
@@ -493,6 +526,10 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-footer {
+  font-family: "PT Sans", sans-serif;
 }
 .allevents.layout-content .map-block {
   height: 520px;
@@ -586,6 +623,10 @@ html {
 .layout-header__title a {
   color: #e75735;
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+}
+.layout-header {
+  font-family: "PT Sans", sans-serif;
 }
 .user-page.layout-content .user-info-block {
   width: 50%;
