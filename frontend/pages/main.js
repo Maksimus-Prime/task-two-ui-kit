@@ -15,6 +15,7 @@ require("./login.less");
 require("./event.less");
 require("./allevents.less");
 require("./test-block.less");
+require("./user.less");
 require("./../vendor/select2.min.js");
 require("../../node_modules/chart.js/dist/Chart.bundle.min.js");
 require("./../vendor/jquery.knob.js");

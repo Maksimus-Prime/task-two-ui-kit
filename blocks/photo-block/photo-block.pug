@@ -1,4 +1,10 @@
-mixin photo-block(src)
+mixin photo-block(src,link)
 	-var src = src || "#";
-	.photo-block
-		img(src=src+"" alt="photo-block")
+	-var link = link || "#";
+	if link !== "#"
+		.photo-block
+			a(href=link+"")
+				img(src=src+"" alt="photo-block")
+	else
+		.photo-block
+			img(src=src+"" alt="photo-block")

@@ -3,13 +3,13 @@ html
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Registration page
+		title User page
 		script(src="https://www.youtube.com/iframe_api")
 		link(rel="stylesheet" href="main.css")
 	body
 		include ../../blocks/user-info-block/user-info-block.pug
 		include ../../blocks/button/button.pug
-		include ../../blocks/stages/stages.pug
+		include ../../blocks/messaging/messaging.pug
 		.layout
 			.layout-header.clearfix
 				.layout-header__title
@@ -17,13 +17,9 @@ html
 						a(href="index.html") THE BEST MEETING WEBSITE
 				.layout-header__registration
 					+button("Go back","button","index.html","small","green")
-			.layout-content.signup3
-				+stages("3","3")
-				p Please check information about yourself, check links
+			.layout-content.user-page
 				+user-info-block("img/photo2.png","#","Sarah Brown", "Developer", "#", "#", "#", "green")
-				.button-line
-					+button("back","button","signup2.html","default")
-					+button("next","button","index.html","default","green")
+				+messaging("Sarah Brown","img/photo2.png")
 			.layout-footer
 				p There is someting information about this site
 		script(type="text/javascript" src="main.js")

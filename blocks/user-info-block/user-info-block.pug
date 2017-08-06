@@ -1,6 +1,6 @@
-mixin user-info-block(photo,name,job,facebook,twitter,dribbble,theme)
+mixin user-info-block(photo,link,name,job,facebook,twitter,dribbble,theme)
 	.user-info-block.clearfix
 		include ../photo-block/photo-block.pug
 		include ../info-block/info-block.pug
-		+photo-block(photo)
+		+photo-block(photo,link)
 		+info-block(name,job,facebook,twitter,dribbble,theme)

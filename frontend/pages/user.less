@@ -1,0 +1,57 @@
+.layout {
+	&-header {
+		&__title {
+			a {
+				color: #e75735;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.user-page.layout-content {
+	.user-info-block {
+		width: 50%;
+		margin: 20px auto;
+		padding: 0;
+	}
+	.messaging {
+		width: 40%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	html {
+		font-size: 14px;
+	}
+	.user-page.layout-content {
+		div.user-info-block {
+			width: 65%;
+			margin: 20px auto;
+			padding: 0;
+		}
+		.messaging {
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+}
+@media screen and (max-width: 720px) {
+	html {
+		font-size: 12px;
+	}
+	.user-page.layout-content {
+		.messaging {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 520px) {
+	.user-page.layout-content {
+		div.user-info-block {
+			width: 100%;
+			margin: 20px auto;
+			padding: 0;
+		}
+	}
+}
