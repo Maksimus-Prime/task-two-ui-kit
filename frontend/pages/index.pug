@@ -10,6 +10,7 @@ html
 		include ../../blocks/button/button.pug
 		include ../../blocks/user-info-block/user-info-block.pug
 		include ../../blocks/search/search.pug
+		include ../../blocks/drop-down/drop-down.pug
 		include ../../blocks/calendar/calendar.pug
 		.layout
 			.layout-header.clearfix
@@ -44,6 +45,7 @@ html
 							a(href="#") Kruzhilinskie Toloki
 						li.content-list__line.theme_event 
 							a(href="#") «Altai wintering»
+					+drop-down("dropdown")
 					+calendar
 				.layout-content-right
 					p.layout-content-right__note Here you can see people which go to the meeting

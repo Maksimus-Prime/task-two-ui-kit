@@ -79,6 +79,9 @@ html {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.layout-content-left .drop-down {
+  display: none;
+}
 .layout-content-left .calendar {
   margin: 10px auto;
 }
@@ -131,6 +134,11 @@ html {
     width: 100%;
   }
   .layout-content-left .content-list {
+    width: 100%;
+    display: none;
+  }
+  .layout-content-left .drop-down {
+    display: block;
     width: 100%;
   }
   .layout-content-left .calendar {
