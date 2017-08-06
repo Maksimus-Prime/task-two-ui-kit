@@ -26,6 +26,9 @@ html {
   margin-top: 2.3%;
   text-align: center;
 }
+.layout-header__registration .button {
+  margin-right: 5px;
+}
 .layout-content-left {
   width: 35%;
   float: left;
@@ -262,6 +265,9 @@ html {
 .signup2.layout-content .main-form-line:last-child {
   text-align: center;
 }
+.signup2.layout-content .main-form-line:last-child .button {
+  margin-right: 5px;
+}
 .signup2.layout-content .main-form-line:first-child {
   font-size: 1.625rem;
   line-height: 41px;
@@ -338,6 +344,9 @@ html {
 }
 .signup3.layout-content .button-line {
   text-align: center;
+}
+.signup3.layout-content .button-line .button {
+  margin-right: 5px;
 }
 .signup3.layout-content .user-info-block {
   width: 50%;

@@ -2,13 +2,6 @@ mixin button(value,type,source,size,theme,link)
 	-var size = size || "default";
 	-var source = source || "#";
 	if (source!=="#")
-		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))
-			a(href=source+"")=value
-	else
-		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
-
-	//if (source!=="#")
 		a(href=source+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value
-			a(href=source+"")
-	//else
+	else
 		button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : ""))=value 
