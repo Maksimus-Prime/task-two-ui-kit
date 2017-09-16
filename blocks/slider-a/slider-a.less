@@ -1,45 +1,42 @@
 .slider-a {
-	width: 100%;
-	display: inline-block;
-
-	&.ui-slider {
-		height: 0.5625rem;
-		border-radius: 0.625rem;
-		border: none;
-		background: #e5e5e5;		
-	}
-
-	& .ui-slider-handle {
-		width: 2.125rem;
-		height: 2.125rem;
-		border-radius: 50%;
-		top: -0.75rem;
-		border: none;
-		background: #e75735;
-
-		& .ui-slider-tip {
-			width: 3.9375rem;
-			height: 2.625rem;
-			border: none;
-			border-radius: 0.625rem;
-			font-family: 'Conv_Lato-Black', sans-serif;
-			font-size: 1.5rem;
-			line-height: 2.625rem;
-			background: #e75735;
-			color: #fff;
-
-			&::before,
-			&::after {
-				border-top-color: #e75735;
-				bottom: -0.625rem;				
-			}
-		}
-	}
+    width: 100%;
+    display: inline-block;
+    &.ui-slider {
+        height: 0.5625rem;
+        border-radius: 0.625rem;
+        border: none;
+        background: #e5e5e5;
+    }
+    & .ui-slider-handle {
+        width: 2.125rem;
+        height: 2.125rem;
+        border-radius: 50%;
+        top: -0.75rem;
+        border: none;
+        background: #e75735;
+        & .ui-slider-tip {
+            width: 3.9375rem;
+            height: 2.625rem;
+            border: none;
+            border-radius: 0.625rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-style: bold;
+            font-size: 1.5rem;
+            line-height: 2.625rem;
+            background: #e75735;
+            color: #fff;
+            &::before,
+            &::after {
+                border-top-color: #e75735;
+                bottom: -0.625rem;
+            }
+        }
+    }
 }
 .ui-slider-float .ui-slider-handle:hover .ui-slider-tip, .ui-slider-float .ui-slider-handle.ui-state-hover .ui-slider-tip, .ui-slider-float .ui-slider-handle:focus .ui-slider-tip, .ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip, .ui-slider-float .ui-slider-handle.ui-state-active .ui-slider-tip, .ui-slider-float .ui-slider-pip:hover .ui-slider-tip-label {
-	top: -3.6875rem !important;
+    top: -3.6875rem !important;
 }
 .ui-slider-float .ui-slider-tip, .ui-slider-float .ui-slider-tip-label {
-	
-	margin-left: -2rem !important;
+    margin-left: -2rem !important;
 }
