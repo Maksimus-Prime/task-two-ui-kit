@@ -1,54 +1,58 @@
 .toggles {
-	display: inline-block;
-	width: 108px;
-	position: relative;
-	height: 45px;
-
-	& label {
-		width: 108px;
-		height: 44px;
-		position: absolute;
-		background-color: #e5e5e5;
-		top: 0;
-		left: 0;
-		border-radius: 50px;
-		color: #fff;
-		cursor: pointer;
-
-		&::after {
-			content: "";
-			width: 34px;
-			height: 34px;
-			border-radius: 50px;
-			position: absolute;
-			top: 5px;
-			left: 5px;
-			transition: all 0.3s;
-			background-color: #fff;
-		}
-
-		&::before {
-			font-family: 'Conv_Lato-Black', sans-serif;
-			font-size: 22px;
-			content: "OFF";
-			position: absolute;
-			top: 8px;
-			right: 16px;
-		}
-	}
-
-	& input[type="checkbox"] {
-		visibility: hidden;
-
-		&:checked + label::after {
-			left: 68px;
-		}
-		&:checked + label::before {
-			content: "ON";
-			left: 13px;
-		}
-		&:checked + label {
-			background-color: #4eb7a8;
-		}
-	}
+    position: relative;
+    display: inline-block;
+    width: 108px;
+    height: 45px;
+    &__input {
+        display:none;
+        &:checked + .toggles__slider {
+            background-color: #4eb7a8;
+            &:before {
+                transform: translateX(64px);
+            }
+            &:after {
+                content:'ON';
+                left: 39px;
+            }
+        }
+        &:focus + .toggles__slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+    }
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e5e5e5;
+        transition: .4s;
+        border-radius: 34px;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 33px;
+            width: 33px;
+            left: 6px;
+            bottom: 7px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        &:after {
+            content: 'OFF';
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-style: bold;
+            color: white;
+            display: block;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 47%;
+            left: 71px;
+            letter-spacing: 1px;
+            font-size: 22px;
+        }  
+    }
 }
