@@ -1,8 +1,7 @@
-mixin news(src,title,subtitle,description)
-	.news.clearfix
-		.news__image
-			img(src=(src)? src : "#")
-		.news-info
-			h2.news-info__title=title
-			span.news-info__subtitle=subtitle
-			p.news-info__description=description
+mixin news(src,title,date,description)
+    section.news
+        .news-left-half(style='background-image:url('+src+')')
+        .news-right-half
+            h2.news-right-half__title=title
+            span.news-right-half__date=date
+            p.news-right-half__description=description
