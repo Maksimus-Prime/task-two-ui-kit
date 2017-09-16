@@ -1,4 +1,26 @@
 .stages {
-	width: 100%;
-	font-family: 'Conv_Lato-Black', sans-serif;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    ul.progressbar li {
+        font-size: 18px;
+        z-index: 1;
+    }
+    ul.progressbar li:before {
+        width: 51px;
+        height: 51px;
+        line-height: 51px;
+        font-size: 1.625rem;
+    }
+    ul.progressbar li:after {
+        height: 9px;
+        top: 22px;
+    }
+    ul.progressbar li.done:before, ul.progressbar li.done:after {
+        background: #e75735;
+    }
+    ul.progressbar li.current:before {
+        background: #e75735;
+    }
 }
