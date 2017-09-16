@@ -1,13 +1,12 @@
 mixin event(src,day,month,title,description)
-	include ../button/button.pug
-	.event.clearfix
-		.event__image
-			img(src=(src)? src : "#")
-		.event-info
-			.event-info-date
-				b.event-info-date__day=day
-				=month
-			h3.event-info__title=title
-			p.event-info__description=description
-			.event-info__button
-				+button("Add to the calendar","button","#","small","green")
+    include ../button/button.pug
+    section.event
+        .event-left-half(style='background-image:url('+src+')')
+        .event-right-half
+            span.event-right-half__date
+                b.event-right-half__day=day
+                | #{month}
+            h4.event-right-half__title=title
+            p.event-right-half__description=description
+            div
+                +button("Add to calendar","button","#","small","event")

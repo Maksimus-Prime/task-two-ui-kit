@@ -1,108 +1,72 @@
 .event {
-	width: 100%;
-	background-color: #e5e5e5;
-	border-radius: 0.4375rem;
-	display: flex;
-
-	&__image {
-		width: 33%;
-		display: flex;
-		background: #fff;
-		border-top-left-radius: 0.4375rem;
-		border-bottom-left-radius: 0.4375rem;
-
-		& img {
-			width: 100%;
-			object-fit: cover;
-			object-position: center;	
-			border-top-left-radius: 0.4375rem;
-			border-bottom-left-radius: 0.4375rem;
-		}
-	}
-
-	&-info {
-		padding: 4.35% 5.5% 17.3% 7.4%;
-		width: 54%;
-		color: #fff;
-		overflow: hidden;	
-		background: #4eb7a8;
-		border-top-right-radius: 0.4375rem;
-		border-bottom-right-radius: 0.4375rem;
-	
-		&-date {
-			font-size: 3.4375rem;
-			font-family: 'Conv_Lato-Light', sans-serif;
-			margin-bottom: 8.8%;
-
-			&__day {
-				font-size: 8.375rem;
-				line-height: 8.375rem;
-				padding-right: 12%;
-				letter-spacing: -0.6875rem;
-
-				font-weight: normal;	
-			}			
-		}
-
-		&__title {
-			font-size: 1.4375rem;
-			margin: 0;
-			margin-bottom: 1.78%;
-			font-family: 'Conv_Lato-Black', sans-serif;
-			letter-spacing: 0.0391rem;
-			text-transform: uppercase;
-			font-weight: normal;
-		}
-
-		&__description {
-			font-family: 'Conv_Lato-Regular', sans-serif;
-			letter-spacing: 0.075rem;
-			font-size: 1.25rem;
-			margin: 0;
-			padding: 0;
-			margin-bottom: 12.3%;			
-		}
-
-		&__button {
-			text-align: center;
-
-			.button {
-		    background-color: #fff;
-		    border: 0.0625rem solid #fff; 
-		    box-shadow: 0 0.625rem 0 0 #28a290;
-		    color: #4eb7a8;
-			font-size: 1.125rem;
-
-				&:hover {
-					background-color: #fff;
-					color: #4eb7a8;
-				}
-			}
-			.size_small.button {
-				padding: 3.3% 0.8%;
-			}
-		}
-	}
-}
-@media screen and (max-width: 360px) {
-	.event {
-
-		&-info {
-		
-			&-date {
-				font-size: 2.8125rem;
-				font-family: 'Conv_Lato-Light', sans-serif;
-				margin-bottom: 8.8%;
-
-				&__day {
-					font-size: 7.125rem;
-					line-height: 7.125rem;
-					padding-right: 5%;
-					letter-spacing: -0.6875rem;
-
-					font-weight: normal;	
-				}			
-			}
-		}
-	}
+    width: 527px;
+    border-radius: 0.4375rem;
+    display: flex;
+    &-left-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #ff9e2c;
+        background-repeat: none;
+        background-size: cover;
+        background-position: center center;
+        flex: 1;
+        border-top-left-radius: 0.4375rem;
+        border-bottom-left-radius: 0.4375rem;
+    }
+    &-right-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+        background-color: #4eb7a8;
+        flex: 1.65;
+        padding: 0.595rem 2rem 3rem 2.1rem;
+        border-top-right-radius: 0.4375rem;
+        border-bottom-right-radius: 0.4375rem;
+        &__date {
+            display: inline-block;
+            width: 100%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3.4375rem;
+            margin-bottom: 13px;
+            color: #fff;
+        }
+        &__day {
+            font-size: 8.3125rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: -0.25rem;
+            padding-right: 1.5rem;
+        }
+        &__title {
+            margin: 0;
+            margin-bottom: 6px;
+            font-size: 1.4375rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-style: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.0625rem;
+            color: #fff;
+        }
+        &__description {
+            margin: 0;
+            font-size: 1.25rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 36px;
+            color: #fff;
+            letter-spacing: 0.08125rem;
+        }
+        & div {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 527px) {
+        width: 100%;
+    }
 }
