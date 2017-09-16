@@ -1,9 +1,9 @@
 mixin tick-box(type,name,value,state)
-	.tick-box
-		-var state = state || false;
-		if type==="radio"
-			input(type="radio" id=name+"-"+value+"" name=name+"" checked=(state==="active"? "checked" : undefined))
-			label(for=name+"-"+value+"")
-		else if type==="checkbox"
-			input(type="checkbox" id=value+"" name=value+"" checked=(state==="active"? "checked" : undefined))
-			label(for=value)
+    .tick-box
+        -var state = state || false;
+        if type==="radio"
+            input.tick-box__input(type="radio" id=name+"-"+value+"" name=name+"" checked=(state==="active"? "checked" : undefined))
+            label.tick-box__label(for=name+"-"+value+"")
+        else if type==="checkbox"
+            input.tick-box__input(type="checkbox" id=value+"" name=value+"" checked=(state==="active"? "checked" : undefined))
+            label.tick-box__label(for=value)
