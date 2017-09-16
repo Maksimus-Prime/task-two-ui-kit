@@ -2,7 +2,7 @@ doctype html
 html
     head
         meta(charset="UTF-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+        meta(name="viewport" content="initial-scale=1, width=device-width")
         meta(name="description" content="UI KIT page")
         meta(name="keywords" content="ui, uikit")
         meta(name="author" content="Lamonov Maks")
@@ -23,7 +23,8 @@ html
         include ../blocks/slider-a/slider-a.pug
         include ../blocks/slider-b/slider-b.pug
         include ../blocks/stages/stages.pug
-        include ../blocks/form/form.pug
+        include ../blocks/message-form/message-form.pug
+        include ../blocks/form-line/form-line.pug
         include ../blocks/toggles/toggles.pug
         include ../blocks/tick-box/tick-box.pug
         include ../blocks/search/search.pug
@@ -57,7 +58,7 @@ html
                 +circle-progress-bar("38")
                 +circle-progress-bar("62")
                 +circle-progress-bar("89")
-                +circle-progress-bar-b(data.chart)
+                +circle-progress-bar-b(data)
             .layout-sliders
                 h3.layout__title Sliders
                 +slider-a("price","0","100","1")
@@ -69,7 +70,7 @@ html
                 h3.layout__title Form elements
                 .layout-form-elements-container.clearfix
                     .layout-form-elements-container__left-block
-                        +form
+                        +message-form(data.messageform)
                     .layout-form-elements-container__right-block
                         h3.layout__title Toggles
                         +toggles("noadult")
@@ -78,13 +79,12 @@ html
                         +tick-box("radio","gender","male","active")
                         +tick-box("radio","gender","female")
             .layout-search-drop-user-profile
-                -var options = ["Topic 1","Topic 2","Topic 5","Topic 4"];
                 .layout-search-drop-user-profile-container.clearfix
                     .layout-search-drop-user-profile-container__left-block
                         h3.layout__title Search / Drop Down
                         +search("search","on")
                         +search("search","off")
-                        +drop-down("dropdown")
+                        +drop-down("dropdown", data.dropdown)
                     .layout-search-drop-user-profile-container__right-block
                         h3.layout__title User profile
                         +user-info-block("img/photo1.png","#","John Smith", "Ux designer", "#", "#","#")
