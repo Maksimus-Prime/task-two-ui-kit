@@ -1,60 +1,64 @@
 .news {
-	width: 100%;
-	border-radius: 0.4375rem;
-	display: flex;
-
-	&__image {
-		width: 33%;
-		display: flex;
-		background: #fff;
-		border-top-left-radius: 0.4375rem;
-		border-bottom-left-radius: 0.4375rem;
-
-		& img {
-	      width: 100%;
-	      object-fit: cover;
-	      object-position: center;
-			border-top-left-radius: 0.4375rem;
-			border-bottom-left-radius: 0.4375rem;
-		}
-	}
-
-	&-info {
-		padding: 7.45% 5.5% 12% 8%;
-		width: 53.5%;
-		color: #fff;
-		background: #e75735;
-		overflow: hidden;
-		border-top-right-radius: 0.4375rem;
-		border-bottom-right-radius: 0.4375rem;
-
-		&__title {
-			font-family: 'Conv_Lato-Light', sans-serif;
-			font-weight: normal;
-			font-size: 3.1875rem;
-			margin: 0;
-			margin-bottom: 7%;
-			line-height: 3.0625rem;
-		}
-
-		&__subtitle {
-			font-family: 'Conv_Lato-Black', sans-serif;
-			display: inline-block;
-			letter-spacing: 0.1rem;
-			margin: 0;
-			padding: 0;
-			margin-bottom: 8.4%;
-			font-size: 1.25rem;
-			font-weight: bold;
-			text-transform: uppercase;			
-		}
-
-		&__description {
-			font-family: 'Conv_Lato-Regular', sans-serif;
-			font-size: 1.25rem;
-			letter-spacing: 0.0625rem;
-			margin: 0;
-			padding: 0;			
-		}
-	}
+    display: flex;
+    width: 527px;
+    border-radius: 0.4375rem;
+    &-left-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #e75735;
+        background-repeat: none;
+        background-size: cover;
+        background-position: center center;
+        flex: 1;
+        border-top-left-radius: 0.4375rem;
+        border-bottom-left-radius: 0.4375rem;
+    }
+    &-right-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #e75735;
+        flex: 1.66;
+        padding: 2.3rem 1.5rem 4.1rem 2.6rem;
+        border-top-right-radius: 0.4375rem;
+        border-bottom-right-radius: 0.4375rem;
+        &__title {
+            font-size: 1.75rem;
+            margin: 0 0 1.1rem 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            color: #fff;
+            font-size: 3.1875rem;
+            line-height: 3.2rem;
+            word-wrap: break-word;
+        }
+        &__date {
+            display: inline-block;
+            width: 100%;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            font-style: bold;
+            color: #fff;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-bottom: 23px;
+            letter-spacing: 0.11rem;
+        }
+        &__description {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #fff;
+            font-size: 1.25rem;
+            letter-spacing: 0.0625rem;
+            line-height: 1.5rem;
+            word-wrap: break-word;
+        }
+    }
+    @media screen and (max-width: 527px) {
+        width: 100%;
+    }
 }

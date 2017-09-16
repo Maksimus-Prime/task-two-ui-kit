@@ -2,94 +2,93 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main page</title>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="description" content="UI KIT page">
+    <meta name="keywords" content="ui, uikit">
+    <meta name="author" content="Lamonov Maks">
+    <title>UI KIT</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <script src="https://www.youtube.com/iframe_api"></script>
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <div class="layout">
       <div class="layout-buttons">
-        <h3 class="layout__title">Standard Buttons</h3>
-                <button class="button size_small theme_green" type="button">Button</button>
-                <button class="button theme_green" type="button">Button</button>
-                <button class="button" type="button">Button</button>
-                <button class="button size_small" type="button">Button</button>
+        <h3 class="layout__title">Standard Buttons</h3><a class="button size_small theme_green" href="/mock-address/change-me" rel="noopener noreferrer">Button</a>
+            <button class="button theme_green" type="button">Button</button><a class="button" href="/mock-address/change-me" rel="noopener noreferrer">Button</a>
+            <button class="button size_small" type="button">Button</button>
       </div>
       <div class="layout-arrow-buttons">
         <h3 class="layout__title">Arrow Buttons</h3>
-        <div class="layout-arrow-buttons__left-block"><a class="arrow-button" href="#"><span class="arrow-button_direction_left"></span></a><a class="arrow-button" href="#"><span class="arrow-button_direction_right"></span></a>
+        <div class="layout-arrow-buttons__left-block"><a class="arrow-button" href="/mock-address/change-me"><span class="arrow-button_direction_left"></span></a><a class="arrow-button" href="/mock-address/change-me"><span class="arrow-button_direction_right"></span></a>
         </div>
-        <div class="layout-arrow-buttons__right-block"><a class="theme_disabled arrow-button" href="#"><span class="arrow-button_direction_left"></span></a><a class="theme_disabled arrow-button" href="#"><span class="arrow-button_direction_right"></span></a>
+        <div class="layout-arrow-buttons__right-block"><a class="theme_disabled arrow-button" href="/mock-address/change-me"><span class="arrow-button_direction_left"></span></a><a class="theme_disabled arrow-button" href="/mock-address/change-me"><span class="arrow-button_direction_right"></span></a>
         </div>
       </div>
       <div class="layout-circle-progress-bars">
         <h3 class="layout__title">Percentages / Pie chart</h3>
-                <div class="circle-progress-bar">
-                  <input class="circle-progress-bar__input" type="text" value="0">
-                </div>
-                <div class="circle-progress-bar">
-                  <input class="circle-progress-bar__input" type="text" value="38">
-                </div>
-                <div class="circle-progress-bar">
-                  <input class="circle-progress-bar__input" type="text" value="62">
-                </div>
-                <div class="circle-progress-bar">
-                  <input class="circle-progress-bar__input" type="text" value="100">
-                </div>
-                <div class="circle-progress-bar-b">
-                  <canvas class="circle-progress-bar-b__value"></canvas>
-                </div>
+            <div class="circle-progress-bar" data-value="0"></div>
+            <div class="circle-progress-bar" data-value="38"></div>
+            <div class="circle-progress-bar" data-value="62"></div>
+            <div class="circle-progress-bar" data-value="89"></div>
+            <div class="circle-progress-bar-b">
+              <canvas class="circle-progress-bar-b__value" data-chart-items="[object Object]"></canvas>
+            </div>
       </div>
       <div class="layout-sliders">
         <h3 class="layout__title">Sliders</h3>
-                <div class="slider-a" id="price" data-min="0" data-max="100" data-step="1"></div>
-                <div class="slider-b" id="yoursalary" data-min="0" data-max="100" data-step="25"></div>
+            <div class="slider-a" data-min="0" data-max="100" data-step="1"></div>
+            <div class="slider-b" data-min="0" data-max="100" data-step="25"></div>
       </div>
       <div class="layout-stages">
         <h3 class="layout__title">Stages</h3>
-                <div class="stages" data-steps="5" data-current="3"></div>
+            <div class="stages" data-steps="5" data-current="3"></div>
       </div>
       <div class="layout-form-elements">
         <h3 class="layout__title">Form elements</h3>
         <div class="layout-form-elements-container clearfix">
           <div class="layout-form-elements-container__left-block">
-                    <form class="form">
-                      <div class="form-line">
-                                  <input class="form-element__input" type="input" name="name" placeholder="Your Name">
-                                  <div class="alert-box alert-box_theme_error">Error</div>
-                      </div>
-                      <div class="form-line">
-                                  <input class="form-element__input" type="email" name="email" placeholder="Your Email">
-                                  <div class="alert-box">Thanks!</div>
-                      </div>
-                      <div class="form-line">
-                                  <textarea class="form-element__textarea" type="textarea" name="message" placeholder="Your Message"></textarea>
-                      </div>
-                      <div class="form-line">
-                                  <button class="button theme_green" type="button">submit</button>
-                      </div>
-                    </form>
+                <form class="message-form">
+                        <div class="form-line">
+                          <input class="form-line__field" type="text" name="name" placeholder="Your Name">
+                          <div class="form-line__alert-box">Error</div>
+                        </div>
+                        <div class="form-line">
+                          <input class="form-line__field" type="email" name="email" placeholder="Your Email">
+                          <div class="form-line__alert-box state_ok">Thanks!</div>
+                        </div>
+                        <div class="form-line">
+                          <textarea class="form-line__textarea" type="textarea" name="message" placeholder="Your Message"></textarea>
+                        </div>
+                  <div class="message-form__submit">
+                          <button class="button theme_green" type="submit">submit</button>
+                  </div>
+                </form>
           </div>
           <div class="layout-form-elements-container__right-block">
             <h3 class="layout__title">Toggles</h3>
-                    <div class="toggles">
-                      <input type="checkbox" id="checkbox-noadult" name="checkbox-noadult">
-                      <label for="checkbox-noadult"></label>
-                    </div>
-                    <div class="toggles">
-                      <input type="checkbox" id="checkbox-adult" name="checkbox-adult" checked="checked">
-                      <label for="checkbox-adult"></label>
-                    </div>
+                <label class="toggles">
+                  <input class="toggles__input" type="checkbox" id="checkbox-noadult" name="checkbox-noadult">
+                  <div class="toggles__slider"></div>
+                </label>
+                <label class="toggles">
+                  <input class="toggles__input" type="checkbox" id="checkbox-adult" name="checkbox-adult" checked="checked">
+                  <div class="toggles__slider"></div>
+                </label>
             <h3 class="layout__title">Tick boxes</h3>
-                    <div class="tick-box">
-                      <input type="checkbox" id="checkbox-male" name="checkbox-male" checked="checked">
-                      <label for="checkbox-male"></label>
-                    </div>
-                    <div class="tick-box">
-                      <input type="checkbox" id="checkbox-female" name="checkbox-female">
-                      <label for="checkbox-female"></label>
-                    </div>
+                <div class="tick-box">
+                  <input class="tick-box__input" type="radio" id="gender-male" name="gender" checked="checked">
+                  <label class="tick-box__label" for="gender-male"></label>
+                </div>
+                <div class="tick-box">
+                  <input class="tick-box__input" type="radio" id="gender-female" name="gender">
+                  <label class="tick-box__label" for="gender-female"></label>
+                </div>
           </div>
         </div>
       </div>
@@ -97,41 +96,43 @@
         <div class="layout-search-drop-user-profile-container clearfix">
           <div class="layout-search-drop-user-profile-container__left-block">
             <h3 class="layout__title">Search / Drop Down</h3>
-                    <div class="search">
-                      <input class="search__input" type="text" name="search" id="search" placeholder="Search">
-                      <label class="search__button" for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
-                    </div>
-                    <div class="search">
-                      <input class="theme_fall search__input" type="text" name="search" id="search" placeholder="I've not found what I'm looking for...">
-                      <label class="search__button" for="search"><i class="fa fa-search" aria-hidden="true"></i></label>
-                    </div>
-                    <form class="drop-down">
-                      <select class="stylee" name="dropdown" id="dropdown">
-                        <option></option>
-                        <option class="new-v" value="1">Option 1</option>
-                        <option class="new-v" value="2">Option 2</option>
-                        <option class="new-v" value="3">Option 3</option>
-                        <option class="new-v" value="4">Option 4</option>
-                        <option class="new-v" value="5">Option 5</option>
-                      </select>
-                    </form>
+                <form class="search-form">
+                  <input class="search-form__field search-field" type="text" name="search" placeholder="Search">
+                  <button class="search-form__button" type="submit"></button>
+                </form>
+                <form class="search-form">
+                  <input class="search-form__field state_off search-field" type="text" name="search-off" placeholder="I've not found what I'm looking for ...">
+                  <button class="search-form__button" type="submit"></button>
+                </form>
+                <div class="drop-down">
+                  <select class="drop-down__select" name="dropdown">
+                    <option></option>
+                    <option value="1"><a href="event.html">Apple Festival 2017</a></option>
+                    <option value="2"><a href="event.html">Fish festival 2017</a></option>
+                    <option value="3"><a href="event.html">International Contest Festival Ax Day</a></option>
+                    <option value="4"><a href="event.html">Vasnetsovs's Plain Air and Pottery Symposium</a></option>
+                    <option value="5"><a href="event.html">The International Music Festival Kaliningrad City Jazz</a></option>
+                    <option value="6"><a href="event.html">Test event</a></option>
+                    <option value="7"><a href="event.html">Test event</a></option>
+                  </select>
+                </div>
           </div>
           <div class="layout-search-drop-user-profile-container__right-block">
             <h3 class="layout__title">User profile</h3>
-                    <div class="user-info-block clearfix">
-                                <div class="photo-block"><img src="img/photo1.png" alt="photo-block"></div>
-                                <div class="info-block">
-                                  <h3 class="info-block__title">John Smith</h3><span class="info-block__subtitle">Ux designer</span>
-                                  <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
-                                </div>
-                    </div>
-                    <div class="user-info-block clearfix">
-                                <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
-                                <div class="theme_green info-block">
-                                  <h3 class="info-block__title">Sarah Brown</h3><span class="info-block__subtitle">Developer</span>
-                                  <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
-                                </div>
-                    </div>
+                <div class="user-info-block clearfix">
+                        <div class="photo-block"><img src="img/photo1.png" alt="photo-block"></div>
+                        <div class="info-block">
+                          <h3 class="info-block__title">John Smith</h3><span class="info-block__subtitle">Ux designer</span>
+                          <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                        </div>
+                </div>
+                <div class="user-info-block clearfix">
+                        <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
+                        <div class="theme_green info-block">
+                          <h3 class="info-block__title">Sarah Brown</h3><span class="info-block__subtitle">Developer</span>
+                          <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                        </div>
+                </div>
           </div>
         </div>
       </div>
@@ -139,73 +140,71 @@
         <h3 class="layout__title">News &amp; Events</h3>
         <div class="layout-news-events-container clearfix">
           <div class="layout-news-events-container__left-block">
-                    <div class="news clearfix">
-                      <div class="news__image"><img src="img/news.png"></div>
-                      <div class="news-info">
-                        <h2 class="news-info__title">It's all going downhill</h2><span class="news-info__subtitle">24 August 2013</span>
-                        <p class="news-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
-                      </div>
-                    </div>
+                <section class="news">
+                  <div class="news-left-half" style="background-image:url(img/news.png);"></div>
+                  <div class="news-right-half">
+                    <h2 class="news-right-half__title">It's all going downhill</h2><span class="news-right-half__date">24 August 2013</span>
+                    <p class="news-right-half__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+                  </div>
+                </section>
           </div>
           <div class="layout-news-events-container__right-block">
-                    <div class="event clearfix">
-                      <div class="event__image"><img src="img/event1.png"></div>
-                      <div class="event-info">
-                        <div class="event-info-date"><b class="event-info-date__day">24</b>Aug
-                        </div>
-                        <h3 class="event-info__title">This is the title</h3>
-                        <p class="event-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <div class="event-info__button">
-                                  <button class="button size_small theme_green" type="button">Add to the calendar</button>
-                        </div>
-                      </div>
+                <section class="event">
+                  <div class="event-left-half" style="background-image:url(img/event1.png);"></div>
+                  <div class="event-right-half"><span class="event-right-half__date"><b class="event-right-half__day">24</b>Aug</span>
+                    <h4 class="event-right-half__title">This is the title</h4>
+                    <p class="event-right-half__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div>
+                          <button class="button size_small theme_event" type="button">Add to calendar</button>
                     </div>
+                  </div>
+                </section>
           </div>
         </div>
       </div>
       <div class="layout-location">
         <h3 class="layout__title">Location</h3>
-                <div class="map-block">
-                  <div class="map" id="map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
-                  <div class="map-block-description">
-                    <h1>Meet us!</h1>
-                    <p>1259 California st San Francisco, CA</p>
-                    <div class="map-block-description__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                  </div>
-                </div>
+            <div class="map-block">
+              <div class="map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
+              <div class="map-block-description">
+                <h1>Meet us!</h1>
+                <p>1259 California st San Francisco, CA</p>
+                <div class="map-block-description__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              </div>
+            </div>
       </div>
       <div class="layout-calendar-and-messaging">
         <h3 class="layout__title">Calendar / Messaging</h3>
         <div class="layout-calendar-and-messaging-container clearfix">
           <div class="layout-calendar-and-messaging-container__left-block">
-                    <div class="calendar">
-                      <div class="calendar__header"></div>
-                      <div class="calendar__datepicker"></div>
-                      <div class="calendar__bottom"></div>
-                    </div>
+                <section class="calendar">
+                  <div class="calendar__header"></div>
+                  <div class="calendar__datepicker"></div>
+                  <div class="calendar__bottom"></div>
+                </section>
           </div>
           <div class="layout-calendar-and-messaging-container__right-block">
-                    <div class="messaging">
-                      <div class="messaging-header">
-                        <button class="messaging-header__chat-icon" type="button" name="chat"><img src="img/chat-iconn.png"></button>
-                        <button class="messaging-header__camera-icon" type="button" name="camera"><img src="img/camera-iconn.png"></button>
-                        <div class="messaging-header__name">Sarah Brown</div>
-                                  <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
-                      </div>
-                      <div class="messaging-block">
-                        <div class="messaging-block__from">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
-                        <div class="messaging-block__to">Yeah that sounds great. See you then.</div>
-                        <div class="messaging-block__button">
-                                    <button class="button theme_green" type="button">Reply</button>
-                        </div>
-                      </div>
+                <div class="messaging">
+                  <div class="messaging-header">
+                    <button class="messaging-header__chat-icon" type="button" name="chat"><img src="img/chat-iconn.png"></button>
+                    <button class="messaging-header__camera-icon" type="button" name="camera"><img src="img/camera-iconn.png"></button>
+                    <div class="messaging-header__name">Sarah Brown</div>
+                          <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
+                  </div>
+                  <div class="messaging-block">
+                    <div class="messaging-block__from">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
+                    <div class="messaging-block__to">Yeah that sounds great. See you then.</div>
+                    <div class="messaging-block__button">
+                            <button class="button theme_green" type="button">Reply</button>
                     </div>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
       <div class="layout-video">
         <h3 class="layout__title">Video</h3>
-                <div class="youtube-video" id="video-placeholder" data-videoid="RN3Mf3oQ6e8"></div>
+            <div class="youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

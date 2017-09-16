@@ -1,14 +1,8 @@
 mixin drop-down(id,options)
-	form.drop-down
-		select.drop-down-main(class="stylee" name=id+"")
-			option
-			option(value="1" class="new-v")
-				a(href="event.html")="Apple Festival 2017"
-			option(value="2" class="new-v")
-				a(href="event.html")="Fish festival 2017"
-			option(value="3" class="new-v")
-				a(href="event.html")="International Contest Festival Ax Day"
-			option(value="4" class="new-v")
-				a(href="event.html")="Vasnetsovs's Plain Air and Pottery Symposium"
-			option(value="5" class="new-v")
-				a(href="event.html")="The International Music Festival Kaliningrad City Jazz"
+    .drop-down
+        select.drop-down__select(name=id+"")
+            option
+            -var i = 1;
+            each item in options
+                option(value=(i++)+"")
+                    a(href=item.link+"")=item.name

@@ -7,11 +7,11 @@ require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 
 $('.slider-a').each(function(i){
-	var currenSlider = $(this)[0];
-	$(currenSlider).slider({
-		min: $(currenSlider).data("min"),
-		max: $(currenSlider).data("max"),
-		step: $(currenSlider).data("step")
-		})
-		.slider('float');
+    var currenSlider = $(this)[0];
+    $(currenSlider).slider({
+        min: $(currenSlider).data("min"),
+        max: $(currenSlider).data("max"),
+        step: $(currenSlider).data("step")
+        })
+        .slider('float');
 });

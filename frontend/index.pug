@@ -1,104 +1,113 @@
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Main page
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		.layout
-			.layout-buttons
-				include ../blocks/button/button.pug
-				h3.layout__title Standard Buttons
-				+button("Button","button","small","green")
-				+button("Button","button","default","green")
-				+button("Button","button","default")
-				+button("Button","button","small")
-			.layout-arrow-buttons
-				include ../blocks/arrow-button/arrow-button.pug
-				h3.layout__title Arrow Buttons
-				.layout-arrow-buttons__left-block
-					+arrow-button("left")
-					+arrow-button("right")
-				.layout-arrow-buttons__right-block
-					+arrow-button("left","disabled")
-					+arrow-button("right","disabled")
-			.layout-circle-progress-bars
-				include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
-				include ../blocks/circle-progress-bar/circle-progress-bar.pug
-				h3.layout__title Percentages / Pie chart
-				+circle-progress-bar("0")
-				+circle-progress-bar("38")
-				+circle-progress-bar("62")
-				+circle-progress-bar("100")
-				+circle-progress-bar-b
-			.layout-sliders
-				include ../blocks/slider-a/slider-a.pug
-				include ../blocks/slider-b/slider-b.pug
-				h3.layout__title Sliders
-				+slider-a("price","0","100","1")
-				+slider-b("yoursalary","0","100","25")
-			.layout-stages
-				include ../blocks/stages/stages.pug
-				h3.layout__title Stages
-				+stages("5","3")
-			.layout-form-elements
-				include ../blocks/form/form.pug
-				include ../blocks/toggles/toggles.pug
-				include ../blocks/tick-box/tick-box.pug
-				h3.layout__title Form elements
-				.layout-form-elements-container.clearfix
-					.layout-form-elements-container__left-block
-						+form
-					.layout-form-elements-container__right-block
-						h3.layout__title Toggles
-						+toggles("noadult")
-						+toggles("adult","active")
-						h3.layout__title Tick boxes
-						+tick-box("male","active")
-						+tick-box("female")
-			.layout-search-drop-user-profile
-				include ../blocks/search/search.pug
-				include ../blocks/drop-down/drop-down.pug
-				include ../blocks/user-info-block/user-info-block.pug
-				-var options = ["Topic 1","Topic 2","Topic 5","Topic 4"];
-				.layout-search-drop-user-profile-container.clearfix
-					.layout-search-drop-user-profile-container__left-block
-						h3.layout__title Search / Drop Down
-						+search("search","on")
-						+search("search","off")
-						+drop-down("dropdown")
-					.layout-search-drop-user-profile-container__right-block
-						h3.layout__title User profile
-						+user-info-block("img/photo1.png","John Smith", "Ux designer", "#", "#","#")
-						+user-info-block("img/photo2.png","Sarah Brown", "Developer", "#", "#", "#", "green")
-			.layout-news-events
-				include ../blocks/news/news.pug
-				include ../blocks/event/event.pug
-				h3.layout__title News &amp; Events
-				.layout-news-events-container.clearfix
-					.layout-news-events-container__left-block
-						+news("img/news.png","It's all going downhill","24 August 2013","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
-					.layout-news-events-container__right-block
-						+event("img/event1.png","24","Aug","This is the title","Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-			.layout-location
-				include ../blocks/map-block/map-block.pug
-				h3.layout__title Location
-				+map-block("map","56.501","84.992","14","img/map-marker-icon.png")
-			.layout-calendar-and-messaging
-				include ../blocks/messaging/messaging.pug
-				include ../blocks/calendar/calendar.pug
-				h3.layout__title Calendar / Messaging
-				.layout-calendar-and-messaging-container.clearfix
-					.layout-calendar-and-messaging-container__left-block
-						+calendar
-					.layout-calendar-and-messaging-container__right-block
-						+messaging("Sarah Brown","img/photo2.png")
-			.layout-video
-				include ../blocks/youtube-video/youtube-video.pug
-				h3.layout__title Video
-				+youtube-video("RN3Mf3oQ6e8")
-
-		script(type="text/javascript" src="main.js")
-		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&callback=initMap")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="initial-scale=1, width=device-width")
+        meta(name="description" content="UI KIT page")
+        meta(name="keywords" content="ui, uikit")
+        meta(name="author" content="Lamonov Maks")
+        title UI KIT
+        link(rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png")
+        link(rel="manifest" href="favicons/manifest.json")
+        link(rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="theme-color" content="#ffffff")
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        include ../blocks/button/button.pug
+        include ../blocks/arrow-button/arrow-button.pug
+        include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
+        include ../blocks/circle-progress-bar/circle-progress-bar.pug
+        include ../blocks/slider-a/slider-a.pug
+        include ../blocks/slider-b/slider-b.pug
+        include ../blocks/stages/stages.pug
+        include ../blocks/message-form/message-form.pug
+        include ../blocks/form-line/form-line.pug
+        include ../blocks/toggles/toggles.pug
+        include ../blocks/tick-box/tick-box.pug
+        include ../blocks/search/search.pug
+        include ../blocks/drop-down/drop-down.pug
+        include ../blocks/user-info-block/user-info-block.pug
+        include ../blocks/news/news.pug
+        include ../blocks/event/event.pug
+        include ../blocks/map-block/map-block.pug
+        include ../blocks/messaging/messaging.pug
+        include ../blocks/calendar/calendar.pug
+        include ../blocks/youtube-video/youtube-video.pug
+        -var data = require('./data.json')
+        .layout
+            .layout-buttons
+                h3.layout__title Standard Buttons
+                +button("Button","button","/mock-address/change-me","small","green")
+                +button("Button","button","#","default","green")
+                +button("Button","button","/mock-address/change-me","default")
+                +button("Button","button","#","small")
+            .layout-arrow-buttons
+                h3.layout__title Arrow Buttons
+                .layout-arrow-buttons__left-block
+                    +arrow-button("left")
+                    +arrow-button("right")
+                .layout-arrow-buttons__right-block
+                    +arrow-button("left","disabled")
+                    +arrow-button("right","disabled")
+            .layout-circle-progress-bars
+                h3.layout__title Percentages / Pie chart
+                +circle-progress-bar("0")
+                +circle-progress-bar("38")
+                +circle-progress-bar("62")
+                +circle-progress-bar("89")
+                +circle-progress-bar-b(data)
+            .layout-sliders
+                h3.layout__title Sliders
+                +slider-a("price","0","100","1")
+                +slider-b("yoursalary","0","100","25")
+            .layout-stages
+                h3.layout__title Stages
+                +stages("5","3")
+            .layout-form-elements
+                h3.layout__title Form elements
+                .layout-form-elements-container.clearfix
+                    .layout-form-elements-container__left-block
+                        +message-form(data.messageform)
+                    .layout-form-elements-container__right-block
+                        h3.layout__title Toggles
+                        +toggles("noadult")
+                        +toggles("adult","active")
+                        h3.layout__title Tick boxes
+                        +tick-box("radio","gender","male","active")
+                        +tick-box("radio","gender","female")
+            .layout-search-drop-user-profile
+                .layout-search-drop-user-profile-container.clearfix
+                    .layout-search-drop-user-profile-container__left-block
+                        h3.layout__title Search / Drop Down
+                        +search("search","on")
+                        +search("search-off","off")
+                        +drop-down("dropdown", data.dropdown)
+                    .layout-search-drop-user-profile-container__right-block
+                        h3.layout__title User profile
+                        +user-info-block("img/photo1.png","#","John Smith", "Ux designer", "#", "#","#")
+                        +user-info-block("img/photo2.png","#","Sarah Brown", "Developer", "#", "#", "#", "green")
+            .layout-news-events
+                h3.layout__title News &amp; Events
+                .layout-news-events-container.clearfix
+                    .layout-news-events-container__left-block
+                        +news("img/news.png","It's all going downhill","24 August 2013","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
+                    .layout-news-events-container__right-block
+                        +event("img/event1.png","24","Aug","This is the title","Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+            .layout-location
+                h3.layout__title Location
+                +map-block("map","56.501","84.992","14","img/map-marker-icon.png")
+            .layout-calendar-and-messaging
+                h3.layout__title Calendar / Messaging
+                .layout-calendar-and-messaging-container.clearfix
+                    .layout-calendar-and-messaging-container__left-block
+                        +calendar
+                    .layout-calendar-and-messaging-container__right-block
+                        +messaging("Sarah Brown","img/photo2.png")
+            .layout-video
+                h3.layout__title Video
+                +youtube-video("RN3Mf3oQ6e8")
+        script(type="text/javascript" src="main.js")
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&callback=initMap")
