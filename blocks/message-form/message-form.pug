@@ -1,0 +1,9 @@
+mixin message-form(data)
+    form.message-form
+        include ../form-line/form-line.pug
+        include ../button/button.pug
+        +form-line(data["name-field"].inputtype,data["name-field"].name,data["name-field"].placeholder,data["name-field"].boxtype)
+        +form-line(data["email-field"].inputtype,data["email-field"].name,data["email-field"].placeholder)
+        +form-line(data["textarea"].inputtype,data["textarea"].name,data["textarea"].placeholder)
+        .message-form__submit
+            +button("submit","submit","#","default","green")

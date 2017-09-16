@@ -1,0 +1,7 @@
+mixin form-line(inputtype, name, placeholder, boxtype)
+    .form-line
+        if inputtype == "textarea"
+            textarea.form-line__textarea(type="textarea" name=name+"" placeholder=placeholder)
+        else
+            input.form-line__field(type=inputtype+"" name=name+"" placeholder=placeholder+"")
+            div(class=""+((boxtype == "error")? "form-line__alert-box" : "form-line__alert-box state_ok"))=(boxtype == "error")? "Error" : "Thanks!"
