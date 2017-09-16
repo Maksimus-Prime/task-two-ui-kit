@@ -1,4 +1,4 @@
 mixin search(name,state)
     form.search-form
-        input.search-form__field(type="text" name=name + "" class=((state == "off")? "state_off " : "") + "search-field" placeholder="Search")
+        input.search-form__field(type="text" name=name + "" class=((state == "off")? "state_off " : "") + "search-field" placeholder=((state == "off")? "I've not found what I'm looking for ..." : "Search"))
         button.search-form__button(type="submit")
