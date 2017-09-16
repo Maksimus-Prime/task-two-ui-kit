@@ -55,7 +55,13 @@ module.exports = {
         }],
         noParse: /node_modules\/chart.js\/dist\/.js$/
     },
-
+    devServer: {
+    	contentBase: __dirname + "/public/",
+    	host: '192.168.1.7',
+    	port: 2992,
+    	disableHostCheck: true,
+    	inline: false
+    },
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery/dist/jquery.js",
