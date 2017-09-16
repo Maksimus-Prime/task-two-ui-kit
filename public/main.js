@@ -60,11 +60,11 @@
 	__webpack_require__(23);
 	__webpack_require__(24);
 	var modules = requireAll(__webpack_require__(25));
-	__webpack_require__(83);
+	__webpack_require__(81);
 
-	__webpack_require__(89);
-	__webpack_require__(67);
-	__webpack_require__(68);
+	__webpack_require__(87);
+	__webpack_require__(65);
+	__webpack_require__(66);
 
 /***/ },
 /* 1 */
@@ -12802,29 +12802,28 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./alert-box/alert-box.js": 26,
-		"./arrow-button/arrow-button.js": 28,
-		"./button/button.js": 30,
-		"./calendar/calendar.js": 32,
-		"./circle-progress-bar-b/circle-progress-bar-b.js": 37,
-		"./circle-progress-bar/circle-progress-bar.js": 39,
-		"./drop-down/drop-down.js": 41,
-		"./event/event.js": 43,
-		"./form-element/form-element.js": 45,
-		"./form/form.js": 47,
-		"./info-block/info-block.js": 49,
-		"./map-block/map-block.js": 51,
-		"./messaging/messaging.js": 53,
-		"./news/news.js": 55,
-		"./photo-block/photo-block.js": 57,
-		"./search/search.js": 59,
-		"./slider-a/slider-a.js": 61,
-		"./slider-b/slider-b.js": 69,
-		"./stages/stages.js": 71,
-		"./tick-box/tick-box.js": 75,
-		"./toggles/toggles.js": 77,
-		"./user-info-block/user-info-block.js": 79,
-		"./youtube-video/youtube-video.js": 81
+		"./arrow-button/arrow-button.js": 26,
+		"./button/button.js": 28,
+		"./calendar/calendar.js": 30,
+		"./circle-progress-bar-b/circle-progress-bar-b.js": 35,
+		"./circle-progress-bar/circle-progress-bar.js": 37,
+		"./drop-down/drop-down.js": 39,
+		"./event/event.js": 41,
+		"./form-line/form-line.js": 43,
+		"./info-block/info-block.js": 45,
+		"./map-block/map-block.js": 47,
+		"./message-form/message-form.js": 49,
+		"./messaging/messaging.js": 51,
+		"./news/news.js": 53,
+		"./photo-block/photo-block.js": 55,
+		"./search/search.js": 57,
+		"./slider-a/slider-a.js": 59,
+		"./slider-b/slider-b.js": 67,
+		"./stages/stages.js": 69,
+		"./tick-box/tick-box.js": 73,
+		"./toggles/toggles.js": 75,
+		"./user-info-block/user-info-block.js": 77,
+		"./youtube-video/youtube-video.js": 79
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12858,23 +12857,9 @@
 /* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	__webpack_require__(29);
-
-/***/ },
-/* 29 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	__webpack_require__(31);
+	__webpack_require__(29);
 
 	$(".button").each(function (i) {
 	    $(this).click(function (e) {
@@ -12899,55 +12884,55 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 31 */
+/* 29 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 32 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(33);
+	__webpack_require__(31);
 
-	__webpack_require__(35);
+	__webpack_require__(33);
 
 	__webpack_require__(17);
 	__webpack_require__(18);
 
-	__webpack_require__(36);
+	__webpack_require__(34);
 
 	$('.calendar__header').each(function (i) {
-		var currentDay = $.datepicker.formatDate('d', new Date());
-		var headerBlock = $(this).html(currentDay);
+	    var currentDay = $.datepicker.formatDate('d', new Date());
+	    var headerBlock = $(this).html(currentDay);
 	});
 	$('.calendar__bottom').each(function (i) {
-		var currentDay = $.datepicker.formatDate('d', new Date());
-		var bottomBlock = $(this).html('Today');
+	    var currentDay = $.datepicker.formatDate('d', new Date());
+	    var bottomBlock = $(this).html('Today');
 	});
 	$('.calendar__datepicker').each(function (i) {
-		var currentDay = $.datepicker.formatDate('d', new Date());
-		$(this).datepicker({
-			showOtherMonths: true,
-			firstDay: 1,
-			dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
-			dateFormat: 'd',
-			onSelect: function onSelect(selectedDate) {
-				var headerBlock = $('.calendar__header').html(selectedDate);
-				if (currentDay == selectedDate) {
-					var bottomBlock = $('.calendar__bottom').html('Today');
-				} else {
-					var bottomBlock = $('.calendar__bottom').html('Another day');
-				}
-			}
-		});
+	    var currentDay = $.datepicker.formatDate('d', new Date());
+	    $(this).datepicker({
+	        showOtherMonths: true,
+	        firstDay: 1,
+	        dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
+	        dateFormat: 'd',
+	        onSelect: function onSelect(selectedDate) {
+	            var headerBlock = $('.calendar__header').html(selectedDate);
+	            if (currentDay == selectedDate) {
+	                var bottomBlock = $('.calendar__bottom').html('Today');
+	            } else {
+	                var bottomBlock = $('.calendar__bottom').html('Another day');
+	            }
+	        }
+	    });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 33 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
@@ -12977,7 +12962,7 @@
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
 				__webpack_require__(19),
-				__webpack_require__(34)
+				__webpack_require__(32)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -15073,7 +15058,7 @@
 
 
 /***/ },
-/* 34 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15124,29 +15109,29 @@
 
 
 /***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 35 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(38);
+	__webpack_require__(36);
 	__webpack_require__(17);
 	Chart.defaults.global.legend.display = false;
 	$('.circle-progress-bar-b__value').each(function (i) {
 	    var elements = $(this).data('chart-items');
-
+	    console.log(elements);
 	    var ctx = $(this)[0];
 	    var myDoughnutChart = new Chart(ctx, {
 	        type: 'doughnut',
@@ -15174,18 +15159,18 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 38 */
+/* 36 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 39 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(40);
+	__webpack_require__(38);
 	__webpack_require__(17);
 
 	$(document).ready(function () {
@@ -15211,6 +15196,28 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+
+	__webpack_require__(17);
+	__webpack_require__(40);
+
+	$('.drop-down__select').each(function (i) {
+	    $(this).select2({
+	        placeholder: "Choose An Option"
+	    }).addClass('stylee');
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+
+/***/ },
 /* 40 */
 /***/ function(module, exports) {
 
@@ -15220,17 +15227,9 @@
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+	"use strict";
 
-	__webpack_require__(17);
 	__webpack_require__(42);
-
-	$('.drop-down-main').each(function (i) {
-		$(this).select2({
-			placeholder: "Choose An Option"
-		}).addClass('stylee');
-	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
 /* 42 */
@@ -15270,9 +15269,32 @@
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
 	__webpack_require__(48);
+
+	$('.map').each(function (i) {
+	    var _self = $(this),
+	        lat = $(this).data("lat"),
+	        lng = $(this).data("lng"),
+	        zoom = $(this).data("zoom"),
+	        icon = $(this).data("icon");
+	    function initMap() {
+	        var location = { lat: lat, lng: lng };
+	        var map = new google.maps.Map(_self[0], {
+	            zoom: zoom,
+	            center: location
+	        });
+	        var marker = new google.maps.Marker({
+	            map: map,
+	            position: location,
+	            icon: icon
+	        });
+	    }
+
+	    window.initMap = initMap;
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
 /* 48 */
@@ -15298,32 +15320,9 @@
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+	"use strict";
 
 	__webpack_require__(52);
-
-	$('.map').each(function (i) {
-		var _self = $(this),
-		    lat = $(this).data("lat"),
-		    lng = $(this).data("lng"),
-		    zoom = $(this).data("zoom"),
-		    icon = $(this).data("icon");
-		function initMap() {
-			var location = { lat: lat, lng: lng };
-			var map = new google.maps.Map(_self[0], {
-				zoom: zoom,
-				center: location
-			});
-			var marker = new google.maps.Marker({
-				map: map,
-				position: location,
-				icon: icon
-			});
-		}
-
-		window.initMap = initMap;
-	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
 /* 52 */
@@ -15377,32 +15376,18 @@
 /* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(60);
 
-/***/ },
-/* 60 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	__webpack_require__(62);
-
-	__webpack_require__(65);
+	__webpack_require__(63);
 
 	__webpack_require__(17);
 	__webpack_require__(18);
 
+	__webpack_require__(64);
+	__webpack_require__(65);
 	__webpack_require__(66);
-	__webpack_require__(67);
-	__webpack_require__(68);
 
 	$('.slider-a').each(function (i) {
 	    var currenSlider = $(this)[0];
@@ -15415,7 +15400,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 62 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15442,8 +15427,8 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
-				__webpack_require__(63),
-				__webpack_require__(34),
+				__webpack_require__(61),
+				__webpack_require__(32),
 				__webpack_require__(19),
 				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -16173,7 +16158,7 @@
 
 
 /***/ },
-/* 63 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16196,7 +16181,7 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
-				__webpack_require__(64),
+				__webpack_require__(62),
 				__webpack_require__(19),
 				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -16405,7 +16390,7 @@
 
 
 /***/ },
-/* 64 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -16426,19 +16411,19 @@
 
 
 /***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 64 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 65 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 66 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {"use strict";
@@ -17099,26 +17084,26 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 68 */
+/* 66 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 69 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	__webpack_require__(62);
+	__webpack_require__(60);
 
-	__webpack_require__(65);
+	__webpack_require__(63);
 
 	__webpack_require__(17);
-	__webpack_require__(70);
-
-	__webpack_require__(67);
 	__webpack_require__(68);
+
+	__webpack_require__(65);
+	__webpack_require__(66);
 
 	$('.slider-b').each(function (i) {
 	    var currentSlider = $(this)[0];
@@ -17135,23 +17120,23 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 70 */
+/* 68 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 71 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(17);
 	__webpack_require__(18);
-	__webpack_require__(72);
-	__webpack_require__(73);
+	__webpack_require__(70);
+	__webpack_require__(71);
 
-	__webpack_require__(74);
+	__webpack_require__(72);
 	$(document).ready(function () {
 	    $('.stages').each(function (i) {
 	        var stageSteps = $(this).data("steps"),
@@ -17176,7 +17161,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 72 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {'use strict';
@@ -17220,10 +17205,24 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 73 */
+/* 71 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 72 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 73 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(74);
 
 /***/ },
 /* 74 */
@@ -17263,9 +17262,24 @@
 /* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(80);
+	__webpack_require__(20);
+	var YouTubeIframeLoader = __webpack_require__(20);
+
+	$('.youtube-video').each(function (i) {
+	    var _self = $(this),
+	        videoId = $(this).data('videoid');
+	    YouTubeIframeLoader.load(function (YT) {
+	        new YT.Player(_self[0], {
+	            width: "100%",
+	            height: "100%",
+	            videoId: videoId
+	        });
+	    });
+	});
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
 /* 80 */
@@ -17277,42 +17291,12 @@
 /* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	__webpack_require__(82);
-	__webpack_require__(20);
-	var YouTubeIframeLoader = __webpack_require__(20);
-
-	$('.youtube-video').each(function (i) {
-		var _self = $(this),
-		    // возвращает массив с одним элементом
-		videoId = $(this).data('videoid');
-		YouTubeIframeLoader.load(function (YT) {
-			new YT.Player(_self[0], {
-				width: "100%",
-				height: "100%",
-				videoId: videoId
-			});
-		});
-	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
-
-/***/ },
-/* 82 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 83 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var map = {
-		"./Awesome/font-awesome.css": 84,
-		"./Lato/Lato-Black/fonts.css": 85,
-		"./Lato/Lato-Bold/fonts.css": 86,
-		"./Lato/Lato-Light/fonts.css": 87,
-		"./Lato/Lato-Regular/fonts.css": 88
+		"./Awesome/font-awesome.css": 82,
+		"./Lato/Lato-Black/fonts.css": 83,
+		"./Lato/Lato-Bold/fonts.css": 84,
+		"./Lato/Lato-Light/fonts.css": 85,
+		"./Lato/Lato-Regular/fonts.css": 86
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17325,8 +17309,20 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 83;
+	webpackContext.id = 81;
 
+
+/***/ },
+/* 82 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 83 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 84 */
@@ -17348,18 +17344,6 @@
 
 /***/ },
 /* 87 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 88 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 89 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
