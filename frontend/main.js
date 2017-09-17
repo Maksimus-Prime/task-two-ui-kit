@@ -8,7 +8,7 @@ var YouTubeIframeLoader = require('youtube-iframe');
 require("./style.less");
 require("./vendor/select2.min.js");
 require("../node_modules/chart.js/dist/Chart.bundle.min.js");
-require("./vendor/jquery.circliful.js");
+require("./vendor/jquery.knob.min.js");
 var modules = requireAll(require.context("./../blocks", true, /^\.\/.*\.js$/));
 require.context("./fonts",true,/\.css$/);
 import './favicons/favicons';
