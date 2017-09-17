@@ -1,16 +1,16 @@
 mixin messaging(name,photo)
-	.messaging
-		include ../button/button.pug
-		include ../photo-block/photo-block.pug
-		.messaging-header
-			button.messaging-header__chat-icon(type="button" name="chat")
-				img(src="img/chat-iconn.png")
-			button.messaging-header__camera-icon(type="button" name="camera")
-				img(src="img/camera-iconn.png")
-			.messaging-header__name=name
-			+photo-block(photo)
-		.messaging-block
-			.messaging-block__from="Hey! So are we cool to meet at the art gallery? Say 8pm"
-			.messaging-block__to="Yeah that sounds great. See you then."
-			.messaging-block__button
-				+button("Reply","button","#","default","green")
+    section.messaging
+        include ../button/button.pug
+        include ../photo-block/photo-block.pug
+        .messaging-header
+            button.messaging-header__chat-icon(type="button" name="chat")
+                img(src="img/chat-iconn.png" alt="chat icon")
+            button.messaging-header__camera-icon(type="button" name="camera")
+                img(src="img/camera-iconn.png" alt="camera icon")
+            .messaging-header__name=name
+            +photo-block(photo)
+        .messaging-block
+            .messaging-block__from="Hey! So are we cool to meet at the art gallery? Say 8pm"
+            .messaging-block__to="Yeah that sounds great. See you then."
+            .messaging-block__button
+                +button("Reply","button","#","default","green")

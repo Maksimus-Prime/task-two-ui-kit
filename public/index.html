@@ -32,10 +32,18 @@
       </div>
       <div class="layout-circle-progress-bars">
         <h3 class="layout__title">Percentages / Pie chart</h3>
-            <div class="circle-progress-bar" data-value="0"></div>
-            <div class="circle-progress-bar" data-value="38"></div>
-            <div class="circle-progress-bar" data-value="62"></div>
-            <div class="circle-progress-bar" data-value="89"></div>
+            <div class="circle-progress-bar">
+              <input class="circle-progress-bar__input" type="text" value="0">
+            </div>
+            <div class="circle-progress-bar">
+              <input class="circle-progress-bar__input" type="text" value="38">
+            </div>
+            <div class="circle-progress-bar">
+              <input class="circle-progress-bar__input" type="text" value="62">
+            </div>
+            <div class="circle-progress-bar">
+              <input class="circle-progress-bar__input" type="text" value="100">
+            </div>
             <div class="circle-progress-bar-b">
               <canvas class="circle-progress-bar-b__value" data-chart-items="[object Object]"></canvas>
             </div>
@@ -119,20 +127,20 @@
           </div>
           <div class="layout-search-drop-user-profile-container__right-block">
             <h3 class="layout__title">User profile</h3>
-                <div class="user-info-block clearfix">
+                <section class="user-info-block clearfix">
                         <div class="photo-block"><img src="img/photo1.png" alt="photo-block"></div>
                         <div class="info-block">
                           <h3 class="info-block__title">John Smith</h3><span class="info-block__subtitle">Ux designer</span>
                           <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
                         </div>
-                </div>
-                <div class="user-info-block clearfix">
+                </section>
+                <section class="user-info-block clearfix">
                         <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
                         <div class="theme_green info-block">
                           <h3 class="info-block__title">Sarah Brown</h3><span class="info-block__subtitle">Developer</span>
                           <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
                         </div>
-                </div>
+                </section>
           </div>
         </div>
       </div>
@@ -166,10 +174,10 @@
         <h3 class="layout__title">Location</h3>
             <div class="map-block">
               <div class="map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
-              <div class="map-block-description">
-                <h1>Meet us!</h1>
-                <p>1259 California st San Francisco, CA</p>
-                <div class="map-block-description__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              <div class="map-block-info">
+                <h3 class="map-block-info__title">Meet us!</h3>
+                <p class="map-block-info__description">1259 California st San Francisco, CA</p>
+                <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
               </div>
             </div>
       </div>
@@ -184,10 +192,10 @@
                 </section>
           </div>
           <div class="layout-calendar-and-messaging-container__right-block">
-                <div class="messaging">
+                <section class="messaging">
                   <div class="messaging-header">
-                    <button class="messaging-header__chat-icon" type="button" name="chat"><img src="img/chat-iconn.png"></button>
-                    <button class="messaging-header__camera-icon" type="button" name="camera"><img src="img/camera-iconn.png"></button>
+                    <button class="messaging-header__chat-icon" type="button" name="chat"><img src="img/chat-iconn.png" alt="chat icon"></button>
+                    <button class="messaging-header__camera-icon" type="button" name="camera"><img src="img/camera-iconn.png" alt="camera icon"></button>
                     <div class="messaging-header__name">Sarah Brown</div>
                           <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
                   </div>
@@ -198,7 +206,7 @@
                             <button class="button theme_green" type="button">Reply</button>
                     </div>
                   </div>
-                </div>
+                </section>
           </div>
         </div>
       </div>

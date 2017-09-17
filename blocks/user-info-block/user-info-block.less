@@ -1,49 +1,44 @@
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 .user-info-block {
-	width: 100%;
-	//width: 91%; Так было раньше
-	//padding-left: 6%;
+    width: 100%;
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        padding: 0;
+    }
 }
 .photo-block {
-	float: left;
+    float: left;
+    @media screen and (max-width: 1033px) {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 720px) {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 }
 .info-block {
-	float: right;
-	width: 60.85%;
-}
-@media screen and (max-width: 1033px) {
-	.photo-block {
-		float: none;
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 20px;
-	}
-	.info-block {
-		float: none;
-		display: block;
-		margin: 0 auto;
-		width: 89%;
-	}	
-}
-@media screen and (max-width: 720px) {
-	.user-info-block {
-		width: 100%;
-		padding: 0;
-	}
-	.photo-block {
-		float: none;
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 20px;
-	}
-	.info-block {
-		float: none;
-		display: block;
-		margin: 0 auto;
-		width: 89%;
-	}	
+    float: right;
+    width: 60.85%;
+    margin-top: 3px;
+    @media screen and (max-width: 1033px) {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 89%;     
+    }
+    @media screen and (max-width: 720px) {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 89%;
+    }
 }
