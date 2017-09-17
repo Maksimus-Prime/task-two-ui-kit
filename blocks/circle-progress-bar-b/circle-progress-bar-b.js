@@ -1,8 +1,8 @@
 require('./circle-progress-bar-b.less');
 require("jquery");
 Chart.defaults.global.legend.display = false;
-//Chart.defaults.global.tooltips.enabled = false;
 $('.circle-progress-bar-b__value').each(function(i){
+    var elements = $(this).data('chart-items');
     var ctx = $(this)[0];
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
@@ -18,14 +18,12 @@ $('.circle-progress-bar-b__value').each(function(i){
                     "#e5e5e5"
                 ],
                 borderWidth: 0
-
             }],
         options: {
             elements: {
                 arc: {
                     borderColor: "#eee",
                     borderWidth: 2
-
                 },
                 line: {
                     backgroundColor: "#000"
@@ -35,4 +33,3 @@ $('.circle-progress-bar-b__value').each(function(i){
         }
     });
 });
-
