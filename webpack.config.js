@@ -2,6 +2,7 @@
 const webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var path = require('path');
 
 const testFolder = './frontend/pages';
 const fs = require('fs');
@@ -47,10 +48,16 @@ module.exports = {
             test: /\.(css|less)$/,
             loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
         }, {
-            test: /\.(jpe?g|png|gif)$/,
+            test: /\.(jpe?g|png|svg|gif)$/,
+            exclude: [
+                path.resolve(__dirname, "frontend/fonts/")
+            ],
             loader: "file-loader?name=img/[name].[ext]"
         }, {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+            include: [
+                path.resolve(__dirname, "frontend/fonts/")
+            ],
             loader: "file-loader?name=fonts/[name].[ext]"
         }],
         noParse: /node_modules\/chart.js\/dist\/.js$/
