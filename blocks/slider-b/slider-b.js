@@ -5,7 +5,7 @@ import "jquery-ui/themes/base/slider.css"
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 
-$('.slider-b').each(function(i){
+$('.js-slider-b').each(function(i){
     var currentSlider = $(this)[0];
     $(currentSlider).slider({
         min: $(currentSlider).data("min"),

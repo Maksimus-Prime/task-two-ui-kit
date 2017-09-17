@@ -20,8 +20,8 @@
     <div class="layout">
       <div class="layout-buttons">
         <h3 class="layout__title">Standard Buttons</h3><a class="button size_small theme_green" href="/mock-address/change-me" rel="noopener noreferrer">Button</a>
-            <button class="button theme_green" type="button">Button</button><a class="button" href="/mock-address/change-me" rel="noopener noreferrer">Button</a>
-            <button class="button size_small" type="button">Button</button>
+            <button class="button js-button theme_green" type="button">Button</button><a class="button" href="/mock-address/change-me" rel="noopener noreferrer">Button</a>
+            <button class="button js-button size_small" type="button">Button</button>
       </div>
       <div class="layout-arrow-buttons">
         <h3 class="layout__title">Arrow Buttons</h3>
@@ -33,29 +33,29 @@
       <div class="layout-circle-progress-bars">
         <h3 class="layout__title">Percentages / Pie chart</h3>
             <div class="circle-progress-bar">
-              <input class="circle-progress-bar__input" type="text" value="0">
+              <input class="circle-progress-bar__input js-circle-progress-bar__input" type="text" value="0">
             </div>
             <div class="circle-progress-bar">
-              <input class="circle-progress-bar__input" type="text" value="38">
+              <input class="circle-progress-bar__input js-circle-progress-bar__input" type="text" value="38">
             </div>
             <div class="circle-progress-bar">
-              <input class="circle-progress-bar__input" type="text" value="62">
+              <input class="circle-progress-bar__input js-circle-progress-bar__input" type="text" value="62">
             </div>
             <div class="circle-progress-bar">
-              <input class="circle-progress-bar__input" type="text" value="89">
+              <input class="circle-progress-bar__input js-circle-progress-bar__input" type="text" value="89">
             </div>
             <div class="circle-progress-bar-b">
-              <canvas class="circle-progress-bar-b__value" data-chart-items="[object Object]"></canvas>
+              <canvas class="circle-progress-bar-b__value js-circle-progress-bar-b__value" data-chart-items="[object Object]"></canvas>
             </div>
       </div>
       <div class="layout-sliders">
         <h3 class="layout__title">Sliders</h3>
-            <div class="slider-a" data-min="0" data-max="100" data-step="1"></div>
-            <div class="slider-b" data-min="0" data-max="100" data-step="25"></div>
+            <div class="slider-a js-slider-a" data-min="0" data-max="100" data-step="1"></div>
+            <div class="slider-b js-slider-b" data-min="0" data-max="100" data-step="25"></div>
       </div>
       <div class="layout-stages">
         <h3 class="layout__title">Stages</h3>
-            <div class="stages" data-steps="5" data-current="3"></div>
+            <div class="stages js-stages" data-steps="5" data-current="3"></div>
       </div>
       <div class="layout-form-elements">
         <h3 class="layout__title">Form elements</h3>
@@ -74,7 +74,7 @@
                           <textarea class="form-line__textarea" type="textarea" name="message" placeholder="Your Message"></textarea>
                         </div>
                   <div class="message-form__submit">
-                          <button class="button theme_green" type="submit">submit</button>
+                          <button class="button js-button theme_green" type="submit">submit</button>
                   </div>
                 </form>
           </div>
@@ -113,7 +113,7 @@
                   <button class="search-form__button" type="submit"></button>
                 </form>
                 <div class="drop-down">
-                  <select class="drop-down__select" name="dropdown">
+                  <select class="drop-down__select js-drop-down__select" name="dropdown">
                     <option></option>
                     <option value="1"><a href="event.html">Apple Festival 2017</a></option>
                     <option value="2"><a href="event.html">Fish festival 2017</a></option>
@@ -131,14 +131,14 @@
                         <div class="photo-block"><img src="img/photo1.png" alt="photo-block"></div>
                         <div class="info-block">
                           <h3 class="info-block__title">John Smith</h3><span class="info-block__subtitle">Ux designer</span>
-                          <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                          <div class="info-block__social"><a href="/mock-address/change-me"><i class="fa fa-facebook"></i></a><a href="/mock-address/change-me"><i class="fa fa-twitter"></i></a><a href="/mock-address/change-me"><i class="fa fa-dribbble"></i></a></div>
                         </div>
                 </section>
                 <section class="user-info-block clearfix">
-                        <div class="photo-block"><img src="img/photo2.png" alt="photo-block"></div>
+                        <div class="photo-block"><a href="/mock-address/change-me"><img src="img/photo2.png" alt="photo-block"></a></div>
                         <div class="theme_green info-block">
                           <h3 class="info-block__title">Sarah Brown</h3><span class="info-block__subtitle">Developer</span>
-                          <div class="info-block__social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                          <div class="info-block__social"><a href="/mock-address/change-me"><i class="fa fa-facebook"></i></a><a href="/mock-address/change-me"><i class="fa fa-twitter"></i></a><a href="/mock-address/change-me"><i class="fa fa-dribbble"></i></a></div>
                         </div>
                 </section>
           </div>
@@ -163,7 +163,7 @@
                     <h4 class="event-right-half__title">This is the title</h4>
                     <p class="event-right-half__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div>
-                          <button class="button size_small theme_event" type="button">Add to calendar</button>
+                          <button class="button js-button size_small theme_event" type="button">Add to calendar</button>
                     </div>
                   </div>
                 </section>
@@ -173,7 +173,7 @@
       <div class="layout-location">
         <h3 class="layout__title">Location</h3>
             <div class="map-block">
-              <div class="map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
+              <div class="map js-map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
               <div class="map-block-info">
                 <h3 class="map-block-info__title">Meet us!</h3>
                 <p class="map-block-info__description">1259 California st San Francisco, CA</p>
@@ -186,9 +186,9 @@
         <div class="layout-calendar-and-messaging-container clearfix">
           <div class="layout-calendar-and-messaging-container__left-block">
                 <section class="calendar">
-                  <div class="calendar__header"></div>
-                  <div class="calendar__datepicker"></div>
-                  <div class="calendar__bottom"></div>
+                  <div class="calendar__header js-calendar__header"></div>
+                  <div class="calendar__datepicker js-calendar__datepicker"></div>
+                  <div class="calendar__bottom js-calendar__bottom"></div>
                 </section>
           </div>
           <div class="layout-calendar-and-messaging-container__right-block">
@@ -203,7 +203,7 @@
                     <div class="messaging-block__from">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
                     <div class="messaging-block__to">Yeah that sounds great. See you then.</div>
                     <div class="messaging-block__button">
-                            <button class="button theme_green" type="button">Reply</button>
+                            <button class="button js-button theme_green" type="button">Reply</button>
                     </div>
                   </div>
                 </section>
@@ -212,7 +212,7 @@
       </div>
       <div class="layout-video">
         <h3 class="layout__title">Video</h3>
-            <div class="youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
+            <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

@@ -4,7 +4,7 @@ require('youtube-iframe');
 var YouTubeIframeLoader = require('youtube-iframe');
 
 
-$('.youtube-video').each(function(i){
+$('.js-youtube-video').each(function(i){
     var _self = $(this),
         videoId = $(this).data('videoid');
     YouTubeIframeLoader.load(function(YT) {

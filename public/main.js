@@ -12691,7 +12691,7 @@
 
 	__webpack_require__(29);
 
-	$(".button").each(function (i) {
+	$(".js-button").each(function (i) {
 	    $(this).click(function (e) {
 	        var ripple = $(this);
 	        if (ripple.find(".effect").length == 0) {
@@ -12734,15 +12734,15 @@
 
 	__webpack_require__(34);
 
-	$('.calendar__header').each(function (i) {
+	$('.js-calendar__header').each(function (i) {
 	    var currentDay = $.datepicker.formatDate('d', new Date());
 	    var headerBlock = $(this).html(currentDay);
 	});
-	$('.calendar__bottom').each(function (i) {
+	$('.js-calendar__bottom').each(function (i) {
 	    var currentDay = $.datepicker.formatDate('d', new Date());
 	    var bottomBlock = $(this).html('Today');
 	});
-	$('.calendar__datepicker').each(function (i) {
+	$('.js-calendar__datepicker').each(function (i) {
 	    var currentDay = $.datepicker.formatDate('d', new Date());
 	    $(this).datepicker({
 	        showOtherMonths: true,
@@ -12750,11 +12750,11 @@
 	        dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
 	        dateFormat: 'd',
 	        onSelect: function onSelect(selectedDate) {
-	            var headerBlock = $('.calendar__header').html(selectedDate);
+	            var headerBlock = $('.js-calendar__header').html(selectedDate);
 	            if (currentDay == selectedDate) {
-	                var bottomBlock = $('.calendar__bottom').html('Today');
+	                var bottomBlock = $('.js-calendar__bottom').html('Today');
 	            } else {
-	                var bottomBlock = $('.calendar__bottom').html('Another day');
+	                var bottomBlock = $('.js-calendar__bottom').html('Another day');
 	            }
 	        }
 	    });
@@ -14958,8 +14958,9 @@
 
 	__webpack_require__(36);
 	__webpack_require__(17);
+
 	Chart.defaults.global.legend.display = false;
-	$('.circle-progress-bar-b__value').each(function (i) {
+	$('.js-circle-progress-bar-b__value').each(function (i) {
 	    var elements = $(this).data('chart-items');
 	    var ctx = $(this)[0];
 	    var myDoughnutChart = new Chart(ctx, {
@@ -15003,7 +15004,7 @@
 	__webpack_require__(17);
 
 	$(document).ready(function () {
-	    $('.circle-progress-bar__input').each(function (i) {
+	    $('.js-circle-progress-bar__input').each(function (i) {
 	        $(this).knob({
 	            "thickness": ".1",
 	            "bgColor": "#fff",
@@ -15032,7 +15033,7 @@
 	__webpack_require__(17);
 	__webpack_require__(40);
 
-	$('.drop-down__select').each(function (i) {
+	$('.js-drop-down__select').each(function (i) {
 	    $(this).select2({
 	        placeholder: "Choose An Option"
 	    }).addClass('stylee');
@@ -15103,7 +15104,7 @@
 	__webpack_require__(49);
 	__webpack_require__(50);
 
-	$('.map').each(function (i) {
+	$('.js-map').each(function (i) {
 	    var _self = $(this),
 	        lat = $(this).data("lat"),
 	        lng = $(this).data("lng"),
@@ -15253,7 +15254,7 @@
 	__webpack_require__(71);
 	__webpack_require__(72);
 
-	$('.slider-a').each(function (i) {
+	$('.js-slider-a').each(function (i) {
 	    var currenSlider = $(this)[0];
 	    $(currenSlider).slider({
 	        min: $(currenSlider).data("min"),
@@ -16969,7 +16970,7 @@
 	__webpack_require__(71);
 	__webpack_require__(72);
 
-	$('.slider-b').each(function (i) {
+	$('.js-slider-b').each(function (i) {
 	    var currentSlider = $(this)[0];
 	    $(currentSlider).slider({
 	        min: $(currentSlider).data("min"),
@@ -17002,7 +17003,7 @@
 
 	__webpack_require__(78);
 	$(document).ready(function () {
-	    $('.stages').each(function (i) {
+	    $('.js-stages').each(function (i) {
 	        var stageSteps = $(this).data("steps"),
 	            currentStep = $(this).data("current");
 	        var stepArr = [];
@@ -17147,7 +17148,7 @@
 	__webpack_require__(20);
 	var YouTubeIframeLoader = __webpack_require__(20);
 
-	$('.youtube-video').each(function (i) {
+	$('.js-youtube-video').each(function (i) {
 	    var _self = $(this),
 	        videoId = $(this).data('videoid');
 	    YouTubeIframeLoader.load(function (YT) {

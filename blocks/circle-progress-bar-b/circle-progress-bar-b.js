@@ -1,7 +1,8 @@
 require('./circle-progress-bar-b.less');
 require("jquery");
+
 Chart.defaults.global.legend.display = false;
-$('.circle-progress-bar-b__value').each(function(i){
+$('.js-circle-progress-bar-b__value').each(function(i){
     var elements = $(this).data('chart-items');
     var ctx = $(this)[0];
     var myDoughnutChart = new Chart(ctx, {
