@@ -1,10 +1,10 @@
 mixin photo-block(src,link)
-	-var src = src || "#";
-	-var link = link || "#";
-	if link !== "#"
-		.photo-block
-			a(href=link+"")
-				img(src=src+"" alt="photo-block")
-	else
-		.photo-block
-			img(src=src+"" alt="photo-block")
+    -var src = src || "#";
+    -var link = link || "#";
+    if link !== "#"
+        .photo-block
+            a(href=link+"")
+                img(src=src+"" alt="photo-block")
+    else
+        .photo-block
+            img(src=src+"" alt="photo-block")
