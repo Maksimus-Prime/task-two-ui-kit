@@ -1,114 +1,103 @@
 .info-block {
-	position: relative;
-	width: 100%;
-	padding-bottom: 4.9%;
-	font-family: 'Conv_Lato-Regular', sans-serif;
-	background: #e5e5e5;
-	border-radius: 0.9375rem;
-	text-align: center;
-
-	&::before {
-		content: "";
-		padding: 3%;
-		position: absolute;
-		top: 44%;
-		left: -2.2%;
-		transform: rotate(45deg);
-		border-radius: 4px 4px;
-
-		background-color: #e5e5e5;		
-	}
-
-	&__title {
-		margin: 0;
-		padding: 5% 0 0.55% 0;
-		font-family: 'Conv_Lato-Regular', sans-serif;
-		font-size: 2.0625rem;
-		font-weight: normal;
-		color: #e75735;
-	}
-
-	&__subtitle {
-		font-family: 'Conv_Lato-Black', sans-serif;
-		display: inline-block;
-		padding-bottom: 5%;
-		font-size: 1.25rem;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-
-	&__social {
-		font-size: 2.6875rem;
-
-		& a {
-			text-decoration: none;
-			color: #757575;
-			padding-left: 2%;
-			padding-right: 10.65%;
-
-			&:nth-of-type(1) {
-				padding-left: 0;
-			}
-
-			&:last-of-type {
-				padding-right: 0;
-			}
-
-			&:hover {
-				& i {
-					color: #e75735;
-				}
-			}
-		}		
-	}
-	
-	.theme_green & { 
-		background-color: #4eb7a8;
-		color: #fff;
-
-		&::before {
-			background-color: #4eb7a8;		
-		}
-
-		&__title {
-			color: #fff;	
-		}
-
-		&__subtitle {
-			color: #fff;
-		}
-
-		&__social {
-			& a {
-			color: #fff;
-				&:hover {
-					& i {
-						color: #e75735;
-					}
-				}
-			}
-		}
-	}
-
-	.theme_green& {
-		background-color: #4eb7a8;
-		
-		&::before {
-			background-color: #4eb7a8;		
-		}
-	}
-}
-@media screen and (max-width: 1033px) {
-	.info-block {
-		&::before {
-			content: "";
-			padding: 3%;
-			position: absolute;
-			top: -4.5%;
-			left: 47%;
-			transform: rotate(45deg);
-			border-radius: 2px 2px;
-			background-color: #e5e5e5;		
-		}
-	}	
+    position: relative;
+    width: 100%;
+    padding-bottom: 4.9%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #e5e5e5;
+    border-radius: 0.9375rem;
+    text-align: center;
+    &::before {
+        content: "";
+        padding: 3%;
+        position: absolute;
+        top: 44%;
+        left: -2.2%;
+        transform: rotate(45deg);
+        border-radius: 4px 4px;
+        background-color: #e5e5e5;
+    }
+    &__title {
+        margin: 0;
+        padding: 5% 0 0.55% 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.0625rem;
+        font-weight: normal;
+        color: #e75735;
+    }
+    &__subtitle {
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        font-style: bold;
+        display: inline-block;
+        letter-spacing: 1.5px;
+        padding-bottom: 5%;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+    &__social {
+        font-size: 2.6875rem;
+        & a {
+            text-decoration: none;
+            color: #757575;
+            padding-left: 2%;
+            padding-right: 10.65%;
+            &:nth-of-type(1) {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+            &:hover {
+                & i {
+                    color: #e75735;
+                }
+            }
+        }       
+    }
+    .theme_green & { 
+        background-color: #4eb7a8;
+        color: #fff;
+        &::before {
+            background-color: #4eb7a8;
+        }
+        &__title {
+            color: #fff;
+        }
+        &__subtitle {
+            color: #fff;
+        }
+        &__social {
+            & a {
+            color: #fff;
+                &:hover {
+                    & i {
+                        color: #e75735;
+                    }
+                }
+            }
+        }
+    }
+    .theme_green& {
+        background-color: #4eb7a8;
+        
+        &::before {
+            background-color: #4eb7a8;
+        }
+    }
+    @media screen and (max-width: 1033px) {
+        &::before {
+            content: "";
+            padding: 3%;
+            position: absolute;
+            top: -4.5%;
+            left: 47%;
+            transform: rotate(45deg);
+            border-radius: 2px 2px;
+            background-color: #e5e5e5;
+        }
+    }
 }
