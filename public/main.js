@@ -58,13 +58,13 @@
 	__webpack_require__(21);
 	__webpack_require__(22);
 	__webpack_require__(23);
-	__webpack_require__(24);
-	var modules = requireAll(__webpack_require__(25));
-	__webpack_require__(81);
+	__webpack_require__(97);
+	var modules = requireAll(__webpack_require__(26));
+	__webpack_require__(90);
 
-	__webpack_require__(87);
-	__webpack_require__(65);
-	__webpack_require__(66);
+	__webpack_require__(96);
+	__webpack_require__(72);
+	__webpack_require__(73);
 
 /***/ },
 /* 1 */
@@ -12423,407 +12423,34 @@
 	r.closePath(),r.stroke();else{var o=e(t);if(0===o)return;r.beginPath();var s=t.getPointPosition(0,i);r.moveTo(s.x,s.y);for(var l=1;l<o;l++)s=t.getPointPosition(l,i),r.lineTo(s.x,s.y);r.closePath(),r.stroke()}}function h(t){return f.isNumber(t)?t:0}var f=t.helpers,g=t.defaults.global,p={display:!0,animate:!0,position:"chartArea",angleLines:{display:!0,color:"rgba(0, 0, 0, 0.1)",lineWidth:1},gridLines:{circular:!1},ticks:{showLabelBackdrop:!0,backdropColor:"rgba(255,255,255,0.75)",backdropPaddingY:2,backdropPaddingX:2,callback:t.Ticks.formatters.linear},pointLabels:{display:!0,fontSize:10,callback:function(t){return t}}},m=t.LinearScaleBase.extend({setDimensions:function(){var t=this,e=t.options,n=e.ticks;t.width=t.maxWidth,t.height=t.maxHeight,t.xCenter=Math.round(t.width/2),t.yCenter=Math.round(t.height/2);var i=f.min([t.height,t.width]),a=f.getValueOrDefault(n.fontSize,g.defaultFontSize);t.drawingArea=e.display?i/2-(a/2+n.backdropPaddingY):i/2},determineDataLimits:function(){var t=this,e=t.chart,n=Number.POSITIVE_INFINITY,i=Number.NEGATIVE_INFINITY;f.each(e.data.datasets,function(a,r){if(e.isDatasetVisible(r)){var o=e.getDatasetMeta(r);f.each(a.data,function(e,a){var r=+t.getRightValue(e);isNaN(r)||o.data[a].hidden||(n=Math.min(r,n),i=Math.max(r,i))})}}),t.min=n===Number.POSITIVE_INFINITY?0:n,t.max=i===Number.NEGATIVE_INFINITY?0:i,t.handleTickRangeOptions()},getTickLimit:function(){var t=this.options.ticks,e=f.getValueOrDefault(t.fontSize,g.defaultFontSize);return Math.min(t.maxTicksLimit?t.maxTicksLimit:11,Math.ceil(this.drawingArea/(1.5*e)))},convertTicksToLabels:function(){var e=this;t.LinearScaleBase.prototype.convertTicksToLabels.call(e),e.pointLabels=e.chart.data.labels.map(e.options.pointLabels.callback,e)},getLabelForIndex:function(t,e){return+this.getRightValue(this.chart.data.datasets[e].data[t])},fit:function(){this.options.pointLabels.display?r(this):o(this)},setReductions:function(t,e,n){var i=this,a=e.l/Math.sin(n.l),r=Math.max(e.r-i.width,0)/Math.sin(n.r),o=-e.t/Math.cos(n.t),s=-Math.max(e.b-i.height,0)/Math.cos(n.b);a=h(a),r=h(r),o=h(o),s=h(s),i.drawingArea=Math.min(Math.round(t-(a+r)/2),Math.round(t-(o+s)/2)),i.setCenterPoint(a,r,o,s)},setCenterPoint:function(t,e,n,i){var a=this,r=a.width-e-a.drawingArea,o=t+a.drawingArea,s=n+a.drawingArea,l=a.height-i-a.drawingArea;a.xCenter=Math.round((o+r)/2+a.left),a.yCenter=Math.round((s+l)/2+a.top)},getIndexAngle:function(t){var n=2*Math.PI/e(this),i=this.chart.options&&this.chart.options.startAngle?this.chart.options.startAngle:0,a=i*Math.PI*2/360;return t*n+a},getDistanceFromCenterForValue:function(t){var e=this;if(null===t)return 0;var n=e.drawingArea/(e.max-e.min);return e.options.reverse?(e.max-t)*n:(t-e.min)*n},getPointPosition:function(t,e){var n=this,i=n.getIndexAngle(t)-Math.PI/2;return{x:Math.round(Math.cos(i)*e)+n.xCenter,y:Math.round(Math.sin(i)*e)+n.yCenter}},getPointPositionForValue:function(t,e){return this.getPointPosition(t,this.getDistanceFromCenterForValue(e))},getBasePosition:function(){var t=this,e=t.min,n=t.max;return t.getPointPositionForValue(0,t.beginAtZero?0:e<0&&n<0?n:e>0&&n>0?e:0)},draw:function(){var t=this,e=t.options,n=e.gridLines,i=e.ticks,a=f.getValueOrDefault;if(e.display){var r=t.ctx,o=a(i.fontSize,g.defaultFontSize),s=a(i.fontStyle,g.defaultFontStyle),l=a(i.fontFamily,g.defaultFontFamily),u=f.fontString(o,s,l);f.each(t.ticks,function(s,l){if(l>0||e.reverse){var d=t.getDistanceFromCenterForValue(t.ticksAsNumbers[l]),h=t.yCenter-d;if(n.display&&0!==l&&c(t,n,d,l),i.display){var f=a(i.fontColor,g.defaultFontColor);if(r.font=u,i.showLabelBackdrop){var p=r.measureText(s).width;r.fillStyle=i.backdropColor,r.fillRect(t.xCenter-p/2-i.backdropPaddingX,h-o/2-i.backdropPaddingY,p+2*i.backdropPaddingX,o+2*i.backdropPaddingY)}r.textAlign="center",r.textBaseline="middle",r.fillStyle=f,r.fillText(s,t.xCenter,h)}}}),(e.angleLines.display||e.pointLabels.display)&&d(t)}}});t.scaleService.registerScaleType("radialLinear",m,p)}},{}],49:[function(t,e,n){"use strict";var i=t(6);i="function"==typeof i?i:window.moment,e.exports=function(t){function e(t,e){var n=t.options.time;if("string"==typeof n.parser)return i(e,n.parser);if("function"==typeof n.parser)return n.parser(e);if("function"==typeof e.getMonth||"number"==typeof e)return i(e);if(e.isValid&&e.isValid())return e;var a=n.format;return"string"!=typeof a&&a.call?(console.warn("options.time.format is deprecated and replaced by options.time.parser."),a(e)):i(e,a)}function n(t,e,n,i){for(var a,r=Object.keys(s),o=r.length,l=r.indexOf(t);l<o;l++){a=r[l];var u=s[a],d=u.steps&&u.steps[u.steps.length-1]||u.maxStep;if(void 0===d||Math.ceil((n-e)/(d*u.size))<=i)break}return a}function a(t,e,n,i){var a=s[n],r=a.size,o=Math.ceil((e-t)/r),l=1,u=e-t;if(a.steps)for(var d=a.steps.length,c=0;c<d&&o>i;c++)l=a.steps[c],o=Math.ceil(u/(r*l));else for(;o>i&&i>0;)++l,o=Math.ceil(u/(r*l));return l}function r(t,e,n){var a=[];if(t.maxTicks){var r=t.stepSize;a.push(void 0!==t.min?t.min:n.min);for(var o=i(n.min);o.add(r,t.unit).valueOf()<n.max;)a.push(o.valueOf());var s=t.max||n.max;a[a.length-1]!==s&&a.push(s)}return a}var o=t.helpers,s={millisecond:{size:1,steps:[1,2,5,10,20,50,100,250,500]},second:{size:1e3,steps:[1,2,5,10,30]},minute:{size:6e4,steps:[1,2,5,10,30]},hour:{size:36e5,steps:[1,2,3,6,12]},day:{size:864e5,steps:[1,2,5]},week:{size:6048e5,maxStep:4},month:{size:2628e6,maxStep:3},quarter:{size:7884e6,maxStep:4},year:{size:3154e7,maxStep:!1}},l={position:"bottom",time:{parser:!1,format:!1,unit:!1,round:!1,displayFormat:!1,isoWeekday:!1,minUnit:"millisecond",displayFormats:{millisecond:"h:mm:ss.SSS a",second:"h:mm:ss a",minute:"h:mm:ss a",hour:"MMM D, hA",day:"ll",week:"ll",month:"MMM YYYY",quarter:"[Q]Q - YYYY",year:"YYYY"}},ticks:{autoSkip:!1}};t.Ticks.generators.time=function(t,e){var n,a,o=t.isoWeekday;return"week"===t.unit&&o!==!1?(n=i(e.min).startOf("isoWeek").isoWeekday(o).valueOf(),a=i(e.max).startOf("isoWeek").isoWeekday(o),e.max-a>0&&a.add(1,"week"),a=a.valueOf()):(n=i(e.min).startOf(t.unit).valueOf(),a=i(e.max).startOf(t.unit),e.max-a>0&&a.add(1,t.unit),a=a.valueOf()),r(t,e,{min:n,max:a})};var u=t.Scale.extend({initialize:function(){if(!i)throw new Error("Chart.js - Moment.js could not be found! You must include it before Chart.js to use the time scale. Download at https://momentjs.com");t.Scale.prototype.initialize.call(this)},determineDataLimits:function(){var t,n=this,i=n.options.time,a=Number.MAX_SAFE_INTEGER,r=Number.MIN_SAFE_INTEGER,s=n.chart.data,l={labels:[],datasets:[]};o.each(s.labels,function(o,s){var u=e(n,o);u.isValid()&&(i.round&&u.startOf(i.round),t=u.valueOf(),a=Math.min(t,a),r=Math.max(t,r),l.labels[s]=t)}),o.each(s.datasets,function(s,u){var d=[];"object"==typeof s.data[0]&&null!==s.data[0]&&n.chart.isDatasetVisible(u)?o.each(s.data,function(o,s){var l=e(n,n.getRightValue(o));l.isValid()&&(i.round&&l.startOf(i.round),t=l.valueOf(),a=Math.min(t,a),r=Math.max(t,r),d[s]=t)}):d=l.labels.slice(),l.datasets[u]=d}),n.dataMin=a,n.dataMax=r,n._parsedData=l},buildTicks:function(){var i,r,s=this,l=s.options.time,u=s.dataMin,d=s.dataMax;if(l.min){var c=e(s,l.min);l.round&&c.round(l.round),i=c.valueOf()}l.max&&(r=e(s,l.max).valueOf());var h=s.getLabelCapacity(i||u),f=l.unit||n(l.minUnit,i||u,r||d,h);s.displayFormat=l.displayFormats[f];var g=l.stepSize||a(i||u,r||d,f,h);s.ticks=t.Ticks.generators.time({maxTicks:h,min:i,max:r,stepSize:g,unit:f,isoWeekday:l.isoWeekday},{min:u,max:d}),s.max=o.max(s.ticks),s.min=o.min(s.ticks)},getLabelForIndex:function(t,n){var i=this,a=i.chart.data.labels&&t<i.chart.data.labels.length?i.chart.data.labels[t]:"",r=i.chart.data.datasets[n].data[t];return null!==r&&"object"==typeof r&&(a=i.getRightValue(r)),i.options.time.tooltipFormat&&(a=e(i,a).format(i.options.time.tooltipFormat)),a},tickFormatFunction:function(t,e,n){var i=t.format(this.displayFormat),a=this.options.ticks,r=o.getValueOrDefault(a.callback,a.userCallback);return r?r(i,e,n):i},convertTicksToLabels:function(){var t=this;t.ticksAsTimestamps=t.ticks,t.ticks=t.ticks.map(function(t){return i(t)}).map(t.tickFormatFunction,t)},getPixelForOffset:function(t){var e=this,n=e.max-e.min,i=n?(t-e.min)/n:0;if(e.isHorizontal()){var a=e.width*i;return e.left+Math.round(a)}var r=e.height*i;return e.top+Math.round(r)},getPixelForValue:function(t,n,i){var a=this,r=null;if(void 0!==n&&void 0!==i&&(r=a._parsedData.datasets[i][n]),null===r&&(t&&t.isValid||(t=e(a,a.getRightValue(t))),t&&t.isValid&&t.isValid()&&(r=t.valueOf())),null!==r)return a.getPixelForOffset(r)},getPixelForTick:function(t){return this.getPixelForOffset(this.ticksAsTimestamps[t])},getValueForPixel:function(t){var e=this,n=e.isHorizontal()?e.width:e.height,a=(t-(e.isHorizontal()?e.left:e.top))/n;return i(e.min+a*(e.max-e.min))},getLabelWidth:function(e){var n=this,i=n.options.ticks,a=n.ctx.measureText(e).width,r=Math.cos(o.toRadians(i.maxRotation)),s=Math.sin(o.toRadians(i.maxRotation)),l=o.getValueOrDefault(i.fontSize,t.defaults.global.defaultFontSize);return a*r+l*s},getLabelCapacity:function(t){var e=this;e.displayFormat=e.options.time.displayFormats.millisecond;var n=e.tickFormatFunction(i(t),0,[]),a=e.getLabelWidth(n),r=e.isHorizontal()?e.width:e.height,o=r/a;return o}});t.scaleService.registerScaleType("time",u,l)}},{6:6}]},{},[7])(7)});
 
 /***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(jQuery) {"use strict";
-
-	(function ($) {
-
-	    $.fn.circliful = function (options, callback) {
-
-	        var settings = $.extend({
-	            // These are the defaults.
-	            foregroundColor: "#3498DB",
-	            backgroundColor: "#ccc",
-	            pointColor: "none",
-	            fillColor: 'none',
-	            foregroundBorderWidth: 15,
-	            backgroundBorderWidth: 15,
-	            pointSize: 28.5,
-	            fontColor: '#aaa',
-	            percent: 75,
-	            animation: 1,
-	            animationStep: 5,
-	            icon: 'none',
-	            iconSize: '30',
-	            iconColor: '#ccc',
-	            iconPosition: 'top',
-	            target: 0,
-	            start: 0,
-	            showPercent: 1,
-	            percentageTextSize: 22,
-	            percentageX: 100,
-	            percentageY: 113,
-	            textAdditionalCss: '',
-	            targetPercent: 0,
-	            targetTextSize: 17,
-	            targetColor: '#2980B9',
-	            text: null,
-	            textStyle: null,
-	            textColor: '#666',
-	            textY: null,
-	            textX: null,
-	            multiPercentage: 0,
-	            percentages: [],
-	            multiPercentageLegend: 0,
-	            textBelow: false,
-	            noPercentageSign: false,
-	            replacePercentageByText: null,
-	            halfCircle: false,
-	            animateInView: false,
-	            decimals: 0,
-	            alwaysDecimals: false,
-	            title: 'Circle Chart',
-	            description: '',
-	            progressColor: null
-	        }, options);
-
-	        return this.each(function () {
-	            var circleContainer = $(this);
-
-	            mergeDataAttributes(settings, circleContainer.data());
-
-	            var percent = settings.percent;
-	            var iconY = 83;
-	            var iconX = 100;
-	            var percentageY = settings.percentageY;
-	            var percentageX = settings.percentageX;
-	            var additionalCss;
-	            var elements;
-	            var icon;
-	            var backgroundBorderWidth = settings.backgroundBorderWidth;
-	            var progressColor = settings.progressColor;
-
-	            if (settings.halfCircle) {
-	                if (settings.iconPosition === 'left') {
-	                    iconX = 80;
-	                    iconY = 100;
-	                    percentageX = 117;
-	                    percentageY = 100;
-	                } else if (settings.halfCircle) {
-	                    iconY = 80;
-	                    percentageY = 100;
-	                }
-	            } else {
-	                if (settings.iconPosition === 'bottom') {
-	                    iconY = 124;
-	                    percentageY = 95;
-	                } else if (settings.iconPosition === 'left') {
-	                    iconX = 80;
-	                    iconY = 110;
-	                    percentageX = 117;
-	                } else if (settings.iconPosition === 'middle') {
-	                    if (settings.multiPercentage !== 1) {
-	                        elements = '<g stroke="' + (settings.backgroundColor !== 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="133" y1="50" x2="140" y2="40" stroke-width="2"  /></g>';
-	                        elements += '<g stroke="' + (settings.backgroundColor !== 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="140" y1="40" x2="200" y2="40" stroke-width="2"  /></g>';
-	                        percentageX = 170; // To center the percentage exactly in the center.
-	                        percentageY = 35;
-	                    }
-	                    iconY = 110;
-	                } else if (settings.iconPosition === 'right') {
-	                    iconX = 120;
-	                    iconY = 110;
-	                    percentageX = 80;
-	                } else if (settings.iconPosition === 'top' && settings.icon !== 'none') {
-	                    percentageY = 120;
-	                }
-	            }
-
-	            if (settings.targetPercent > 0 && settings.halfCircle !== true) {
-	                percentageY = 95;
-	                elements = '<g stroke="' + (settings.backgroundColor !== 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="75" y1="101" x2="125" y2="101" stroke-width="1"  /></g>';
-	                elements += '<text text-anchor="middle" x="' + percentageX + '" y="120" style="font-size: ' + settings.targetTextSize + 'px;" fill="' + settings.targetColor + '">' + settings.targetPercent + (settings.noPercentageSign && settings.replacePercentageByText === null ? '' : '%') + '</text>';
-	                elements += '<circle cx="100" cy="100" r="69" fill="none" stroke="' + settings.backgroundColor + '" stroke-width="3" stroke-dasharray="450" transform="rotate(-90,100,100)" />';
-	                elements += '<circle cx="100" cy="100" r="69" fill="none" stroke="' + settings.targetColor + '" stroke-width="3" stroke-dasharray="' + 435 / 100 * settings.targetPercent + ', 20000" transform="rotate(-90,100,100)" />';
-	            }
-
-	            if (settings.text !== null) {
-	                if (settings.halfCircle) {
-	                    if (settings.textBelow) {
-	                        elements += '<text text-anchor="middle" x="' + (settings.textX !== null ? settings.textX : '100') + '" y="' + (settings.textY !== null ? settings.textY : '64%') + '" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-	                    } else {
-	                        elements += '<text text-anchor="middle" x="' + (settings.textX !== null ? settings.textX : '100') + '" y="' + (settings.textY !== null ? settings.textY : '115') + '" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-	                    }
-	                } else {
-	                    if (settings.textBelow) {
-	                        elements += '<text text-anchor="middle" x="' + (settings.textX !== null ? settings.textX : '100') + '" y="' + (settings.textY !== null ? settings.textY : '99%') + '" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-	                    } else {
-	                        elements += '<text text-anchor="middle" x="' + (settings.textX !== null ? settings.textX : '100') + '" y="' + (settings.textY !== null ? settings.textY : '115') + '" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-	                    }
-	                }
-	            }
-
-	            if (settings.icon !== 'none') {
-	                icon = '<text text-anchor="middle" x="' + iconX + '" y="' + iconY + '" class="icon" style="font-size: ' + settings.iconSize + 'px" fill="' + settings.iconColor + '">&#x' + settings.icon + '</text>';
-	            }
-
-	            if (settings.halfCircle) {
-	                var rotate = 'transform="rotate(-180,100,100)"';
-	                circleContainer.addClass('svg-container').append($('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 194 186" class="circliful">' + (typeof elements !== 'undefined' ? elements : '') + '<clipPath id="cut-off-bottom"> <rect x="100" y="0" width="100" height="200" /> </clipPath>' + '<circle cx="100" cy="100" r="57" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="360" clip-path="url(#cut-off-bottom)" transform="rotate(-90,100,100)" />' + '<circle class="circle" cx="100" cy="100" r="57" class="border" fill="none" stroke="' + settings.foregroundColor + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="0,20000" ' + rotate + ' />' + '<circle cx="100" cy="100" r="' + settings.pointSize + '" fill="' + settings.pointColor + '" clip-path="url(#cut-off-bottom)" transform="rotate(-90,100,100)" />' + icon + '<text class="timer" text-anchor="middle" x="' + percentageX + '" y="' + percentageY + '" style="font-size: ' + settings.percentageTextSize + 'px; ' + additionalCss + ';' + settings.textAdditionalCss + '" fill="' + settings.fontColor + '"><tspan class="number">' + (settings.replacePercentageByText === null ? 0 : settings.replacePercentageByText) + '</tspan><tspan class="percent">' + (settings.noPercentageSign || settings.replacePercentageByText !== null ? '' : '%') + '</tspan></text>'));
-	            } else {
-	                drawCircles();
-	            }
-
-	            var circle = circleContainer.find('.circle');
-	            var myTimer = circleContainer.find('.timer');
-	            var interval = 30;
-	            var angle = 0;
-	            var angleIncrement = settings.animationStep;
-	            var last = 0;
-	            var summary = 0;
-	            var oneStep = 0;
-	            var text = percent;
-	            var calculateFill = 360 / 100 * percent;
-
-	            if (settings.halfCircle) {
-	                calculateFill = 360 / 100 * percent / 2;
-	            }
-
-	            if (settings.replacePercentageByText !== null) {
-	                text = settings.replacePercentageByText;
-	            }
-
-	            if (settings.start > 0 && settings.target > 0) {
-	                percent = settings.start / (settings.target / 100);
-	                oneStep = settings.target / 100;
-	            }
-
-	            if (settings.animation === 1) {
-	                if (settings.animateInView) {
-	                    $(window).scroll(function () {
-	                        checkAnimation();
-	                    });
-	                } else {
-	                    animate();
-	                }
-	            } else {
-	                if (settings.multiPercentage !== 1) {
-	                    circle.attr("stroke-dasharray", calculateFill + ", 20000");
-
-	                    if (settings.showPercent === 1) {
-	                        myTimer.find('.number').text(text);
-	                    } else {
-	                        myTimer.find('.number').text(settings.target);
-	                        myTimer.find('.percent').text('');
-	                    }
-	                } else {
-	                    if (settings.replacePercentageByText !== null) {
-	                        myTimer.find('.number').text(settings.replacePercentageByText);
-	                        myTimer.find('.percent').text('');
-	                    }
-	                }
-	            }
-
-	            function animate() {
-	                var currentCircle = circle;
-	                var currentCalculateFill = calculateFill;
-
-	                if (settings.multiPercentage === 1) {
-	                    var index, percent;
-	                    var percentages = settings.percentages;
-	                    var circleRadius = 360;
-	                    for (index = 0; index < percentages.length; ++index) {
-	                        percent = percentages[index].percent;
-	                        currentCalculateFill = circleRadius / 100 * percent;
-	                        currentCircle = circleContainer.find('#circle' + (index + 1));
-
-	                        if (index > 0) {
-	                            circleRadius = circleRadius + 62.5;
-	                            currentCalculateFill = circleRadius / 100 * percent;
-	                        }
-
-	                        animateCircle(currentCircle, currentCalculateFill, circleRadius, percent);
-	                    }
-	                } else {
-	                    animateCircle(currentCircle, currentCalculateFill, 360, percent);
-	                }
-	            }
-
-	            function animateCircle(currentCircle, currentCalculateFill, circleRadius, percent) {
-	                var timer = window.setInterval(function () {
-	                    if (angle >= currentCalculateFill) {
-	                        window.clearInterval(timer);
-	                        last = 1;
-	                        if (typeof callback === 'function') {
-	                            callback.call(this);
-	                        }
-	                    } else {
-	                        angle += angleIncrement;
-	                        summary += oneStep;
-	                    }
-	                    if (settings.halfCircle) {
-	                        if (angle * 2 / (circleRadius / 100) >= percent && last === 1) {
-	                            angle = circleRadius / 100 * percent / 2;
-	                        }
-	                    } else {
-	                        if (angle / (circleRadius / 100) >= percent && last === 1) {
-	                            angle = circleRadius / 100 * percent;
-	                        }
-	                    }
-
-	                    if (summary > settings.target && last === 1) {
-	                        summary = settings.target;
-	                    }
-
-	                    if (settings.replacePercentageByText === null) {
-	                        if (settings.halfCircle) {
-	                            text = parseFloat(100 * angle / circleRadius * 2);
-	                        } else {
-	                            text = parseFloat(100 * angle / circleRadius);
-	                        }
-	                        text = text.toFixed(settings.decimals);
-	                        if (!settings.alwaysDecimals && (percent === 0 || percent > 1 && last !== 1)) {
-	                            text = parseInt(text);
-	                        }
-	                    }
-
-	                    currentCircle.attr("stroke-dasharray", angle + ", 20000");
-
-	                    if (settings.multiPercentage !== 1) {
-	                        if (settings.showPercent === 1) {
-	                            myTimer.find('.number').text(text);
-	                        } else {
-
-	                            myTimer.find('.number').text(summary);
-	                            myTimer.find('.percent').text('');
-	                        }
-	                    } else {
-	                        myTimer.find('.number').text('');
-	                        myTimer.find('.percent').text('');
-	                    }
-
-	                    if (progressColor !== null) {
-	                        $.each(progressColor, function (key, color) {
-	                            if (settings.halfCircle) {
-	                                key /= 2;
-	                            }
-	                            if (angle >= key * (circleRadius / 100)) {
-	                                currentCircle.css({
-	                                    stroke: color,
-	                                    transition: 'stroke 0.1s linear'
-	                                });
-	                            }
-	                        });
-	                    }
-	                }.bind(currentCircle), interval);
-	            }
-
-	            function isElementInViewport() {
-	                // Get the scroll position of the page.
-	                var scrollElem = navigator.userAgent.toLowerCase().indexOf('webkit') !== -1 ? 'body' : 'html';
-	                var viewportTop = $(scrollElem).scrollTop();
-	                var viewportBottom = viewportTop + $(window).height();
-
-	                // Get the position of the element on the page.
-	                var elemTop = Math.round(circle.offset().top);
-	                var elemBottom = elemTop + circle.height();
-
-	                return elemTop < viewportBottom && elemBottom > viewportTop;
-	            }
-
-	            function checkAnimation() {
-	                // If the animation has already been started
-	                if (circle.hasClass('start')) return;
-
-	                if (isElementInViewport(circle)) {
-	                    // Start the animation
-	                    circle.addClass('start');
-	                    setTimeout(animate, 250);
-	                }
-	            }
-
-	            function mergeDataAttributes(settings, dataAttributes) {
-	                $.each(settings, function (key, value) {
-	                    if (key.toLowerCase() in dataAttributes) {
-	                        settings[key] = dataAttributes[key.toLowerCase()];
-	                    }
-	                });
-	            }
-
-	            /**
-	             * Draws the initial circles before animate gets called
-	             */
-	            function drawCircles() {
-	                if (settings.multiPercentage === 1) {
-	                    var index, calculateFillMulti, percent, color, circles;
-	                    var percentages = settings.percentages;
-	                    var radius = 47;
-	                    var circleRadius = 360;
-	                    var rotate = -90;
-	                    for (index = 0; index < percentages.length; ++index) {
-	                        percent = percentages[index].percent;
-	                        color = percentages[index].color;
-	                        calculateFillMulti = circleRadius / 100 * percent;
-	                        if (index > 0) {
-	                            circleRadius = circleRadius + 62.5;
-	                            calculateFillMulti = circleRadius / 100 * percent;
-	                        }
-	                        radius += 10;
-	                        circles += '<circle cx="100" cy="100" r="' + radius + '" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="' + circleRadius + '" transform="rotate(' + rotate + ',100,100)" />' + '<circle class="circle" id="circle' + (index + 1) + '" data-percent="' + percent + '" cx="100" cy="100" r="' + radius + '" class="border" fill="none" stroke="' + color + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="' + calculateFillMulti + ',20000" transform="rotate(' + rotate + ',100,100)" />';
-	                    }
-
-	                    circleContainer.addClass('svg-container').append($('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 194 186" class="circliful">' + (typeof elements !== 'undefined' ? elements : '') + circles + icon + '<text class="timer" text-anchor="middle" x="' + percentageX + '" y="' + percentageY + '" style="font-size: ' + settings.percentageTextSize + 'px; ' + additionalCss + ';' + settings.textAdditionalCss + '" fill="' + settings.fontColor + '">' + '<tspan class="number">' + (settings.replacePercentageByText === null ? 0 : settings.replacePercentageByText) + '</tspan>' + '<tspan class="percent">' + (settings.noPercentageSign || settings.replacePercentageByText !== null ? '' : '%') + '</tspan>' + '</text>'));
-
-	                    if (settings.multiPercentageLegend === 1) {
-	                        showLegend();
-	                    }
-	                } else {
-	                    circleContainer.addClass('svg-container').append($('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 194 186" class="circliful">' + (typeof elements !== 'undefined' ? elements : '') + '<circle cx="100" cy="100" r="57" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="360" transform="rotate(-90,100,100)" />' + '<circle class="circle" cx="100" cy="100" r="57" class="border" fill="none" stroke="' + settings.foregroundColor + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />' + '<circle cx="100" cy="100" r="' + settings.pointSize + '" fill="' + settings.pointColor + '" />' + icon + '<text class="timer" text-anchor="middle" x="' + percentageX + '" y="' + percentageY + '" style="font-size: ' + settings.percentageTextSize + 'px; ' + additionalCss + ';' + settings.textAdditionalCss + '" fill="' + settings.fontColor + '">' + '<tspan class="number">' + (settings.replacePercentageByText === null ? 0 : settings.replacePercentageByText) + '</tspan>' + '<tspan class="percent">' + (settings.noPercentageSign || settings.replacePercentageByText !== null ? '' : '%') + '</tspan>' + '</text>'));
-	                }
-	            }
-
-	            /**
-	             * Show the legend only for multi percentage circles
-	             */
-	            function showLegend() {
-	                var height = circleContainer.height();
-	                var width = circleContainer.width();
-	                var percentages = settings.percentages;
-	                var index;
-	                var lines = '';
-	                for (index = 0; index < percentages.length; ++index) {
-	                    var title = percentages[index].title;
-	                    var color = percentages[index].color;
-	                    var percent = percentages[index].percent;
-
-	                    lines += '<div><span class="color-box" style="background: ' + color + '"></span>' + title + ', ' + percent + '%</div>';
-	                }
-
-	                circleContainer.append($('<div/>').append(lines).attr('style', 'position:absolute;top:' + height / 3 + 'px;left:' + (width + 20) + 'px').attr('class', 'legend-line'));
-	            }
-	        });
-	    };
-	})(jQuery);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
-
-/***/ },
-/* 25 */
+/* 24 */,
+/* 25 */,
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arrow-button/arrow-button.js": 26,
-		"./button/button.js": 28,
-		"./calendar/calendar.js": 30,
-		"./circle-progress-bar-b/circle-progress-bar-b.js": 35,
-		"./circle-progress-bar/circle-progress-bar.js": 37,
-		"./drop-down/drop-down.js": 39,
-		"./event/event.js": 41,
-		"./form-line/form-line.js": 43,
-		"./info-block/info-block.js": 45,
-		"./map-block/map-block.js": 47,
-		"./message-form/message-form.js": 49,
-		"./messaging/messaging.js": 51,
-		"./news/news.js": 53,
-		"./photo-block/photo-block.js": 55,
-		"./search/search.js": 57,
-		"./slider-a/slider-a.js": 59,
-		"./slider-b/slider-b.js": 67,
-		"./stages/stages.js": 69,
-		"./tick-box/tick-box.js": 73,
-		"./toggles/toggles.js": 75,
-		"./user-info-block/user-info-block.js": 77,
-		"./youtube-video/youtube-video.js": 79
+		"./arrow-button/arrow-button.js": 27,
+		"./button/button.js": 29,
+		"./calendar/calendar.js": 31,
+		"./circle-progress-bar-b/circle-progress-bar-b.js": 36,
+		"./circle-progress-bar/circle-progress-bar.js": 38,
+		"./drop-down/drop-down.js": 40,
+		"./event/event.js": 42,
+		"./form-line/form-line.js": 45,
+		"./info-block/info-block.js": 47,
+		"./map-block/map-block.js": 49,
+		"./message-form/message-form.js": 52,
+		"./messaging/messaging.js": 54,
+		"./news/news.js": 58,
+		"./photo-block/photo-block.js": 61,
+		"./search/search.js": 63,
+		"./slider-a/slider-a.js": 66,
+		"./slider-b/slider-b.js": 74,
+		"./stages/stages.js": 76,
+		"./tick-box/tick-box.js": 80,
+		"./toggles/toggles.js": 82,
+		"./user-info-block/user-info-block.js": 84,
+		"./youtube-video/youtube-video.js": 88
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12836,30 +12463,30 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 25;
+	webpackContext.id = 26;
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	__webpack_require__(27);
+	__webpack_require__(28);
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	__webpack_require__(29);
+	__webpack_require__(30);
 
 	$(".button").each(function (i) {
 	    $(this).click(function (e) {
@@ -12884,25 +12511,25 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(31);
+	__webpack_require__(32);
 
-	__webpack_require__(33);
+	__webpack_require__(34);
 
 	__webpack_require__(17);
 	__webpack_require__(18);
 
-	__webpack_require__(34);
+	__webpack_require__(35);
 
 	$('.calendar__header').each(function (i) {
 	    var currentDay = $.datepicker.formatDate('d', new Date());
@@ -12932,7 +12559,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
@@ -12962,7 +12589,7 @@
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
 				__webpack_require__(19),
-				__webpack_require__(32)
+				__webpack_require__(33)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -15058,7 +14685,7 @@
 
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15109,12 +14736,6 @@
 
 
 /***/ },
-/* 33 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
 /* 34 */
 /***/ function(module, exports) {
 
@@ -15122,16 +14743,21 @@
 
 /***/ },
 /* 35 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(36);
+	__webpack_require__(37);
 	__webpack_require__(17);
 	Chart.defaults.global.legend.display = false;
 	$('.circle-progress-bar-b__value').each(function (i) {
 	    var elements = $(this).data('chart-items');
-	    console.log(elements);
 	    var ctx = $(this)[0];
 	    var myDoughnutChart = new Chart(ctx, {
 	        type: 'doughnut',
@@ -15159,56 +14785,49 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(38);
+	__webpack_require__(39);
 	__webpack_require__(17);
 
 	$(document).ready(function () {
-	    $('div.circle-progress-bar').each(function (i) {
-	        var value = $(this).data('value');
-	        $(this).circliful({
-	            animation: 0,
-	            animationStep: 1,
-	            foregroundBorderWidth: 6,
-	            backgroundBorderWidth: 6,
-	            backgroundColor: '#fff',
-	            foregroundColor: '#e75735',
-	            percent: value,
-	            pointSize: 28.5,
-	            percentageTextSize: 76,
-	            noPercentageSign: true,
-	            textStyle: 'font-size: 12px;',
-	            textColor: '#666'
+	    $('.circle-progress-bar__input').each(function (i) {
+	        $(this).knob({
+	            "thickness": ".1",
+	            "bgColor": "#fff",
+	            "fgColor": "#e75735",
+	            "width": "100%",
+	            "height": "100%",
+	            "fontSize": "4.5625rem",
+	            "readOnly": "false"
 	        });
-	        $(this).find("circle").attr("r", 80);
 	    });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
 	__webpack_require__(17);
-	__webpack_require__(40);
+	__webpack_require__(41);
 
 	$('.drop-down__select').each(function (i) {
 	    $(this).select2({
@@ -15218,38 +14837,31 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	__webpack_require__(42);
 
 /***/ },
 /* 42 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
+	__webpack_require__(43);
 	__webpack_require__(44);
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/event1.png";
 
 /***/ },
 /* 45 */
@@ -15269,16 +14881,31 @@
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+	"use strict";
 
 	__webpack_require__(48);
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+
+	__webpack_require__(50);
+	__webpack_require__(51);
 
 	$('.map').each(function (i) {
 	    var _self = $(this),
 	        lat = $(this).data("lat"),
 	        lng = $(this).data("lng"),
 	        zoom = $(this).data("zoom"),
-	        icon = $(this).data("icon");
+	        icon = $(this).data("marker");
 	    function initMap() {
 	        var location = { lat: lat, lng: lng };
 	        var map = new google.maps.Map(_self[0], {
@@ -15297,20 +14924,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 48 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	__webpack_require__(50);
-
-/***/ },
 /* 50 */
 /***/ function(module, exports) {
 
@@ -15320,74 +14933,122 @@
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	__webpack_require__(52);
+	module.exports = __webpack_require__.p + "img/map-marker-icon.png";
 
 /***/ },
 /* 52 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	"use strict";
+
+	__webpack_require__(53);
 
 /***/ },
 /* 53 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	"use strict";
-
-	__webpack_require__(54);
+	// removed by extract-text-webpack-plugin
 
 /***/ },
 /* 54 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
+	__webpack_require__(55);
 	__webpack_require__(56);
+	__webpack_require__(57);
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/camera-iconn.png";
 
 /***/ },
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	__webpack_require__(58);
+	module.exports = __webpack_require__.p + "img/chat-iconn.png";
 
 /***/ },
 /* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	__webpack_require__(59);
+	__webpack_require__(60);
+
+/***/ },
+/* 59 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 59 */
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/news.png";
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	__webpack_require__(62);
+
+/***/ },
+/* 62 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	__webpack_require__(64);
+	__webpack_require__(65);
+
+/***/ },
+/* 64 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/search.svg";
+
+/***/ },
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(60);
+	__webpack_require__(67);
 
-	__webpack_require__(63);
+	__webpack_require__(70);
 
 	__webpack_require__(17);
 	__webpack_require__(18);
 
-	__webpack_require__(64);
-	__webpack_require__(65);
-	__webpack_require__(66);
+	__webpack_require__(71);
+	__webpack_require__(72);
+	__webpack_require__(73);
 
 	$('.slider-a').each(function (i) {
 	    var currenSlider = $(this)[0];
@@ -15400,7 +15061,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 60 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -15427,8 +15088,8 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
-				__webpack_require__(61),
-				__webpack_require__(32),
+				__webpack_require__(68),
+				__webpack_require__(33),
 				__webpack_require__(19),
 				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -16158,7 +15819,7 @@
 
 
 /***/ },
-/* 61 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16181,7 +15842,7 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(17),
-				__webpack_require__(62),
+				__webpack_require__(69),
 				__webpack_require__(19),
 				__webpack_require__(18)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -16390,7 +16051,7 @@
 
 
 /***/ },
-/* 62 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -16411,19 +16072,19 @@
 
 
 /***/ },
-/* 63 */
+/* 70 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 64 */
+/* 71 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 65 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {"use strict";
@@ -17084,26 +16745,26 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 66 */
+/* 73 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 67 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	__webpack_require__(60);
+	__webpack_require__(67);
 
-	__webpack_require__(63);
+	__webpack_require__(70);
 
 	__webpack_require__(17);
-	__webpack_require__(68);
+	__webpack_require__(75);
 
-	__webpack_require__(65);
-	__webpack_require__(66);
+	__webpack_require__(72);
+	__webpack_require__(73);
 
 	$('.slider-b').each(function (i) {
 	    var currentSlider = $(this)[0];
@@ -17120,23 +16781,23 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 68 */
+/* 75 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 69 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	__webpack_require__(17);
 	__webpack_require__(18);
-	__webpack_require__(70);
-	__webpack_require__(71);
+	__webpack_require__(77);
+	__webpack_require__(78);
 
-	__webpack_require__(72);
+	__webpack_require__(79);
 	$(document).ready(function () {
 	    $('.stages').each(function (i) {
 	        var stageSteps = $(this).data("steps"),
@@ -17161,7 +16822,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 70 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {'use strict';
@@ -17205,54 +16866,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 71 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 72 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 73 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(74);
-
-/***/ },
-/* 74 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 75 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(76);
-
-/***/ },
-/* 76 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(78);
-
-/***/ },
 /* 78 */
 /***/ function(module, exports) {
 
@@ -17260,11 +16873,74 @@
 
 /***/ },
 /* 79 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	'use strict';
 
-	__webpack_require__(80);
+	__webpack_require__(81);
+
+/***/ },
+/* 81 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 82 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(83);
+
+/***/ },
+/* 83 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	__webpack_require__(85);
+	__webpack_require__(86);
+	__webpack_require__(87);
+
+/***/ },
+/* 85 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/photo1.png";
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "img/photo2.png";
+
+/***/ },
+/* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+
+	__webpack_require__(17);
+	__webpack_require__(89);
 	__webpack_require__(20);
 	var YouTubeIframeLoader = __webpack_require__(20);
 
@@ -17282,21 +16958,21 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 80 */
+/* 89 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 81 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./Awesome/font-awesome.css": 82,
-		"./Lato/Lato-Black/fonts.css": 83,
-		"./Lato/Lato-Bold/fonts.css": 84,
-		"./Lato/Lato-Light/fonts.css": 85,
-		"./Lato/Lato-Regular/fonts.css": 86
+		"./Awesome/font-awesome.css": 91,
+		"./Lato/Lato-Black/fonts.css": 92,
+		"./Lato/Lato-Bold/fonts.css": 93,
+		"./Lato/Lato-Light/fonts.css": 94,
+		"./Lato/Lato-Regular/fonts.css": 95
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17309,44 +16985,249 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 81;
+	webpackContext.id = 90;
 
 
 /***/ },
-/* 82 */
+/* 91 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 83 */
+/* 92 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 84 */
+/* 93 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 85 */
+/* 94 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 86 */
+/* 95 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 87 */
+/* 96 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 97 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
+
+	(function (e) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(17)], __WEBPACK_AMD_DEFINE_FACTORY__ = (e), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else {
+	    e(jQuery);
+	  }
+	})(function (e) {
+	  "use strict";
+	  var t = {},
+	      n = Math.max,
+	      r = Math.min;t.c = {};t.c.d = e(document);t.c.t = function (e) {
+	    return e.originalEvent.touches.length - 1;
+	  };t.o = function () {
+	    var n = this;this.o = null;this.$ = null;this.i = null;this.g = null;this.v = null;this.cv = null;this.x = 0;this.y = 0;this.w = 0;this.h = 0;this.$c = null;this.c = null;this.t = 0;this.isInit = false;this.fgColor = null;this.pColor = null;this.dH = null;this.cH = null;this.eH = null;this.rH = null;this.scale = 1;this.relative = false;this.relativeWidth = false;this.relativeHeight = false;this.$div = null;this.run = function () {
+	      var t = function t(e, _t) {
+	        var r;for (r in _t) {
+	          n.o[r] = _t[r];
+	        }n._carve().init();n._configure()._draw();
+	      };if (this.$.data("kontroled")) return;this.$.data("kontroled", true);this.extend();this.o = e.extend({ min: this.$.data("min") !== undefined ? this.$.data("min") : 0, max: this.$.data("max") !== undefined ? this.$.data("max") : 100, stopper: true, readOnly: this.$.data("readonly") || this.$.attr("readonly") === "readonly", cursor: this.$.data("cursor") === true && 30 || this.$.data("cursor") || 0, thickness: this.$.data("thickness") && Math.max(Math.min(this.$.data("thickness"), 1), .01) || .35, lineCap: this.$.data("linecap") || "butt", width: this.$.data("width") || 200, height: this.$.data("height") || 200, displayInput: this.$.data("displayinput") == null || this.$.data("displayinput"), displayPrevious: this.$.data("displayprevious"), fgColor: this.$.data("fgcolor") || "#87CEEB", inputColor: this.$.data("inputcolor"), font: this.$.data("font") || "Arial", fontWeight: this.$.data("font-weight") || "bold", inline: false, step: this.$.data("step") || 1, rotation: this.$.data("rotation"), draw: null, change: null, cancel: null, release: null, format: function format(e) {
+	          return e;
+	        }, parse: function parse(e) {
+	          return parseFloat(e);
+	        } }, this.o);this.o.flip = this.o.rotation === "anticlockwise" || this.o.rotation === "acw";if (!this.o.inputColor) {
+	        this.o.inputColor = this.o.fgColor;
+	      }if (this.$.is("fieldset")) {
+	        this.v = {};this.i = this.$.find("input");this.i.each(function (t) {
+	          var r = e(this);n.i[t] = r;n.v[t] = n.o.parse(r.val());r.bind("change blur", function () {
+	            var e = {};e[t] = r.val();n.val(n._validate(e));
+	          });
+	        });this.$.find("legend").remove();
+	      } else {
+	        this.i = this.$;this.v = this.o.parse(this.$.val());this.v === "" && (this.v = this.o.min);this.$.bind("change blur", function () {
+	          n.val(n._validate(n.o.parse(n.$.val())));
+	        });
+	      }!this.o.displayInput && this.$.hide();this.$c = e(document.createElement("canvas")).attr({ width: this.o.width, height: this.o.height });this.$div = e('<div style="' + (this.o.inline ? "display:inline;" : "") + "width:" + this.o.width + "px;height:" + this.o.height + "px;" + '"></div>');this.$.wrap(this.$div).before(this.$c);this.$div = this.$.parent();if (typeof G_vmlCanvasManager !== "undefined") {
+	        G_vmlCanvasManager.initElement(this.$c[0]);
+	      }this.c = this.$c[0].getContext ? this.$c[0].getContext("2d") : null;if (!this.c) {
+	        throw { name: "CanvasNotSupportedException", message: "Canvas not supported. Please use excanvas on IE8.0.", toString: function toString() {
+	            return this.name + ": " + this.message;
+	          } };
+	      }this.scale = (window.devicePixelRatio || 1) / (this.c.webkitBackingStorePixelRatio || this.c.mozBackingStorePixelRatio || this.c.msBackingStorePixelRatio || this.c.oBackingStorePixelRatio || this.c.backingStorePixelRatio || 1);this.relativeWidth = this.o.width % 1 !== 0 && this.o.width.indexOf("%");this.relativeHeight = this.o.height % 1 !== 0 && this.o.height.indexOf("%");this.relative = this.relativeWidth || this.relativeHeight;this._carve();if (this.v instanceof Object) {
+	        this.cv = {};this.copy(this.v, this.cv);
+	      } else {
+	        this.cv = this.v;
+	      }this.$.bind("configure", t).parent().bind("configure", t);this._listen()._configure()._xy().init();this.isInit = true;this.$.val(this.o.format(this.v));this._draw();return this;
+	    };this._carve = function () {
+	      if (this.relative) {
+	        var e = this.relativeWidth ? this.$div.parent().width() * parseInt(this.o.width) / 100 : this.$div.parent().width(),
+	            t = this.relativeHeight ? this.$div.parent().height() * parseInt(this.o.height) / 100 : this.$div.parent().height();this.w = this.h = Math.min(e, t);
+	      } else {
+	        this.w = this.o.width;this.h = this.o.height;
+	      }this.$div.css({ width: this.w + "px", height: this.h + "px" });this.$c.attr({ width: this.w, height: this.h });if (this.scale !== 1) {
+	        this.$c[0].width = this.$c[0].width * this.scale;this.$c[0].height = this.$c[0].height * this.scale;this.$c.width(this.w);this.$c.height(this.h);
+	      }return this;
+	    };this._draw = function () {
+	      var e = true;n.g = n.c;n.clear();n.dH && (e = n.dH());e !== false && n.draw();
+	    };this._touch = function (e) {
+	      var r = function r(e) {
+	        var t = n.xy2val(e.originalEvent.touches[n.t].pageX, e.originalEvent.touches[n.t].pageY);if (t == n.cv) return;if (n.cH && n.cH(t) === false) return;n.change(n._validate(t));n._draw();
+	      };this.t = t.c.t(e);r(e);t.c.d.bind("touchmove.k", r).bind("touchend.k", function () {
+	        t.c.d.unbind("touchmove.k touchend.k");n.val(n.cv);
+	      });return this;
+	    };this._mouse = function (e) {
+	      var r = function r(e) {
+	        var t = n.xy2val(e.pageX, e.pageY);if (t == n.cv) return;if (n.cH && n.cH(t) === false) return;n.change(n._validate(t));n._draw();
+	      };r(e);t.c.d.bind("mousemove.k", r).bind("keyup.k", function (e) {
+	        if (e.keyCode === 27) {
+	          t.c.d.unbind("mouseup.k mousemove.k keyup.k");if (n.eH && n.eH() === false) return;n.cancel();
+	        }
+	      }).bind("mouseup.k", function (e) {
+	        t.c.d.unbind("mousemove.k mouseup.k keyup.k");n.val(n.cv);
+	      });return this;
+	    };this._xy = function () {
+	      var e = this.$c.offset();this.x = e.left;this.y = e.top;return this;
+	    };this._listen = function () {
+	      if (!this.o.readOnly) {
+	        this.$c.bind("mousedown", function (e) {
+	          e.preventDefault();n._xy()._mouse(e);
+	        }).bind("touchstart", function (e) {
+	          e.preventDefault();n._xy()._touch(e);
+	        });this.listen();
+	      } else {
+	        this.$.attr("readonly", "readonly");
+	      }if (this.relative) {
+	        e(window).resize(function () {
+	          n._carve().init();n._draw();
+	        });
+	      }return this;
+	    };this._configure = function () {
+	      if (this.o.draw) this.dH = this.o.draw;if (this.o.change) this.cH = this.o.change;if (this.o.cancel) this.eH = this.o.cancel;if (this.o.release) this.rH = this.o.release;if (this.o.displayPrevious) {
+	        this.pColor = this.h2rgba(this.o.fgColor, "0.4");this.fgColor = this.h2rgba(this.o.fgColor, "0.6");
+	      } else {
+	        this.fgColor = this.o.fgColor;
+	      }return this;
+	    };this._clear = function () {
+	      this.$c[0].width = this.$c[0].width;
+	    };this._validate = function (e) {
+	      var t = ~~((e < 0 ? -.5 : .5) + e / this.o.step) * this.o.step;return Math.round(t * 100) / 100;
+	    };this.listen = function () {};this.extend = function () {};this.init = function () {};this.change = function (e) {};this.val = function (e) {};this.xy2val = function (e, t) {};this.draw = function () {};this.clear = function () {
+	      this._clear();
+	    };this.h2rgba = function (e, t) {
+	      var n;e = e.substring(1, 7);n = [parseInt(e.substring(0, 2), 16), parseInt(e.substring(2, 4), 16), parseInt(e.substring(4, 6), 16)];return "rgba(" + n[0] + "," + n[1] + "," + n[2] + "," + t + ")";
+	    };this.copy = function (e, t) {
+	      for (var n in e) {
+	        t[n] = e[n];
+	      }
+	    };
+	  };t.Dial = function () {
+	    t.o.call(this);this.startAngle = null;this.xy = null;this.radius = null;this.lineWidth = null;this.cursorExt = null;this.w2 = null;this.PI2 = 2 * Math.PI;this.extend = function () {
+	      this.o = e.extend({ bgColor: this.$.data("bgcolor") || "#EEEEEE", angleOffset: this.$.data("angleoffset") || 0, angleArc: this.$.data("anglearc") || 360, inline: true }, this.o);
+	    };this.val = function (e, t) {
+	      if (null != e) {
+	        e = this.o.parse(e);if (t !== false && e != this.v && this.rH && this.rH(e) === false) {
+	          return;
+	        }this.cv = this.o.stopper ? n(r(e, this.o.max), this.o.min) : e;this.v = this.cv;this.$.val(this.o.format(this.v));this._draw();
+	      } else {
+	        return this.v;
+	      }
+	    };this.xy2val = function (e, t) {
+	      var i, s;i = Math.atan2(e - (this.x + this.w2), -(t - this.y - this.w2)) - this.angleOffset;if (this.o.flip) {
+	        i = this.angleArc - i - this.PI2;
+	      }if (this.angleArc != this.PI2 && i < 0 && i > -.5) {
+	        i = 0;
+	      } else if (i < 0) {
+	        i += this.PI2;
+	      }s = i * (this.o.max - this.o.min) / this.angleArc + this.o.min;this.o.stopper && (s = n(r(s, this.o.max), this.o.min));return s;
+	    };this.listen = function () {
+	      var t = this,
+	          i,
+	          s,
+	          o = function o(e) {
+	        e.preventDefault();var o = e.originalEvent,
+	            u = o.detail || o.wheelDeltaX,
+	            a = o.detail || o.wheelDeltaY,
+	            f = t._validate(t.o.parse(t.$.val())) + (u > 0 || a > 0 ? t.o.step : u < 0 || a < 0 ? -t.o.step : 0);f = n(r(f, t.o.max), t.o.min);t.val(f, false);if (t.rH) {
+	          clearTimeout(i);i = setTimeout(function () {
+	            t.rH(f);i = null;
+	          }, 100);if (!s) {
+	            s = setTimeout(function () {
+	              if (i) t.rH(f);s = null;
+	            }, 200);
+	          }
+	        }
+	      },
+	          u,
+	          a,
+	          f = 1,
+	          l = { 37: -t.o.step, 38: t.o.step, 39: t.o.step, 40: -t.o.step };this.$.bind("keydown", function (i) {
+	        var s = i.keyCode;if (s >= 96 && s <= 105) {
+	          s = i.keyCode = s - 48;
+	        }u = parseInt(String.fromCharCode(s));if (isNaN(u)) {
+	          s !== 13 && s !== 8 && s !== 9 && s !== 189 && (s !== 190 || t.$.val().match(/\./)) && i.preventDefault();if (e.inArray(s, [37, 38, 39, 40]) > -1) {
+	            i.preventDefault();var o = t.o.parse(t.$.val()) + l[s] * f;t.o.stopper && (o = n(r(o, t.o.max), t.o.min));t.change(t._validate(o));t._draw();a = window.setTimeout(function () {
+	              f *= 2;
+	            }, 30);
+	          }
+	        }
+	      }).bind("keyup", function (e) {
+	        if (isNaN(u)) {
+	          if (a) {
+	            window.clearTimeout(a);a = null;f = 1;t.val(t.$.val());
+	          }
+	        } else {
+	          t.$.val() > t.o.max && t.$.val(t.o.max) || t.$.val() < t.o.min && t.$.val(t.o.min);
+	        }
+	      });this.$c.bind("mousewheel DOMMouseScroll", o);this.$.bind("mousewheel DOMMouseScroll", o);
+	    };this.init = function () {
+	      if (this.v < this.o.min || this.v > this.o.max) {
+	        this.v = this.o.min;
+	      }this.$.val(this.v);this.w2 = this.w / 2;this.cursorExt = this.o.cursor / 100;this.xy = this.w2 * this.scale;this.lineWidth = this.xy * this.o.thickness;this.lineCap = this.o.lineCap;this.radius = this.xy - this.lineWidth / 2;this.o.angleOffset && (this.o.angleOffset = isNaN(this.o.angleOffset) ? 0 : this.o.angleOffset);this.o.angleArc && (this.o.angleArc = isNaN(this.o.angleArc) ? this.PI2 : this.o.angleArc);this.angleOffset = this.o.angleOffset * Math.PI / 180;this.angleArc = this.o.angleArc * Math.PI / 180;this.startAngle = 1.5 * Math.PI + this.angleOffset;this.endAngle = 1.5 * Math.PI + this.angleOffset + this.angleArc;var e = n(String(Math.abs(this.o.max)).length, String(Math.abs(this.o.min)).length, 2) + 2;this.o.displayInput && this.i.css({ width: (this.w / 2 + 4 >> 0) + "px", height: (this.w / 3 >> 0) + "px", position: "absolute", "vertical-align": "middle", "margin-top": (this.w / 3 >> 0) + "px", "margin-left": "-" + (this.w * 3 / 4 + 2 >> 0) + "px", border: 0, background: "none", font: this.o.fontWeight + " " + (this.w / e >> 0) + "px " + this.o.font, "text-align": "center", color: this.o.inputColor || this.o.fgColor, padding: "0px", "-webkit-appearance": "none" }) || this.i.css({ width: "0px", visibility: "hidden" });
+	    };this.change = function (e) {
+	      this.cv = e;this.$.val(this.o.format(e));
+	    };this.angle = function (e) {
+	      return (e - this.o.min) * this.angleArc / (this.o.max - this.o.min);
+	    };this.arc = function (e) {
+	      var t, n;e = this.angle(e);if (this.o.flip) {
+	        t = this.endAngle + 1e-5;n = t - e - 1e-5;
+	      } else {
+	        t = this.startAngle - 1e-5;n = t + e + 1e-5;
+	      }this.o.cursor && (t = n - this.cursorExt) && (n = n + this.cursorExt);return { s: t, e: n, d: this.o.flip && !this.o.cursor };
+	    };this.draw = function () {
+	      var e = this.g,
+	          t = this.arc(this.cv),
+	          n,
+	          r = 1;e.lineWidth = this.lineWidth;e.lineCap = this.lineCap;if (this.o.bgColor !== "none") {
+	        e.beginPath();e.strokeStyle = this.o.bgColor;e.arc(this.xy, this.xy, this.radius, this.endAngle - 1e-5, this.startAngle + 1e-5, true);e.stroke();
+	      }if (this.o.displayPrevious) {
+	        n = this.arc(this.v);e.beginPath();e.strokeStyle = this.pColor;e.arc(this.xy, this.xy, this.radius, n.s, n.e, n.d);e.stroke();r = this.cv == this.v;
+	      }e.beginPath();e.strokeStyle = r ? this.o.fgColor : this.fgColor;e.arc(this.xy, this.xy, this.radius, t.s, t.e, t.d);e.stroke();
+	    };this.cancel = function () {
+	      this.val(this.v);
+	    };
+	  };e.fn.dial = e.fn.knob = function (n) {
+	    return this.each(function () {
+	      var r = new t.Dial();r.o = n;r.$ = e(this);r.run();
+	    }).parent();
+	  };
+	});
 
 /***/ }
 /******/ ]);
