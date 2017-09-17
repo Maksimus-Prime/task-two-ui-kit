@@ -6,7 +6,7 @@ require("./slider-a.less");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 
-$('.slider-a').each(function(i){
+$('.js-slider-a').each(function(i){
     var currenSlider = $(this)[0];
     $(currenSlider).slider({
         min: $(currenSlider).data("min"),

@@ -2,7 +2,7 @@ require('./circle-progress-bar.less');
 require('jquery');
 
 $(document).ready(function() {
-    $('.circle-progress-bar__input').each(function(i){
+    $('.js-circle-progress-bar__input').each(function(i){
         $(this).knob({
             "thickness": ".1",
             "bgColor": "#fff",

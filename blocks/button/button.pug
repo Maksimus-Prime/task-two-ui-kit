@@ -4,4 +4,4 @@ mixin button(value,type,link,size,theme)
     if (link!=="#")
         a(href=link+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : "")+((theme==="event")? " theme_event" : "") rel="noopener noreferrer")=value
     else
-        button(type=type+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : "")+((theme==="event")? " theme_event" : ""))=value
+        button(type=type+"" class="button js-button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : "")+((theme==="event")? " theme_event" : ""))=value

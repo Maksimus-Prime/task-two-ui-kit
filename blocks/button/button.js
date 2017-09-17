@@ -1,6 +1,6 @@
 require("./button.less");
 
-$(".button").each(function(i){
+$(".js-button").each(function(i){
     $(this).click(function(e){
         var ripple = $(this);
         if(ripple.find(".effect").length == 0) {
