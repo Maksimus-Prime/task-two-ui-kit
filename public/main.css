@@ -579,11 +579,6 @@ html {
     text-align: center;
   }
 }
-@media screen and (max-width: 350px) {
-  .layout-form-elements-container__right-block .toggles {
-    margin-right: 15.7%;
-  }
-}
 .layout-search-drop-user-profile-container__left-block {
   width: 50%;
   float: left;
@@ -627,6 +622,9 @@ html {
   .layout-search-drop-user-profile-container__right-block {
     width: 100%;
     float: none;
+  }
+  .layout-search-drop-user-profile-container__right-block .user-info-block {
+    width: 100%;
   }
 }
 .layout-news-events-container__left-block {
