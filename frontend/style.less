@@ -58,26 +58,26 @@ html {
         text-align: center;
         &__left-block {
             display: inline-block;
+            @media screen and (max-width: 720px) {
+                display: block;
+                margin: 0 auto;
+            }
         }
         &__right-block {
             display: inline-block;
+            @media screen and (max-width: 720px) {
+                display: block;
+                margin: 0 auto;
+            }
         }
         .arrow-button {
             margin: 0 10px;
+            @media screen and (max-width: 720px) {
+                margin: 10px 10px;
+            }
         }
         @media screen and (max-width: 720px) {
             text-align: center;
-            &__left-block {
-                display: block;
-                margin: 0 auto;
-            }
-            &__right-block {
-                display: block;
-                margin: 0 auto;
-            }
-            .arrow-button {
-                margin: 10px 10px;
-            }
         }
     }
     &-circle-progress-bars {
@@ -88,17 +88,15 @@ html {
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             font-style: normal;
+            @media screen and (max-width: 720px) {
+                display: block;
+                margin: 10px auto;
+            }
         }
         .circle-progress-bar-b {
             width: 10.875rem;
             height: 10.875rem;
-        }
-        @media screen and (max-width: 720px) {
-            .circle-progress-bar {
-                display: block;
-                margin: 10px auto;
-            }
-            .circle-progress-bar-b {
+            @media screen and (max-width: 720px) {
                 display: block;
                 margin: 10px auto;
             }
@@ -110,17 +108,22 @@ html {
             vertical-align: top;
             margin-right: 7.5%;
             margin-left: 4.05%;
-        }
-        .slider-b {
-            width: 43.75%;
-        }
-        @media screen and (max-width: 720px) {
-            margin-bottom: 60px;
-            .slider-a, .slider-b {
+            @media screen and (max-width: 720px) {
                 width: 100%;
                 display: block;
                 margin: 30px auto;
-            } 
+            }
+        }
+        .slider-b {
+            width: 43.75%;
+            @media screen and (max-width: 720px) {
+                width: 100%;
+                display: block;
+                margin: 30px auto;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            margin-bottom: 60px;
         }
     }
     &-stages {
@@ -134,8 +137,15 @@ html {
             &__left-block {
                 width: 50%;
                 float: left;
+                @media screen and (max-width: 720px) {
+                    width: 100%;
+                    float: none;
+                }
                 .message-form {
                     width: 96.5%;
+                    @media screen and (max-width: 720px) {
+                        width: 100%;
+                    }
                 }
             }
                 
@@ -143,6 +153,11 @@ html {
                 width: 50%;
                 float: right;
                 text-align: center;
+                @media screen and (max-width: 720px) {
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+                }
                 .toggles:nth-child(2) {
                     margin-right: 3.7%;
                 }
@@ -151,34 +166,22 @@ html {
                 }
             }
         }
-        @media screen and (max-width: 720px) {
-            h1.layout__title:first-child {
-                margin-top: 0;
-            }
-            &-container {
-                &__left-block {
-                    width: 100%;
-                    float: none;
-                    .message-form {
-                        width: 100%;
-                    }
-                }
-                &__right-block {
-                    width: 100%;
-                    float: none;
-                    text-align: center;
-                }
-            } 
-        }
     }
     &-search-drop-user-profile {
         &-container {
             &__left-block {
                 width: 50%;
                 float: left;
+                @media screen and (max-width: 720px) {
+                    width: 100%;
+                    float: none;
+                }
                 .search-form {
                 	width: 97%;
                     margin-bottom: 29px;
+                    @media screen and (max-width: 720px) {
+                        width: 100%;
+                    }
                     &__input {
                         height: 3.25rem;
                     }
@@ -186,6 +189,14 @@ html {
                 .drop-down {
                     .select2.select2-container.select2-container--default {
                         width: 97% !important;
+                        @media screen and (max-width: 720px) {
+                            width: 100% !important;
+                        }
+                    }
+                    .select2-selection.select2-selection--single {
+                        @media screen and (max-width: 720px) {
+                            height: 39px !important;
+                        }
                     }
                 }
             }
@@ -193,40 +204,21 @@ html {
                 width: 50%;
                 float: right;
                 text-align: center;
+                @media screen and (max-width: 720px) {
+                    width: 100%;
+                    float: none;
+                }
                 .user-info-block {
                     width: 90%;
                     margin-bottom: 46px;
+                    @media screen and (max-width: 720px) {
+                        width: 100%;
+                    }
                 }
                 .user-info-block:nth-child(3) {
                     margin-bottom: 0;
                 }
             }
-        }
-        @media screen and (max-width: 720px) {
-            &-container {
-                &__left-block {
-                    width: 100%;
-                    float: none;
-                    .search-form {
-                        width: 100%;
-                    }
-                    .drop-down {
-                        .select2.select2-container.select2-container--default {
-                            width: 100% !important;
-                        }
-                        .select2-selection.select2-selection--single {
-                            height: 39px !important;
-                        }
-                    }
-                }
-                &__right-block {
-                    width: 100%;
-                    float: none;
-                    .user-info-block {
-                        width: 100%;
-                    }
-                }
-            }     
         }
     }
     &-news-events {
@@ -234,38 +226,34 @@ html {
             &__left-block {
                 width: 50%;
                 float: left;
+                @media screen and (max-width: 720px) {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
                 .news {
                     width: 97.25%;
+                    @media screen and (max-width: 720px) {
+                        width: 100%;
+                    }
                 }
             }
             &__right-block {
                 width: 50%;
                 float: right;
+                @media screen and (max-width: 720px) {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                }
                 .event {
                     width: 97.25%;
+                    @media screen and (max-width: 720px) {
+                        width: 100%;
+                    }
                 }
             }
-        }
-        @media screen and (max-width: 720px) {
-            &-container {
-                &__left-block {
-                    float: none;
-                    width: 100%;
-                    margin: 0;
-                    margin-bottom: 20px;
-                    .news {
-                        width: 100%;
-                    }
-                }
-                &__right-block {
-                    float: none;
-                    width: 100%;
-                    margin: 0;
-                    .event {
-                        width: 100%;
-                    }
-                }
-            }  
         }
     }
     &-calendar-and-messaging {
@@ -273,38 +261,34 @@ html {
             &__left-block {
                 width: 50%;
                 float: left;
-                .calendar {
-                    width: 96.869%;
-                }
-            }
-            &__right-block {
-                width: 50%;
-                float: right;
-                .messaging {
-                    width: 96.869%;
-                }
-            }
-        }
-        @media screen and (max-width: 720px) {
-            &-container {
-                &__left-block {
+                @media screen and (max-width: 720px) {
                     width: 100%;
                     float: none;
-                    .calendar {
+                }
+                .calendar {
+                    width: 96.869%;
+                    @media screen and (max-width: 720px) {
                         width: 100%;
                         margin: 0;
                         margin-bottom: 20px;
                     }
                 }
-                &__right-block {
+            }
+            &__right-block {
+                width: 50%;
+                float: right;
+                @media screen and (max-width: 720px) {
                     width: 100%;
                     float: none;
-                    .messaging {
+                }
+                .messaging {
+                    width: 96.869%;
+                    @media screen and (max-width: 720px) {
                         width: 100%;
                         margin: 0;
                     }
                 }
-            }    
+            }
         }
     }
 }
