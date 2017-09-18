@@ -472,26 +472,32 @@ html {
 .layout-arrow-buttons__left-block {
   display: inline-block;
 }
+@media screen and (max-width: 720px) {
+  .layout-arrow-buttons__left-block {
+    display: block;
+    margin: 0 auto;
+  }
+}
 .layout-arrow-buttons__right-block {
   display: inline-block;
+}
+@media screen and (max-width: 720px) {
+  .layout-arrow-buttons__right-block {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .layout-arrow-buttons .arrow-button {
   margin: 0 10px;
 }
 @media screen and (max-width: 720px) {
-  .layout-arrow-buttons {
-    text-align: center;
-  }
-  .layout-arrow-buttons__left-block {
-    display: block;
-    margin: 0 auto;
-  }
-  .layout-arrow-buttons__right-block {
-    display: block;
-    margin: 0 auto;
-  }
   .layout-arrow-buttons .arrow-button {
     margin: 10px 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .layout-arrow-buttons {
+    text-align: center;
   }
 }
 .layout-circle-progress-bars {
@@ -504,15 +510,17 @@ html {
   font-weight: 300;
   font-style: normal;
 }
-.layout-circle-progress-bars .circle-progress-bar-b {
-  width: 10.875rem;
-  height: 10.875rem;
-}
 @media screen and (max-width: 720px) {
   .layout-circle-progress-bars .circle-progress-bar {
     display: block;
     margin: 10px auto;
   }
+}
+.layout-circle-progress-bars .circle-progress-bar-b {
+  width: 10.875rem;
+  height: 10.875rem;
+}
+@media screen and (max-width: 720px) {
   .layout-circle-progress-bars .circle-progress-bar-b {
     display: block;
     margin: 10px auto;
@@ -524,18 +532,26 @@ html {
   margin-right: 7.5%;
   margin-left: 4.05%;
 }
+@media screen and (max-width: 720px) {
+  .layout-sliders .slider-a {
+    width: 100%;
+    display: block;
+    margin: 30px auto;
+  }
+}
 .layout-sliders .slider-b {
   width: 43.75%;
 }
 @media screen and (max-width: 720px) {
-  .layout-sliders {
-    margin-bottom: 60px;
-  }
-  .layout-sliders .slider-a,
   .layout-sliders .slider-b {
     width: 100%;
     display: block;
     margin: 30px auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .layout-sliders {
+    margin-bottom: 60px;
   }
 }
 .layout-stages {
@@ -548,13 +564,31 @@ html {
   width: 50%;
   float: left;
 }
+@media screen and (max-width: 720px) {
+  .layout-form-elements-container__left-block {
+    width: 100%;
+    float: none;
+  }
+}
 .layout-form-elements-container__left-block .message-form {
   width: 96.5%;
+}
+@media screen and (max-width: 720px) {
+  .layout-form-elements-container__left-block .message-form {
+    width: 100%;
+  }
 }
 .layout-form-elements-container__right-block {
   width: 50%;
   float: right;
   text-align: center;
+}
+@media screen and (max-width: 720px) {
+  .layout-form-elements-container__right-block {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
 }
 .layout-form-elements-container__right-block .toggles:nth-child(2) {
   margin-right: 3.7%;
@@ -562,30 +596,24 @@ html {
 .layout-form-elements-container__right-block .tick-box {
   margin-right: 2.7%;
 }
-@media screen and (max-width: 720px) {
-  .layout-form-elements h1.layout__title:first-child {
-    margin-top: 0;
-  }
-  .layout-form-elements-container__left-block {
-    width: 100%;
-    float: none;
-  }
-  .layout-form-elements-container__left-block .message-form {
-    width: 100%;
-  }
-  .layout-form-elements-container__right-block {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-}
 .layout-search-drop-user-profile-container__left-block {
   width: 50%;
   float: left;
 }
+@media screen and (max-width: 720px) {
+  .layout-search-drop-user-profile-container__left-block {
+    width: 100%;
+    float: none;
+  }
+}
 .layout-search-drop-user-profile-container__left-block .search-form {
   width: 97%;
   margin-bottom: 29px;
+}
+@media screen and (max-width: 720px) {
+  .layout-search-drop-user-profile-container__left-block .search-form {
+    width: 100%;
+  }
 }
 .layout-search-drop-user-profile-container__left-block .search-form__input {
   height: 3.25rem;
@@ -593,53 +621,42 @@ html {
 .layout-search-drop-user-profile-container__left-block .drop-down .select2.select2-container.select2-container--default {
   width: 97% !important;
 }
+@media screen and (max-width: 720px) {
+  .layout-search-drop-user-profile-container__left-block .drop-down .select2.select2-container.select2-container--default {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .layout-search-drop-user-profile-container__left-block .drop-down .select2-selection.select2-selection--single {
+    height: 39px !important;
+  }
+}
 .layout-search-drop-user-profile-container__right-block {
   width: 50%;
   float: right;
   text-align: center;
 }
-.layout-search-drop-user-profile-container__right-block .user-info-block {
-  width: 90%;
-  margin-bottom: 46px;
-}
-.layout-search-drop-user-profile-container__right-block .user-info-block:nth-child(3) {
-  margin-bottom: 0;
-}
 @media screen and (max-width: 720px) {
-  .layout-search-drop-user-profile-container__left-block {
-    width: 100%;
-    float: none;
-  }
-  .layout-search-drop-user-profile-container__left-block .search-form {
-    width: 100%;
-  }
-  .layout-search-drop-user-profile-container__left-block .drop-down .select2.select2-container.select2-container--default {
-    width: 100% !important;
-  }
-  .layout-search-drop-user-profile-container__left-block .drop-down .select2-selection.select2-selection--single {
-    height: 39px !important;
-  }
   .layout-search-drop-user-profile-container__right-block {
     width: 100%;
     float: none;
   }
+}
+.layout-search-drop-user-profile-container__right-block .user-info-block {
+  width: 90%;
+  margin-bottom: 46px;
+}
+@media screen and (max-width: 720px) {
   .layout-search-drop-user-profile-container__right-block .user-info-block {
     width: 100%;
   }
 }
+.layout-search-drop-user-profile-container__right-block .user-info-block:nth-child(3) {
+  margin-bottom: 0;
+}
 .layout-news-events-container__left-block {
   width: 50%;
   float: left;
-}
-.layout-news-events-container__left-block .news {
-  width: 97.25%;
-}
-.layout-news-events-container__right-block {
-  width: 50%;
-  float: right;
-}
-.layout-news-events-container__right-block .event {
-  width: 97.25%;
 }
 @media screen and (max-width: 720px) {
   .layout-news-events-container__left-block {
@@ -648,14 +665,30 @@ html {
     margin: 0;
     margin-bottom: 20px;
   }
+}
+.layout-news-events-container__left-block .news {
+  width: 97.25%;
+}
+@media screen and (max-width: 720px) {
   .layout-news-events-container__left-block .news {
     width: 100%;
   }
+}
+.layout-news-events-container__right-block {
+  width: 50%;
+  float: right;
+}
+@media screen and (max-width: 720px) {
   .layout-news-events-container__right-block {
     float: none;
     width: 100%;
     margin: 0;
   }
+}
+.layout-news-events-container__right-block .event {
+  width: 97.25%;
+}
+@media screen and (max-width: 720px) {
   .layout-news-events-container__right-block .event {
     width: 100%;
   }
@@ -664,30 +697,36 @@ html {
   width: 50%;
   float: left;
 }
-.layout-calendar-and-messaging-container__left-block .calendar {
-  width: 96.869%;
-}
-.layout-calendar-and-messaging-container__right-block {
-  width: 50%;
-  float: right;
-}
-.layout-calendar-and-messaging-container__right-block .messaging {
-  width: 96.869%;
-}
 @media screen and (max-width: 720px) {
   .layout-calendar-and-messaging-container__left-block {
     width: 100%;
     float: none;
   }
+}
+.layout-calendar-and-messaging-container__left-block .calendar {
+  width: 96.869%;
+}
+@media screen and (max-width: 720px) {
   .layout-calendar-and-messaging-container__left-block .calendar {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
   }
+}
+.layout-calendar-and-messaging-container__right-block {
+  width: 50%;
+  float: right;
+}
+@media screen and (max-width: 720px) {
   .layout-calendar-and-messaging-container__right-block {
     width: 100%;
     float: none;
   }
+}
+.layout-calendar-and-messaging-container__right-block .messaging {
+  width: 96.869%;
+}
+@media screen and (max-width: 720px) {
   .layout-calendar-and-messaging-container__right-block .messaging {
     width: 100%;
     margin: 0;
