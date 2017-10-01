@@ -2,8 +2,11 @@ mixin message-form(data)
     form.message-form
         include ../form-line/form-line.pug
         include ../button/button.pug
-        +form-line(data["name-field"].inputtype,data["name-field"].name,data["name-field"].placeholder,data["name-field"].boxtype)
-        +form-line(data["email-field"].inputtype,data["email-field"].name,data["email-field"].placeholder)
-        +form-line(data["textarea"].inputtype,data["textarea"].name,data["textarea"].placeholder)
+        .message-form__field
+            +form-line({inputtype: data["name-field"].inputtype, name: data["name-field"].name, placeholder: data["name-field"].placeholder, valid: data["name-field"].valid})
+        .message-form__field
+            +form-line({inputtype: data["email-field"].inputtype, name: data["email-field"].name, placeholder: data["email-field"].placeholder})
+        .message-form__field
+            +form-line({inputtype: data["textarea"].inputtype, name: data["textarea"].name, placeholder: data["textarea"].placeholder})
         .message-form__submit
-            +button("submit","submit","#","default","green")
+            +button({text: "Submit", type: "submit", link: "none", color: "green", theme: "form"})

@@ -9,5 +9,14 @@ git clone https://github.com/Maksimus-Prime/task-two-ui-kit.git
 ```
 npm install
 ```
+## Run
+### Development
+```
+npm run dev
+```
+### Production
+```
+npm run prod
+```
 Look at the [result](https://maksimus-prime.github.io/task-two-ui-kit/public/).
 You can look at simple [site](https://maksimus-prime.github.io/task-two-ui-kit/public/testsite/) with elements from the UI-KIT as well.

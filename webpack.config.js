@@ -46,7 +46,7 @@ module.exports = {
             }
         }, {
             test: /\.(css|less)$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!less-loader")
         }, {
             test: /\.(jpe?g|png|svg|gif)$/,
             exclude: [
@@ -63,11 +63,9 @@ module.exports = {
         noParse: /node_modules\/chart.js\/dist\/.js$/
     },
     devServer: {
-    	contentBase: __dirname + "/public/",
-    	host: '192.168.1.7',
-    	port: 2992,
-    	disableHostCheck: true,
-    	inline: false
+        contentBase: __dirname + "/public/",
+        host: 'localhost',
+        port: 3003
     },
     plugins: [
         new webpack.ProvidePlugin({

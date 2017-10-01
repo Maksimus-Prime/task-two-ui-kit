@@ -1,7 +1,8 @@
-mixin button(value,type,link,size,theme)
-    -var size = size || "default";
-    -var link = link || "#";
-    if (link!=="#")
-        a(href=link+"" class="button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : "")+((theme==="event")? " theme_event" : "") rel="noopener noreferrer")=value
+mixin button(object)
+    -var size = (object.size? " button_size_"+object.size : "");
+    -var color = (object.color? " button_color_" + object.color : "");
+    -var theme = (object.theme? " button_theme_" + object.theme : "");
+    if (object.link!=="none")
+        a.button(href=object.link+"" class=size + color + theme + "" rel="noopener noreferrer")=object.text
     else
-        button(type=type+"" class="button js-button"+((size==="small")? " size_small" : "")+((theme==="green")? " theme_green" : "")+((theme==="event")? " theme_event" : ""))=value
+        button.button(type=object.type+"" class="js-button"+ size + color + theme)=object.text
