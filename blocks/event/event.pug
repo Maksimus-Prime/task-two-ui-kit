@@ -1,12 +1,12 @@
-mixin event(src,day,month,title,description)
+mixin event(object)
     include ../button/button.pug
     section.event
-        .event-left-half(style='background-image:url('+src+')')
+        .event-left-half(style='background-image:url('+object.image+')')
         .event-right-half
-            span.event-right-half__date
-                b.event-right-half__day=day
+            span.event__date
+                b.event__day=object.day
                 | #{month}
-            h4.event-right-half__title=title
-            p.event-right-half__description=description
-            div
-                +button("Add to calendar","button","#","small","event")
+            h4.event__title=object.title
+            p.event__description=object.description
+            div.event__button
+                +button({text: "Add to calendar", type: "button", link: "none", size: "small", theme: "event"})

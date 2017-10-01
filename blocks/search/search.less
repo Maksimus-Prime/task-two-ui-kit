@@ -1,7 +1,6 @@
 .search-form {
     display: flex;
     width: 526px;
-    margin-bottom: 1.8rem;
     &__field {
         flex-direction: column;
         justify-content: center;
@@ -20,6 +19,13 @@
         }
         &:last-child {
             border-radius: 0 5px 5px 0;
+        }
+        &_not-found_true {
+            background-color: #e75735;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
         }
     }
     &__button {
@@ -42,15 +48,6 @@
         }
         &:last-child {
             border-radius: 0 5px 5px 0;
-        }
-    }
-    .state_off& {
-        &__field {
-            background-color: #e75735;
-            color: #fff;
-            &::placeholder {
-                color: #fff;
-            }
         }
     }
     @media screen and (max-width: 526px) {

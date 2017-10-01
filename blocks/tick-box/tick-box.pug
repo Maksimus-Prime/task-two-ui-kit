@@ -1,9 +1,8 @@
-mixin tick-box(type,name,value,state)
+mixin tick-box(object)
     .tick-box
-        -var state = state || false;
-        if type==="radio"
-            input.tick-box__input(type="radio" id=name+"-"+value+"" name=name+"" checked=(state==="active"? "checked" : undefined))
-            label.tick-box__label(for=name+"-"+value+"")
-        else if type==="checkbox"
-            input.tick-box__input(type="checkbox" id=value+"" name=value+"" checked=(state==="active"? "checked" : undefined))
-            label.tick-box__label(for=value)
+        if object.type==="radio"
+            input.tick-box__input(type="radio" id=object.name+"-"+object.value+"" name=object.name+"" checked=(object.active? "checked" : undefined))
+            label.tick-box__label(for=object.name+"-"+object.value+"")
+        else if object.type==="checkbox"
+            input.tick-box__input(type="checkbox" id=object.value+"" name=object.value+"" checked=(object.active? "checked" : undefined))
+            label.tick-box__label(for=object.value)

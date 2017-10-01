@@ -9,7 +9,7 @@
 .button {
     display: inline-block;
     position: relative;
-    padding: 1.45% 5.15%;
+    padding: 0.985rem 3.495rem;;
     letter-spacing: 0.0625rem;
     font-size: 1.375rem;
     line-height: 1.375rem;
@@ -40,8 +40,8 @@
     &:active, &:focus {
         outline: none;
     }
-    .size_small& {
-        padding: 0.8% 2.6%;
+    &_size_small {
+        padding: 0.543rem 1.765rem;
         font-size: 1.14375rem;
         line-height: 1.14375rem;
         border-radius: 0.3125rem;
@@ -54,7 +54,7 @@
             box-shadow: none;
         }
     }
-    .theme_green& {
+    &_color_green {
         background-color: @green-background-color;
         border: 0.125rem solid @green-outline-color;
         box-shadow: 0 0.3125rem 0 0 @green-outline-color;
@@ -69,7 +69,7 @@
             box-shadow: none;
         }
     }
-    .theme_green.size_small& {
+    &_color_green&_size_small {
         box-shadow: 0 0.1875rem 0 0 @green-outline-color;
         &:hover {
             box-shadow: 0 0.1875rem 0 0 @green-hover-bottom-color;
@@ -79,7 +79,7 @@
             box-shadow: none;
         }
     }
-    .theme_event& {
+    &_theme_event {
         box-shadow: 0 0.1875rem 0 0 @green-hover-bottom-color;
         &:hover {
             box-shadow: 0 0.1875rem 0 0 #fff;
@@ -89,7 +89,7 @@
             box-shadow: none;
         }
     }
-    .theme_event.size_small& {
+    &_theme_event&_size_small {
         padding: 0.58rem 1.1rem;
         border: 0.125rem solid #fff;
         color: #4eb7a8;
@@ -105,6 +105,23 @@
         &:active {
             transform: translateY(0.1875rem);
             box-shadow: none;
+        }
+    }
+    &_theme_form {
+        padding: 0.98rem 3.602rem;
+    }
+    &_theme_messaging {
+        padding: 3.2% 30% 3.22% 30%; //1.052rem 9.86rem 1.06rem 9.86rem
+        text-align: center;
+        width: 85%;
+        background-color: #4eb7a8;
+        border: 1px solid #4eb7a8; 
+        box-shadow: 0 5px 0 0 #28a290;
+        color: #fff;
+        font-size: 1.375rem;
+        &:hover {
+            background-color: #fff; 
+            color: #4eb7a8;
         }
     }
 }

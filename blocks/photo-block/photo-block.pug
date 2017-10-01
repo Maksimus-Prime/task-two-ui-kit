@@ -1,10 +1,8 @@
-mixin photo-block(src,link)
-    -var src = src || "#";
-    -var link = link || "#";
-    if link !== "#"
-        .photo-block
-            a(href=link+"")
-                img(src=src+"" alt="photo-block")
+mixin photo-block(object)
+    if object.link !== "none"
+        .photo-block(class=object.theme? "photo-block_theme_"+object.theme : "")
+            a.photo-block__link(href=object.link+"" target="_blank" rel="noopener noreferrer")
+                img.photo-block__image(src=object.image+"" alt="User's photo")
     else
         .photo-block
-            img(src=src+"" alt="photo-block")
+            img.photo-block__image(src=object.image+"" alt="User's photo")

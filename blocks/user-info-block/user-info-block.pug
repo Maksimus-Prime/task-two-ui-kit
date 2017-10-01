@@ -1,6 +1,8 @@
-mixin user-info-block(photo,link,name,job,facebook,twitter,dribbble,theme)
+mixin user-info-block(object)
     section.user-info-block.clearfix
         include ../photo-block/photo-block.pug
         include ../info-block/info-block.pug
-        +photo-block(photo,link)
-        +info-block(name,job,facebook,twitter,dribbble,theme)
+        .user-info-block__photo
+            +photo-block({image: object.image, link: object.link})
+        .user-info-block__info
+            +info-block({name: object.name, job: object.job, facebook: object.facebook, twitter: object.twitter, dribbble: object.dribbble, theme: object.theme})

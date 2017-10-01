@@ -52,13 +52,13 @@
             "inputtype": "text",
             "name": "name",
             "placeholder": "Your Name",
-            "boxtype": "error"
+            "valid": "false"
         },
         "email-field": {
             "inputtype": "email",
             "name": "email",
             "placeholder": "Your Email",
-            "boxtype": ""
+            "valid": "true"
         },
         "textarea": {
             "inputtype": "textarea",

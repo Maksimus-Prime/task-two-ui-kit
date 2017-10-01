@@ -5,9 +5,14 @@
     text-align: center;
     display: inline-block;
     border-radius: 50%;
+    padding: 0;
     outline: none;
-    &_direction_left {
+    border: none;
+    background: none;
+    cursor: default;
+    &__arrow {
         display: inline-block;
+        cursor: pointer;
         width: 5.125rem;
         height: 5.125rem;
         line-height: 5.125rem;
@@ -24,83 +29,48 @@
             border-right: 0.40625rem solid @button-color;
             transform: rotate(-135deg);
         }
-    }
-    &_direction_right {
-        display: inline-block;
-        width: 5.125rem;
-        height: 5.125rem;
-        line-height: 5.125rem;
-        border: 0.3125rem solid @button-color;
-        border-radius: 50%;
-        &::after {
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 13%;
-            width: 31%;
-            height: 31%;
-            border-bottom: 0.40625rem solid @button-color;
-            border-left: 0.40625rem solid @button-color;
-            transform: rotate(-135deg);         
-        }
-    }
-    &:hover {
-        background: @button-color;
-        & .arrow-button_direction_left {
+        &:hover {
+            background: @button-color;
             &::after {
                 border-top-color: #fff;
                 border-right-color: #fff;
             }
         }
-        & .arrow-button_direction_right {
+        &_direction_right {
             &::after {
-                border-bottom-color: #fff;
-                border-left-color: #fff;
+                margin-left: 0;
+                border-top: none;
+                border-right: none;
+                margin-right: 13%;
+                border-bottom: 0.40625rem solid @button-color;
+                border-left: 0.40625rem solid @button-color;  
             }
-        }
-        .theme_disabled& {
-            background: @button-font;
-            & .arrow-button_direction_left {
-            cursor: default;
-            pointer-events: none;
+            &:hover {
                 &::after {
-                    border-top-color: @disabled-button-color;
-                    border-right-color: @disabled-button-color;
-                }
-            }
-            & .arrow-button_direction_right {
-            cursor: default;
-            pointer-events: none;
-                &::after {
-                    border-bottom-color: @disabled-button-color;
-                    border-left-color: @disabled-button-color;
+                    border-bottom-color: #fff;
+                    border-left-color: #fff;
                 }
             }
         }
-    }
-    .theme_disabled & {
-        &_direction_left {
+        &_disabled_true {
+            cursor: default;
             background-color: @disabled-button-color;
             border: 0.3125rem solid @disabled-button-color;
             &::after {
                 border-top: 0.40625rem solid #fff;
                 border-right: 0.40625rem solid #fff;
             }
-        }
-        &_direction_right {
-            background-color: @disabled-button-color;
-            border: 0.3125rem solid @disabled-button-color;
-            &::after {
-                border-bottom: 0.40625rem solid #fff;
-                border-left: 0.40625rem solid #fff;
+            &:hover {
+                background-color: @disabled-button-color;
             }
         }
-    }
-    a.theme_disabled& {
-        cursor: default;
-        pointer-events: none;
-    }
-    &:hover, &:active, &:focus {
-        outline: none;
+        &_direction_right&_disabled_true {
+            &::after {
+                border-top: none;
+                border-right: none;
+                border-bottom: 0.40625rem solid #fff;
+                border-left: 0.40625rem solid #fff;
+            }            
+        }
     }
 }
