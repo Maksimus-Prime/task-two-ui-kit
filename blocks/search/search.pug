@@ -1,4 +1,4 @@
 mixin search(object)
     form.search-form
-        input.search-form__field(type="text" name=object.name + "" class=(object.not_found ? "search-form__field_not-found_true" : "") placeholder=(object.not_found ? "I've not found what I'm looking for ..." : "Search"))
+        input.search-form__field(type="text" name=object.name class=(object.not_found ? "search-form__field_not-found_true" : "") placeholder=(object.not_found ? "I've not found what I'm looking for ..." : "Search"))
         button.search-form__button(type="submit")

@@ -1,5 +1,5 @@
 mixin toggles(object)
     label.toggles
         -var name = "checkbox-"+object.name;
-        input.toggles__input(type="checkbox" id=name+"" name=name+"" checked=(object.active? "checked" : undefined))
+        input.toggles__input(type="checkbox" id=name name=name checked=(object.active? "checked" : undefined))
         div.toggles__slider

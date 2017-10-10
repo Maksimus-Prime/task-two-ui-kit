@@ -3,6 +3,6 @@ mixin button(object)
     -var color = (object.color? " button_color_" + object.color : "");
     -var theme = (object.theme? " button_theme_" + object.theme : "");
     if (object.link!=="none")
-        a.button(href=object.link+"" class=size + color + theme + "" rel="noopener noreferrer")=object.text
+        a.button(href=object.link class=size + color + theme rel="noopener noreferrer")=object.text
     else
-        button.button(type=object.type+"" class="js-button"+ size + color + theme)=object.text
+        button.button(type=object.type class="js-button"+ size + color + theme)=object.text
