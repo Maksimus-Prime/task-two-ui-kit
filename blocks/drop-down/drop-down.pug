@@ -1,8 +1,8 @@
 mixin drop-down(id,options)
     .drop-down
-        select.drop-down__select(name=id+"" class="js-drop-down__select")
+        select.drop-down__select(name=id class="js-drop-down__select")
             option
             -var i = 1;
             each item in options
                 option(value=(i++)+"")
-                    a(href=item.link+"")=item.name
+                    a(href=item.link)=item.name

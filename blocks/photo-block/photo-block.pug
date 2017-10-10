@@ -1,8 +1,8 @@
 mixin photo-block(object)
     if object.link !== "none"
         .photo-block(class=object.theme? "photo-block_theme_"+object.theme : "")
-            a.photo-block__link(href=object.link+"" target="_blank" rel="noopener noreferrer")
-                img.photo-block__image(src=object.image+"" alt="User's photo")
+            a.photo-block__link(href=object.link target="_blank" rel="noopener noreferrer")
+                img.photo-block__image(src=object.image alt="User's photo")
     else
         .photo-block
-            img.photo-block__image(src=object.image+"" alt="User's photo")
+            img.photo-block__image(src=object.image alt="User's photo")

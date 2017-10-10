@@ -1,7 +1,7 @@
 mixin form-line(object)
     .form-line
         if object.inputtype == "textarea"
-            textarea.form-line__textarea(type="textarea" name=object.name+"" placeholder=object.placeholder)
+            textarea.form-line__textarea(type="textarea" name=object.name placeholder=object.placeholder)
         else
-            input.form-line__field(type=object.inputtype+"" name=object.name+"" placeholder=object.placeholder+"")
+            input.form-line__field(type=object.inputtype name=object.name placeholder=object.placeholder)
             div.form-line__alert-box(class=(object.valid? "form-line__alert-box_valid_true" : ""))=object.valid? "Thanks!" : "Error"

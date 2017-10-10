@@ -380,7 +380,6 @@
 
                     // all other Pips
                     percent = (( 102 / pips ) * which ) + "%";
-                    console.log(pips, percent);
 
                     classes += ( options.rest === "label" ) ? " ui-slider-pip-label" : "";
                     classes += ( options.rest === false ) ? " ui-slider-pip-hide" : "";

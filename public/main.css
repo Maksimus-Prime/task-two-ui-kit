@@ -436,7 +436,7 @@ body {
   letter-spacing: 0.125rem;
   word-spacing: -0.125rem;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   font-size: 2.0625rem;
@@ -764,7 +764,7 @@ body {
   border: 0.125rem solid #e75735;
   border-radius: 0.3125rem;
   box-shadow: 0 0.3125rem 0 0 #e75735;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   text-decoration: none;
@@ -1100,7 +1100,7 @@ a.button {
 }
 .calendar__header {
   display: inline-block;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   width: 95.25%;
@@ -1128,7 +1128,7 @@ a.button {
 }
 .calendar__bottom {
   width: 89.354%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   padding: 6% 0.5% 6% 7.2%;
@@ -1165,7 +1165,7 @@ a.button {
 .ui-datepicker-calendar thead {
   background: #e75735;
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   font-size: 1rem;
@@ -1177,7 +1177,7 @@ a.button {
 }
 .ui-datepicker-calendar {
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -1218,7 +1218,7 @@ a.button {
   line-height: 4.0625rem;
   letter-spacing: -2px;
   padding-bottom: 9px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -1316,7 +1316,7 @@ input.circle-progress-bar__value:focus {
   width: 100%;
 }
 .drop-down__select {
-  font-family: "PT Sans", sans-serif !important;
+  font-family: "PT Sans", Arial, sans-serif !important;
   width: 97%;
   font-size: 26px;
   line-height: 50px;
@@ -1332,7 +1332,7 @@ input.circle-progress-bar__value:focus {
   background: #e5e5e5 !important;
   color: #000 !important;
   height: 50px !important;
-  font-family: "PT Sans", sans-serif !important;
+  font-family: "PT Sans", Arial, sans-serif !important;
   line-height: 50px !important;
   border: 0;
 }
@@ -1382,7 +1382,7 @@ input.circle-progress-bar__value:focus {
   padding: 10px 5px 10px 22px !important;
 }
 .select2-container--open .select2-dropdown {
-  font-family: "PT Sans", sans-serif !important;
+  font-family: "PT Sans", Arial, sans-serif !important;
   color: #fff !important;
 }
 .select2-container--open .select2-dropdown--below {
@@ -1398,13 +1398,13 @@ input.circle-progress-bar__value:focus {
   padding: 0 0 0 5px !important;
   width: 100% !important;
   color: #fff !important;
-  font-family: "PT Sans", sans-serif !important;
+  font-family: "PT Sans", Arial, sans-serif !important;
   outline: none !important;
   box-sizing: border-box !important;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
   border: none !important;
-  font-family: "PT Sans", sans-serif !important;
+  font-family: "PT Sans", Arial, sans-serif !important;
   background-color: #4eb7a8 !important;
   font-size: 1.625rem !important;
 }
@@ -1485,7 +1485,7 @@ input.circle-progress-bar__value:focus {
 .event__date {
   display: inline-block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 3.4375rem;
@@ -1494,7 +1494,7 @@ input.circle-progress-bar__value:focus {
 }
 .event__day {
   font-size: 8.3125rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   letter-spacing: -0.25rem;
@@ -1504,7 +1504,7 @@ input.circle-progress-bar__value:focus {
   margin: 0;
   margin-bottom: 6px;
   font-size: 1.4375rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   text-transform: uppercase;
@@ -1514,7 +1514,7 @@ input.circle-progress-bar__value:focus {
 .event__description {
   margin: 0;
   font-size: 1.25rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-bottom: 36px;
@@ -1544,7 +1544,7 @@ input.circle-progress-bar__value:focus {
           flex: 2.1;
   margin-right: 0.75rem;
   font-size: 1.5625rem;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   padding: 0.55rem 0.5rem 0.7rem 1.5rem;
   background-color: #e5e5e5;
   border: none;
@@ -1569,7 +1569,7 @@ input.circle-progress-bar__value:focus {
   border-radius: 7px;
   color: #fff;
   font-size: 1.125rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   text-transform: uppercase;
@@ -1601,7 +1601,7 @@ input.circle-progress-bar__value:focus {
   background-color: #e5e5e5;
   border: 0;
   border-radius: 0.1875rem;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   resize: none;
 }
 @media screen and (max-width: 524px) {
@@ -1628,7 +1628,7 @@ input.circle-progress-bar__value:focus {
   position: relative;
   width: 100%;
   padding-bottom: 4.9%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   background: #e5e5e5;
@@ -1649,7 +1649,7 @@ input.circle-progress-bar__value:focus {
 .info-block__title {
   margin: 0;
   padding: 5% 0 0.55% 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.0625rem;
@@ -1660,7 +1660,7 @@ input.circle-progress-bar__value:focus {
   color: #fff;
 }
 .info-block__subtitle {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   display: inline-block;
@@ -1723,7 +1723,7 @@ div.info-block_theme_green::before {
   border-top-right-radius: 0.3125rem;
 }
 .map-block-info {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1738,7 +1738,7 @@ div.info-block_theme_green::before {
   border-bottom-right-radius: 0.3125rem;
 }
 .map-block-info__title {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1755,7 +1755,7 @@ div.info-block_theme_green::before {
   vertical-align: top;
 }
 .map-block-info__description {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   line-height: 27px;
@@ -1870,7 +1870,7 @@ div.info-block_theme_green::before {
 .messaging-header__name {
   margin: 0;
   padding: 5.35% 0 20.5% 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 3.875rem;
   letter-spacing: -0.1875rem;
   line-height: 4.75rem;
@@ -1905,7 +1905,7 @@ div.info-block_theme_green::before {
   margin: 0 auto;
   margin-top: 10.2%;
   padding: 5.55% 6% 7.5% 6.1%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   font-size: 1.4375rem;
@@ -1933,7 +1933,7 @@ div.info-block_theme_green::before {
   border: 0.3125rem solid #fff;
   background-color: #e5e5e5;
   border-radius: 0.75rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   font-size: 1.4375rem;
@@ -2053,7 +2053,7 @@ div.info-block_theme_green::before {
 .news-right-half__title {
   font-size: 1.75rem;
   margin: 0 0 1.1rem 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #fff;
@@ -2064,7 +2064,7 @@ div.info-block_theme_green::before {
 .news-right-half__date {
   display: inline-block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   color: #fff;
@@ -2075,7 +2075,7 @@ div.info-block_theme_green::before {
 }
 .news-right-half__description {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #fff;
@@ -2129,7 +2129,7 @@ div.info-block_theme_green::before {
   background-color: #e5e5e5;
   border: none;
   font-size: 1.5625rem;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: #888888;
 }
 .search-form__field::-webkit-input-placeholder {
@@ -2292,7 +2292,7 @@ div.info-block_theme_green::before {
   height: 2.625rem;
   border: none;
   border-radius: 0.625rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   font-size: 1.5rem;
@@ -2630,7 +2630,7 @@ div.info-block_theme_green::before {
   top: 0.8125rem;
   font-size: 1.5rem;
   color: #d1d1d1;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
 }
@@ -2690,7 +2690,7 @@ ul.progressbar li.fail:before {
 }
 .stages {
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
 }
@@ -2813,7 +2813,7 @@ ul.progressbar li.fail:before {
 }
 .toggles__slider:after {
   content: 'OFF';
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
   color: white;
