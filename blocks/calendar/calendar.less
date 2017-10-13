@@ -1,5 +1,5 @@
 .calendar {
-    width: 97.9%;
+    width: 100%;
     &__header {
         display: inline-block;
         font-family: 'Lato', Arial, sans-serif;
@@ -26,25 +26,37 @@
             }
         }
     }
-    &__bottom {
-        width: 89.354%;
-        font-family: 'Lato', Arial, sans-serif;
-        font-weight: 500;
-        font-style: bold;
-        padding: 6% 0.5% 6% 7.2%;
-        margin-top: 0.1%;
-        font-size: 1.5rem;
-        letter-spacing: 0.0625rem;
-        text-transform: uppercase;
-        background-color: #e5e5e5;
-        color: #868686;
-        font-weight: bold;
-        border-bottom-left-radius: 0.4375rem;
-        border-bottom-right-radius: 0.4375rem;
+    &__button {
         @media screen and (max-width: 720px) {
             width: 92.3%;
         }
     }
+}
+.ui-datepicker-buttonpane.ui-widget-content button {
+    width: 100%;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    text-align: left;
+    padding: 1.91rem 2.296rem 1.91rem 2.296rem;
+    margin: 0;
+    margin-top: 0.03125rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    background-color: #e5e5e5;
+    color: #868686;
+    font-weight: bold;
+    border-bottom-left-radius: 0.4375rem;
+    border-bottom-right-radius: 0.4375rem;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	padding: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: none;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,

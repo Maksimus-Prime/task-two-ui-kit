@@ -18,7 +18,7 @@ html
     body
         include ../blocks/button/button.pug
         include ../blocks/arrow-button/arrow-button.pug
-        include ../blocks/circle-progress-bar-b/circle-progress-bar-b.pug
+        include ../blocks/pie-chart/pie-chart.pug
         include ../blocks/circle-progress-bar/circle-progress-bar.pug
         include ../blocks/slider-a/slider-a.pug
         include ../blocks/slider-b/slider-b.pug
@@ -58,18 +58,18 @@ html
                     +arrow-button({direction: "left", state: "disabled"})
                 .layout-arrow-buttons__item-button
                     +arrow-button({direction: "right", state: "disabled"})
-            .layout-circle-progress-bars
+            .layout-progress-bars
                 h3.layout__title Percentages / Pie chart
-                .layout-circle-progress-bars__item
+                .layout-progress-bars__item
                     +circle-progress-bar({value: "0"})
-                .layout-circle-progress-bars__item
+                .layout-progress-bars__item
                     +circle-progress-bar({value: "38"})
-                .layout-circle-progress-bars__item
+                .layout-progress-bars__item
                     +circle-progress-bar({value: "62"})
-                .layout-circle-progress-bars__item
+                .layout-progress-bars__item
                     +circle-progress-bar({value: "89"})
-                .layout-circle-progress-bars__item
-                    +circle-progress-bar-b(data)
+                .layout-progress-bars__item
+                    +pie-chart(data)
             .layout-sliders
                 h3.layout__title Sliders
                 .layout-sliders__slider-left

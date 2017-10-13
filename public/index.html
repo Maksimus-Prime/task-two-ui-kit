@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <!--mixin pie-chart(data)
+    .pie-chart
+        canvas.pie-chart__value(class="js-pie-chart__value")
+    -->
     <div class="layout">
       <div class="layout-buttons">
         <h3 class="layout__title">Standard Buttons</h3>
@@ -40,37 +44,37 @@
               <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_direction_right"></span></button>
         </div>
         <div class="layout-arrow-buttons__item-button">
-              <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_disabled_true"></span></button>
+              <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_disabled"></span></button>
         </div>
         <div class="layout-arrow-buttons__item-button">
-              <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_direction_right arrow-button__arrow_disabled_true"></span></button>
+              <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_direction_right arrow-button__arrow_disabled"></span></button>
         </div>
       </div>
-      <div class="layout-circle-progress-bars">
+      <div class="layout-progress-bars">
         <h3 class="layout__title">Percentages / Pie chart</h3>
-        <div class="layout-circle-progress-bars__item">
+        <div class="layout-progress-bars__item">
               <div class="circle-progress-bar">
                 <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="0">
               </div>
         </div>
-        <div class="layout-circle-progress-bars__item">
+        <div class="layout-progress-bars__item">
               <div class="circle-progress-bar">
                 <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="38">
               </div>
         </div>
-        <div class="layout-circle-progress-bars__item">
+        <div class="layout-progress-bars__item">
               <div class="circle-progress-bar">
                 <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="62">
               </div>
         </div>
-        <div class="layout-circle-progress-bars__item">
+        <div class="layout-progress-bars__item">
               <div class="circle-progress-bar">
                 <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="89">
               </div>
         </div>
-        <div class="layout-circle-progress-bars__item">
-              <div class="circle-progress-bar-b">
-                <canvas class="circle-progress-bar-b__value js-circle-progress-bar-b__value"></canvas>
+        <div class="layout-progress-bars__item">
+              <div class="pie-chart">
+                <div class="pie-chart__value js-pie-chart__value"></div>
               </div>
         </div>
       </div>
@@ -96,13 +100,13 @@
                     <div class="message-form__field">
                             <div class="form-line">
                               <input class="form-line__field" type="text" name="name" placeholder="Your Name">
-                              <div class="form-line__alert-box form-line__alert-box_valid_true">Thanks!</div>
+                              <div class="form-line__alert-box">Error</div>
                             </div>
                     </div>
                     <div class="message-form__field">
                             <div class="form-line">
                               <input class="form-line__field" type="email" name="email" placeholder="Your Email">
-                              <div class="form-line__alert-box">Error</div>
+                              <div class="form-line__alert-box form-line__alert-box_valid">Thanks!</div>
                             </div>
                     </div>
                     <div class="message-form__field">
@@ -255,7 +259,6 @@
                   <section class="calendar">
                     <div class="calendar__header js-calendar__header"></div>
                     <div class="calendar__datepicker js-calendar__datepicker"></div>
-                    <div class="calendar__bottom js-calendar__bottom"></div>
                   </section>
             </div>
           </div>
