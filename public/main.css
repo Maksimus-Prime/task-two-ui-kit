@@ -466,16 +466,16 @@ body {
     margin: 10px 10px;
   }
 }
-.layout-circle-progress-bars {
+.layout-progress-bars {
   text-align: center;
 }
-.layout-circle-progress-bars__item {
+.layout-progress-bars__item {
   display: inline-block;
   width: 10.875rem;
-  width: 200px;
+  height: 10.875rem;
 }
 @media screen and (max-width: 720px) {
-  .layout-circle-progress-bars__item {
+  .layout-progress-bars__item {
     display: block;
     margin: 10px auto;
   }
@@ -735,19 +735,19 @@ body {
   border-bottom-color: #fff;
   border-left-color: #fff;
 }
-.arrow-button__arrow_disabled_true {
+.arrow-button__arrow_disabled {
   cursor: default;
   background-color: #e5e5e5;
   border: 0.3125rem solid #e5e5e5;
 }
-.arrow-button__arrow_disabled_true::after {
+.arrow-button__arrow_disabled::after {
   border-top: 0.40625rem solid #fff;
   border-right: 0.40625rem solid #fff;
 }
-.arrow-button__arrow_disabled_true:hover {
+.arrow-button__arrow_disabled:hover {
   background-color: #e5e5e5;
 }
-.arrow-button__arrow_direction_right.arrow-button__arrow_disabled_true::after {
+.arrow-button__arrow_direction_right.arrow-button__arrow_disabled::after {
   border-top: none;
   border-right: none;
   border-bottom: 0.40625rem solid #fff;
@@ -1096,7 +1096,7 @@ a.button {
   top: .3em;
 }
 .calendar {
-  width: 97.9%;
+  width: 100%;
 }
 .calendar__header {
   display: inline-block;
@@ -1126,13 +1126,22 @@ a.button {
     width: 99.9%;
   }
 }
-.calendar__bottom {
-  width: 89.354%;
+@media screen and (max-width: 720px) {
+  .calendar__button {
+    width: 92.3%;
+  }
+}
+.ui-datepicker-buttonpane.ui-widget-content button {
+  width: 100%;
   font-family: 'Lato', Arial, sans-serif;
   font-weight: 500;
   font-style: bold;
-  padding: 6% 0.5% 6% 7.2%;
-  margin-top: 0.1%;
+  text-align: left;
+  padding: 1.91rem 2.296rem 1.91rem 2.296rem;
+  margin: 0;
+  margin-top: 0.03125rem;
+  outline: none;
+  border: none;
   font-size: 1.5rem;
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
@@ -1142,10 +1151,11 @@ a.button {
   border-bottom-left-radius: 0.4375rem;
   border-bottom-right-radius: 0.4375rem;
 }
-@media screen and (max-width: 720px) {
-  .calendar__bottom {
-    width: 92.3%;
-  }
+.ui-datepicker .ui-datepicker-buttonpane {
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: none;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
@@ -1293,11 +1303,6 @@ a.button {
   .ui-datepicker th {
     letter-spacing: 0;
   }
-}
-.circle-progress-bar-b {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
 }
 .circle-progress-bar {
   width: 10.875rem;
@@ -1548,7 +1553,14 @@ input.circle-progress-bar__value:focus {
   padding: 0.55rem 0.5rem 0.7rem 1.5rem;
   background-color: #e5e5e5;
   border: none;
+  outline: none;
   border-radius: 7px;
+}
+.form-line__field:focus {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 .form-line__alert-box {
   display: -webkit-box;
@@ -1586,10 +1598,10 @@ input.circle-progress-bar__value:focus {
   border-radius: 0.125rem 0.125rem;
   background-color: #e75735;
 }
-.form-line__alert-box_valid_true {
+.form-line__alert-box_valid {
   background-color: #4eb7a8;
 }
-.form-line__alert-box_valid_true::before {
+.form-line__alert-box_valid::before {
   background-color: #4eb7a8;
 }
 .form-line__textarea {
@@ -1603,6 +1615,13 @@ input.circle-progress-bar__value:focus {
   border-radius: 0.1875rem;
   font-family: "PT Sans", Arial, sans-serif;
   resize: none;
+  outline: none;
+}
+.form-line__textarea:focus {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 @media screen and (max-width: 524px) {
   .form-line {
@@ -2131,6 +2150,7 @@ div.info-block_theme_green::before {
   font-size: 1.5625rem;
   font-family: "PT Sans", Arial, sans-serif;
   color: #888888;
+  outline: none;
 }
 .search-form__field::-webkit-input-placeholder {
   color: #888888;
@@ -2160,6 +2180,12 @@ div.info-block_theme_green::before {
 .search-form__field_not-found_true::placeholder {
   color: #fff;
 }
+.search-form__field:focus {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
 .search-form__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2184,6 +2210,7 @@ div.info-block_theme_green::before {
   font-weight: normal;
   background-color: #e75735;
   border: none;
+  outline: none;
 }
 .search-form__button:first-child {
   border-radius: 5px 0 0 5px;

@@ -5,7 +5,7 @@ mixin message-form(data)
         .message-form__field
             +form-line({inputtype: data["name-field"].inputtype, name: data["name-field"].name, placeholder: data["name-field"].placeholder, valid: data["name-field"].valid})
         .message-form__field
-            +form-line({inputtype: data["email-field"].inputtype, name: data["email-field"].name, placeholder: data["email-field"].placeholder})
+            +form-line({inputtype: data["email-field"].inputtype, name: data["email-field"].name, placeholder: data["email-field"].placeholder, valid: data["email-field"].valid})
         .message-form__field
             +form-line({inputtype: data["textarea"].inputtype, name: data["textarea"].name, placeholder: data["textarea"].placeholder})
         .message-form__submit

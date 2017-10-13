@@ -1,52 +1,52 @@
 {
-    "chart": {
-        "item1": {
+    "chart": [
+        {
             "name": "good",
             "value": "24"
         },
-        "item2": {
+        {
             "name": "good",
             "value": "25"
         },
-        "item3": {
+        {
             "name": "good",
             "value": "40"
         },
-        "item4": {
+        {
             "name": "good",
             "value": "45"
         }
-    },
-    "dropdown": {
-        "option1": {
+    ],
+    "dropdown": [
+        {
             "link": "event.html",
             "name": "Apple Festival 2017"
         },
-        "option2": {
+        {
             "link": "event.html",
             "name": "Fish festival 2017"
         },
-        "option3": {
+        {
             "link": "event.html",
             "name": "International Contest Festival Ax Day"
         },
-        "option4": {
+        {
             "link": "event.html",
             "name": "Vasnetsovs's Plain Air and Pottery Symposium"
         },
-        "option5": {
+        {
             "link": "event.html",
             "name": "The International Music Festival Kaliningrad City Jazz"
         },
-        "option6": {
+        {
             "link": "event.html",
             "name": "Test event"
         },
-        "option7": {
+        {
             "link": "event.html",
             "name": "Test event"
         }
-    },
+    ],
     "messageform": {
         "name-field": {
             "inputtype": "text",

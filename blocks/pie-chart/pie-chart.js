@@ -1,8 +1,33 @@
-require('./circle-progress-bar-b.less');
+/*require('./pie-chart.less');
 require("jquery");
 
-Chart.defaults.global.legend.display = false;
-$('.js-circle-progress-bar-b__value').each(function(i){
+
+$('.js-pie-chart__value').each(function(i) {
+    new Chartist.Pie($(this)[0], {
+    series: [{
+        value: 20,
+        className: 'piece1'
+        }, {
+        value: 10,
+        className: 'piece2'
+        }, {
+        value: 20,
+        className: 'piece3'
+        }, {
+        value: 50,
+        className: 'piece4'
+    }]
+    }, {
+      donut: true,
+      showLabel: false,
+      donutWidth: 20,
+      startAngle: 0,
+      total: 100
+    });    
+});*/
+
+/*Chart.defaults.global.legend.display = false;
+$('.js-pie-chart__value').each(function(i){
     var ctx = $(this)[0];
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
@@ -32,4 +57,4 @@ $('.js-circle-progress-bar-b__value').each(function(i){
         }
         }
     });
-});
+});*/
