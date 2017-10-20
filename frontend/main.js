@@ -14,4 +14,4 @@ require.context("./fonts",true,/\.css$/);
 import './favicons/favicons';
 require("./vendor/select2.min.css");
 require("./vendor/SliderPips/dist/jquery-ui-slider-pips.js");
-require("./vendor/SliderPips/dist/jquery-ui-slider-pips.css");
+require.context("./../blocks",true,/\.less$/);

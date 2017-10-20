@@ -1,6 +1,3 @@
-require("./map-block.less");
-require("./img/map-marker-icon.png");
-
 $('.js-map-block__map').each(function(i){
     var _self = $(this),
         lat = $(this).data("lat"),

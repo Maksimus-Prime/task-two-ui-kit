@@ -3,7 +3,6 @@ require('jquery-ui');
 require("./../../frontend/vendor/jquery.progressbar.js");
 require("./../../frontend/vendor/jquery.progressbar.css");
 
-require('./stages.less');
 $(document).ready(function(){
     $('.js-stages').each(function(i){
         var stageSteps = $(this).data("steps"), currentStep = $(this).data("current");

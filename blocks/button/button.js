@@ -1,5 +1,3 @@
-require("./button.less");
-
 $(".js-button").each(function(i){
     $(this).click(function(e){
         var ripple = $(this);

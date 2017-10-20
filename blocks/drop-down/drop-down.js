@@ -1,5 +1,4 @@
 require("jquery");
-require("./drop-down.less");
 
 $('.js-drop-down__select').each(function(i){
     $(this).select2({

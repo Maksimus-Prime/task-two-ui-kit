@@ -1,5 +1,4 @@
 require("jquery");
-require("./youtube-video.less");
 require('youtube-iframe');
 var YouTubeIframeLoader = require('youtube-iframe');
 
