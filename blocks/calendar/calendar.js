@@ -1,8 +1,7 @@
 require('jquery');
 require('jquery-ui');
-import "jquery-ui/ui/widgets/datepicker"
-import "jquery-ui/themes/base/datepicker.css"
-require("./calendar.less");
+import "jquery-ui/ui/widgets/datepicker";
+import "jquery-ui/themes/base/datepicker.css";
 
 $('.js-calendar__header').each(function(i){
     var $currentDay = $.datepicker.formatDate('d', new Date());

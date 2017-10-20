@@ -1,1 +1,0 @@
-require('./tick-box.less');

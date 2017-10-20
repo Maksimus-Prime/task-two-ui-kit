@@ -1,4 +1,3 @@
-require('./circle-progress-bar.less');
 require('jquery');
 
 $(document).ready(function() {

@@ -1,7 +1,6 @@
 require('jquery');
-require("./slider-b.less");
-import "jquery-ui/ui/widgets/slider"
-import "jquery-ui/themes/base/slider.css"
+import "jquery-ui/ui/widgets/slider";
+import "jquery-ui/themes/base/slider.css";
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
 require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
 

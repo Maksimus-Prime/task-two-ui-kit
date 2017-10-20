@@ -2,10 +2,10 @@
 const webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var path = require('path');
+const path = require('path');
+const fs = require('fs');
 
 const testFolder = './frontend/pages';
-const fs = require('fs');
 var newHtmlWebpckPlgn = [];
 
 const htmlWebpckPlgn = fs.readdirSync(testFolder).filter(function(file) {
@@ -32,8 +32,12 @@ module.exports = {
     watch: true,
 
     module: {
+        noParse: [
+            /node_modules\/chart.js\/dist\/Chart.bundle.min.js/
+        ],
         loaders: [{
-            test: /\.json$/, loader: "json-loader"
+            test: /\.json$/,
+            loader: "json-loader"
         }, {
             test: /\.js$/,
             exclude: /node_modules/,
@@ -49,18 +53,17 @@ module.exports = {
             loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!less-loader")
         }, {
             test: /\.(jpe?g|png|svg|gif)$/,
+            loader: "file-loader?name=img/[name].[ext]",
             exclude: [
                 path.resolve(__dirname, "frontend/fonts/")
-            ],
-            loader: "file-loader?name=img/[name].[ext]"
+            ]
         }, {
             test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+            loader: "file-loader?name=fonts/[name].[ext]",
             include: [
                 path.resolve(__dirname, "frontend/fonts/")
-            ],
-            loader: "file-loader?name=fonts/[name].[ext]"
-        }],
-        noParse: /node_modules\/chart.js\/dist\/.js$/
+            ]
+        }]
     },
     devServer: {
         contentBase: __dirname + "/public/",

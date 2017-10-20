@@ -5,6 +5,7 @@
     border: 0.5625rem solid #e5e5e5;
     background-color: #e5e5e5;
     border-radius: 50%;
+    outline: none;
     &__image {
         width: 100%;
     }
@@ -15,5 +16,11 @@
         border: 0.5625rem solid #e5e5e5;
         left: 32.4%;
         bottom: -41.2%;
+    }
+    &:focus {
+        outline-color: rgb(77, 144, 254);
+        outline-offset: -2px;
+        outline-style: auto;
+        outline-width: 5px;
     }
 }
