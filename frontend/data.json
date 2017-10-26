@@ -1,22 +1,4 @@
 {
-    "chart": [
-        {
-            "name": "good",
-            "value": "24"
-        },
-        {
-            "name": "good",
-            "value": "25"
-        },
-        {
-            "name": "good",
-            "value": "40"
-        },
-        {
-            "name": "good",
-            "value": "45"
-        }
-    ],
     "dropdown": [
         {
             "link": "event.html",
