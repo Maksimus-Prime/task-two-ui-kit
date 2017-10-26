@@ -1,41 +1,14 @@
-/*require('./pie-chart.less');
-require("jquery");
+Chart.defaults.global.legend.display = false;
 
-
-$('.js-pie-chart__value').each(function(i) {
-    new Chartist.Pie($(this)[0], {
-    series: [{
-        value: 20,
-        className: 'piece1'
-        }, {
-        value: 10,
-        className: 'piece2'
-        }, {
-        value: 20,
-        className: 'piece3'
-        }, {
-        value: 50,
-        className: 'piece4'
-    }]
-    }, {
-      donut: true,
-      showLabel: false,
-      donutWidth: 20,
-      startAngle: 0,
-      total: 100
-    });    
-});*/
-
-/*Chart.defaults.global.legend.display = false;
-$('.js-pie-chart__value').each(function(i){
-    var ctx = $(this)[0];
+$('.js-pie-chart').each(function(i){
+    var el = $(this)[0];
+    var ctx = el.getContext('2d');
+    var values = $(el).data('values').split(',');
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-        labels: ["sadf","adsf","adf","asdfd"],
-        datasets: [
-            {
-                data: [24, 25, 40, 45],
+            datasets: [{
+                data: values,
                 backgroundColor: [
                     "#747474",
                     "#e75735",
@@ -44,17 +17,22 @@ $('.js-pie-chart__value').each(function(i){
                 ],
                 borderWidth: 0
             }],
+        },
         options: {
+            tooltips: {
+                enabled: false
+            },
+            hover: {mode: null},
+            cutoutPercentage: 65,
             elements: {
                 arc: {
                     borderColor: "#eee",
-                    borderWidth: 2
+                    borderWidth: 1
                 },
                 line: {
                     backgroundColor: "#000"
                 }
             }
         }
-        }
     });
-});*/
+});

@@ -1,3 +1,24 @@
+include ../blocks/button/button.pug
+include ../blocks/arrow-button/arrow-button.pug
+include ../blocks/pie-chart/pie-chart.pug
+include ../blocks/circle-progress-bar/circle-progress-bar.pug
+include ../blocks/slider-a/slider-a.pug
+include ../blocks/slider-b/slider-b.pug
+include ../blocks/stages/stages.pug
+include ../blocks/message-form/message-form.pug
+include ../blocks/form-line/form-line.pug
+include ../blocks/toggles/toggles.pug
+include ../blocks/tick-box/tick-box.pug
+include ../blocks/search/search.pug
+include ../blocks/drop-down/drop-down.pug
+include ../blocks/user-info-block/user-info-block.pug
+include ../blocks/news/news.pug
+include ../blocks/event/event.pug
+include ../blocks/map-block/map-block.pug
+include ../blocks/messaging/messaging.pug
+include ../blocks/calendar/calendar.pug
+include ../blocks/youtube-video/youtube-video.pug
+-var data = require('./data.json')
 doctype html
 html
     head
@@ -16,27 +37,6 @@ html
         script(src="https://www.youtube.com/iframe_api")
         link(rel="stylesheet" href="main.css")
     body
-        include ../blocks/button/button.pug
-        include ../blocks/arrow-button/arrow-button.pug
-        include ../blocks/pie-chart/pie-chart.pug
-        include ../blocks/circle-progress-bar/circle-progress-bar.pug
-        include ../blocks/slider-a/slider-a.pug
-        include ../blocks/slider-b/slider-b.pug
-        include ../blocks/stages/stages.pug
-        include ../blocks/message-form/message-form.pug
-        include ../blocks/form-line/form-line.pug
-        include ../blocks/toggles/toggles.pug
-        include ../blocks/tick-box/tick-box.pug
-        include ../blocks/search/search.pug
-        include ../blocks/drop-down/drop-down.pug
-        include ../blocks/user-info-block/user-info-block.pug
-        include ../blocks/news/news.pug
-        include ../blocks/event/event.pug
-        include ../blocks/map-block/map-block.pug
-        include ../blocks/messaging/messaging.pug
-        include ../blocks/calendar/calendar.pug
-        include ../blocks/youtube-video/youtube-video.pug
-        -var data = require('./data.json')
         .layout
             .layout-buttons
                 h3.layout__title Standard Buttons
@@ -69,7 +69,7 @@ html
                 .layout-progress-bars__item
                     +circle-progress-bar({value: "89"})
                 .layout-progress-bars__item
-                    +pie-chart(data)
+                    +pie-chart("2, 3, 6, 7")
             .layout-sliders
                 h3.layout__title Sliders
                 .layout-sliders__slider-left
