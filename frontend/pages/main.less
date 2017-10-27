@@ -1,239 +1,113 @@
 html {
-	font-size: 16px;
+    font-size: 16px;
+    @media screen and (max-width: 1040px)  {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 640px)  {
+        font-size: 12px;
+    }
 }
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 .layout {
-	max-width: 1260px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 10px;
-	background-color: #fff;
-
-	&-header {
-		&__title {
-			float: left;
-			width: 70%;
-			margin: 0;
-			color: #e75735;
-			font-family: "PT Sans", sans-serif;
-		}
-		&__registration {
-			float: right;
-			width: 30%;
-			margin: 0;
-			margin-top: 2.3%;
-			text-align: center;
-			.button {
-				margin-right: 5px;
-			}
-		}
-	}
-
-	&-content {
-		&-left {
-			width: 35%;
-			float: left;
-			.all-events-news {
-				a {
-					font-size: 1.625rem;
-					color: #4eb7a8;
-					font-family: "PT Sans", sans-serif;
-				}
-			}
-
-			& .content-list {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				margin-top: -1px;
-
-				&__line {
-					width: 96.35%%;
-					padding: 10px 5px;
-					border: 1px solid #e75735;
-					font-size: 1.625rem;
-					font-family: "PT Sans", sans-serif;
-
-					&:not(:first-child) {
-						margin-top: -1px;
-					}
-
-					a {
-						color: #000;
-						text-decoration: none;
-					}
-				}
-				&__line.theme_event {
-					border: 1px solid #4eb7a8;
-				}
-				&__line.theme_event.state_active {
-					background-color: #4eb7a8;
-					a {
-						color: #fff;
-					}
-				}
-				&__line.state_active {
-					background-color: #e75735;
-					a {
-						color: #fff;
-					}
-				}
-				&:first-of-type {
-					.content-list__line:first-child {
-						border-top-left-radius: 5px;
-						border-top-right-radius: 5px;
-					}
-				}
-				&:last-child {
-					.content-list__line:last-child {
-						border-bottom-left-radius: 5px;
-						border-bottom-right-radius: 5px;
-					}
-				}
-			}
-			.drop-down {
-				display: none;
-			}
-			.calendar {
-				margin: 10px auto;
-			}
-		}
-		&-right {
-			width: 65%;
-			float: right;
-			&__note {
-				font-family: "PT Sans", sans-serif;
-				font-size: 1.21rem;
-				text-align: center;
-			}
-			.search {
-				width: 90%;
-				margin: 0 auto;
-				margin-bottom: 10px;
-			}
-		}
-		.index& {
-			& .layout-content-right {
-				.user-info-block {
-					width: 78%;
-					margin: 0 auto;
-					margin-bottom: 10px;
-				}
-			}
-		}
-	}
-
-	&-footer {
-		text-align: center;
-		font-size: 1.21rem;
-		font-family: "PT Sans", sans-serif;
-
-	}
-}
-
-@media screen and (max-width: 1040px) {
-	html {
-		font-size: 14px;
-	}
-}
-@media screen and (max-width: 880px) {
-	.layout {
-		&-header {
-			&__registration {
-				width: 30%;
-				margin-top: 3%;
-			}
-		}
-		&-content {
-			&-left {
-				.calendar {
-					display: none;
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 640px) {
-	html {
-		font-size: 12px;
-	}
-	.layout {
-		&-header {
-			&__registration {
-				width: 30%;
-				margin-top: 4%;
-			}
-		}
-		&-content {
-			&-left {
-				float: none;
-				width: 100%;
-				& .content-list {
-					width: 100%;
-					display: none;
-				}
-				.drop-down {
-					display: block;
-					width: 100%;
-				}
-				.calendar {
-					width: 100%;
-					display: block;
-				}
-			}
-			&-right {
-				float: none;
-				width: 100%;
-				
-				.search {
-					width: 100%;
-				}
-			}
-			.index& {
-				& .layout-content-right {
-					div.user-info-block {
-						width: 100%;
-					}
-				}
-			}
-		}
-
-	}
-}
-@media screen and (max-width: 550px) {
-	html {
-		font-size: 12px;
-	}
-	.layout {
-		&-header {
-			&__registration {
-				width: 30%;
-				margin-top: 4.5%;
-				.button {
-					margin-bottom: 5px;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 350px) {
-	html {
-		font-size: 12px;
-	}
-	.layout {
-		&-header {
-			&__registration {
-				width: 30%;
-				margin-top: 8%;
-				.button {
-					margin-bottom: 5px;
-				}
-			}
-		}
-	}
+    width: 98%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    &-header {
+        display: flex;
+        &__title {
+            flex: 1;
+            margin: 0;
+            color: #e75735;
+            font-family: "PT Sans", Arial, sans-serif;
+        }
+        &__registration {
+            flex: 1;
+            margin: 0;
+            text-align: right;
+            @media screen and (max-width: 500px) {
+                flex: 1.4;
+            }
+            @media screen and (max-width: 400px) {
+                text-align: center;
+            }
+        }
+        &__button {
+            display: inline-block;
+            @media screen and (max-width: 400px) {
+                margin-bottom: 0.4rem;
+            }
+        }
+    }
+    &-content {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        &-left {
+            flex: 1;
+        }
+        &-right {
+            flex: 1.7;
+        }
+        &__note {
+            font-family: "PT Sans", Arial, sans-serif;
+            font-size: 1.21rem;
+            text-align: center;
+        }
+        &__events-list {
+            @media screen and (max-width: 575px) {
+                display: none;
+            }
+        }
+        &__drop-down {
+            display: none;
+            @media screen and (max-width: 575px) {
+                display: block;
+            }
+        }
+        &__calendar {
+            margin: 10px auto;
+            @media screen and (max-width: 730px) {
+                display: none;
+            }
+            @media screen and (max-width: 575px) {
+                width: 100%;
+                display: block;
+            }
+        }
+        &__search {
+            width: 95%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            @media screen and (max-width: 575px) {
+                width: 100%;
+            }
+        }
+        &__user-block {
+            width: 78%;
+            margin: 0 auto;
+            margin-bottom: 0.625rem;
+            @media screen and (max-width: 640px) {
+                width: 100%;
+            }
+        }
+        &__allevents-link {
+            font-size: 1.625rem;
+            color: #4eb7a8;
+            font-family: "PT Sans", Arial, sans-serif;
+        }
+    }
+    &-footer {
+        text-align: center;
+        font-size: 1.21rem;
+        font-family: "PT Sans", Arial, sans-serif;
+    }
 }

@@ -1,60 +1,53 @@
+include ../../blocks/button/button.pug
+include ../../blocks/user-info-block/user-info-block.pug
+include ../../blocks/search/search.pug
+include ../../blocks/drop-down/drop-down.pug
+include ../../blocks/calendar/calendar.pug
+include ../../blocks/events-list/events-list.pug
+-var data = require('./data.json');
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Main page
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		include ../../blocks/button/button.pug
-		include ../../blocks/user-info-block/user-info-block.pug
-		include ../../blocks/search/search.pug
-		include ../../blocks/drop-down/drop-down.pug
-		include ../../blocks/calendar/calendar.pug
-		.layout
-			.layout-header.clearfix
-				.layout-header__title
-					h1 THE BEST MEETING WEBSITE
-				.layout-header__registration
-					+button("LOG IN","button","login.html","small","green")
-					+button("SIGN UP","button","signup1.html","small")
-			.layout-content.index.clearfix
-				.layout-content-left
-					p.all-events-news
-						a(href="allevents.html") All events and news
-					ul.content-list
-						li.content-list__line.state_active
-							a(href="event.html") Apple Festival 2017
-						li.content-list__line
-							a(href="event.html") Fish festival 2017
-						li.content-list__line 
-							a(href="#") International Contest Festival “Ax Day”
-						li.content-list__line 
-							a(href="#") Vasnetsovs's Plain Air and Pottery Symposium
-						li.content-list__line 
-							a(href="#") The International Music Festival "Kaliningrad City Jazz"
-					ul.content-list
-						li.content-list__line.theme_event
-							a(href="#") Event dedicated to the attainment of Seraphim's relics
-						li.content-list__line.theme_event
-							a(href="event.html") Kalmyk National Holiday “Zul”
-						li.content-list__line.theme_event 
-							a(href="#") Traditional Even celebration "Bakyldidyak"
-						li.content-list__line.theme_event 
-							a(href="#") Kruzhilinskie Toloki
-						li.content-list__line.theme_event 
-							a(href="#") «Altai wintering»
-					+drop-down("dropdown")
-					+calendar
-				.layout-content-right
-					p.layout-content-right__note Here you can see people which go to the meeting
-					+search("search","on")
-					+user-info-block("img/photo1.png","#","John Smith", "Ux designer", "#", "#","#")
-					+user-info-block("img/photo2.png","user.html","Sarah Brown", "Developer", "#", "#", "#", "green")
-					+user-info-block("img/photo1.png","#","John Smith", "Ux designer", "#", "#","#")
-					+user-info-block("img/photo2.png","#","Sarah Brown", "Developer", "#", "#", "#", "green")
-					+user-info-block("img/photo2.png","#","Sarah Brown", "Developer", "#", "#", "#", "green")
-			.layout-footer
-				p There is some information about this site
-		script(type="text/javascript" src="main.js")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Main page
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .layout
+            .layout-header
+                h1.layout-header__title THE BEST MEETING WEBSITE
+                .layout-header__registration
+                    .layout-header__button
+                        +button({text: "LOG IN", type: "button", link: "login.html", size: "small", color: "green"})
+                    .layout-header__button
+                        +button({text: "SIGN UP", type: "button", link: "signup1.html", size: "small"})
+            .layout-content
+                .layout-content-left
+                    p
+                        a.layout-content__allevents-link(href="allevents.html") All events and news
+                    .layout-content__events-list
+                        +events-list(data.eventslist)
+                    .layout-content__drop-down
+                        +drop-down("dropdown", data.dropdown)
+                    .layout-content__calendar
+                        +calendar
+                .layout-content-right
+                    p.layout-content__note Here you can see people who go to the meeting
+                    .layout-content__search
+                        +search({name: "search"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .layout-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+            .layout-footer
+                p There is some information about this site
+        script(type="text/javascript" src="main.js")
