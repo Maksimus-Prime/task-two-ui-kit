@@ -1,0 +1,30 @@
+.events-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+        font-size: 1.625rem;
+        border: 1px solid #e75735;  
+        font-family: "PT Sans", Arial, sans-serif;
+        li&_theme_green {
+            border-color: #4eb7a8;
+            &:hover {
+                background-color: #4eb7a8;
+                color: #fff;
+            }
+        }
+        &:not(:first-child) {
+            border-top: none;
+        }
+        &:hover {
+            background-color: #e75735;
+            color: #fff;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 10px 5px;
+        color: inherit;
+        text-decoration: none;
+    }
+}

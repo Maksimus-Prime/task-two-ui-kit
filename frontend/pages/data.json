@@ -1,0 +1,105 @@
+{
+    "dropdown": [
+        {
+            "link": "event.html",
+            "name": "Apple Festival 2017"
+        },
+        {
+            "link": "event.html",
+            "name": "Fish festival 2017"
+        },
+        {
+            "link": "event.html",
+            "name": "International Contest Festival Ax Day"
+        },
+        {
+            "link": "event.html",
+            "name": "Vasnetsovs's Plain Air and Pottery Symposium"
+        },
+        {
+            "link": "event.html",
+            "name": "The International Music Festival Kaliningrad City Jazz"
+        },
+        {
+            "link": "event.html",
+            "name": "Test event"
+        },
+        {
+            "link": "event.html",
+            "name": "Test event"
+        }
+    ],
+    "messageform": {
+        "name-field": {
+            "inputtype": "text",
+            "name": "name",
+            "placeholder": "Your Name",
+            "valid": "false"
+        },
+        "email-field": {
+            "inputtype": "email",
+            "name": "email",
+            "placeholder": "Your Email",
+            "valid": "true"
+        },
+        "textarea": {
+            "inputtype": "textarea",
+            "name": "message",
+            "placeholder": "Your Message"
+        },
+        "submit-button": {
+            "value": "submit",
+            "type": "submit",
+            "link": "#",
+            "size": "default",
+            "theme": "green"
+        } 
+    },
+    "eventslist": [
+        {
+            "text": "Apple Festival 2017",
+            "link": "event.html"
+        },
+        {
+            "text": "Fish festival 2017",
+            "link": "event.html"
+        },
+        {
+            "text": "International Contest Festival “Ax Day”",
+            "link": "event.html"
+        },
+        {
+            "text": "Vasnetsovs's Plain Air and Pottery Symposium",
+            "link": "event.html"
+        },
+        {
+            "text": "The International Music Festival Kaliningrad City Jazz",
+            "link": "event.html"
+        },
+        {
+            "text": "Event dedicated to the attainment of Seraphim's relics",
+            "link": "event.html",
+            "theme": "green"
+        },
+        {
+            "text": "Kalmyk National Holiday Zul",
+            "link": "event.html",
+            "theme": "green"
+        },
+        {
+            "text": "Traditional Even celebration Bakyldidyak",
+            "link": "event.html",
+            "theme": "green"
+        },
+        {
+            "text": "Kruzhilinskie Toloki",
+            "link": "event.html",
+            "theme": "green"
+        },
+        {
+            "text": "«Altai wintering»",
+            "link": "event.html",
+            "theme": "green"
+        }
+    ]
+}
