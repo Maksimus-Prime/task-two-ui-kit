@@ -50,6 +50,26 @@
             "theme": "green"
         }
     },
+    "signup1form": {
+        "phone-field": {
+            "inputtype": "tel",
+            "name": "phone-number",
+            "placeholder": "Enter your phone",
+            "valid": "true"
+        },
+        "name-field": {
+            "inputtype": "text",
+            "name": "name",
+            "placeholder": "Enter your name",
+            "valid": "true"
+        },
+        "code-field": {
+            "inputtype": "password",
+            "name": "check-code",
+            "placeholder": "Enter your code",
+            "valid": "false"
+        }
+    },
     "eventslist": [
         {
             "text": "Apple Festival 2017",

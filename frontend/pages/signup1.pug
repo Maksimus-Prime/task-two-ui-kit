@@ -1,38 +1,35 @@
+include ../../blocks/button/button.pug
+include ../../blocks/form-line/form-line.pug
+include ../../blocks/stages/stages.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
+-var data = require('./data.json');
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Main page
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		include ../../blocks/button/button.pug
-		include ../../blocks//alert-box/alert-box.pug
-		include ../../blocks//form-element/form-element.pug
-		include ../../blocks/stages/stages.pug
-		.layout
-			.layout-header.clearfix
-				.layout-header__title
-					h1 
-						a(href="index.html") THE BEST MEETING WEBSITE
-				.layout-header__registration
-					+button("Go back","button","index.html","small","green")
-			.layout-content.signup1
-				+stages("3","1")
-				p.layout-content__note Please enter your phone or email. We'll send you a message with code
-				form.main-form
-					.main-form-line
-						+form-element("text","phone","Enter your phone")
-						+alert-box("error")
-					.main-form-line
-						+form-element("text","name","Enter your name")
-						+alert-box
-					.main-form-line
-						+form-element("text","code","Enter your code")
-						+alert-box
-					.main-form-line
-						+button("next","button","signup2.html","default","green")
-			.layout-footer
-				p FOOTER There is someting information about this site
-		script(type="text/javascript" src="main.js")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Main page
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .signup1-page
+            .signup1-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
+            .signup1-page-content
+                .signup1-page-content__steps
+                    +stages({steps: "3", current: "1"})
+                p.signup1-page-content__note Please enter your phone or email. We'll send you a message with code
+                form.signup1-page-content__main-form
+                    -var data = data.signup1form;
+                    .signup1-page-content__main-form-line
+                        +form-line({inputtype: data["phone-field"].inputtype, name: data["phone-field"].name, placeholder: data["phone-field"].placeholder, valid: data["phone-field"].valid})
+                    .signup1-page-content__main-form-line
+                        +form-line({inputtype: data["name-field"].inputtype, name: data["name-field"].name, placeholder: data["name-field"].placeholder, valid: data["name-field"].valid})
+                    .signup1-page-content__main-form-line
+                        +form-line({inputtype: data["code-field"].inputtype, name: data["code-field"].name, placeholder: data["code-field"].placeholder, valid: data["code-field"].valid})
+                    .signup1-page-content__main-form-line
+                        +button({text: "Next", type: "button", link: "signup2.html", color: "green"})
+            .signup1-page__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

@@ -1,87 +1,39 @@
-.layout {
-	&-header {
-		&__title {
-			a {
-				color: #e75735;
-				text-decoration: none;
-				font-family: "PT Sans", sans-serif;
-			}
-		}
-	}
-	&-footer {
-		font-family: "PT Sans", sans-serif;
-	}
-}
-.signup1.layout-content {
-	.layout-content__note {
-		font-size: 1.21rem;
-		font-family: "PT Sans", sans-serif;
-		text-align: center;
-	}
-	.main-form {
-		width: 55%;
-		margin: 10px auto;
-		&-line {
-			margin-bottom: 10px;
-			&:last-child {
-				text-align: center;
-			}	
-		}
-		.form-element {
-			&__input {
-				margin-right: 1%;
-			}
-		}
-		.alert-box {
-			width: 27%;
-			vertical-align: top;
-		}
-	}
-}
-@media screen and (max-width: 1040px) {
-	html {
-		font-size: 14px;
-	}
-	.signup1.layout-content {
-		.main-form {
-			width: 65%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
-}
-@media screen and (max-width: 880px) {
-	.signup1.layout-content {
-		.main-form {
-			width: 70%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 640px) {
-	html {
-		font-size: 12px;
-	}
-	.signup1.layout-content {
-		.main-form {
-			width: 80%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
-}
-@media screen and (max-width: 530px) {
-	.signup1.layout-content {
-		.main-form {
-			width: 100%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
+.signup1-page {
+    width: 98%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    &-content {
+        &__note {
+            font-family: "PT Sans", Arial, sans-serif;
+            font-size: 1.21rem;
+            text-align: center;
+        }
+        &__main-form {
+            width: 55%;
+            margin: 0 auto;
+            @media screen and (max-width: 900px) {
+                width: 70%;
+            }
+            @media screen and (max-width: 650px) {
+                width: 85%;
+            }
+            @media screen and (max-width: 380px) {
+                width: 98%;
+            }
+        }
+        &__main-form-line {
+            margin-bottom:  0.5rem;
+            &:last-child {
+                text-align: center;
+            }
+        }
+    }
+    &__footer {
+        margin-top: 1rem;
+    }
 }
