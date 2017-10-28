@@ -19,4 +19,4 @@ npm run dev
 npm run prod
 ```
 Look at the [result](https://maksimus-prime.github.io/task-two-ui-kit/public/).
-You can look at simple [site](https://maksimus-prime.github.io/task-two-ui-kit/public/testsite/) with elements from the UI-KIT as well.
+You can look at simple [site](https://maksimus-prime.github.io/task-two-ui-kit/public/pages/) with elements from the UI-KIT as well.

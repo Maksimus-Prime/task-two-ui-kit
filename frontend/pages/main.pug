@@ -1,0 +1,50 @@
+include ../../blocks/button/button.pug
+include ../../blocks/user-info-block/user-info-block.pug
+include ../../blocks/search/search.pug
+include ../../blocks/drop-down/drop-down.pug
+include ../../blocks/calendar/calendar.pug
+include ../../blocks/events-list/events-list.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
+-var data = require('./data.json');
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Main page
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .main-page
+            .main-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
+            .main-page-content
+                .main-page-content-left
+                    p
+                        a.main-page-content__allevents-link(href="allevents.html") All events and news
+                    .main-page-content__events-list
+                        +events-list(data.eventslist)
+                    .main-page-content__drop-down
+                        +drop-down("dropdown", data.dropdown)
+                    .main-page-content__calendar
+                        +calendar
+                .main-page-content-right
+                    p.main-page-content__note Here you can see people who go to the meeting
+                    .main-page-content__search
+                        +search({name: "search"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+                    .main-page-content__user-block
+                        +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
+            .main-page__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

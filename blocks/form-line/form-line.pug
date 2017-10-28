@@ -1,7 +1,9 @@
-mixin form-line(object)
+mixin form-line(params)
     .form-line
-        if object.inputtype == "textarea"
-            textarea.form-line__textarea(type="textarea" name=object.name placeholder=object.placeholder)
+        if params.inputtype == "textarea"
+            textarea.form-line__textarea(type="textarea" name=params.name placeholder=params.placeholder)
         else
-            input.form-line__field(type=object.inputtype name=object.name placeholder=object.placeholder)
-            div.form-line__alert-box(class=((object.valid === "true")? "form-line__alert-box_valid" : ""))=(object.valid === "true")? "Thanks!" : "Error"
+            input.form-line__field(type=params.inputtype name=params.name placeholder=params.placeholder)
+            div.form-line__state
+                div.form-line__arrow(class=((params.valid === "true")? "form-line__arrow_valid" : ""))
+                div.form-line__box(class=((params.valid === "true")? "form-line__box_valid" : ""))=(params.valid === "true")? "Thanks!" : "Error"

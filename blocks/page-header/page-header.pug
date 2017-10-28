@@ -1,0 +1,16 @@
+mixin page-header(params)
+    include ../button/button.pug
+    header.page-header
+        h1.page-header__title= params.title
+        .page-header__registration
+            -if(params.buttons.length !== 0)
+                each item in params.buttons
+                    -if(item.button === "login")
+                        .page-header__button
+                            +button({text: "LOG IN", type: "button", link: item.link, size: "small", color: "green"})
+                    -else if(item.button === "signup")
+                        .page-header__button
+                            +button({text: "SIGN UP", type: "button", link: item.link, size: "small"})
+                    -else if(item.button === "goback")
+                        .page-header__button
+                            +button({text: "GO BACK", type: "button", link: item.link, size: "small", color: "green"})

@@ -22,10 +22,10 @@ const pages = newHtmlWebpckPlgn.map(createPage);
 
 module.exports = {
     entry: {
-        main: "./frontend/pages/main"
+        main: "./frontend/main"
     },
     output: {
-        path: __dirname + "/public/pages",
+        path: __dirname + "/public/",
         filename: "[name].js"
     },
 
@@ -83,7 +83,12 @@ module.exports = {
             $: "jquery/dist/jquery.js",
             jQuery: "jquery/dist/jquery.js"
         }),
-        new ExtractTextPlugin('main.css'),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './frontend/index.pug',
+            inject: false
+        }),
+        new ExtractTextPlugin('main.css')
     ].concat(pages)
 };
 

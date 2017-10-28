@@ -7,12 +7,7 @@ html {
         font-size: 12px;
     }
 }
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.layout {
+.main-page {
     width: 98%;
     max-width: 1250px;
     margin: 0 auto;
@@ -21,32 +16,6 @@ html {
     flex-direction: column;
     min-height: 100vh;
     background-color: #fff;
-    &-header {
-        display: flex;
-        &__title {
-            flex: 1;
-            margin: 0;
-            color: #e75735;
-            font-family: "PT Sans", Arial, sans-serif;
-        }
-        &__registration {
-            flex: 1;
-            margin: 0;
-            text-align: right;
-            @media screen and (max-width: 500px) {
-                flex: 1.4;
-            }
-            @media screen and (max-width: 400px) {
-                text-align: center;
-            }
-        }
-        &__button {
-            display: inline-block;
-            @media screen and (max-width: 400px) {
-                margin-bottom: 0.4rem;
-            }
-        }
-    }
     &-content {
         flex: 1;
         display: flex;
@@ -105,9 +74,7 @@ html {
             font-family: "PT Sans", Arial, sans-serif;
         }
     }
-    &-footer {
-        text-align: center;
-        font-size: 1.21rem;
-        font-family: "PT Sans", Arial, sans-serif;
+    &__footer {
+        margin-top: 1rem;
     }
 }
