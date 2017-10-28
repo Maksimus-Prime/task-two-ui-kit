@@ -6218,73 +6218,53 @@ html {
 .main-page__footer {
   margin-top: 1rem;
 }
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
+.signup1-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.layout-footer {
-  font-family: "PT Sans", sans-serif;
-}
-.signup1.layout-content .layout-content__note {
+.signup1-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 1.21rem;
-  font-family: "PT Sans", sans-serif;
   text-align: center;
 }
-.signup1.layout-content .main-form {
+.signup1-page-content__main-form {
   width: 55%;
-  margin: 10px auto;
+  margin: 0 auto;
 }
-.signup1.layout-content .main-form-line {
-  margin-bottom: 10px;
-}
-.signup1.layout-content .main-form-line:last-child {
-  text-align: center;
-}
-.signup1.layout-content .main-form .form-element__input {
-  margin-right: 1%;
-}
-.signup1.layout-content .main-form .alert-box {
-  width: 27%;
-  vertical-align: top;
-}
-@media screen and (max-width: 1040px) {
-  html {
-    font-size: 14px;
-  }
-  .signup1.layout-content .main-form {
-    width: 65%;
-  }
-  .signup1.layout-content .main-form .alert-box {
-    width: 27%;
-  }
-}
-@media screen and (max-width: 880px) {
-  .signup1.layout-content .main-form {
+@media screen and (max-width: 900px) {
+  .signup1-page-content__main-form {
     width: 70%;
   }
-  .signup1.layout-content .main-form .alert-box {
-    width: 27%;
+}
+@media screen and (max-width: 650px) {
+  .signup1-page-content__main-form {
+    width: 85%;
   }
 }
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 12px;
-  }
-  .signup1.layout-content .main-form {
-    width: 80%;
-  }
-  .signup1.layout-content .main-form .alert-box {
-    width: 27%;
+@media screen and (max-width: 380px) {
+  .signup1-page-content__main-form {
+    width: 98%;
   }
 }
-@media screen and (max-width: 530px) {
-  .signup1.layout-content .main-form {
-    width: 100%;
-  }
-  .signup1.layout-content .main-form .alert-box {
-    width: 27%;
-  }
+.signup1-page-content__main-form-line {
+  margin-bottom: 0.5rem;
+}
+.signup1-page-content__main-form-line:last-child {
+  text-align: center;
+}
+.signup1-page__footer {
+  margin-top: 1rem;
 }
 .layout-header__title a {
   color: #e75735;
