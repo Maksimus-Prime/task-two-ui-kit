@@ -4,6 +4,8 @@ include ../../blocks/search/search.pug
 include ../../blocks/drop-down/drop-down.pug
 include ../../blocks/calendar/calendar.pug
 include ../../blocks/events-list/events-list.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
 -var data = require('./data.json');
 doctype html
 html
@@ -14,40 +16,35 @@ html
         script(src="https://www.youtube.com/iframe_api")
         link(rel="stylesheet" href="main.css")
     body
-        .layout
-            .layout-header
-                h1.layout-header__title THE BEST MEETING WEBSITE
-                .layout-header__registration
-                    .layout-header__button
-                        +button({text: "LOG IN", type: "button", link: "login.html", size: "small", color: "green"})
-                    .layout-header__button
-                        +button({text: "SIGN UP", type: "button", link: "signup1.html", size: "small"})
-            .layout-content
-                .layout-content-left
+        .main-page
+            .main-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
+            .main-page-content
+                .main-page-content-left
                     p
-                        a.layout-content__allevents-link(href="allevents.html") All events and news
-                    .layout-content__events-list
+                        a.main-page-content__allevents-link(href="allevents.html") All events and news
+                    .main-page-content__events-list
                         +events-list(data.eventslist)
-                    .layout-content__drop-down
+                    .main-page-content__drop-down
                         +drop-down("dropdown", data.dropdown)
-                    .layout-content__calendar
+                    .main-page-content__calendar
                         +calendar
-                .layout-content-right
-                    p.layout-content__note Here you can see people who go to the meeting
-                    .layout-content__search
+                .main-page-content-right
+                    p.main-page-content__note Here you can see people who go to the meeting
+                    .main-page-content__search
                         +search({name: "search"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .layout-content__user-block
+                    .main-page-content__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-            .layout-footer
-                p There is some information about this site
+            .main-page__footer
+                +page-footer({text: "There is some information about this site"})
         script(type="text/javascript" src="main.js")

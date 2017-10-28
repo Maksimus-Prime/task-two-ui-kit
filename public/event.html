@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="layout">
+      <div class="layout-header clearfix">
+        <div class="layout-header__title">
+          <h1> <a href="index.html">THE BEST MEETING WEBSITE</a></h1>
+        </div>
+        <div class="layout-header__registration"><a class="button" href="undefined" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+      <div class="layout-content event-page">
+            <section class="event">
+              <div class="event-left-half" style="background-image:url(undefined);"></div>
+              <div class="event-right-half"><span class="event__date"><b class="event__day"></b></span>
+                <h4 class="event__title"></h4>
+                <p class="event__description"></p>
+                <div class="event__button">
+                      <button class="button js-button button_size_small button_theme_event" type="button">Add to calendar</button>
+                </div>
+              </div>
+            </section>
+        <div class="layout-content-join"><a class="button" href="undefined" rel="noopener noreferrer"></a>
+        </div>
+        <div class="layout-content-slider-bar">
+          <p class="layout-content__note">At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event</p>
+              <div class="slider-a js-slider-a" data-min="undefined" data-max="undefined" data-step="undefined"></div>
+              <div class="circle-progress-bar">
+                <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text">
+              </div>
+        </div>
+        <p class="layout-content__note">Some information about an event</p>
+            <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
+            <div class="map-block">
+              <div class="map-block__map js-map-block__map" data-lat="undefined" data-lng="undefined" data-zoom="undefined"></div>
+              <div class="map-block-info">
+                <h3 class="map-block-info__title"></h3>
+                <p class="map-block-info__description"></p>
+                <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+              </div>
+            </div>
+      </div>
+      <div class="layout-footer">
+        <p>There is some information about this site</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&amp;callback=initMap"></script>
+  </body>
+</html>

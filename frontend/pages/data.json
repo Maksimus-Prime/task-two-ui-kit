@@ -29,23 +29,18 @@
             "name": "Test event"
         }
     ],
-    "messageform": {
-        "name-field": {
-            "inputtype": "text",
-            "name": "name",
-            "placeholder": "Your Name",
-            "valid": "false"
-        },
+    "loginform": {
         "email-field": {
             "inputtype": "email",
             "name": "email",
             "placeholder": "Your Email",
             "valid": "true"
         },
-        "textarea": {
-            "inputtype": "textarea",
-            "name": "message",
-            "placeholder": "Your Message"
+        "password-field": {
+            "inputtype": "password",
+            "name": "password",
+            "placeholder": "Your Password",
+            "valid": "false"
         },
         "submit-button": {
             "value": "submit",
@@ -53,7 +48,7 @@
             "link": "#",
             "size": "default",
             "theme": "green"
-        } 
+        }
     },
     "eventslist": [
         {
