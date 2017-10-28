@@ -1,54 +1,62 @@
 .form-line {
-    width: 100%;
     display: flex;
-    justify-content: center;
     &__field {
-        flex: 2.1;
-        margin-right: 0.75rem;
+        flex: 2.4;
         font-size: 1.5625rem;
         font-family: "PT Sans", Arial, sans-serif;
         padding: 0.55rem 0.5rem 0.7rem 1.5rem;
         background-color: #e5e5e5;
         border: none;
         outline: none;
-        border-radius: 7px;
+        border-radius: 0.4375rem;
         &:focus {
             outline-color: rgb(77, 144, 254);
             outline-offset: -2px;
             outline-style: auto;
             outline-width: 5px;
         }
+        @media screen and (max-width: 430px) {
+            flex: 1;
+            width: 100%;
+        }
     }
-    &__alert-box {
+    &__state {
         display: flex;
+        flex: 1;
+        @media screen and (max-width: 430px) {
+            flex: none;
+            width: 100px;
+        }
+    }
+    &__arrow {
+        align-self: center;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: 0.4375rem solid #e75735;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        &_valid {
+            border-right-color: #4eb7a8;
+        }
+    }
+    &__box {
+        width: 100%;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        flex: 0.8;
-        position: relative;
         background-color: #e75735;
-        border-radius: 7px;
-        color: #fff;
-        font-size: 1.125rem;
+        border-radius: 0.4375rem;
         font-family: 'Lato', Arial, sans-serif;
         font-weight: 500;
         font-style: bold;
         text-transform: uppercase;
         text-align: center;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 42%;
-            left: -3%;
-            padding: 4%;
-            transform: rotate(45deg);
-            border-radius: 0.125rem 0.125rem;
-            background-color: #e75735;
-        }
+        color: #fff;
+        font-size: 1.125rem;
         &_valid {
             background-color: #4eb7a8;
-            &::before {
-                background-color: #4eb7a8;
-            }
         }
     }
     &__textarea {
@@ -68,20 +76,6 @@
             outline-offset: -2px;
             outline-style: auto;
             outline-width: 5px;
-        }
-    }
-    @media screen and (max-width: 524px) {
-        width: 100%;
-        &__field {
-            flex: 1.8;
-        }
-        &__alert-box {
-            flex: 1;
-        }        
-    }
-    @media screen and (max-width: 366px) {
-        &__field {
-            width: 150px;
         }
     }
 }
