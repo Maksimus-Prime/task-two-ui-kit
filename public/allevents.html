@@ -8,35 +8,41 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="layout">
-      <div class="layout-header clearfix">
-        <div class="layout-header__title">
-          <h1><a href="index.html">THE BEST MEETING WEBSITE</a></h1>
-        </div>
-        <div class="layout-header__registration"><a class="button" href="undefined" rel="noopener noreferrer"></a><a class="button" href="undefined" rel="noopener noreferrer"></a>
-        </div>
+    <div class="allevents-page">
+      <div class="allevents-page__header">
+        <header class="page-header">
+          <h1 class="page-header__title">THE BEST MEETING WEBSITE</h1>
+          <div class="page-header__registration">
+            <div class="page-header__button"><a class="button  button_size_small button_color_green" href="login.html" rel="noopener noreferrer">LOG IN</a>
+            </div>
+            <div class="page-header__button"><a class="button  button_size_small" href="signup1.html" rel="noopener noreferrer">SIGN UP</a>
+            </div>
+          </div>
+        </header>
       </div>
-      <div class="layout-content allevents">
+      <div class="allevents-page-content">
         <div class="events-news-list">
           <div class="events-news-list-left">
-                <button class="arrow-button" type="button"><span class="arrow-button__arrow"></span></button>
+            <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_disabled"></span></button>
           </div>
           <div class="events-news-list-center">
-                <section class="news">
-                  <div class="news-left-half" style="background-image:url(undefined);"></div>
-                  <div class="news-right-half">
-                    <h2 class="news-right-half__title"></h2><span class="news-right-half__date"></span>
-                    <p class="news-right-half__description"></p>
-                  </div>
-                </section>
+            <section class="news">
+              <div class="news-left-half" style="background-image:url(img/news.png);"></div>
+              <div class="news-right-half">
+                <h2 class="news-right-half__title">It's all going downhill</h2><span class="news-right-half__date">24 August 2013</span>
+                <p class="news-right-half__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+              </div>
+            </section>
           </div>
           <div class="events-news-list-right">
-                <button class="arrow-button" type="button"><span class="arrow-button__arrow"></span></button>
+            <button class="arrow-button" type="button"><span class="arrow-button__arrow  arrow-button__arrow_direction_right"></span></button>
           </div>
         </div>
       </div>
-      <div class="layout-footer">
-        <p>There is some information about this site</p>
+      <div class="allevents-page__footer">
+        <div class="page-footer">
+          <p class="page-footer__text">There is some information about this site</p>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

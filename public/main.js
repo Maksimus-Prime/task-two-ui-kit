@@ -66,7 +66,7 @@
 	__webpack_require__(98);
 	__webpack_require__(56);
 	__webpack_require__(100);
-	__webpack_require__(151);
+	__webpack_require__(153);
 
 /***/ }),
 /* 1 */
@@ -17053,28 +17053,29 @@
 		"./arrow-button/arrow-button.less": 101,
 		"./button/button.less": 103,
 		"./calendar/calendar.less": 105,
-		"./circle-progress-bar/circle-progress-bar.less": 107,
-		"./drop-down/drop-down.less": 109,
-		"./event/event.less": 111,
-		"./events-list/events-list.less": 113,
-		"./form-line/form-line.less": 115,
-		"./info-block/info-block.less": 117,
-		"./map-block/map-block.less": 119,
-		"./message-form/message-form.less": 121,
-		"./messaging/messaging.less": 123,
-		"./news/news.less": 125,
-		"./page-footer/page-footer.less": 127,
-		"./page-header/page-header.less": 129,
-		"./photo-block/photo-block.less": 131,
-		"./pie-chart/pie-chart.less": 133,
-		"./search/search.less": 135,
-		"./slider-a/slider-a.less": 137,
-		"./slider-b/slider-b.less": 139,
-		"./stages/stages.less": 141,
-		"./tick-box/tick-box.less": 143,
-		"./toggles/toggles.less": 145,
-		"./user-info-block/user-info-block.less": 147,
-		"./youtube-video/youtube-video.less": 149
+		"./choose-photo/choose-photo.less": 107,
+		"./circle-progress-bar/circle-progress-bar.less": 109,
+		"./drop-down/drop-down.less": 111,
+		"./event/event.less": 113,
+		"./events-list/events-list.less": 115,
+		"./form-line/form-line.less": 117,
+		"./info-block/info-block.less": 119,
+		"./map-block/map-block.less": 121,
+		"./message-form/message-form.less": 123,
+		"./messaging/messaging.less": 125,
+		"./news/news.less": 127,
+		"./page-footer/page-footer.less": 129,
+		"./page-header/page-header.less": 131,
+		"./photo-block/photo-block.less": 133,
+		"./pie-chart/pie-chart.less": 135,
+		"./search/search.less": 137,
+		"./slider-a/slider-a.less": 139,
+		"./slider-b/slider-b.less": 141,
+		"./stages/stages.less": 143,
+		"./tick-box/tick-box.less": 145,
+		"./toggles/toggles.less": 147,
+		"./user-info-block/user-info-block.less": 149,
+		"./youtube-video/youtube-video.less": 151
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17267,17 +17268,23 @@
 /***/ }),
 /* 150 */,
 /* 151 */
+/***/ (function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 152 */,
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./allevents.less": 152,
-		"./event.less": 154,
-		"./login.less": 156,
-		"./main.less": 158,
-		"./signup1.less": 160,
-		"./signup2.less": 162,
-		"./signup3.less": 164,
-		"./test-block.less": 166,
+		"./allevents.less": 154,
+		"./event.less": 156,
+		"./login.less": 158,
+		"./main.less": 160,
+		"./signup1.less": 162,
+		"./signup2.less": 164,
+		"./signup3.less": 166,
 		"./user.less": 168
 	};
 	function webpackContext(req) {
@@ -17291,17 +17298,10 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 151;
+	webpackContext.id = 153;
 
 
 /***/ }),
-/* 152 */
-/***/ (function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 153 */,
 /* 154 */
 /***/ (function(module, exports) {
 

@@ -4607,6 +4607,20 @@ a.button {
     letter-spacing: 0;
   }
 }
+.choose-photo {
+  text-align: center;
+}
+.choose-photo__photo {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: #a5a5a5;
+}
+.choose-photo__note {
+  font-size: 1.21rem;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+}
 .circle-progress-bar {
   width: 10.875rem;
   display: inline-block;
@@ -5912,155 +5926,51 @@ div.info-block_theme_green::before {
     min-height: 450px;
   }
 }
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
-}
-.layout-footer {
-  font-family: "PT Sans", sans-serif;
-}
-.allevents.layout-content .map-block {
-  height: 520px;
-}
-.allevents.layout-content .events-news-list {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-.allevents.layout-content .events-news-list-left {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: left;
-  width: 10%;
-}
-.allevents.layout-content .events-news-list-center {
-  display: table-cell;
-  width: 70%;
+.allevents-page {
+  width: 98%;
+  max-width: 1250px;
   margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.allevents.layout-content .events-news-list-right {
-  display: table-cell;
-  vertical-align: middle;
-  width: 10%;
-  text-align: right;
+.allevents-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-@media screen and (max-width: 1040px) {
-  html {
-    font-size: 14px;
-  }
+.allevents-page__footer {
+  margin-top: 1rem;
 }
-@media screen and (max-width: 790px) {
-  .allevents.layout-content .events-news-list {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-  .allevents.layout-content .events-news-list-left {
-    display: table-cell;
-    width: 15%;
-  }
-  .allevents.layout-content .events-news-list-center {
-    display: table-cell;
-    width: 70%;
-    margin: 0 auto;
-  }
-  .allevents.layout-content .events-news-list-right {
-    display: table-cell;
-    width: 15%;
-  }
+.event-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-@media screen and (max-width: 570px) {
-  .allevents.layout-content .events-news-list {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-  .allevents.layout-content .events-news-list-left {
-    display: table-cell;
-    width: 18%;
-  }
-  .allevents.layout-content .events-news-list-center {
-    display: table-cell;
-    width: 64%;
-    margin: 0 auto;
-  }
-  .allevents.layout-content .events-news-list-right {
-    display: table-cell;
-    width: 18%;
-  }
+.event-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-@media screen and (max-width: 490px) {
-  html {
-    font-size: 12px;
-  }
-  .allevents.layout-content .events-news-list {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-  .allevents.layout-content .events-news-list-left {
-    display: none;
-  }
-  .allevents.layout-content .events-news-list-center {
-    display: table-cell;
-  }
-  .allevents.layout-content .events-news-list-right {
-    display: none;
-  }
-}
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
-}
-.layout-footer {
-  font-family: "PT Sans", sans-serif;
-}
-.event-page.layout-content .event {
-  width: 72%;
-  height: 400px;
-  margin: 15px auto;
-}
-.event-page.layout-content .event .event-info__description {
-  margin-bottom: 6.3%;
-}
-.event-page.layout-content .map-block {
-  height: 520px;
-}
-.event-page.layout-content .slider-a {
-  width: 40%;
-  vertical-align: top;
-  margin-top: 110px;
-}
-.event-page.layout-content .layout-content__note {
-  font-size: 1.21rem;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-}
-.event-page.layout-content .layout-content-join {
-  text-align: center;
-}
-.event-page.layout-content .layout-content-slider-bar {
-  text-align: center;
-}
-.event-page.layout-content .about-event {
-  text-align: center;
-}
-@media screen and (max-width: 1040px) {
-  html {
-    font-size: 14px;
-  }
-  .event-page.layout-content .event {
-    width: 100%;
-    height: 400px;
-    margin: 15px auto;
-  }
-}
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 12px;
-  }
+.event-page__footer {
+  margin-top: 1rem;
 }
 .login-page {
   width: 98%;
@@ -6233,6 +6143,11 @@ html {
   min-height: 100vh;
   background-color: #fff;
 }
+.signup1-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .signup1-page-content__note {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 1.21rem;
@@ -6266,198 +6181,164 @@ html {
 .signup1-page__footer {
   margin-top: 1rem;
 }
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
-}
-.layout-header {
-  font-family: "PT Sans", sans-serif;
-}
-.signup2.layout-content .photo-choose-block {
-  display: block;
-  width: 60%;
+.signup2-page {
+  width: 98%;
+  max-width: 1250px;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.signup2.layout-content .photo-choose-block__photo {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: #a5a5a5;
+.signup2-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-.signup2.layout-content .photo-choose-block__note {
+.signup2-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 1.21rem;
   text-align: center;
-  font-family: "PT Sans", sans-serif;
 }
-.signup2.layout-content .main-form {
+.signup2-page-content__main-form {
   width: 55%;
-  margin: 10px auto;
+  margin: 0 auto;
 }
-.signup2.layout-content .main-form-line {
-  margin-bottom: 10px;
-  font-family: "PT Sans", sans-serif;
-}
-.signup2.layout-content .main-form-line:last-child {
-  text-align: center;
-}
-.signup2.layout-content .main-form-line:last-child .button {
-  margin-right: 5px;
-}
-.signup2.layout-content .main-form-line:first-child {
-  font-size: 1.625rem;
-  line-height: 41px;
-  text-align: center;
-}
-.signup2.layout-content .main-form-line-get .toggles {
-  display: inline-block;
-}
-.signup2.layout-content .main-form-line-get label {
-  font-size: 1.21rem;
-  height: 45px;
-  font-family: "PT Sans", sans-serif;
-}
-.signup2.layout-content .main-form .form-element__input {
-  margin-right: 1%;
-}
-.signup2.layout-content .main-form .alert-box {
-  width: 27%;
-  vertical-align: top;
-}
-@media screen and (max-width: 1040px) {
-  html {
-    font-size: 14px;
-  }
-  .signup2.layout-content .main-form {
-    width: 65%;
-  }
-  .signup2.layout-content .main-form .alert-box {
-    width: 27%;
-  }
-}
-@media screen and (max-width: 880px) {
-  .signup2.layout-content .main-form {
+@media screen and (max-width: 900px) {
+  .signup2-page-content__main-form {
     width: 70%;
   }
-  .signup2.layout-content .main-form .alert-box {
-    width: 27%;
+}
+@media screen and (max-width: 650px) {
+  .signup2-page-content__main-form {
+    width: 85%;
   }
 }
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 12px;
-  }
-  .signup2.layout-content .main-form {
-    width: 80%;
-  }
-  .signup2.layout-content .main-form .alert-box {
-    width: 27%;
-  }
-  .signup2.layout-content .photo-choose-block {
-    width: 80%;
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form {
+    width: 98%;
   }
 }
-@media screen and (max-width: 530px) {
-  .signup2.layout-content .main-form {
-    width: 100%;
-  }
-  .signup2.layout-content .main-form .alert-box {
-    width: 27%;
-  }
-  .signup2.layout-content .photo-choose-block {
-    width: 100%;
+.signup2-page-content__main-form-line {
+  margin-bottom: 0.5rem;
+}
+.signup2-page-content__main-form-line:first-child {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signup2-page-content__main-form-line:last-child {
+  text-align: center;
+}
+.signup2-page-content__main-form-line:nth-last-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form-line:nth-last-child(2) {
+    display: block;
+    text-align: center;
   }
 }
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
+.signup2-page-content__main-form-line-item {
+  margin: 0 0.3125rem;
 }
-.layout-header {
-  font-family: "PT Sans", sans-serif;
+label.signup2-page-content__main-form-line-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.21rem;
 }
-.signup3.layout-content .stages {
-  width: 70%;
+.signup2-page-content__main-form-button {
+  display: inline-block;
+  margin: 0 0.3125rem;
+}
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form-button {
+    display: block;
+    margin: 0;
+  }
+  .signup2-page-content__main-form-button:first-child {
+    margin-bottom: 0.4325rem;
+  }
+}
+.signup2-page__footer {
+  margin-top: 1rem;
+}
+.signup3-page {
+  width: 98%;
+  max-width: 1250px;
   margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.signup3.layout-content p {
+.signup3-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.signup3-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 1.21rem;
   text-align: center;
-  font-family: "PT Sans", sans-serif;
 }
-.signup3.layout-content .button-line {
-  text-align: center;
+.signup3-page__footer {
+  margin-top: 1rem;
 }
-.signup3.layout-content .button-line .button {
-  margin-right: 5px;
+.user-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.signup3.layout-content .user-info-block {
-  width: 50%;
-  margin: 20px auto;
-  padding: 0;
+.user-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-@media screen and (max-width: 1050px) {
-  .signup3.layout-content div.user-info-block {
-    width: 65%;
-    margin: 20px auto;
-    padding: 0;
-  }
+.user-page-content__user-block {
+  width: 40%;
+  margin: 1rem auto;
 }
-@media screen and (max-width: 520px) {
-  .signup3.layout-content .stages {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .signup3.layout-content div.user-info-block {
-    width: 100%;
-    margin: 20px auto;
-    padding: 0;
-  }
-}
-.layout-header__title a {
-  color: #e75735;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
-}
-.layout-header {
-  font-family: "PT Sans", sans-serif;
-}
-.user-page.layout-content .user-info-block {
-  width: 50%;
-  margin: 20px auto;
-  padding: 0;
-}
-.user-page.layout-content .messaging {
+.user-page-content__messaging {
   width: 40%;
   margin: 0 auto;
 }
-@media screen and (max-width: 1050px) {
-  html {
-    font-size: 14px;
-  }
-  .user-page.layout-content div.user-info-block {
-    width: 65%;
-    margin: 20px auto;
-    padding: 0;
-  }
-  .user-page.layout-content .messaging {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 720px) {
-  html {
-    font-size: 12px;
-  }
-  .user-page.layout-content .messaging {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 520px) {
-  .user-page.layout-content div.user-info-block {
-    width: 100%;
-    margin: 20px auto;
-    padding: 0;
-  }
+.user-page__footer {
+  margin-top: 1rem;
 }

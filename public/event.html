@@ -8,47 +8,52 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div class="layout">
-      <div class="layout-header clearfix">
-        <div class="layout-header__title">
-          <h1> <a href="index.html">THE BEST MEETING WEBSITE</a></h1>
-        </div>
-        <div class="layout-header__registration"><a class="button" href="undefined" rel="noopener noreferrer"></a>
-        </div>
+    <div class="event-page">
+      <div class="event-page__header">
+        <header class="page-header">
+          <h1 class="page-header__title">THE BEST MEETING WEBSITE</h1>
+          <div class="page-header__registration">
+            <div class="page-header__button"><a class="button  button_size_small button_color_green" href="main.html" rel="noopener noreferrer">GO BACK</a>
+            </div>
+          </div>
+        </header>
       </div>
-      <div class="layout-content event-page">
-            <section class="event">
-              <div class="event-left-half" style="background-image:url(undefined);"></div>
-              <div class="event-right-half"><span class="event__date"><b class="event__day"></b></span>
-                <h4 class="event__title"></h4>
-                <p class="event__description"></p>
-                <div class="event__button">
-                      <button class="button js-button button_size_small button_theme_event" type="button">Add to calendar</button>
-                </div>
-              </div>
-            </section>
-        <div class="layout-content-join"><a class="button" href="undefined" rel="noopener noreferrer"></a>
+      <div class="event-page-content">
+        <section class="event">
+          <div class="event-left-half" style="background-image:url(img/event1.png);"></div>
+          <div class="event-right-half"><span class="event__date"><b class="event__day">24</b></span>
+            <h4 class="event__title">This is the title</h4>
+            <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="event__button">
+              <button class="button js-button button_size_small button_theme_event" type="button">Add to calendar</button>
+            </div>
+          </div>
+        </section>
+        <div class="layout-content-join">
+          <button class="button js-button button_size_small button_color_green" type="button">Join</button>
         </div>
         <div class="layout-content-slider-bar">
           <p class="layout-content__note">At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event</p>
-              <div class="slider-a js-slider-a" data-min="undefined" data-max="undefined" data-step="undefined"></div>
-              <div class="circle-progress-bar">
-                <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text">
-              </div>
+          <div class="slider-a js-slider-a" data-min="0" data-max="100" data-step="1"></div>
+          <div class="circle-progress-bar">
+            <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="55">
+          </div>
         </div>
         <p class="layout-content__note">Some information about an event</p>
-            <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
-            <div class="map-block">
-              <div class="map-block__map js-map-block__map" data-lat="undefined" data-lng="undefined" data-zoom="undefined"></div>
-              <div class="map-block-info">
-                <h3 class="map-block-info__title"></h3>
-                <p class="map-block-info__description"></p>
-                <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-              </div>
-            </div>
+        <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
+        <div class="map-block">
+          <div class="map-block__map js-map-block__map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
+          <div class="map-block-info">
+            <h3 class="map-block-info__title">Meet us!</h3>
+            <p class="map-block-info__description">1259 California st San Francisco, CA</p>
+            <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+          </div>
+        </div>
       </div>
-      <div class="layout-footer">
-        <p>There is some information about this site</p>
+      <div class="event-page__footer">
+        <div class="page-footer">
+          <p class="page-footer__text">There is some information about this site</p>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

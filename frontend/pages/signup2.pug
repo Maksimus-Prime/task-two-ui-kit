@@ -1,54 +1,54 @@
+include ../../blocks/button/button.pug
+include ../../blocks/form-line/form-line.pug
+include ../../blocks/stages/stages.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
+include ../../blocks/toggles/toggles.pug
+include ../../blocks/tick-box/tick-box.pug
+include ../../blocks/choose-photo/choose-photo.pug
+-var data = require('./data.json');
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title Main page
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		include ../../blocks/button/button.pug
-		include ../../blocks//alert-box/alert-box.pug
-		include ../../blocks//form-element/form-element.pug
-		include ../../blocks/stages/stages.pug
-		include ../../blocks/toggles/toggles.pug
-		include ../../blocks/tick-box/tick-box.pug
-		.layout
-			.layout-header.clearfix
-				.layout-header__title
-					h1 
-						a(href="index.html") THE BEST MEETING WEBSITE
-				.layout-header__registration
-					+button("Go back","button","index.html","small","green")
-			.layout-content.signup2
-				+stages("3","2")
-				.photo-choose-block
-					img.photo-choose-block__photo
-					p.photo-choose-block__note choose a photo
-				form.main-form
-					.main-form-line
-						+tick-box("radio","gendor","male","active")
-						label Male
-						+tick-box("radio","gendor","female")
-						label Female 
-					.main-form-line
-						+form-element("input","job","Enter your job")
-						+alert-box
-					.main-form-line
-						+form-element("input","facebook","Enter link to your profile on Facebook")
-						+alert-box
-					.main-form-line
-						+form-element("input","twitter","Enter link to your profile on Twitter")
-						+alert-box("error")
-					.main-form-line
-						+form-element("input","dribbble","Enter link to your profile on Dribbble")
-						+alert-box("error")
-					.main-form-line-get
-						+toggles("get-information","active")
-						label Get information about current events
-					.main-form-line
-						+button("back","button","signup1.html","default")
-						+button("next","button","signup3.html","default","green")
-			.layout-footer
-				p There is someting information about this site
-		script(type="text/javascript" src="main.js")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Main page
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .signup2-page
+            .signup2-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
+            .signup2-page-content
+                .signup2-page-content__steps
+                    +stages({steps: "3", current: "2"})
+                +choose-photo()
+                form.signup2-page-content__main-form
+                    -var data = data.signup2form;
+                    .signup2-page-content__main-form-line
+                        .signup2-page-content__main-form-line-item
+                            +tick-box({type: "radio", name: "gender", value: "male", active: true})
+                        label.signup2-page-content__main-form-line-item Male
+                        .signup2-page-content__main-form-line-item
+                            +tick-box({type: "radio", name: "gender", value: "female"})
+                        label.signup2-page-content__main-form-line-item Female
+                    .signup2-page-content__main-form-line
+                        +form-line({inputtype: data["job-field"].inputtype, name: data["job-field"].name, placeholder: data["job-field"].placeholder, valid: data["job-field"].valid})
+                    .signup2-page-content__main-form-line
+                        +form-line({inputtype: data["facebook-field"].inputtype, name: data["facebook-field"].name, placeholder: data["facebook-field"].placeholder, valid: data["facebook-field"].valid})
+                    .signup2-page-content__main-form-line
+                        +form-line({inputtype: data["twitter-field"].inputtype, name: data["twitter-field"].name, placeholder: data["twitter-field"].placeholder, valid: data["twitter-field"].valid})
+                    .signup2-page-content__main-form-line
+                        +form-line({inputtype: data["dribbble-field"].inputtype, name: data["dribbble-field"].name, placeholder: data["dribbble-field"].placeholder, valid: data["dribbble-field"].valid})
+                    .signup2-page-content__main-form-line
+                        .signup2-page-content__main-form-line-item 
+                            +toggles({name: "get-information", active: true})
+                        label.signup2-page-content__main-form-line-item Get information about current events
+                    .signup2-page-content__main-form-line
+                        .signup2-page-content__main-form-button
+                            +button({text: "back", type: "button", link: "signup1.html"})
+                        .signup2-page-content__main-form-button
+                            +button({text: "next", type: "button", link: "signup3.html", color: "green"})
+            .signup2-page__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

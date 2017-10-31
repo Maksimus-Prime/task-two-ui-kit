@@ -1,61 +1,24 @@
-.layout {
-	&-header {
-		&__title {
-			a {
-				color: #e75735;
-				text-decoration: none;
-				font-family: "PT Sans", sans-serif;
-			}
-		}
-	}
-	&-header {
-		font-family: "PT Sans", sans-serif;
-	}
-}
-.user-page.layout-content {
-	.user-info-block {
-		width: 50%;
-		margin: 20px auto;
-		padding: 0;
-	}
-	.messaging {
-		width: 40%;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	html {
-		font-size: 14px;
-	}
-	.user-page.layout-content {
-		div.user-info-block {
-			width: 65%;
-			margin: 20px auto;
-			padding: 0;
-		}
-		.messaging {
-			width: 50%;
-			margin: 0 auto;
-		}
-	}
-}
-@media screen and (max-width: 720px) {
-	html {
-		font-size: 12px;
-	}
-	.user-page.layout-content {
-		.messaging {
-			width: 100%;
-		}
-	}
-}
-@media screen and (max-width: 520px) {
-	.user-page.layout-content {
-		div.user-info-block {
-			width: 100%;
-			margin: 20px auto;
-			padding: 0;
-		}
-	}
+.user-page {
+    width: 98%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    &-content {
+        flex: 1;
+        &__user-block {
+            width: 40%;
+            margin: 1rem auto;
+        }
+        &__messaging {
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+    &__footer {
+        margin-top: 1rem;
+    }
 }
