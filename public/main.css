@@ -6368,9 +6368,44 @@ label.signup2-page-content__main-form-line-item {
   width: 40%;
   margin: 1rem auto;
 }
+@media screen and (max-width: 1220px) {
+  .user-page-content__user-block {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .user-page-content__user-block {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .user-page-content__user-block {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .user-page-content__user-block {
+    width: 100%;
+  }
+}
 .user-page-content__messaging {
   width: 40%;
   margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .user-page-content__messaging {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .user-page-content__messaging {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .user-page-content__messaging {
+    width: 100%;
+  }
 }
 .user-page__footer {
   margin-top: 1rem;
