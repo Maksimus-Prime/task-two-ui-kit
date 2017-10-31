@@ -1,32 +1,29 @@
+include ../../blocks/button/button.pug
+include ../../blocks/news/news.pug
+include ../../blocks/event/event.pug
+include ../../blocks/arrow-button/arrow-button.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title All events and news
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		include ../../blocks/button/button.pug
-		include ../../blocks/news/news.pug
-		include ../../blocks/event/event.pug
-		include ../../blocks/arrow-button/arrow-button.pug
-		.layout
-			.layout-header.clearfix
-				.layout-header__title
-					h1
-						a(href="index.html") THE BEST MEETING WEBSITE
-				.layout-header__registration
-					+button("LOG IN","button","login.html","small","green")
-					+button("SIGN UP","button","signup1.html","small")
-			.layout-content.allevents
-				.events-news-list
-					.events-news-list-left
-						+arrow-button("left","disabled")
-					.events-news-list-center
-						+news("img/news.png","It's all going downhill","24 August 2013","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.")
-					.events-news-list-right
-						+arrow-button("right")
-			.layout-footer
-				p There is some information about this site
-		script(type="text/javascript" src="main.js")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title All events and news
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .allevents-page
+            .allevents-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
+            .allevents-page-content
+                .events-news-list
+                    .events-news-list-left
+                        +arrow-button({direction: "left", state: "disabled"})
+                    .events-news-list-center
+                         +news({image: "img/news.png", title: "It's all going downhill", date: "24 August 2013", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
+                    .events-news-list-right
+                        +arrow-button({direction: "right"})
+            .allevents-page__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

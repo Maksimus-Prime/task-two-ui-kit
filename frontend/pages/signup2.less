@@ -1,124 +1,73 @@
-.layout {
-	&-header {
-		&__title {
-			a {
-				color: #e75735;
-				text-decoration: none;
-				font-family: "PT Sans", sans-serif;
-			}
-		}
-	}
-	&-header {
-		font-family: "PT Sans", sans-serif;
-	}
-}
-.signup2.layout-content {
-	.photo-choose-block {
-		display: block;
-		width: 60%;
-		margin: 0 auto;
-		text-align: center;
-		&__photo {
-			width: 250px;
-			height: 250px;
-			border-radius: 50%;
-			background-color: #a5a5a5;
-		}
-		&__note {
-			font-size: 1.21rem;
-			text-align: center;
-			font-family: "PT Sans", sans-serif;
-		}
-	}
-	.main-form {
-		width: 55%;
-		margin: 10px auto;
-		&-line {
-			margin-bottom: 10px;
-			font-family: "PT Sans", sans-serif;
-			&:last-child {
-				text-align: center;
-				.button {
-					margin-right: 5px;
-				}
-			}
-			&:first-child {
-				font-size: 1.625rem;
-				line-height: 41px;
-				text-align: center;
-			}
-		}
-		&-line-get {
-			.toggles {
-				display: inline-block;
-			}
-			label {
-				font-size: 1.21rem;
-				height: 45px;
-				font-family: "PT Sans", sans-serif;
-			}
-		}
-		.form-element {
-			&__input {
-				margin-right: 1%;
-			}
-		}
-		.alert-box {
-			width: 27%;
-			vertical-align: top;
-		}
-	}
-}
-@media screen and (max-width: 1040px) {
-	html {
-		font-size: 14px;
-	}
-	.signup2.layout-content {
-		.main-form {
-			width: 65%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
-}
-@media screen and (max-width: 880px) {
-	.signup2.layout-content {
-		.main-form {
-			width: 70%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 640px) {
-	html {
-		font-size: 12px;
-	}
-	.signup2.layout-content {
-		.main-form {
-			width: 80%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-		.photo-choose-block {
-			width: 80%;
-		}
-	}
-}
-@media screen and (max-width: 530px) {
-	.signup2.layout-content {
-		.main-form {
-			width: 100%;
-			.alert-box {
-				width: 27%;
-			}
-		}
-		.photo-choose-block {
-			width: 100%;
-		}
-	}
+.signup2-page {
+    width: 98%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    &-content {
+        flex: 1;
+        &__note {
+            font-family: "PT Sans", Arial, sans-serif;
+            font-size: 1.21rem;
+            text-align: center;
+        }
+        &__main-form {
+            width: 55%;
+            margin: 0 auto;
+            @media screen and (max-width: 900px) {
+                width: 70%;
+            }
+            @media screen and (max-width: 650px) {
+                width: 85%;
+            }
+            @media screen and (max-width: 380px) {
+                width: 98%;
+            }
+        }
+        &__main-form-line {
+            margin-bottom: 0.5rem;
+            &:first-child {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &:last-child {
+                text-align: center;
+            }
+            &:nth-last-child(2) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 380px) {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+        &__main-form-line-item {
+            margin: 0 0.3125rem;
+            label& {
+                font-family: "PT Sans", Arial, sans-serif;
+                font-size: 1.21rem;
+            }
+        }
+        &__main-form-button {
+            display: inline-block;
+            margin: 0 0.3125rem;
+            @media screen and (max-width: 380px) {
+                display: block;
+                margin: 0; 
+                &:first-child {
+                    margin-bottom: 0.4325rem;
+                }
+            }
+        }
+    }
+    &__footer {
+        margin-top: 1rem;
+    }
 }

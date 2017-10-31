@@ -1,25 +1,26 @@
+include ../../blocks/button/button.pug
+include ../../blocks/user-info-block/user-info-block.pug
+include ../../blocks/messaging/messaging.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
+-var data = require('./data.json');
 doctype html
 html
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		title User page
-		script(src="https://www.youtube.com/iframe_api")
-		link(rel="stylesheet" href="main.css")
-	body
-		include ../../blocks/user-info-block/user-info-block.pug
-		include ../../blocks/button/button.pug
-		include ../../blocks/messaging/messaging.pug
-		.layout
-			.layout-header.clearfix
-				.layout-header__title
-					h1 
-						a(href="index.html") THE BEST MEETING WEBSITE
-				.layout-header__registration
-					+button("Go back","button","index.html","small","green")
-			.layout-content.user-page
-				+user-info-block("img/photo2.png","#","Sarah Brown", "Developer", "#", "#", "#", "green")
-				+messaging("Sarah Brown","img/photo2.png")
-			.layout-footer
-				p There is someting information about this site
-		script(type="text/javascript" src="main.js")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title User page
+        script(src="https://www.youtube.com/iframe_api")
+        link(rel="stylesheet" href="main.css")
+    body
+        .user-page
+            .user-page__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
+            .user-page-content
+                .user-page-content__user-block
+                    +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
+                .user-page-content__messaging
+                    +messaging({name: "Sarah Brown", image: "img/photo2.png"})
+            .user-page__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

@@ -70,6 +70,32 @@
             "valid": "false"
         }
     },
+    "signup2form": {
+        "job-field": {
+            "inputtype": "text",
+            "name": "job",
+            "placeholder": "Enter your job",
+            "valid": "true"
+        },
+        "facebook-field": {
+            "inputtype": "text",
+            "name": "facebook",
+            "placeholder": "Enter link to your profile on Facebook",
+            "valid": "false"
+        },
+        "twitter-field": {
+            "inputtype": "text",
+            "name": "twitter",
+            "placeholder": "Enter link to your profile on Twitter",
+            "valid": "true"
+        },
+        "dribbble-field": {
+            "inputtype": "text",
+            "name": "dribbble",
+            "placeholder": "Enter link to your profile on Dribbble",
+            "valid": "false"
+        }
+    },
     "eventslist": [
         {
             "text": "Apple Festival 2017",

@@ -1,59 +1,21 @@
-.layout {
-	&-header {
-		&__title {
-			a {
-				color: #e75735;
-				text-decoration: none;
-				font-family: "PT Sans", sans-serif;
-			}
-		}
-	}
-	&-header {
-		font-family: "PT Sans", sans-serif;
-	}
-}
-.signup3.layout-content {
-	.stages {
-		width: 70%;
-		margin: 0 auto;
-	}
-	p {
-		font-size: 1.21rem;
-		text-align: center;
-		font-family: "PT Sans", sans-serif;
-	}
-	.button-line {
-		text-align: center;
-		.button {
-			margin-right: 5px;
-		}
-	}
-	.user-info-block {
-		width: 50%;
-		margin: 20px auto;
-		padding: 0;
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.signup3.layout-content {
-		div.user-info-block {
-			width: 65%;
-			margin: 20px auto;
-			padding: 0;
-		}
-	}
-}
-@media screen and (max-width: 520px) {
-	.signup3.layout-content {
-		.stages {
-			width: 100%;
-			margin: 0 auto;
-		}
-		div.user-info-block {
-			width: 100%;
-			margin: 20px auto;
-			padding: 0;
-		}
-	}
+.signup3-page {
+    width: 98%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    &-content {
+        flex: 1;
+        &__note {
+            font-family: "PT Sans", Arial, sans-serif;
+            font-size: 1.21rem;
+            text-align: center;
+        }
+    }
+    &__footer {
+        margin-top: 1rem;
+    }
 }
