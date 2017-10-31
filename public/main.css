@@ -6308,6 +6308,39 @@ label.signup2-page-content__main-form-line-item {
   font-size: 1.21rem;
   text-align: center;
 }
+.signup3-page-content__user-block {
+  width: 45%;
+  margin: 0 auto;
+  margin-bottom: 1.15rem;
+}
+@media screen and (max-width: 800px) {
+  .signup3-page-content__user-block {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .signup3-page-content__user-block {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .signup3-page-content__user-block {
+    width: 100%;
+  }
+}
+.signup3-page-content__buttons {
+  text-align: center;
+}
+.signup3-page-content__button {
+  display: inline-block;
+  margin: 0 0.3125rem;
+}
+@media screen and (max-width: 380px) {
+  .signup3-page-content__button {
+    display: block;
+    margin: 0.4325rem 0;
+  }
+}
 .signup3-page__footer {
   margin-top: 1rem;
 }
