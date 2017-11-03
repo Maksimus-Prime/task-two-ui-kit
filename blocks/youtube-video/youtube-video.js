@@ -1,7 +1,4 @@
-require("jquery");
-require('youtube-iframe');
 var YouTubeIframeLoader = require('youtube-iframe');
-
 
 $('.js-youtube-video').each(function(i){
     var _self = $(this),

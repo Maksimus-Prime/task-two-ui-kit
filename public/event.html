@@ -18,42 +18,52 @@
           </div>
         </header>
       </div>
-      <div class="event-page-content">
-        <section class="event">
-          <div class="event-left-half" style="background-image:url(img/event1.png);"></div>
-          <div class="event-right-half"><span class="event__date"><b class="event__day">24</b></span>
-            <h4 class="event__title">This is the title</h4>
-            <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="event__button">
-              <button class="button js-button button_size_small button_theme_event" type="button">Add to calendar</button>
+      <main class="event-page-content">
+        <div class="event-page-content__event">
+          <section class="event">
+            <div class="event-left-half" style="background-image:url(img/event1.png);"></div>
+            <div class="event-right-half"><span class="event__date"><b class="event__day">24</b></span>
+              <h4 class="event__title">This is the title</h4>
+              <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="event__button">
+                <button class="button js-button button_size_small button_theme_event" type="button">Add to calendar</button>
+              </div>
             </div>
-          </div>
-        </section>
-        <div class="layout-content-join">
+          </section>
+        </div>
+        <div class="event-page-content__join-button">
           <button class="button js-button button_size_small button_color_green" type="button">Join</button>
         </div>
-        <div class="layout-content-slider-bar">
-          <p class="layout-content__note">At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event</p>
-          <div class="slider-a js-slider-a" data-min="0" data-max="100" data-step="1"></div>
-          <div class="circle-progress-bar">
-            <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="55">
+        <p class="event-page-content__note">At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event</p>
+        <div class="event-page-content__statistics">
+          <div class="event-page-content__slider">
+            <div class="slider-a js-slider-a" data-min="0" data-max="100" data-step="1"></div>
+          </div>
+          <div class="event-page-content__progress-bar">
+            <div class="circle-progress-bar">
+              <input class="circle-progress-bar__value js-circle-progress-bar__value" type="text" value="55">
+            </div>
           </div>
         </div>
-        <p class="layout-content__note">Some information about an event</p>
-        <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
-        <div class="map-block">
-          <div class="map-block__map js-map-block__map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
-          <div class="map-block-info">
-            <h3 class="map-block-info__title">Meet us!</h3>
-            <p class="map-block-info__description">1259 California st San Francisco, CA</p>
-            <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+        <p class="event-page-content__note">Some information about an event</p>
+        <div class="event-page-content__video">
+          <div class="youtube-video js-youtube-video" data-videoid="RN3Mf3oQ6e8"></div>
+        </div>
+        <div class="event-page-content__map">
+          <div class="map-block">
+            <div class="map-block__map js-map-block__map" data-lat="56.501" data-lng="84.992" data-zoom="14" data-marker="img/map-marker-icon.png"></div>
+            <div class="map-block-info">
+              <h3 class="map-block-info__title">Meet us!</h3>
+              <p class="map-block-info__description">1259 California st San Francisco, CA</p>
+              <div class="map-block-info__icons"><i class="fa fa-dot-circle-o" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
       <div class="event-page__footer">
-        <div class="page-footer">
+        <footer class="page-footer">
           <p class="page-footer__text">There is some information about this site</p>
-        </div>
+        </footer>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>

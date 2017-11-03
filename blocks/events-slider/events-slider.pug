@@ -1,0 +1,10 @@
+include ../arrow-button/arrow-button.pug
+include ../news/news.pug
+mixin events-slider()
+    section.events-slider
+        .events-slider__side
+            +arrow-button({direction: "left", state: "disabled"})
+        .events-slider__center
+            +news({image: "img/news.png", title: "It's all going downhill", date: "24 August 2013", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
+        .events-slider__side
+            +arrow-button({direction: "right"})

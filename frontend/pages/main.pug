@@ -19,8 +19,8 @@ html
         .main-page
             .main-page__header
                 +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
-            .main-page-content
-                .main-page-content-left
+            main.main-page-content
+                .main-page-content__left
                     p
                         a.main-page-content__allevents-link(href="allevents.html") All events and news
                     .main-page-content__events-list
@@ -29,7 +29,7 @@ html
                         +drop-down("dropdown", data.dropdown)
                     .main-page-content__calendar
                         +calendar
-                .main-page-content-right
+                .main-page-content__right
                     p.main-page-content__note Here you can see people who go to the meeting
                     .main-page-content__search
                         +search({name: "search"})

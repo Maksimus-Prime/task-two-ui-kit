@@ -18,17 +18,22 @@ html
         .event-page
             .event-page__header
                 +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
-            .event-page-content
-                +event({image: "img/event1.png", day: "24", month: "Aug", title: "This is the title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."})
-                .layout-content-join
+            main.event-page-content
+                .event-page-content__event
+                    +event({image: "img/event1.png", day: "24", month: "Aug", title: "This is the title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."})
+                .event-page-content__join-button
                     +button({text: "Join", type: "button", link: "none", size: "small", color: "green"})
-                .layout-content-slider-bar
-                    p.layout-content__note At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event
-                    +slider-a({min: "0", max: "100", step: "1"})
-                    +circle-progress-bar({value: "55"})
-                p.layout-content__note Some information about an event
-                +youtube-video({videoId: "RN3Mf3oQ6e8"})
-                +map-block({id: "map", lat: "56.501", lng: "84.992", zoom: "14", marker: "img/map-marker-icon.png", title: "Meet us!", address: "1259 California st San Francisco, CA"})
+                p.event-page-content__note At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event
+                .event-page-content__statistics
+                    .event-page-content__slider
+                        +slider-a({min: "0", max: "100", step: "1"})
+                    .event-page-content__progress-bar
+                        +circle-progress-bar({value: "55"})
+                p.event-page-content__note Some information about an event
+                .event-page-content__video
+                    +youtube-video({videoId: "RN3Mf3oQ6e8"})
+                .event-page-content__map
+                    +map-block({id: "map", lat: "56.501", lng: "84.992", zoom: "14", marker: "img/map-marker-icon.png", title: "Meet us!", address: "1259 California st San Francisco, CA"})
             .event-page__footer
                 +page-footer({text: "There is some information about this site"})
         script(type="text/javascript" src="main.js")

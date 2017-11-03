@@ -1,7 +1,5 @@
-require('jquery');
-require('jquery-ui');
-require("./../../frontend/vendor/jquery.progressbar.js");
-require("./../../frontend/vendor/jquery.progressbar.css");
+import "./../../frontend/vendor/jquery.progressbar.js";
+import "./../../frontend/vendor/jquery.progressbar.css";
 
 $(document).ready(function(){
     $('.js-stages').each(function(i){
