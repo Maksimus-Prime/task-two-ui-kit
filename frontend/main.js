@@ -3,17 +3,10 @@ function requireAll(requireContext) {
 }
 require("jquery");
 require("jquery-ui");
-require('youtube-iframe');
-var YouTubeIframeLoader = require('youtube-iframe');
-require("./style.less");
-require("./vendor/select2.min.js");
-require("../node_modules/chart.js/dist/Chart.bundle.min.js");
-require("./vendor/jquery.knob.min.js");
-require.context("./../blocks",true,/\.(jpe?g|png|svg|gif)$/);
 var modules = requireAll(require.context("./../blocks", true, /^\.\/.*\.js$/));
-require.context("./fonts",true,/\.css$/);
+import "./style.less";
 import './favicons/favicons';
-require("./vendor/select2.min.css");
-require("./vendor/SliderPips/dist/jquery-ui-slider-pips.js");
+require.context("./../blocks",true,/\.(jpe?g|png|svg|gif)$/);
+require.context("./fonts",true,/\.css$/);
 require.context("./../blocks",true,/\.less$/);
 require.context("./pages/",true,/\.less$/);

@@ -1,4 +1,4 @@
-require('jquery');
+import "./../../frontend/vendor/jquery.knob.min.js";
 
 $(document).ready(function() {
     $('.js-circle-progress-bar__value').each(function(i){

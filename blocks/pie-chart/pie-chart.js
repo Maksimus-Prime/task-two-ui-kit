@@ -1,3 +1,4 @@
+import "./../../node_modules/chart.js/dist/Chart.bundle.min.js";
 Chart.defaults.global.legend.display = false;
 
 $('.js-pie-chart').each(function(i){

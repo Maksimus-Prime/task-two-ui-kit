@@ -1,5 +1,3 @@
-require('jquery');
-require('jquery-ui');
 import "jquery-ui/ui/widgets/datepicker";
 import "jquery-ui/themes/base/datepicker.css";
 

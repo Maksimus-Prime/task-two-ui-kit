@@ -1,9 +1,7 @@
-require('jquery');
-require('jquery-ui');
 import "jquery-ui/ui/widgets/slider";
 import "jquery-ui/themes/base/slider.css";
-require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js");
-require("./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css");
+import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js";
+import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css";
 
 $('.js-slider-a').each(function(i){
     var currenSlider = $(this)[0];

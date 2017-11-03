@@ -16,7 +16,7 @@ html
         link(rel="stylesheet" href="main.css")
     body
         .event-page
-            header.event-page__header
+            .event-page__header
                 +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
             main.event-page-content
                 .event-page-content__event
@@ -34,7 +34,7 @@ html
                     +youtube-video({videoId: "RN3Mf3oQ6e8"})
                 .event-page-content__map
                     +map-block({id: "map", lat: "56.501", lng: "84.992", zoom: "14", marker: "img/map-marker-icon.png", title: "Meet us!", address: "1259 California st San Francisco, CA"})
-            footer.event-page__footer
+            .event-page__footer
                 +page-footer({text: "There is some information about this site"})
         script(type="text/javascript" src="main.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpcagWc1LzQgPuGadYKpXCXVchQ3o0Ik&callback=initMap")
