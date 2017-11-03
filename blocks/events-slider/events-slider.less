@@ -1,0 +1,18 @@
+.events-slider {
+    display: flex;
+    &__center {
+        flex: 5;
+        @media screen and (max-width: 600px) {
+            flex: 1;
+        }
+    }
+    &__side {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }        
+    }
+}
