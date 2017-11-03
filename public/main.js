@@ -11257,25 +11257,25 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	$(".js-button").each(function (i) {
-	    $(this).click(function (e) {
-	        var ripple = $(this);
-	        if (ripple.find(".effect").length == 0) {
-	            ripple.append("<span class='effect'></span>");
-	        }
-	        var efekt = ripple.find(".effect");
-	        efekt.removeClass("replay");
-	        if (!efekt.height() && !efekt.width()) {
-	            var d = Math.max(ripple.outerWidth(), ripple.outerHeight());
-	            efekt.css({ height: d / 4, width: d / 4 });
-	        }
-	        var x = e.pageX - ripple.offset().left - efekt.width() / 2;
-	        var y = e.pageY - ripple.offset().top - efekt.height() / 2;
-	        efekt.css({
-	            top: y + 'px',
-	            left: x + 'px'
-	        }).addClass("replay");
-	    });
+	$(".js-button").each(function () {
+	  $(this).click(function (e) {
+	    var ripple = $(this);
+	    if (ripple.find(".effect").length == 0) {
+	      ripple.append("<span class='effect'></span>");
+	    }
+	    var efekt = ripple.find(".effect");
+	    efekt.removeClass("replay");
+	    if (!efekt.height() && !efekt.width()) {
+	      var d = Math.max(ripple.outerWidth(), ripple.outerHeight());
+	      efekt.css({ height: d / 4, width: d / 4 });
+	    }
+	    var x = e.pageX - ripple.offset().left - efekt.width() / 2;
+	    var y = e.pageY - ripple.offset().top - efekt.height() / 2;
+	    efekt.css({
+	      top: y + "px",
+	      left: x + "px"
+	    }).addClass("replay");
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -11289,40 +11289,40 @@
 
 	__webpack_require__(31);
 
-	$('.js-calendar__header').each(function (i) {
-	    var $currentDay = $.datepicker.formatDate('d', new Date());
-	    $(this).html($currentDay);
+	$(".js-calendar__header").each(function () {
+	  var $currentDay = $.datepicker.formatDate("d", new Date());
+	  $(this).html($currentDay);
 	});
-	$('.js-calendar__datepicker').each(function (i) {
-	    $(this).datepicker({
-	        showOtherMonths: true,
-	        firstDay: 1,
-	        dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
-	        dateFormat: 'd',
-	        showButtonPanel: true,
-	        onSelect: function onSelect(selectedDate) {
-	            $('.js-calendar__header').html(selectedDate);
-	        }
-	    });
+	$(".js-calendar__datepicker").each(function () {
+	  $(this).datepicker({
+	    showOtherMonths: true,
+	    firstDay: 1,
+	    dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
+	    dateFormat: "d",
+	    showButtonPanel: true,
+	    onSelect: function onSelect(selectedDate) {
+	      $(".js-calendar__header").html(selectedDate);
+	    }
+	  });
 	});
 	$.datepicker._gotoToday = function (id) {
-	    var target = $(id);
-	    var inst = this._getInst(target[0]);
-	    if (this._get(inst, 'gotoCurrent') && inst.currentDay) {
-	        inst.selectedDay = inst.currentDay;
-	        inst.drawMonth = inst.selectedMonth = inst.currentMonth;
-	        inst.drawYear = inst.selectedYear = inst.currentYear;
-	    } else {
-	        var date = new Date();
-	        inst.selectedDay = date.getDate();
-	        inst.drawMonth = inst.selectedMonth = date.getMonth();
-	        inst.drawYear = inst.selectedYear = date.getFullYear();
-	        // the below two lines are new
-	        var $currentDay = $.datepicker.formatDate('d', new Date());
-	        $('.js-calendar__header').html($currentDay);
-	    }
-	    this._notifyChange(inst);
-	    this._adjustDate(target);
+	  var target = $(id);
+	  var inst = this._getInst(target[0]);
+	  if (this._get(inst, "gotoCurrent") && inst.currentDay) {
+	    inst.selectedDay = inst.currentDay;
+	    inst.drawMonth = inst.selectedMonth = inst.currentMonth;
+	    inst.drawYear = inst.selectedYear = inst.currentYear;
+	  } else {
+	    var date = new Date();
+	    inst.selectedDay = date.getDate();
+	    inst.drawMonth = inst.selectedMonth = date.getMonth();
+	    inst.drawYear = inst.selectedYear = date.getFullYear();
+	    // the below two lines are new
+	    var $currentDay = $.datepicker.formatDate("d", new Date());
+	    $(".js-calendar__header").html($currentDay);
+	  }
+	  this._notifyChange(inst);
+	  this._adjustDate(target);
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -13519,19 +13519,19 @@
 	__webpack_require__(34);
 
 	$(document).ready(function () {
-	    $('.js-circle-progress-bar__value').each(function (i) {
-	        $(this).knob({
-	            "thickness": ".1",
-	            "bgColor": "#fff",
-	            "fgColor": "#e75735",
-	            "width": "100%",
-	            "height": "100%",
-	            "readOnly": "false",
-	            "font": "'Lato', sans-serif",
-	            "fontWeight": "300",
-	            "fontStyle": "normal"
-	        });
+	  $(".js-circle-progress-bar__value").each(function () {
+	    $(this).knob({
+	      "thickness": ".1",
+	      "bgColor": "#fff",
+	      "fgColor": "#e75735",
+	      "width": "100%",
+	      "height": "100%",
+	      "readOnly": "false",
+	      "font": "'Lato', sans-serif",
+	      "fontWeight": "300",
+	      "fontStyle": "normal"
 	    });
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -13750,10 +13750,10 @@
 
 	__webpack_require__(37);
 
-	$('.js-drop-down__select').each(function (i) {
-	    $(this).select2({
-	        placeholder: "Choose An Option"
-	    }).addClass('stylee');
+	$(".js-drop-down__select").each(function () {
+	  $(this).select2({
+	    placeholder: "Choose An Option"
+	  }).addClass("stylee");
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -14895,26 +14895,26 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	$('.js-map-block__map').each(function (i) {
-	    var _self = $(this),
-	        lat = $(this).data("lat"),
-	        lng = $(this).data("lng"),
-	        zoom = $(this).data("zoom"),
-	        icon = $(this).data("marker");
-	    function initMap() {
-	        var location = { lat: lat, lng: lng };
-	        var map = new google.maps.Map(_self[0], {
-	            zoom: zoom,
-	            center: location
-	        });
-	        var marker = new google.maps.Marker({
-	            map: map,
-	            position: location,
-	            icon: icon
-	        });
-	    }
+	$(".js-map-block__map").each(function () {
+	  var _self = $(this),
+	      lat = $(this).data("lat"),
+	      lng = $(this).data("lng"),
+	      zoom = $(this).data("zoom"),
+	      icon = $(this).data("marker");
+	  function initMap() {
+	    var location = { lat: lat, lng: lng };
+	    var map = new google.maps.Map(_self[0], {
+	      zoom: zoom,
+	      center: location
+	    });
+	    var marker = new google.maps.Marker({
+	      map: map,
+	      position: location,
+	      icon: icon
+	    });
+	  }
 
-	    window.initMap = initMap;
+	  window.initMap = initMap;
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -14922,42 +14922,42 @@
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
 	__webpack_require__(41);
 
 	Chart.defaults.global.legend.display = false;
 
-	$('.js-pie-chart').each(function (i) {
-	    var el = $(this)[0];
-	    var ctx = el.getContext('2d');
-	    var values = $(el).data('values').split(',');
-	    var myDoughnutChart = new Chart(ctx, {
-	        type: 'doughnut',
-	        data: {
-	            datasets: [{
-	                data: values,
-	                backgroundColor: ["#747474", "#e75735", "#4eb7a8", "#e5e5e5"],
-	                borderWidth: 0
-	            }]
+	$(".js-pie-chart").each(function () {
+	  var el = $(this)[0];
+	  var ctx = el.getContext("2d");
+	  var values = $(el).data("values").split(",");
+	  var myDoughnutChart = new Chart(ctx, {
+	    type: "doughnut",
+	    data: {
+	      datasets: [{
+	        data: values,
+	        backgroundColor: ["#747474", "#e75735", "#4eb7a8", "#e5e5e5"],
+	        borderWidth: 0
+	      }]
+	    },
+	    options: {
+	      tooltips: {
+	        enabled: false
+	      },
+	      hover: { mode: null },
+	      cutoutPercentage: 65,
+	      elements: {
+	        arc: {
+	          borderColor: "#eee",
+	          borderWidth: 1
 	        },
-	        options: {
-	            tooltips: {
-	                enabled: false
-	            },
-	            hover: { mode: null },
-	            cutoutPercentage: 65,
-	            elements: {
-	                arc: {
-	                    borderColor: "#eee",
-	                    borderWidth: 1
-	                },
-	                line: {
-	                    backgroundColor: "#000"
-	                }
-	            }
+	        line: {
+	          backgroundColor: "#000"
 	        }
-	    });
+	      }
+	    }
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -14990,13 +14990,13 @@
 
 	__webpack_require__(49);
 
-	$('.js-slider-a').each(function (i) {
-	    var currenSlider = $(this)[0];
-	    $(currenSlider).slider({
-	        min: $(currenSlider).data("min"),
-	        max: $(currenSlider).data("max"),
-	        step: $(currenSlider).data("step")
-	    }).slider('float');
+	$(".js-slider-a").each(function () {
+	  var currenSlider = $(this)[0];
+	  $(currenSlider).slider({
+	    min: $(currenSlider).data("min"),
+	    max: $(currenSlider).data("max"),
+	    step: $(currenSlider).data("step")
+	  }).slider("float");
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -16700,17 +16700,17 @@
 
 	__webpack_require__(49);
 
-	$('.js-slider-b').each(function (i) {
-	    var currentSlider = $(this)[0];
-	    $(currentSlider).slider({
-	        min: $(currentSlider).data("min"),
-	        max: $(currentSlider).data("max"),
-	        step: $(currentSlider).data("step"),
-	        range: true
-	    }).slider('pips', {
-	        rest: "label",
-	        step: 1
-	    });
+	$(".js-slider-b").each(function () {
+	  var currentSlider = $(this)[0];
+	  $(currentSlider).slider({
+	    min: $(currentSlider).data("min"),
+	    max: $(currentSlider).data("max"),
+	    step: $(currentSlider).data("step"),
+	    range: true
+	  }).slider("pips", {
+	    rest: "label",
+	    step: 1
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -16725,25 +16725,25 @@
 	__webpack_require__(54);
 
 	$(document).ready(function () {
-	    $('.js-stages').each(function (i) {
-	        var stageSteps = $(this).data("steps"),
-	            currentStep = $(this).data("current");
-	        var stepArr = [];
-	        makeSteps(stageSteps, currentStep);
-	        $(this).progressbar({
-	            steps: stepArr
-	        });
-
-	        function makeSteps(steps, current) {
-	            for (var _i = 0; _i < stageSteps; _i++) {
-	                if (_i == currentStep - 1) {
-	                    stepArr.push('@');
-	                } else {
-	                    stepArr.push('');
-	                }
-	            }
-	        }
+	  $(".js-stages").each(function () {
+	    var stageSteps = $(this).data("steps"),
+	        currentStep = $(this).data("current");
+	    var stepArr = [];
+	    makeSteps(stageSteps, currentStep);
+	    $(this).progressbar({
+	      steps: stepArr
 	    });
+
+	    function makeSteps(steps, current) {
+	      for (var i = 0; i < stageSteps; i++) {
+	        if (i == currentStep - 1) {
+	          stepArr.push("@");
+	        } else {
+	          stepArr.push("");
+	        }
+	      }
+	    }
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -16802,20 +16802,20 @@
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
 	var YouTubeIframeLoader = __webpack_require__(57);
 
-	$('.js-youtube-video').each(function (i) {
-	    var _self = $(this),
-	        videoId = $(this).data('videoid');
-	    YouTubeIframeLoader.load(function (YT) {
-	        new YT.Player(_self[0], {
-	            width: "100%",
-	            height: "100%",
-	            videoId: videoId
-	        });
+	$(".js-youtube-video").each(function () {
+	  var _self = $(this),
+	      videoId = $(this).data("videoid");
+	  YouTubeIframeLoader.load(function (YT) {
+	    new YT.Player(_self[0], {
+	      width: "100%",
+	      height: "100%",
+	      videoId: videoId
 	    });
+	  });
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
