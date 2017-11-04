@@ -1,7 +1,7 @@
 mixin news(object)
     section.news
-        .news-left-half(style="background-image:url("+object.image+")")
-        .news-right-half
-            h2.news-right-half__title=object.title
-            span.news-right-half__date=object.date
-            p.news-right-half__description=object.description
+        .news__left-half(style="background-image:url("+object.image+")")
+        .news__right-half
+            h2.news__title=object.title
+            span.news__date=object.date
+            p.news__description=object.description
