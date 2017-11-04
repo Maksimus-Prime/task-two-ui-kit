@@ -60,7 +60,7 @@
 	__webpack_require__(58);
 	__webpack_require__(67);
 	__webpack_require__(100);
-	__webpack_require__(155);
+	__webpack_require__(157);
 
 /***/ }),
 /* 1 */
@@ -17058,13 +17058,13 @@
 		"./photo-block/photo-block.less": 135,
 		"./pie-chart/pie-chart.less": 137,
 		"./search/search.less": 139,
-		"./slider-a/slider-a.less": 141,
-		"./slider-b/slider-b.less": 143,
-		"./stages/stages.less": 145,
-		"./tick-box/tick-box.less": 147,
-		"./toggles/toggles.less": 149,
-		"./user-info-block/user-info-block.less": 151,
-		"./youtube-video/youtube-video.less": 153
+		"./slider-a/slider-a.less": 143,
+		"./slider-b/slider-b.less": 145,
+		"./stages/stages.less": 147,
+		"./tick-box/tick-box.less": 149,
+		"./toggles/toggles.less": 151,
+		"./user-info-block/user-info-block.less": 153,
+		"./youtube-video/youtube-video.less": 155
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17221,12 +17221,7 @@
 
 /***/ }),
 /* 140 */,
-/* 141 */
-/***/ (function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 141 */,
 /* 142 */,
 /* 143 */
 /***/ (function(module, exports) {
@@ -17271,17 +17266,24 @@
 /***/ }),
 /* 154 */,
 /* 155 */
+/***/ (function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./allevents.less": 156,
-		"./event.less": 158,
-		"./login.less": 160,
-		"./main.less": 162,
-		"./signup1.less": 164,
-		"./signup2.less": 166,
-		"./signup3.less": 168,
-		"./user.less": 170
+		"./allevents.less": 158,
+		"./event.less": 160,
+		"./login.less": 162,
+		"./main.less": 164,
+		"./signup1.less": 166,
+		"./signup2.less": 168,
+		"./signup3.less": 170,
+		"./user.less": 172
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17294,17 +17296,10 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 155;
+	webpackContext.id = 157;
 
 
 /***/ }),
-/* 156 */
-/***/ (function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 157 */,
 /* 158 */
 /***/ (function(module, exports) {
 
@@ -17348,6 +17343,13 @@
 /***/ }),
 /* 169 */,
 /* 170 */
+/***/ (function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 171 */,
+/* 172 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

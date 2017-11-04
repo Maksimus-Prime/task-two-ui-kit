@@ -39,7 +39,8 @@ html
     body
         .layout
             .layout-buttons
-                h3.layout__title Standard Buttons
+                .layout-buttons__title
+                    h3.layout__title Standard Buttons
                 .layout-buttons__item-button
                     +button({text: "Button", type: "button", link: "/mock-address/change-me", size: "small", color: "green"})
                 .layout-buttons__item-button
@@ -81,56 +82,54 @@ html
                 +stages({steps: "5", current: "3"})
             .layout-form-elements
                 h3.layout__title Form elements
-                .layout-form-elements-container.clearfix
-                    .layout-form-elements-container-left
-                        .layout-form-elements-container-left__item
-                            +message-form(data.messageform)
-                    .layout-form-elements-container-right
-                        h3.layout__title Toggles
-                        .layout-form-elements-container-right__toggles-item
+                .layout-form-elements-container
+                    .layout-form-elements-container__message-form
+                        +message-form(data.messageform)
+                    .layout-form-elements-container__toggles-and-ticks
+                        h3.layout__title.layout__title_margin-top_false Toggles
+                        .layout-form-elements-container__toggles
                             +toggles({name: "noadult"})
-                        .layout-form-elements-container-right__toggles-item
+                        .layout-form-elements-container__toggles
                             +toggles({name: "adult", active: true})
                         h3.layout__title Tick boxes
-                        .layout-form-elements-container-right__tick-item
+                        .layout-form-elements-container__tick
                             +tick-box({type: "radio", name: "gender", value: "male", active: true})
-                        .layout-form-elements-container-right__tick-item
+                        .layout-form-elements-container__tick
                             +tick-box({type: "radio", name: "gender", value: "female"})
             .layout-search-drop-user-profile
-                .layout-search-drop-user-profile-container.clearfix
-                    .layout-search-drop-user-profile-container-left
+                .layout-search-drop-user-profile-container
+                    .layout-search-drop-user-profile-container__left
                         h3.layout__title Search / Drop Down
-                        .layout-search-drop-user-profile-container-left__search
+                        .layout-search-drop-user-profile-container__search
                             +search({name: "search"})
-                        .layout-search-drop-user-profile-container-left__search
+                        .layout-search-drop-user-profile-container__search
                             +search({name: "search-off", not_found: true})
-                        +drop-down("dropdown", data.dropdown)
-                    .layout-search-drop-user-profile-container-right
+                        .layout-search-drop-user-profile-container__search
+                            +drop-down("dropdown", data.dropdown)
+                    .layout-search-drop-user-profile-container__right
                         h3.layout__title User profile
-                        .layout-search-drop-user-profile-container-right__item
+                        .layout-search-drop-user-profile-container__user-block
                             +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                        .layout-search-drop-user-profile-container-right__item
+                        .layout-search-drop-user-profile-container__user-block
                             +user-info-block({image: "img/photo2.png", link: "/mock-address/change-me", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
             .layout-news-events
                 h3.layout__title News &amp; Events
-                .layout-news-events-container.clearfix
-                    .layout-news-events-container-left
-                        .layout-news-events-container-left__item
+                .layout-news-events-container
+                        .layout-news-events-container__item
                             +news({image: "img/news.png", title: "It's all going downhill", date: "24 August 2013", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
-                    .layout-news-events-container-right
-                        .layout-news-events-container-right__item
+                        .layout-news-events-container__item
                             +event({image: "img/event1.png", day: "24", month: "Aug", title: "This is the title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."})
             .layout-location
                 h3.layout__title Location
                 +map-block({id: "map", lat: "56.501", lng: "84.992", zoom: "14", marker: "img/map-marker-icon.png", title: "Meet us!", address: "1259 California st San Francisco, CA"})
             .layout-calendar-and-messaging
                 h3.layout__title Calendar / Messaging
-                .layout-calendar-and-messaging-container.clearfix
-                    .layout-calendar-and-messaging-container-left
-                        .layout-calendar-and-messaging-container-left__calendar
+                .layout-calendar-and-messaging-container
+                    .layout-calendar-and-messaging-container__left
+                        .layout-calendar-and-messaging-container__calendar
                             +calendar
-                    .layout-calendar-and-messaging-container-right
-                        .layout-calendar-and-messaging-container-right__messaging
+                    .layout-calendar-and-messaging-container__right
+                        .layout-calendar-and-messaging-container__messaging
                             +messaging({name: "Sarah Brown", image: "img/photo2.png"})
             .layout-video
                 h3.layout__title Video
