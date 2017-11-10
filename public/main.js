@@ -57,10 +57,10 @@
 	__webpack_require__(24);
 	var modules = requireAll(__webpack_require__(26));
 
-	__webpack_require__(58);
-	__webpack_require__(67);
-	__webpack_require__(100);
-	__webpack_require__(155);
+	__webpack_require__(57);
+	__webpack_require__(66);
+	__webpack_require__(99);
+	__webpack_require__(152);
 
 /***/ }),
 /* 1 */
@@ -11232,10 +11232,9 @@
 		"./drop-down/drop-down.js": 35,
 		"./map-block/map-block.js": 39,
 		"./pie-chart/pie-chart.js": 40,
-		"./slider-a/slider-a.js": 42,
-		"./slider-b/slider-b.js": 51,
-		"./stages/stages.js": 52,
-		"./youtube-video/youtube-video.js": 56
+		"./slider/slider.js": 42,
+		"./stages/stages.js": 51,
+		"./youtube-video/youtube-video.js": 55
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -14990,13 +14989,25 @@
 
 	__webpack_require__(49);
 
-	$(".js-slider-a").each(function () {
-	  var currenSlider = $(this)[0];
-	  $(currenSlider).slider({
-	    min: $(currenSlider).data("min"),
-	    max: $(currenSlider).data("max"),
-	    step: $(currenSlider).data("step")
-	  }).slider("float");
+	$(".js-slider").each(function () {
+	  var currentSlider = $(this)[0];
+	  var sliderType = $(currentSlider).data("type");
+	  var sliderConf = {
+	    min: $(currentSlider).data("min"),
+	    max: $(currentSlider).data("max"),
+	    step: $(currentSlider).data("step"),
+	    range: undefined
+	  };
+	  sliderConf.range = sliderType === "pips" ? true : undefined;
+	  function sliderSettings(sliderType) {
+	    if (sliderType === "pips") {
+	      return { rest: "label", step: 1 };
+	    } else {
+	      sliderConf.range = undefined;
+	      return;
+	    }
+	  }
+	  $(currentSlider).slider(sliderConf).slider(sliderType, sliderSettings(sliderType));
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
@@ -16692,37 +16703,9 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	__webpack_require__(43);
-
-	__webpack_require__(46);
-
-	__webpack_require__(48);
-
-	__webpack_require__(49);
-
-	$(".js-slider-b").each(function () {
-	  var currentSlider = $(this)[0];
-	  $(currentSlider).slider({
-	    min: $(currentSlider).data("min"),
-	    max: $(currentSlider).data("max"),
-	    step: $(currentSlider).data("step"),
-	    range: true
-	  }).slider("pips", {
-	    rest: "label",
-	    step: 1
-	  });
-	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
+	__webpack_require__(52);
 
 	__webpack_require__(53);
-
-	__webpack_require__(54);
 
 	$(document).ready(function () {
 	  $(".js-stages").each(function () {
@@ -16748,7 +16731,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {'use strict';
@@ -16792,19 +16775,19 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 55 */,
-/* 56 */
+/* 54 */,
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
-	var YouTubeIframeLoader = __webpack_require__(57);
+	var YouTubeIframeLoader = __webpack_require__(56);
 
 	$(".js-youtube-video").each(function () {
 	  var _self = $(this),
@@ -16820,7 +16803,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	(function(window) {
@@ -16876,18 +16859,18 @@
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./event/img/event1.png": 59,
-		"./map-block/img/map-marker-icon.png": 60,
-		"./messaging/img/camera-iconn.png": 61,
-		"./messaging/img/chat-iconn.png": 62,
-		"./news/img/news.png": 63,
-		"./search/img/search.svg": 64,
-		"./user-info-block/img/photo1.png": 65,
-		"./user-info-block/img/photo2.png": 66
+		"./event/img/event1.png": 58,
+		"./map-block/img/map-marker-icon.png": 59,
+		"./messaging/img/camera-iconn.png": 60,
+		"./messaging/img/chat-iconn.png": 61,
+		"./news/img/news.png": 62,
+		"./search/img/search.svg": 63,
+		"./user-info-block/img/photo1.png": 64,
+		"./user-info-block/img/photo2.png": 65
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -16900,67 +16883,67 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 58;
+	webpackContext.id = 57;
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/event1.png";
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/map-marker-icon.png";
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/camera-iconn.png";
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/chat-iconn.png";
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/news.png";
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/search.svg";
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/photo1.png";
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/photo2.png";
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./Awesome/font-awesome.css": 68,
-		"./Lato/Lato-Black/fonts.css": 76,
-		"./Lato/Lato-Bold/fonts.css": 82,
-		"./Lato/Lato-Light/fonts.css": 88,
-		"./Lato/Lato-Regular/fonts.css": 94
+		"./Awesome/font-awesome.css": 67,
+		"./Lato/Lato-Black/fonts.css": 75,
+		"./Lato/Lato-Bold/fonts.css": 81,
+		"./Lato/Lato-Light/fonts.css": 87,
+		"./Lato/Lato-Regular/fonts.css": 93
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -16973,98 +16956,97 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 67;
+	webpackContext.id = 66;
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 68 */,
 /* 69 */,
 /* 70 */,
 /* 71 */,
 /* 72 */,
 /* 73 */,
 /* 74 */,
-/* 75 */,
-/* 76 */
+/* 75 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 76 */,
 /* 77 */,
 /* 78 */,
 /* 79 */,
 /* 80 */,
-/* 81 */,
-/* 82 */
+/* 81 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 82 */,
 /* 83 */,
 /* 84 */,
 /* 85 */,
 /* 86 */,
-/* 87 */,
-/* 88 */
+/* 87 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 88 */,
 /* 89 */,
 /* 90 */,
 /* 91 */,
 /* 92 */,
-/* 93 */,
-/* 94 */
+/* 93 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 94 */,
 /* 95 */,
 /* 96 */,
 /* 97 */,
 /* 98 */,
-/* 99 */,
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arrow-button/arrow-button.less": 101,
-		"./button/button.less": 103,
-		"./calendar/calendar.less": 105,
-		"./choose-photo/choose-photo.less": 107,
-		"./circle-progress-bar/circle-progress-bar.less": 109,
-		"./drop-down/drop-down.less": 111,
-		"./event/event.less": 113,
-		"./events-list/events-list.less": 115,
-		"./events-slider/events-slider.less": 117,
-		"./form-line/form-line.less": 119,
-		"./info-block/info-block.less": 121,
-		"./map-block/map-block.less": 123,
-		"./message-form/message-form.less": 125,
-		"./messaging/messaging.less": 127,
-		"./news/news.less": 129,
-		"./page-footer/page-footer.less": 131,
-		"./page-header/page-header.less": 133,
-		"./photo-block/photo-block.less": 135,
-		"./pie-chart/pie-chart.less": 137,
-		"./search/search.less": 139,
-		"./slider-a/slider-a.less": 141,
-		"./slider-b/slider-b.less": 143,
-		"./stages/stages.less": 145,
-		"./tick-box/tick-box.less": 147,
-		"./toggles/toggles.less": 149,
-		"./user-info-block/user-info-block.less": 151,
-		"./youtube-video/youtube-video.less": 153
+		"./arrow-button/arrow-button.less": 100,
+		"./button/button.less": 102,
+		"./calendar/calendar.less": 104,
+		"./choose-photo/choose-photo.less": 106,
+		"./circle-progress-bar/circle-progress-bar.less": 108,
+		"./drop-down/drop-down.less": 110,
+		"./event/event.less": 112,
+		"./events-list/events-list.less": 114,
+		"./events-slider/events-slider.less": 116,
+		"./form-line/form-line.less": 118,
+		"./info-block/info-block.less": 120,
+		"./map-block/map-block.less": 122,
+		"./message-form/message-form.less": 124,
+		"./messaging/messaging.less": 126,
+		"./news/news.less": 128,
+		"./page-footer/page-footer.less": 130,
+		"./page-header/page-header.less": 132,
+		"./photo-block/photo-block.less": 134,
+		"./pie-chart/pie-chart.less": 136,
+		"./search/search.less": 138,
+		"./slider/slider.less": 140,
+		"./stages/stages.less": 142,
+		"./tick-box/tick-box.less": 144,
+		"./toggles/toggles.less": 146,
+		"./user-info-block/user-info-block.less": 148,
+		"./youtube-video/youtube-video.less": 150
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -17077,192 +17059,220 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 100;
+	webpackContext.id = 99;
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 102 */,
-/* 103 */
+/* 101 */,
+/* 102 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 104 */,
-/* 105 */
+/* 103 */,
+/* 104 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 106 */,
-/* 107 */
+/* 105 */,
+/* 106 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 108 */,
-/* 109 */
+/* 107 */,
+/* 108 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 110 */,
-/* 111 */
+/* 109 */,
+/* 110 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 112 */,
-/* 113 */
+/* 111 */,
+/* 112 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 114 */,
-/* 115 */
+/* 113 */,
+/* 114 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 116 */,
-/* 117 */
+/* 115 */,
+/* 116 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 118 */,
-/* 119 */
+/* 117 */,
+/* 118 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 120 */,
-/* 121 */
+/* 119 */,
+/* 120 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 122 */,
-/* 123 */
+/* 121 */,
+/* 122 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 124 */,
-/* 125 */
+/* 123 */,
+/* 124 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 126 */,
-/* 127 */
+/* 125 */,
+/* 126 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 128 */,
-/* 129 */
+/* 127 */,
+/* 128 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 130 */,
-/* 131 */
+/* 129 */,
+/* 130 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 132 */,
-/* 133 */
+/* 131 */,
+/* 132 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 134 */,
-/* 135 */
+/* 133 */,
+/* 134 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 136 */,
-/* 137 */
+/* 135 */,
+/* 136 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 138 */,
-/* 139 */
+/* 137 */,
+/* 138 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 140 */,
-/* 141 */
+/* 139 */,
+/* 140 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 142 */,
-/* 143 */
+/* 141 */,
+/* 142 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 144 */,
-/* 145 */
+/* 143 */,
+/* 144 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 146 */,
-/* 147 */
+/* 145 */,
+/* 146 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 148 */,
-/* 149 */
+/* 147 */,
+/* 148 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 150 */,
-/* 151 */
+/* 149 */,
+/* 150 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 152 */,
+/* 151 */,
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./allevents.less": 153,
+		"./event.less": 155,
+		"./login.less": 157,
+		"./main.less": 159,
+		"./signup1.less": 161,
+		"./signup2.less": 163,
+		"./signup3.less": 165,
+		"./user.less": 167
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 152;
+
+
+/***/ }),
 /* 153 */
 /***/ (function(module, exports) {
 
@@ -17271,83 +17281,48 @@
 /***/ }),
 /* 154 */,
 /* 155 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./allevents.less": 156,
-		"./event.less": 158,
-		"./login.less": 160,
-		"./main.less": 162,
-		"./signup1.less": 164,
-		"./signup2.less": 166,
-		"./signup3.less": 168,
-		"./user.less": 170
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 155;
-
-
-/***/ }),
-/* 156 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 157 */,
-/* 158 */
+/* 156 */,
+/* 157 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 159 */,
-/* 160 */
+/* 158 */,
+/* 159 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 161 */,
-/* 162 */
+/* 160 */,
+/* 161 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 163 */,
-/* 164 */
+/* 162 */,
+/* 163 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 165 */,
-/* 166 */
+/* 164 */,
+/* 165 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 167 */,
-/* 168 */
-/***/ (function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 169 */,
-/* 170 */
+/* 166 */,
+/* 167 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

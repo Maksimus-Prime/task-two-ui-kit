@@ -2,8 +2,7 @@ include ../blocks/button/button.pug
 include ../blocks/arrow-button/arrow-button.pug
 include ../blocks/pie-chart/pie-chart.pug
 include ../blocks/circle-progress-bar/circle-progress-bar.pug
-include ../blocks/slider-a/slider-a.pug
-include ../blocks/slider-b/slider-b.pug
+include ../blocks/slider/slider.pug
 include ../blocks/stages/stages.pug
 include ../blocks/message-form/message-form.pug
 include ../blocks/form-line/form-line.pug
@@ -73,9 +72,9 @@ html
             .layout-sliders
                 h3.layout__title Sliders
                 .layout-sliders__slider-left
-                    +slider-a({min: "0", max: "100", step: "1"})
+                    +slider({type: "float", min: "0", max: "100", step: "1"})
                 .layout-sliders__slider-right
-                    +slider-b({min: "0", max: "100", step: "25"})
+                    +slider({type: "pips", min: "0", max: "100", step: "25"})
             .layout-stages
                 h3.layout__title Stages
                 +stages({steps: "5", current: "3"})
