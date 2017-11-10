@@ -3,7 +3,7 @@ include ../../blocks/map-block/map-block.pug
 include ../../blocks/youtube-video/youtube-video.pug
 include ../../blocks/event/event.pug
 include ../../blocks/circle-progress-bar/circle-progress-bar.pug
-include ../../blocks/slider-a/slider-a.pug
+include ../../blocks/slider/slider.pug
 include ../../blocks/page-header/page-header.pug
 include ../../blocks/page-footer/page-footer.pug
 doctype html
@@ -35,7 +35,7 @@ html
                 p.event-page-content__note At the bottom: I'll go if people are for example 50. On the right: Number of people who go to the event
                 .event-page-content__statistics
                     .event-page-content__slider
-                        +slider-a({min: "0", max: "100", step: "1"})
+                        +slider({type: "float", min: "0", max: "100", step: "1"})
                     .event-page-content__progress-bar
                         +circle-progress-bar({value: "55"})
                 p.event-page-content__note Some information about an event
