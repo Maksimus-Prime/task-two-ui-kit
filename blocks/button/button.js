@@ -8,7 +8,7 @@ class Button {
     this.initEventHandlers();
   }
   initEventHandlers() {
-    $(this.domEl).click(function(e) {
+    $(this.domEl).on("click", function(event) {
       const ripple = $(this);
       if(ripple.find(".effect").length == 0) {
         ripple.append("<span class='effect'></span>");
@@ -20,8 +20,8 @@ class Button {
         const d = Math.max(ripple.outerWidth(), ripple.outerHeight());
         efekt.css({height: d/4, width: d/4});
       }
-      const x = e.pageX - ripple.offset().left - efekt.width()/2;
-      const y = e.pageY - ripple.offset().top - efekt.height()/2;
+      const x = event.pageX - ripple.offset().left - efekt.width()/2;
+      const y = event.pageY - ripple.offset().top - efekt.height()/2;
       efekt.css({
         top: y + "px",
         left: x + "px"
