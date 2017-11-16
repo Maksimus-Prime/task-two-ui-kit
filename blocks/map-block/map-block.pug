@@ -1,9 +1,9 @@
-mixin map-block(object)
+mixin map-block(params)
     .map-block
-        .map-block__map(class="js-map-block__map" data-lat=object.lat+"" data-lng=object.lng+"" data-zoom=object.zoom+"" data-marker=object.marker)
+        .map-block__map(class="js-map-block__map" data-lat=params.lat+"" data-lng=params.lng+"" data-zoom=params.zoom+"" data-marker=params.marker)
         .map-block-info
-            h3.map-block-info__title=object.title
-            p.map-block-info__description=object.address
+            h3.map-block-info__title=params.title
+            p.map-block-info__description=params.address
             .map-block-info__icons
                 i.fa.fa-dot-circle-o(aria-hidden="true")
                 i.fa.fa-map-marker(aria-hidden="true")
