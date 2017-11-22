@@ -1,4 +1,5 @@
 const YouTubeIframeLoader = require("youtube-iframe");
+
 import es6bindall from "es6bindall";
 
 class YoutubeVideo {
@@ -17,13 +18,13 @@ class YoutubeVideo {
       new YT.Player(this.domEl, {
         width: "100%",
         height: "100%",
-        videoId: this.videoId
+        videoId: this.videoId,
       });
     });
   }
 }
 
-$(".js-youtube-video").each(function(){
-  const currentYoutubeVideo = $(this)[0];
-  const el = new YoutubeVideo(currentYoutubeVideo);  
+$(".js-youtube-video").each(function () {
+  const currentYoutubeVideo = this;
+  const el = new YoutubeVideo(currentYoutubeVideo);
 });

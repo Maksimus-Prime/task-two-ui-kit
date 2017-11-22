@@ -11,12 +11,12 @@ class DropDown {
   }
   initDropDown() {
     $(this.domEl).select2({
-      placeholder: "Choose An Option"
+      placeholder: "Choose An Option",
     }).addClass("stylee");
   }
 }
 
-$(".js-drop-down__select").each(function() {
-  const currentDropDown = $(this)[0];
+$(".js-drop-down__select").each(function () {
+  const currentDropDown = this;
   const el = new DropDown(currentDropDown);
 });

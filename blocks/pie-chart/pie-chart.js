@@ -1,5 +1,6 @@
 import "./../../node_modules/chart.js/dist/Chart.bundle.min.js";
 import es6bindall from "es6bindall";
+
 Chart.defaults.global.legend.display = false;
 
 class PieChart {
@@ -21,32 +22,32 @@ class PieChart {
             "#747474",
             "#e75735",
             "#4eb7a8",
-            "#e5e5e5"
+            "#e5e5e5",
           ],
-          borderWidth: 0
+          borderWidth: 0,
         }],
       },
       options: {
         tooltips: {
-          enabled: false
+          enabled: false,
         },
-        hover: {mode: null},
+        hover: { mode: null },
         cutoutPercentage: 65,
         elements: {
           arc: {
             borderColor: "#eee",
-            borderWidth: 1
+            borderWidth: 1,
           },
           line: {
-            backgroundColor: "#000"
-          }
-        }
-      }
+            backgroundColor: "#000",
+          },
+        },
+      },
     });
   }
 }
 
-$(".js-pie-chart").each(function(){
-  const currentPieChart = $(this)[0];
-  const el = new PieChart(currentPieChart);  
+$(".js-pie-chart").each(function () {
+  const currentPieChart = this;
+  const el = new PieChart(currentPieChart);
 });

@@ -19,23 +19,21 @@ class Slider {
       min: $(this.domEl).data("min"),
       max: $(this.domEl).data("max"),
       step: $(this.domEl).data("step"),
-      range: undefined
+      range: undefined,
     };
     this.sliderConf.range = (this.sliderType === "pips") ? true : undefined;
   }
   initSlider() {
-    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));    
+    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
   }
   getSliderSettings(sliderType) {
-    if(sliderType === "pips") {
+    if (sliderType === "pips") {
       return { rest: "label", step: 1 };
-    }else {
-      return;
     }
   }
 }
 
-$(".js-slider").each(function() {
-  const currentSlider = $(this)[0];
+$(".js-slider").each(function (element) {
+  const currentSlider = this;
   const el = new Slider(currentSlider);
 });

@@ -10,20 +10,20 @@ class CircleProgressBar {
   }
   initCircleProgressBar() {
     $(this.domEl).knob({
-      "thickness": ".1",
-      "bgColor": "#fff",
-      "fgColor": "#e75735",
-      "width": "100%",
-      "height": "100%",
-      "readOnly": "false",
-      "font": "'Lato', sans-serif",
-      "fontWeight": "300",
-      "fontStyle": "normal"
+      thickness: ".1",
+      bgColor: "#fff",
+      fgColor: "#e75735",
+      width: "100%",
+      height: "100%",
+      readOnly: "false",
+      font: "'Lato', sans-serif",
+      fontWeight: "300",
+      fontStyle: "normal",
     });
   }
 }
 
-$(".js-circle-progress-bar__value").each(function() {
-  const currentCircleProgressBar = $(this)[0];
+$(".js-circle-progress-bar__value").each(function () {
+  const currentCircleProgressBar = this;
   const el = new CircleProgressBar(currentCircleProgressBar);
 });
