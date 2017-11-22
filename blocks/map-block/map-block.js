@@ -17,23 +17,23 @@ class Map {
   initMap() {
     const location = {
       lat: this.lat,
-      lng: this.lng
+      lng: this.lng,
     };
     const mapSettings = {
       zoom: this.zoom,
-      center: location
+      center: location,
     };
     const markerSettings = {
       map: markerSettings,
       position: location,
-      icon: this.icon
+      icon: this.icon,
     };
-    const map = new google.maps.Map(this.domEl,mapSettings);
+    const map = new google.maps.Map(this.domEl, mapSettings);
     const marker = new google.maps.Marker(markerSettings);
   }
 }
 
-$(".js-map-block__map").each(function(){
-  const currentMap = $(this)[0];
-  const el = new Map(currentMap);  
+$(".js-map-block__map").each(function () {
+  const currentMap = this;
+  const el = new Map(currentMap);
 });

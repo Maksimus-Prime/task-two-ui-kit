@@ -14,9 +14,9 @@ class Stages {
     this.currentStep = $(this.domEl).data("current");
   }
   getSteps() {
-    let stepsArr = [];
-    for(let i = 0; i < this.stepsNum; i++) {
-      if (i == this.currentStep-1) {
+    const stepsArr = [];
+    for (let i = 0; i < this.stepsNum; i++) {
+      if (i == this.currentStep - 1) {
         stepsArr.push("@");
       } else {
         stepsArr.push("");
@@ -27,12 +27,12 @@ class Stages {
   initStages() {
     this.initData();
     $(this.domEl).progressbar({
-      steps: this.getSteps()
+      steps: this.getSteps(),
     });
   }
 }
 
-$(".js-stages").each(function() {
-  const currentStages = $(this)[0];
+$(".js-stages").each(function () {
+  const currentStages = this;
   const el = new Stages(currentStages);
 });

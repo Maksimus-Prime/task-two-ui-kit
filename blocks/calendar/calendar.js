@@ -20,29 +20,28 @@ class Calendar {
     $(this.calendarDatePicker).datepicker({
       showOtherMonths: true,
       firstDay: 1,
-      dayNamesMin: ["SUN","MON","TUE","WED","THU","FRD","SAT"],
+      dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRD", "SAT"],
       dateFormat: "d",
       showButtonPanel: true,
-      onSelect: function(selectedDate) {
+      onSelect(selectedDate) {
         $(".js-calendar__header").html(selectedDate);
-      }
+      },
     });
     const calendarHeader = this.calendarHeader;
-    $.datepicker._gotoToday = function(id) {
-      var target = $(id);
-      var inst = this._getInst(target[0]);
+    $.datepicker._gotoToday = function (id) {
+      const target = $(id);
+      const inst = this._getInst(target[0]);
       if (this._get(inst, "gotoCurrent") && inst.currentDay) {
         inst.selectedDay = inst.currentDay;
         inst.drawMonth = inst.selectedMonth = inst.currentMonth;
         inst.drawYear = inst.selectedYear = inst.currentYear;
-      }
-      else {
-        var date = new Date();
+      } else {
+        const date = new Date();
         inst.selectedDay = date.getDate();
         inst.drawMonth = inst.selectedMonth = date.getMonth();
         inst.drawYear = inst.selectedYear = date.getFullYear();
         // the below two lines are new
-        var $currentDay = $.datepicker.formatDate("d", new Date());
+        const $currentDay = $.datepicker.formatDate("d", new Date());
         $(calendarHeader).html($currentDay);
       }
       this._notifyChange(inst);
@@ -51,7 +50,7 @@ class Calendar {
   }
 }
 
-$(".js-calendar").each(function() {
-  const currentCalendar = $(this)[0];
+$(".js-calendar").each(function () {
+  const currentCalendar = this;
   const el = new Calendar(currentCalendar);
 });

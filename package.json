@@ -24,6 +24,8 @@
     "babel-preset-env": "^1.6.0",
     "es6bindall": "0.0.9",
     "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "json-loader": "^0.5.7",
     "less-loader": "^3.0.0",
     "postcss-loader": "^2.0.6",
@@ -34,7 +36,6 @@
     "youtube-iframe": "^1.0.3"
   },
   "scripts": {
-    "npm i": "npm install",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "prod": "./node_modules/.bin/webpack -p"
   },
