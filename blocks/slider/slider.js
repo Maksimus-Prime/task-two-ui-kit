@@ -7,7 +7,7 @@ import es6bindall from "es6bindall";
 class Slider {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["initData", "initSlider", "getSliderSettings"];
+    this.bindMethods = ["initData", "getSliderSettings", "initSlider"];
     es6bindall(this, this.bindMethods);
     this.initData();
     this.getSliderSettings(this.sliderType);
@@ -23,17 +23,17 @@ class Slider {
     };
     this.sliderConf.range = (this.sliderType === "pips") ? true : undefined;
   }
-  initSlider() {
-    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
-  }
   getSliderSettings(sliderType) {
     if (sliderType === "pips") {
       return { rest: "label", step: 1 };
     }
   }
+  initSlider() {
+    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
+  }
 }
 
-$(".js-slider").each(function (element) {
+$(".js-slider").each(function () {
   const currentSlider = this;
   const el = new Slider(currentSlider);
 });
