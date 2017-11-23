@@ -1,7 +1,7 @@
+include ../form-line/form-line.pug
+include ../button/button.pug
 mixin message-form(data)
     form.message-form
-        include ../form-line/form-line.pug
-        include ../button/button.pug
         .message-form__field
             +form-line({inputtype: data["name-field"].inputtype, name: data["name-field"].name, placeholder: data["name-field"].placeholder, valid: data["name-field"].valid})
         .message-form__field

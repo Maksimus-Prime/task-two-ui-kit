@@ -1,17 +1,17 @@
+include ../button/button.pug
+include ../photo-block/photo-block.pug
 mixin messaging(object)
     section.messaging
-        include ../button/button.pug
-        include ../photo-block/photo-block.pug
-        .messaging-header
-            button.messaging-header__chat-icon(type="button" name="chat")
+        .messaging__header
+            button.messaging__chat-icon(type="button" name="chat")
                 img(src="img/chat-iconn.png" alt="chat icon")
-            button.messaging-header__camera-icon(type="button" name="camera")
+            button.messaging__camera-icon(type="button" name="camera")
                 img(src="img/camera-iconn.png" alt="camera icon")
-            .messaging-header__name=object.name
-            .messaging-header__photo
+            .messaging__name=object.name
+            .messaging__photo-block
                 +photo-block({image: object.image, theme: "messaging"})
-        .messaging-block
-            .messaging-block__from="Hey! So are we cool to meet at the art gallery? Say 8pm"
-            .messaging-block__to="Yeah that sounds great. See you then."
-            .messaging-block__button
+        .messaging__body
+            .messaging__message-from="Hey! So are we cool to meet at the art gallery? Say 8pm"
+            .messaging__message-to="Yeah that sounds great. See you then."
+            .messaging__reply-button
                 +button({text: "Reply", type: "button", link: "none", color: "green", theme: "messaging"})

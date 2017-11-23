@@ -6,94 +6,85 @@
         border-top-left-radius: 0.3125rem;
         border-top-right-radius: 0.3125rem;
     }
-    &-info {
+    &__footer {
         font-family: 'Lato', Arial, sans-serif;
         display: flex;
         font-weight: 300;
         font-style: normal;
         padding: 2.25% 3.5% 3.35% 4.52%;
         width: 91.98%;
-        -height: 79px;
         background: #e75735;
         color: #fff;
         border-bottom-left-radius: 0.3125rem;
         border-bottom-right-radius: 0.3125rem;
-        &__title {
-            font-family: 'Lato', Arial, sans-serif;
-            display: flex;
-            font-weight: 300;
-            font-style: normal;
-            letter-spacing: -1.1px;
-            display: inline-block;
-            flex: 1;
-            margin: 0;
-            font-size: 3.4375rem;
-            font-weight: normal;
-            vertical-align: top;
-        }
-        &__description {
-            font-family: 'Lato', Arial, sans-serif;
-            font-weight: 500;
-            font-style: bold;
-            line-height: 27px;
-            letter-spacing: 1.1px;
-            flex: 1;
-            padding: 0;
-            margin: 0;
-            margin-top: auto;
-            font-size: 1.4375rem;
-            text-transform: uppercase;
-        }
-        &__icons {
-            margin-top: auto;
-            text-align: right;
-            font-family: 'FontAwesome';
-            flex-direction: column-reverse;
-            flex: 2;
-            vertical-align: top;
-            font-size: 3rem;
-            & i:nth-child(2) {
-                margin-left: 2.9375rem;
-                margin-right: 0.75rem;
-            }
-        }
-        @media screen and (max-width: 1150px) {
-            &__title {
-                flex: 1;
-            }
-            &__description {
-                flex: 1.5;
-            }
-            &__icons {
-                flex: 1;
-            }
-        }
-        @media screen and (max-width: 650px) {
-            &__title {
-                flex: 1;
-            }
-            &__description {
-                flex: 1;
-            }
-            &__icons {
-                flex: 0.6;
-            }
-        }
         @media screen and (max-width: 650px) {
             align-items: center;
-            &__title {
-                display: none;
-            }
-            &__description {
-                flex: 1;
-            }
-            &__icons {
-                flex: 0.7;
-                margin: 0;
-                & i:nth-child(2) {
-                    margin-left: 1rem;
-                    margin-right: 0;
-                }
+        }
+    }
+    &__title {
+        font-family: 'Lato', Arial, sans-serif;
+        display: flex;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: -1.1px;
+        display: inline-block;
+        flex: 1;
+        margin: 0;
+        font-size: 3.4375rem;
+        font-weight: normal;
+        vertical-align: top;
+        @media screen and (max-width: 1150px) {
+            flex: 1;
+        }
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
+    }
+    &__description {
+        font-family: 'Lato', Arial, sans-serif;
+        font-weight: 500;
+        font-style: bold;
+        line-height: 27px;
+        letter-spacing: 1.1px;
+        flex: 1;
+        padding: 0;
+        margin: 0;
+        margin-top: auto;
+        font-size: 1.4375rem;
+        text-transform: uppercase;
+        @media screen and (max-width: 1150px) {
+            flex: 1.5;
+        }
+        @media screen and (max-width: 720px) {
+            flex: 1.2;
+        }
+        @media screen and (max-width: 650px) {
+            flex: 1;
+        }
+    }
+    &__icons {
+        margin-top: auto;
+        text-align: right;
+        font-family: 'FontAwesome';
+        flex-direction: column-reverse;
+        flex: 2;
+        vertical-align: top;
+        font-size: 3rem;
+        @media screen and (max-width: 1150px) {
+            flex: 1;
+        }   
+        @media screen and (max-width: 650px) {
+            flex: 0.7;
+            margin: 0;
+        }
+    }
+    &__icon {
+       &:nth-child(2) {
+            margin-left: 2.9375rem;
+            margin-right: 0.75rem;
+            @media screen and (max-width: 650px) {
+                margin-left: 1rem;
+                margin-right: 0;
             }
         }
     }

@@ -15113,7 +15113,7 @@
 	        center: location
 	      };
 	      var markerSettings = {
-	        map: markerSettings,
+	        map: mapSettings,
 	        position: location,
 	        icon: this.icon
 	      };
@@ -17581,12 +17581,12 @@
 
 	var map = {
 		"./allevents.less": 153,
-		"./event.less": 155,
-		"./login.less": 157,
-		"./main.less": 159,
-		"./signup1.less": 161,
-		"./signup2.less": 163,
-		"./signup3.less": 165,
+		"./checking-signup-information.less": 155,
+		"./entering-contact-information.less": 157,
+		"./entering-job-and-social-information.less": 159,
+		"./event.less": 161,
+		"./login.less": 163,
+		"./main.less": 165,
 		"./user.less": 167
 	};
 	function webpackContext(req) {

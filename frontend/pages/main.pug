@@ -26,32 +26,32 @@ html
     body
         .main-page
             .main-page__header
-                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
-            main.main-page-content
-                .main-page-content__left
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "entering-contact-information.html"}]})
+            main.main-page__content
+                .main-page__events-calendar-column
                     p
-                        a.main-page-content__allevents-link(href="allevents.html") All events and news
-                    .main-page-content__events-list
+                        a.main-page__allevents-link(href="allevents.html") All events and news
+                    .main-page__events-list
                         +events-list(data.eventslist)
-                    .main-page-content__drop-down
+                    .main-page__drop-down
                         +drop-down("dropdown", data.dropdown)
-                    .main-page-content__calendar
+                    .main-page__calendar
                         +calendar
-                .main-page-content__right
-                    p.main-page-content__note Here you can see people who go to the meeting
-                    .main-page-content__search
+                .main-page__search-user-blocks-column
+                    p.main-page__note Here you can see people who go to the meeting
+                    .main-page__search
                         +search({name: "search"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                    .main-page-content__user-block
+                    .main-page__user-block
                         +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
             .main-page__footer
                 +page-footer({text: "There is some information about this site"})

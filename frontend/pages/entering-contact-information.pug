@@ -1,0 +1,43 @@
+include ../../blocks/button/button.pug
+include ../../blocks/form-line/form-line.pug
+include ../../blocks/stages/stages.pug
+include ../../blocks/page-header/page-header.pug
+include ../../blocks/page-footer/page-footer.pug
+-var data = require('./data.json');
+-var formData = data.enteringContactInformationFormData;
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="initial-scale=1, width=device-width")
+        meta(name="description" content="one of the pages of meeting site")
+        meta(name="keywords" content="signup")
+        meta(name="author" content="Lamonov Maks")
+        title Signup page
+        link(rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png")
+        link(rel="manifest" href="favicons/manifest.json")
+        link(rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="stylesheet" href="main.css")
+    body
+        .entering-contact-information
+            .entering-contact-information__header
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
+            .entering-contact-information__content
+                .entering-contact-information__steps
+                    +stages({steps: "3", current: "1"})
+                p.entering-contact-information__note Please enter your phone or email. We'll send you a message with code
+                form.entering-contact-information__main-form
+                    .entering-contact-information__form-line
+                        +form-line({inputtype: formData["phone-field"].inputtype, name: formData["phone-field"].name, placeholder: formData["phone-field"].placeholder, valid: formData["phone-field"].valid})
+                    .entering-contact-information__form-line
+                        +form-line({inputtype: formData["name-field"].inputtype, name: formData["name-field"].name, placeholder: formData["name-field"].placeholder, valid: formData["name-field"].valid})
+                    .entering-contact-information__form-line
+                        +form-line({inputtype: formData["code-field"].inputtype, name: formData["code-field"].name, placeholder: formData["code-field"].placeholder, valid: formData["code-field"].valid})
+                    .entering-contact-information__form-line
+                        +button({text: "Next", type: "button", link: "entering-job-and-social-information.html", color: "green"})
+            .entering-contact-information__footer
+                +page-footer({text: "There is some information about this site"})
+        script(type="text/javascript" src="main.js")

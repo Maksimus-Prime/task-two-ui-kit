@@ -2,7 +2,6 @@ include ../../blocks/button/button.pug
 include ../../blocks/page-header/page-header.pug
 include ../../blocks/page-footer/page-footer.pug
 include ../../blocks/events-slider/events-slider.pug
-
 doctype html
 html
     head
@@ -22,8 +21,8 @@ html
     body
         .allevents-page
             .allevents-page__header
-                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "signup1.html"}]})
-            main.allevents-page-content
+                +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "login", link: "login.html"}, {button: "signup", link: "entering-contact-information.html"}]})
+            main.allevents-page__content
                 +events-slider()
             .allevents-page__footer
                 +page-footer({text: "There is some information about this site"})

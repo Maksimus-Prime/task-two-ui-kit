@@ -24,10 +24,10 @@ html
         .user-page
             .user-page__header
                 +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
-            .user-page-content
-                .user-page-content__user-block
+            .user-page__content
+                .user-page__user-block
                     +user-info-block({image: "img/photo2.png", link: "user.html", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-                .user-page-content__messaging
+                .user-page__messaging
                     +messaging({name: "Sarah Brown", image: "img/photo2.png"})
             .user-page__footer
                 +page-footer({text: "There is some information about this site"})

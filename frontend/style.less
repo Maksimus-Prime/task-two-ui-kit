@@ -40,205 +40,193 @@ body {
             margin: 45px 0;
         }
     }
-    &-buttons {
+    &__buttons {
         text-align: center;
-        &__item-button {
-            margin: 10px 0;
+    }
+    &__button {
+        margin: 10px 0;
+    }
+    &__arrow-buttons {
+        text-align: center;
+    }
+    &__arrow-button {
+        display: inline-block;
+        margin: 0 10px;
+        @media screen and (max-width: 720px) {
+            margin: 10px 10px;
         }
     }
-    &-arrow-buttons {
+    &__progress-bars {
         text-align: center;
-        &__item-button {
-            display: inline-block;
-            margin: 0 10px;
-            @media screen and (max-width: 720px) {
-                margin: 10px 10px;
-            }
+    }
+    &__progress-bar {
+        display: inline-block;
+        width: 10.875rem;
+        height: 10.875rem;
+        @media screen and (max-width: 720px) {
+            display: block;
+            margin: 10px auto;
         }
     }
-    &-progress-bars {
+    &__sliders {
         text-align: center;
-        &__item {
-            display: inline-block;
-            width: 10.875rem;
-            height: 10.875rem;
-            @media screen and (max-width: 720px) {
-                display: block;
-                margin: 10px auto;
-            }
-        }
-    }
-    &-sliders {
-        text-align: center;
-        &__slider-left {
-            display: inline-block;
-            width: 43.75%;
-            vertical-align: top;
-            margin-right: 2rem;
-            @media screen and (max-width: 720px) {
-                width: 85%;
-                display: block;
-                margin: 30px auto;
-            }
-        }
-        &__slider-right {
-            display: inline-block;
-            width: 43.75%;
-            @media screen and (max-width: 720px) {
-                width: 85%;
-                display: block;
-                margin: 30px auto;
-            }
-        }
         @media screen and (max-width: 720px) {
             margin-bottom: 60px;
         }
     }
-    &-stages {
+    &__float-slider {
+        display: inline-block;
+        width: 43.75%;
+        vertical-align: top;
+        margin-right: 2rem;
+        @media screen and (max-width: 720px) {
+            width: 85%;
+            display: block;
+            margin: 30px auto;
+        }
+    }
+    &__pips-slider {
+        display: inline-block;
+        width: 43.75%;
+        @media screen and (max-width: 720px) {
+            width: 85%;
+            display: block;
+            margin: 30px auto;
+        }
+    }
+    &__stages {
         width: 100%;
         margin: 0 auto;
     }
-    &-form-elements {
-        &-container {
-            font-size: 0;
-            &__message-form {
-              width: 48.3%;
-              display: inline-block;
-                @media screen and (max-width: 860px) {
-                    width: 55%;
-                }
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    margin-bottom: 4rem;
-                    float: block;
-                }
-            }
-            &__toggles-and-ticks {
-              width: 45%;
-              display: inline-block;
-              vertical-align: top;
-              text-align: center;
-                @media screen and (max-width: 860px) {
-                    width: 43%;
-                }
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    display: block;
-                    text-align: center;
-                }
-            }
-            &__toggles {
-                display: inline-block;
-                &:nth-child(2) {
-                    margin-right: 3.7%;
-                }
-            }
-            &__tick{
-                display: inline-block;
-                margin-right: 2.7%;
+    &__form-elements-container {
+        font-size: 0;
+    }
+    &__message-form {
+        width: 48.3%;
+        display: inline-block;
+        @media screen and (max-width: 860px) {
+            width: 55%;
+        }
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            margin-bottom: 4rem;
+            float: block;
+        }
+    }
+    &__toggles-and-ticks {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        @media screen and (max-width: 860px) {
+            width: 43%;
+        }
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+    &__toggles {
+        display: inline-block;
+        &:nth-child(2) {
+            margin-right: 3.7%;
+        }
+    }
+    &__tick{
+        display: inline-block;
+        margin-right: 2.7%;
+    }
+    &__search-drop-side {
+        width: 50%;
+        display: inline-block;
+        @media screen and (max-width: 1100px) {
+            width: 47%;
+        }                
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__user-profile-side {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        @media screen and (max-width: 1100px) {
+            width: 52%;
+        }                
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__search {
+        width: 97%;
+        margin-bottom: 1.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 720px) {
+            width: 100%;
+        }
+    }
+    &__user-block {
+        width: 90%;
+        margin-bottom: 2.875rem;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+        }
+        &:nth-child(3) {
+            margin-bottom: 0;
+        }
+    }
+    &__news-events-item {
+        width: 48.45%;
+        display: inline-block;
+        vertical-align: top;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            display: block;
+            &:first-child {
+                margin-bottom: 1rem;
             }
         }
     }
-    &-search-drop-user-profile {
-        &-container {
-            &__left {
-                width: 50%;
-                display: inline-block;
-                @media screen and (max-width: 1100px) {
-                    width: 47%;
-                }                
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    display: block;
-                }
-            }
-            &__right {
-                width: 49%;
-                display: inline-block;
-                vertical-align: top;
-                text-align: center;
-                @media screen and (max-width: 1100px) {
-                    width: 52%;
-                }                
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    display: block;
-                }
-            }
-            &__search {
-                width: 97%;
-                margin-bottom: 1.8rem;
-                &:last-child {
-                  margin-bottom: 0;
-                }
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                }
-            }
-            &__user-block {
-                width: 90%;
-                margin-bottom: 2.875rem;
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                }
-                &:nth-child(3) {
-                    margin-bottom: 0;
-                }
-            }
+    &__calendar-and-messaging-container {
+        font-size: 0;
+    }
+    &__calendar-side {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        @media screen and (max-width: 720px) {
+            display: block;
+            width: 100%;
         }
     }
-    &-news-events {
-        &-container {
-            &__item {
-                width: 48.45%;
-                display: inline-block;
-                vertical-align: top;
-                @media screen and (max-width: 720px) {
-                  width: 100%;
-                  display: block;
-                  &:first-child {
-                    margin-bottom: 1rem;
-                  }
-                }
-            }
+    &__messaging-side {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        @media screen and (max-width: 720px) {
+            display: block;
+            width: 100%;
         }
     }
-    &-calendar-and-messaging {
-        &-container {
-          font-size: 0;
-            &__left {
-                width: 50%;
-                display: inline-block;
-                vertical-align: top;
-                @media screen and (max-width: 720px) {
-                    display: block;
-                    width: 100%;
-                }
-            }
-            &__right {
-                width: 50%;
-                display: inline-block;
-                vertical-align: top;
-                @media screen and (max-width: 720px) {
-                    display: block;
-                    width: 100%;
-                }
-            }
-            &__calendar {
-                width: 96.869%;
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    margin: 0;
-                    margin-bottom: 20px;
-                }
-            }
-            &__messaging {
-                width: 96.869%;
-                @media screen and (max-width: 720px) {
-                    width: 100%;
-                    margin: 0;
-                }
-            }
+    &__calendar {
+        width: 96.869%;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+    &__messaging {
+        width: 96.869%;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            margin: 0;
         }
     }
 }

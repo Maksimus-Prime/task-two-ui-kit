@@ -1,9 +1,9 @@
 mixin map-block(params)
     .map-block
         .map-block__map(class="js-map-block__map" data-lat=params.lat+"" data-lng=params.lng+"" data-zoom=params.zoom+"" data-marker=params.marker)
-        .map-block-info
-            h3.map-block-info__title=params.title
-            p.map-block-info__description=params.address
-            .map-block-info__icons
-                i.fa.fa-dot-circle-o(aria-hidden="true")
-                i.fa.fa-map-marker(aria-hidden="true")
+        .map-block__footer
+            h3.map-block__title=params.title
+            p.map-block__description=params.address
+            .map-block__icons
+                i.map-block__icon.fa.fa-dot-circle-o(aria-hidden="true")
+                i.map-block__icon.fa.fa-map-marker(aria-hidden="true")

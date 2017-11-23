@@ -29,7 +29,7 @@
             "name": "Test event"
         }
     ],
-    "loginform": {
+    "loginFormData": {
         "email-field": {
             "inputtype": "email",
             "name": "email",
@@ -50,7 +50,7 @@
             "theme": "green"
         }
     },
-    "signup1form": {
+    "enteringContactInformationFormData": {
         "phone-field": {
             "inputtype": "tel",
             "name": "phone-number",
@@ -70,7 +70,7 @@
             "valid": "false"
         }
     },
-    "signup2form": {
+    "enteringJobAndSocialInformationFormData": {
         "job-field": {
             "inputtype": "text",
             "name": "job",
