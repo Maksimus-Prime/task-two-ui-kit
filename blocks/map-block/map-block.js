@@ -24,7 +24,7 @@ class Map {
       center: location,
     };
     const markerSettings = {
-      map: markerSettings,
+      map: mapSettings,
       position: location,
       icon: this.icon,
     };

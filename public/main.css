@@ -5960,6 +5960,222 @@ div.info-block_theme_green::before {
 .allevents-page__footer {
   margin-top: 1rem;
 }
+.signup3-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.signup3-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.signup3-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.21rem;
+  text-align: center;
+}
+.signup3-page-content__user-block {
+  width: 45%;
+  margin: 0 auto;
+  margin-bottom: 1.15rem;
+}
+@media screen and (max-width: 800px) {
+  .signup3-page-content__user-block {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .signup3-page-content__user-block {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .signup3-page-content__user-block {
+    width: 100%;
+  }
+}
+.signup3-page-content__buttons {
+  text-align: center;
+}
+.signup3-page-content__button {
+  display: inline-block;
+  margin: 0 0.3125rem;
+}
+@media screen and (max-width: 380px) {
+  .signup3-page-content__button {
+    display: block;
+    margin: 0.4325rem 0;
+  }
+}
+.signup3-page__footer {
+  margin-top: 1rem;
+}
+.signup1-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.signup1-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.signup1-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.21rem;
+  text-align: center;
+}
+.signup1-page-content__main-form {
+  width: 55%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .signup1-page-content__main-form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .signup1-page-content__main-form {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .signup1-page-content__main-form {
+    width: 98%;
+  }
+}
+.signup1-page-content__main-form-line {
+  margin-bottom: 0.5rem;
+}
+.signup1-page-content__main-form-line:last-child {
+  text-align: center;
+}
+.signup1-page__footer {
+  margin-top: 1rem;
+}
+.signup2-page {
+  width: 98%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.signup2-page-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.signup2-page-content__note {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.21rem;
+  text-align: center;
+}
+.signup2-page-content__main-form {
+  width: 55%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .signup2-page-content__main-form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .signup2-page-content__main-form {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form {
+    width: 98%;
+  }
+}
+.signup2-page-content__main-form-line {
+  margin-bottom: 0.5rem;
+}
+.signup2-page-content__main-form-line:first-child {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signup2-page-content__main-form-line:last-child {
+  text-align: center;
+}
+.signup2-page-content__main-form-line:nth-last-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form-line:nth-last-child(2) {
+    display: block;
+    text-align: center;
+  }
+}
+.signup2-page-content__main-form-line-item {
+  margin: 0 0.3125rem;
+}
+label.signup2-page-content__main-form-line-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.21rem;
+}
+.signup2-page-content__main-form-button {
+  display: inline-block;
+  margin: 0 0.3125rem;
+}
+@media screen and (max-width: 380px) {
+  .signup2-page-content__main-form-button {
+    display: block;
+    margin: 0;
+  }
+  .signup2-page-content__main-form-button:first-child {
+    margin-bottom: 0.4325rem;
+  }
+}
+.signup2-page__footer {
+  margin-top: 1rem;
+}
 .event-page {
   width: 98%;
   max-width: 1250px;
@@ -6212,222 +6428,6 @@ html {
   font-family: "PT Sans", Arial, sans-serif;
 }
 .main-page__footer {
-  margin-top: 1rem;
-}
-.signup1-page {
-  width: 98%;
-  max-width: 1250px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  background-color: #fff;
-}
-.signup1-page-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.signup1-page-content__note {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 1.21rem;
-  text-align: center;
-}
-.signup1-page-content__main-form {
-  width: 55%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 900px) {
-  .signup1-page-content__main-form {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .signup1-page-content__main-form {
-    width: 85%;
-  }
-}
-@media screen and (max-width: 380px) {
-  .signup1-page-content__main-form {
-    width: 98%;
-  }
-}
-.signup1-page-content__main-form-line {
-  margin-bottom: 0.5rem;
-}
-.signup1-page-content__main-form-line:last-child {
-  text-align: center;
-}
-.signup1-page__footer {
-  margin-top: 1rem;
-}
-.signup2-page {
-  width: 98%;
-  max-width: 1250px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  background-color: #fff;
-}
-.signup2-page-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.signup2-page-content__note {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 1.21rem;
-  text-align: center;
-}
-.signup2-page-content__main-form {
-  width: 55%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 900px) {
-  .signup2-page-content__main-form {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .signup2-page-content__main-form {
-    width: 85%;
-  }
-}
-@media screen and (max-width: 380px) {
-  .signup2-page-content__main-form {
-    width: 98%;
-  }
-}
-.signup2-page-content__main-form-line {
-  margin-bottom: 0.5rem;
-}
-.signup2-page-content__main-form-line:first-child {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.signup2-page-content__main-form-line:last-child {
-  text-align: center;
-}
-.signup2-page-content__main-form-line:nth-last-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media screen and (max-width: 380px) {
-  .signup2-page-content__main-form-line:nth-last-child(2) {
-    display: block;
-    text-align: center;
-  }
-}
-.signup2-page-content__main-form-line-item {
-  margin: 0 0.3125rem;
-}
-label.signup2-page-content__main-form-line-item {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 1.21rem;
-}
-.signup2-page-content__main-form-button {
-  display: inline-block;
-  margin: 0 0.3125rem;
-}
-@media screen and (max-width: 380px) {
-  .signup2-page-content__main-form-button {
-    display: block;
-    margin: 0;
-  }
-  .signup2-page-content__main-form-button:first-child {
-    margin-bottom: 0.4325rem;
-  }
-}
-.signup2-page__footer {
-  margin-top: 1rem;
-}
-.signup3-page {
-  width: 98%;
-  max-width: 1250px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  background-color: #fff;
-}
-.signup3-page-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.signup3-page-content__note {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 1.21rem;
-  text-align: center;
-}
-.signup3-page-content__user-block {
-  width: 45%;
-  margin: 0 auto;
-  margin-bottom: 1.15rem;
-}
-@media screen and (max-width: 800px) {
-  .signup3-page-content__user-block {
-    width: 65%;
-  }
-}
-@media screen and (max-width: 550px) {
-  .signup3-page-content__user-block {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 380px) {
-  .signup3-page-content__user-block {
-    width: 100%;
-  }
-}
-.signup3-page-content__buttons {
-  text-align: center;
-}
-.signup3-page-content__button {
-  display: inline-block;
-  margin: 0 0.3125rem;
-}
-@media screen and (max-width: 380px) {
-  .signup3-page-content__button {
-    display: block;
-    margin: 0.4325rem 0;
-  }
-}
-.signup3-page__footer {
   margin-top: 1rem;
 }
 .user-page {
