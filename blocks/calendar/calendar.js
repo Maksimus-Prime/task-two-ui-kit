@@ -5,17 +5,17 @@ import es6bindall from "es6bindall";
 class Calendar {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["initCanendarElements", "initCalendar"];
+    this.bindMethods = ["findInnerCalendarElements", "initCalendar"];
     es6bindall(this, this.bindMethods);
-    this.initCanendarElements();
+    this.findInnerCalendarElements();
     this.initCalendar();
   }
-  initCanendarElements() {
+  findInnerCalendarElements() {
     this.calendarHeader = $(this.domEl).find(".js-calendar__header");
     this.calendarDatePicker = $(this.domEl).find(".js-calendar__datepicker");
-    this.$currentDay = $.datepicker.formatDate("d", new Date());
   }
   initCalendar() {
+    this.$currentDay = $.datepicker.formatDate("d", new Date());
     $(this.calendarHeader).html(this.$currentDay);
     $(this.calendarDatePicker).datepicker({
       showOtherMonths: true,

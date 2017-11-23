@@ -3,33 +3,36 @@ import es6bindall from "es6bindall";
 class Map {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["initMap"];
+    this.bindMethods = ["initData", "initSettings", "initMap"];
     es6bindall(this, this.bindMethods);
     this.initData();
+    this.initSettings();
     window.initMap = this.initMap;
   }
   initData() {
     this.zoom = $(this.domEl).data("zoom");
     this.lat = +$(this.domEl).data("lat");
     this.lng = +$(this.domEl).data("lng");
-    this.icon = $(this).data("marker");
+    this.icon = $(this.domEl).data("marker");
   }
-  initMap() {
-    const location = {
+  initSettings() {
+    this.location = {
       lat: this.lat,
       lng: this.lng,
     };
-    const mapSettings = {
+    this.mapSettings = {
       zoom: this.zoom,
-      center: location,
+      center: this.location,
     };
-    const markerSettings = {
-      map: mapSettings,
-      position: location,
+    this.markerSettings = {
+      position: this.location,
+      map: this.mapSettings,
       icon: this.icon,
     };
-    const map = new google.maps.Map(this.domEl, mapSettings);
-    const marker = new google.maps.Marker(markerSettings);
+  }
+  initMap() {
+    const map = new google.maps.Map(this.domEl, this.mapSettings);
+    const marker = new google.maps.Marker(this.markerSettings);
   }
 }
 

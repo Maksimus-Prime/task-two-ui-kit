@@ -11270,32 +11270,43 @@
 	    _classCallCheck(this, Button);
 
 	    this.domEl = domEl;
-	    this.bindMethods = ["initEventHandlers"];
+	    this.bindMethods = ["initClickHandler", "addRipleEffect", "findInnerElements"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
-	    this.initEventHandlers();
+	    this.findInnerElements();
+	    this.initClickHandler();
 	  }
 
 	  _createClass(Button, [{
-	    key: "initEventHandlers",
-	    value: function initEventHandlers() {
-	      $(this.domEl).on("click", function (event) {
-	        var ripple = $(this);
-	        if (ripple.find(".effect").length == 0) {
-	          ripple.append("<span class='effect'></span>");
-	        }
-	        var efekt = ripple.find(".effect");
-	        efekt.removeClass("replay");
-	        if (!efekt.height() && !efekt.width()) {
-	          var d = Math.max(ripple.outerWidth(), ripple.outerHeight());
-	          efekt.css({ height: d / 4, width: d / 4 });
-	        }
-	        var x = event.pageX - ripple.offset().left - efekt.width() / 2;
-	        var y = event.pageY - ripple.offset().top - efekt.height() / 2;
-	        efekt.css({
-	          top: y + "px",
-	          left: x + "px"
-	        }).addClass("replay");
-	      });
+	    key: "initClickHandler",
+	    value: function initClickHandler() {
+	      $(this.domEl).on("click", this.addRipleEffect);
+	    }
+	  }, {
+	    key: "addRipleEffect",
+	    value: function addRipleEffect(event) {
+	      var $ripple = $(this.domEl);
+	      var $effect = $(this.effect);
+	      if ($effect.length === 0) {
+	        $ripple.append("<span class='effect js-effect'></span>");
+	      }
+	      this.findInnerElements();
+	      $effect = $(this.effect);
+	      $effect.removeClass("replay");
+	      if (!$effect.height() && !$effect.width()) {
+	        var d = Math.max($ripple.outerWidth(), $ripple.outerHeight());
+	        $effect.css({ height: d / 4, width: d / 4 });
+	      }
+	      var x = event.pageX - $ripple.offset().left - $effect.width() / 2;
+	      var y = event.pageY - $ripple.offset().top - $effect.height() / 2;
+	      $(this.effect).css({
+	        top: y + "px",
+	        left: x + "px"
+	      }).addClass("replay");
+	    }
+	  }, {
+	    key: "findInnerElements",
+	    value: function findInnerElements() {
+	      this.effect = $(this.domEl).find(".js-effect");
 	    }
 	  }]);
 
@@ -11384,22 +11395,22 @@
 	    _classCallCheck(this, Calendar);
 
 	    this.domEl = domEl;
-	    this.bindMethods = ["initCanendarElements", "initCalendar"];
+	    this.bindMethods = ["findInnerCalendarElements", "initCalendar"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
-	    this.initCanendarElements();
+	    this.findInnerCalendarElements();
 	    this.initCalendar();
 	  }
 
 	  _createClass(Calendar, [{
-	    key: "initCanendarElements",
-	    value: function initCanendarElements() {
+	    key: "findInnerCalendarElements",
+	    value: function findInnerCalendarElements() {
 	      this.calendarHeader = $(this.domEl).find(".js-calendar__header");
 	      this.calendarDatePicker = $(this.domEl).find(".js-calendar__datepicker");
-	      this.$currentDay = $.datepicker.formatDate("d", new Date());
 	    }
 	  }, {
 	    key: "initCalendar",
 	    value: function initCalendar() {
+	      this.$currentDay = $.datepicker.formatDate("d", new Date());
 	      $(this.calendarHeader).html(this.$currentDay);
 	      $(this.calendarDatePicker).datepicker({
 	        showOtherMonths: true,
@@ -15087,9 +15098,10 @@
 	    _classCallCheck(this, Map);
 
 	    this.domEl = domEl;
-	    this.bindMethods = ["initMap"];
+	    this.bindMethods = ["initData", "initSettings", "initMap"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
 	    this.initData();
+	    this.initSettings();
 	    window.initMap = this.initMap;
 	  }
 
@@ -15099,26 +15111,30 @@
 	      this.zoom = $(this.domEl).data("zoom");
 	      this.lat = +$(this.domEl).data("lat");
 	      this.lng = +$(this.domEl).data("lng");
-	      this.icon = $(this).data("marker");
+	      this.icon = $(this.domEl).data("marker");
+	    }
+	  }, {
+	    key: "initSettings",
+	    value: function initSettings() {
+	      this.location = {
+	        lat: this.lat,
+	        lng: this.lng
+	      };
+	      this.mapSettings = {
+	        zoom: this.zoom,
+	        center: this.location
+	      };
+	      this.markerSettings = {
+	        position: this.location,
+	        map: this.mapSettings,
+	        icon: this.icon
+	      };
 	    }
 	  }, {
 	    key: "initMap",
 	    value: function initMap() {
-	      var location = {
-	        lat: this.lat,
-	        lng: this.lng
-	      };
-	      var mapSettings = {
-	        zoom: this.zoom,
-	        center: location
-	      };
-	      var markerSettings = {
-	        map: mapSettings,
-	        position: location,
-	        icon: this.icon
-	      };
-	      var map = new google.maps.Map(this.domEl, mapSettings);
-	      var marker = new google.maps.Marker(markerSettings);
+	      var map = new google.maps.Map(this.domEl, this.mapSettings);
+	      var marker = new google.maps.Marker(this.markerSettings);
 	    }
 	  }]);
 
@@ -15248,7 +15264,7 @@
 	    _classCallCheck(this, Slider);
 
 	    this.domEl = domEl;
-	    this.bindMethods = ["initData", "initSlider", "getSliderSettings"];
+	    this.bindMethods = ["initData", "getSliderSettings", "initSlider"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
 	    this.initData();
 	    this.getSliderSettings(this.sliderType);
@@ -15268,23 +15284,23 @@
 	      this.sliderConf.range = this.sliderType === "pips" ? true : undefined;
 	    }
 	  }, {
-	    key: "initSlider",
-	    value: function initSlider() {
-	      $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
-	    }
-	  }, {
 	    key: "getSliderSettings",
 	    value: function getSliderSettings(sliderType) {
 	      if (sliderType === "pips") {
 	        return { rest: "label", step: 1 };
 	      }
 	    }
+	  }, {
+	    key: "initSlider",
+	    value: function initSlider() {
+	      $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
+	    }
 	  }]);
 
 	  return Slider;
 	}();
 
-	$(".js-slider").each(function (element) {
+	$(".js-slider").each(function () {
 	  var currentSlider = this;
 	  var el = new Slider(currentSlider);
 	});
@@ -17003,6 +17019,7 @@
 	    this.domEl = domEl;
 	    this.bindMethods = ["initData", "getSteps", "initStages"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
+	    this.initData();
 	    this.initStages();
 	  }
 
@@ -17017,7 +17034,7 @@
 	    value: function getSteps() {
 	      var stepsArr = [];
 	      for (var i = 0; i < this.stepsNum; i++) {
-	        if (i == this.currentStep - 1) {
+	        if (i === this.currentStep - 1) {
 	          stepsArr.push("@");
 	        } else {
 	          stepsArr.push("");
@@ -17028,7 +17045,6 @@
 	  }, {
 	    key: "initStages",
 	    value: function initStages() {
-	      this.initData();
 	      $(this.domEl).progressbar({
 	        steps: this.getSteps()
 	      });

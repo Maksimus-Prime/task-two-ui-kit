@@ -1,6 +1,5 @@
-const YouTubeIframeLoader = require("youtube-iframe");
-
 import es6bindall from "es6bindall";
+const YouTubeIframeLoader = require("youtube-iframe");
 
 class YoutubeVideo {
   constructor(domEl) {

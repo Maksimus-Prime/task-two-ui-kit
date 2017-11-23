@@ -3,29 +3,36 @@ import es6bindall from "es6bindall";
 class Button {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["initEventHandlers"];
+    this.bindMethods = ["initClickHandler", "addRipleEffect", "findInnerElements"];
     es6bindall(this, this.bindMethods);
-    this.initEventHandlers();
+    this.findInnerElements();
+    this.initClickHandler();
   }
-  initEventHandlers() {
-    $(this.domEl).on("click", function (event) {
-      const ripple = $(this);
-      if (ripple.find(".effect").length == 0) {
-        ripple.append("<span class='effect'></span>");
-      }
-      const efekt = ripple.find(".effect");
-      efekt.removeClass("replay");
-      if (!efekt.height() && !efekt.width()) {
-        const d = Math.max(ripple.outerWidth(), ripple.outerHeight());
-        efekt.css({ height: d / 4, width: d / 4 });
-      }
-      const x = event.pageX - ripple.offset().left - efekt.width() / 2;
-      const y = event.pageY - ripple.offset().top - efekt.height() / 2;
-      efekt.css({
-        top: `${y}px`,
-        left: `${x}px`,
-      }).addClass("replay");
-    });
+  initClickHandler() {
+    $(this.domEl).on("click", this.addRipleEffect);
+  }
+  addRipleEffect(event) {
+    const $ripple = $(this.domEl);
+    let $effect = $(this.effect);
+    if ($effect.length === 0) {
+      $ripple.append("<span class='effect js-effect'></span>");
+    }
+    this.findInnerElements();
+    $effect = $(this.effect);
+    $effect.removeClass("replay");
+    if (!$effect.height() && !$effect.width()) {
+      const d = Math.max($ripple.outerWidth(), $ripple.outerHeight());
+      $effect.css({ height: d / 4, width: d / 4 });
+    }
+    const x = event.pageX - $ripple.offset().left - ($effect.width() / 2);
+    const y = event.pageY - $ripple.offset().top - ($effect.height() / 2);
+    $(this.effect).css({
+      top: `${y}px`,
+      left: `${x}px`,
+    }).addClass("replay");
+  }
+  findInnerElements() {
+    this.effect = $(this.domEl).find(".js-effect");
   }
 }
 
