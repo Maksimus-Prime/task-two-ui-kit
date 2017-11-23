@@ -3,6 +3,7 @@ include ../../blocks/form-line/form-line.pug
 include ../../blocks/page-header/page-header.pug
 include ../../blocks/page-footer/page-footer.pug
 -var data = require('./data.json');
+-var formData = data.loginFormData;
 doctype html
 html
     head
@@ -23,15 +24,14 @@ html
         .login-page
             .login-page__header
                 +page-header({title: "THE BEST MEETING WEBSITE", buttons: [{button: "goback", link: "main.html"}]})
-            main.login-page-content
-                p.login-page-content__note Please enter your phone or email. We'll send you a message with code
-                form.login-page-content__main-form
-                    -var data = data.loginform;
-                    .login-page-content__main-form-line
-                        +form-line({inputtype: data["email-field"].inputtype, name: data["email-field"].name, placeholder: data["email-field"].placeholder, valid: data["email-field"].valid})
-                    .login-page-content__main-form-line
-                        +form-line({inputtype: data["password-field"].inputtype, name: data["password-field"].name, placeholder: data["password-field"].placeholder, valid: data["password-field"].valid})
-                    .login-page-content__main-form-line
+            main.login-page__content
+                p.login-page__note Please enter your phone or email. We'll send you a message with code
+                form.login-page__main-form
+                    .login-page__form-line
+                        +form-line({inputtype: formData["email-field"].inputtype, name: formData["email-field"].name, placeholder: formData["email-field"].placeholder, valid: formData["email-field"].valid})
+                    .login-page__form-line
+                        +form-line({inputtype: formData["password-field"].inputtype, name: formData["password-field"].name, placeholder: formData["password-field"].placeholder, valid: formData["password-field"].valid})
+                    .login-page__form-line
                         +button({text: "Log in", type: "button", link: "main.html", color: "green"})
             .login-page__footer
                 +page-footer({text: "There is some information about this site"})

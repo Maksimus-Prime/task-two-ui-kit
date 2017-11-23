@@ -8,29 +8,30 @@
     min-height: 100vh;
     background-color: #fff;
     &-content {
-        &__note {
-            font-family: "PT Sans", Arial, sans-serif;
-            font-size: 1.21rem;
+        flex: 1;
+    }
+    &__note {
+        font-family: "PT Sans", Arial, sans-serif;
+        font-size: 1.21rem;
+        text-align: center;
+    }
+    &__main-form {
+        width: 55%;
+        margin: 0 auto;
+        @media screen and (max-width: 900px) {
+            width: 70%;
+        }
+        @media screen and (max-width: 650px) {
+            width: 85%;
+        }
+        @media screen and (max-width: 380px) {
+            width: 98%;
+        }
+    }
+    &__form-line {
+        margin-bottom:  0.5rem;
+        &:last-child {
             text-align: center;
-        }
-        &__main-form {
-            width: 55%;
-            margin: 0 auto;
-            @media screen and (max-width: 900px) {
-                width: 70%;
-            }
-            @media screen and (max-width: 650px) {
-                width: 85%;
-            }
-            @media screen and (max-width: 380px) {
-                width: 98%;
-            }
-        }
-        &__main-form-line {
-            margin-bottom:  0.5rem;
-            &:last-child {
-                text-align: center;
-            }
         }
     }
     &__footer {

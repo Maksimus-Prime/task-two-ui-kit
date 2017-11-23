@@ -37,99 +37,99 @@ html
         link(rel="stylesheet" href="main.css")
     body
         .layout
-            .layout-buttons
+            .layout__buttons
                 h3.layout__title Standard Buttons
-                .layout-buttons__item-button
+                .layout__button
                     +button({text: "Button", type: "button", link: "/mock-address/change-me", size: "small", color: "green"})
-                .layout-buttons__item-button
+                .layout__button
                     +button({text: "Button", type: "button", link: "none", color: "green"})
-                .layout-buttons__item-button
+                .layout__button
                     +button({text: "Button", type: "button", link: "/mock-address/change-me"})
-                .layout-buttons__item-button
+                .layout__button
                     +button({text: "Button", type: "button", link: "none", size: "small"})
-            .layout-arrow-buttons
+            .layout__arrow-buttons
                 h3.layout__title Arrow Buttons
-                .layout-arrow-buttons__item-button
+                .layout__arrow-button
                     +arrow-button({direction: "left"})
-                .layout-arrow-buttons__item-button
+                .layout__arrow-button
                     +arrow-button({direction: "right"})
-                .layout-arrow-buttons__item-button
+                .layout__arrow-button
                     +arrow-button({direction: "left", state: "disabled"})
-                .layout-arrow-buttons__item-button
+                .layout__arrow-button
                     +arrow-button({direction: "right", state: "disabled"})
-            .layout-progress-bars
+            .layout__progress-bars
                 h3.layout__title Percentages / Pie chart
-                .layout-progress-bars__item
+                .layout__progress-bar
                     +circle-progress-bar({value: "0"})
-                .layout-progress-bars__item
+                .layout__progress-bar
                     +circle-progress-bar({value: "38"})
-                .layout-progress-bars__item
+                .layout__progress-bar
                     +circle-progress-bar({value: "62"})
-                .layout-progress-bars__item
+                .layout__progress-bar
                     +circle-progress-bar({value: "89"})
-                .layout-progress-bars__item
+                .layout__progress-bar
                     +pie-chart("2, 3, 6, 7")
-            .layout-sliders
+            .layout__sliders
                 h3.layout__title Sliders
-                .layout-sliders__slider-left
+                .layout__float-slider
                     +slider({type: "float", min: "0", max: "100", step: "1"})
-                .layout-sliders__slider-right
+                .layout__pips-slider
                     +slider({type: "pips", min: "0", max: "100", step: "25"})
-            .layout-stages
+            .layout__stages
                 h3.layout__title Stages
                 +stages({steps: "5", current: "3"})
-            .layout-form-elements
+            .layout__form-elements
                 h3.layout__title Form elements
-                .layout-form-elements-container
-                    .layout-form-elements-container__message-form
+                .layout__form-elements-container
+                    .layout__message-form
                         +message-form(data.messageform)
-                    .layout-form-elements-container__toggles-and-ticks
+                    .layout__toggles-and-ticks
                         h3.layout__title.layout__title_margin-top_false Toggles
-                        .layout-form-elements-container__toggles
+                        .layout__toggles
                             +toggles({name: "noadult"})
-                        .layout-form-elements-container__toggles
+                        .layout__toggles
                             +toggles({name: "adult", active: true})
                         h3.layout__title Tick boxes
-                        .layout-form-elements-container__tick
+                        .layout__tick
                             +tick-box({type: "radio", name: "gender", value: "male", active: true})
-                        .layout-form-elements-container__tick
+                        .layout__tick
                             +tick-box({type: "radio", name: "gender", value: "female"})
-            .layout-search-drop-user-profile
-                .layout-search-drop-user-profile-container
-                    .layout-search-drop-user-profile-container__left
+            .layout__search-drop-user-profile
+                .layout__search-drop-user-profile-container
+                    .layout__search-drop-side
                         h3.layout__title Search / Drop Down
-                        .layout-search-drop-user-profile-container__search
+                        .layout__search
                             +search({name: "search"})
-                        .layout-search-drop-user-profile-container__search
+                        .layout__search
                             +search({name: "search-off", not_found: true})
-                        .layout-search-drop-user-profile-container__search
+                        .layout__search
                             +drop-down("dropdown", data.dropdown)
-                    .layout-search-drop-user-profile-container__right
+                    .layout__user-profile-side
                         h3.layout__title User profile
-                        .layout-search-drop-user-profile-container__user-block
+                        .layout__user-block
                             +user-info-block({image: "img/photo1.png", link: "none", name: "John Smith", job: "Ux designer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me"})
-                        .layout-search-drop-user-profile-container__user-block
+                        .layout__user-block
                             +user-info-block({image: "img/photo2.png", link: "/mock-address/change-me", name: "Sarah Brown", job: "Developer", facebook: "/mock-address/change-me", twitter: "/mock-address/change-me",dribbble: "/mock-address/change-me", theme: "green"})
-            .layout-news-events
+            .layout__news-events
                 h3.layout__title News &amp; Events
-                .layout-news-events-container
-                        .layout-news-events-container__item
+                .layout__container
+                        .layout__news-events-item
                             +news({image: "img/news.png", title: "It's all going downhill", date: "24 August 2013", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."})
-                        .layout-news-events-container__item
+                        .layout__news-events-item
                             +event({image: "img/event1.png", day: "24", month: "Aug", title: "This is the title", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."})
-            .layout-location
+            .layout__location
                 h3.layout__title Location
                 +map-block({id: "map", lat: "56.501", lng: "84.992", zoom: "14", marker: "img/map-marker-icon.png", title: "Meet us!", address: "1259 California st San Francisco, CA"})
-            .layout-calendar-and-messaging
+            .layout__calendar-and-messaging
                 h3.layout__title Calendar / Messaging
-                .layout-calendar-and-messaging-container
-                    .layout-calendar-and-messaging-container__left
-                        .layout-calendar-and-messaging-container__calendar
+                .layout__calendar-and-messaging-container
+                    .layout__calendar-side
+                        .layout__calendar
                             +calendar
-                    .layout-calendar-and-messaging-container__right
-                        .layout-calendar-and-messaging-container__messaging
+                    .layout__messaging-side
+                        .layout__messaging
                             +messaging({name: "Sarah Brown", image: "img/photo2.png"})
-            .layout-video
+            .layout__video
                 h3.layout__title Video
                 +youtube-video({videoId: "RN3Mf3oQ6e8"})
         script(type="text/javascript" src="main.js")

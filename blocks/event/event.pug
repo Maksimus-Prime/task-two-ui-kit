@@ -1,8 +1,8 @@
+include ../button/button.pug
 mixin event(object)
-    include ../button/button.pug
     section.event
-        .event__left-half(style="background-image:url("+object.image+")")
-        .event__right-half
+        .event__image(style="background-image:url("+object.image+")")
+        .event__content
             span.event__date
                 b.event__day=object.day
                 | #{object.month}
