@@ -1,8 +1,8 @@
+import es6bindall from "es6bindall";
 import "jquery-ui/ui/widgets/slider";
 import "jquery-ui/themes/base/slider.css";
-import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.js";
+import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips";
 import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css";
-import es6bindall from "es6bindall";
 
 class Slider {
   constructor(domEl) {

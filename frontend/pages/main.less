@@ -20,12 +20,21 @@ html {
         flex: 1;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 575px) {
+            display: block;
+        }
     }
     &__events-calendar-column {
         flex: 1;
+        @media screen and (max-width: 575px) {
+            display: block;
+        }
     }
     &__search-user-blocks-column {
         flex: 1.7;
+        @media screen and (max-width: 575px) {
+            display: block;
+        }
     }
     &__note {
         font-family: "PT Sans", Arial, sans-serif;
