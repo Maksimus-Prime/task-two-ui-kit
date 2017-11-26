@@ -1,5 +1,6 @@
-import "./../../node_modules/chart.js/dist/Chart.bundle.min.js";
 import es6bindall from "es6bindall";
+import Chart from "chart.js";
+import "./../../node_modules/chart.js/dist/Chart.bundle.min";
 
 Chart.defaults.global.legend.display = false;
 

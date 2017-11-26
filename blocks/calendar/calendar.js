@@ -5,7 +5,7 @@ import es6bindall from "es6bindall";
 class Calendar {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["findInnerCalendarElements", "initCalendar"];
+    this.bindMethods = ["findInnerCalendarElements", "changeDatepickerFunc", "initCalendar"];
     es6bindall(this, this.bindMethods);
     this.findInnerCalendarElements();
     this.initCalendar();
@@ -27,7 +27,9 @@ class Calendar {
         $(".js-calendar__header").html(selectedDate);
       },
     });
-    const calendarHeader = this.calendarHeader;
+  }
+  changeDatepickerFunc() {
+    const { calendarHeader } = this;
     $.datepicker._gotoToday = function (id) {
       const target = $(id);
       const inst = this._getInst(target[0]);

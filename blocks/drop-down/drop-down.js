@@ -1,6 +1,6 @@
-import "./../../frontend/vendor/select2.min.js";
-import "./../../frontend/vendor/select2.min.css";
 import es6bindall from "es6bindall";
+import "./../../frontend/vendor/select2.full.min";
+import "./../../frontend/vendor/select2.min.css";
 
 class DropDown {
   constructor(domEl) {
@@ -12,7 +12,7 @@ class DropDown {
   initDropDown() {
     $(this.domEl).select2({
       placeholder: "Choose An Option",
-    }).addClass("stylee");
+    }).data("select2").$dropdown.addClass("drop-down");
   }
 }
 

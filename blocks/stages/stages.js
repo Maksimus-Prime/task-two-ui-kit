@@ -1,6 +1,6 @@
+import es6bindall from "es6bindall";
 import "./../../frontend/vendor/jquery.progressbar";
 import "./../../frontend/vendor/jquery.progressbar.css";
-import es6bindall from "es6bindall";
 
 class Stages {
   constructor(domEl) {

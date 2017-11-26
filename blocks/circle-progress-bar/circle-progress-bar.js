@@ -1,5 +1,5 @@
-import "./../../frontend/vendor/jquery.knob.min.js";
 import es6bindall from "es6bindall";
+import "./../../frontend/vendor/jquery.knob.min";
 
 class CircleProgressBar {
   constructor(domEl) {
