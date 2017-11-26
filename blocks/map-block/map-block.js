@@ -35,8 +35,9 @@ class Map {
     const marker = new google.maps.Marker(this.markerSettings);
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-map-block__map").each(function () {
   const currentMap = this;
   const el = new Map(currentMap);
 });
+/* eslint-disable no-unused-vars, func-names */

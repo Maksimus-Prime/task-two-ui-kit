@@ -15,8 +15,9 @@ class DropDown {
     }).data("select2").$dropdown.addClass("drop-down");
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-drop-down__select").each(function () {
   const currentDropDown = this;
   const el = new DropDown(currentDropDown);
 });
+/* eslint-disable no-unused-vars, func-names */

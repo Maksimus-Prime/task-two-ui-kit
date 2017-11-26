@@ -6,38 +6,38 @@
   "dependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
+    "babel-preset-env": "^1.6.0",
     "chart.js": "^2.6.0",
-    "css-loader": "^0.28.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.11.1",
-    "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
+    "normalize-css": "^2.3.1",
+    "es6bindall": "0.0.9",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "youtube-iframe": "^1.0.3",
+    "file-loader": "^0.11.1",
+    "json-loader": "^0.5.7",
     "less": "^2.7.2",
     "less-loader": "^3.0.0",
-    "normalize-css": "^2.3.1",
-    "style-loader": "^0.17.0",
-    "webpack": "^1.12.2",
-    "webpack-vendor-chunk-plugin": "^1.0.0"
-  },
-  "devDependencies": {
-    "babel-preset-env": "^1.6.0",
-    "es6bindall": "0.0.9",
-    "eslint": "^4.10.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "json-loader": "^0.5.7",
-    "less-loader": "^3.0.0",
+    "html-webpack-plugin": "^2.28.0",
     "postcss-loader": "^2.0.6",
     "pug": "^2.0.0-rc.1",
     "pug-loader": "^2.0.0",
     "script-ext-html-webpack-plugin": "^1.8.3",
+    "style-loader": "^0.17.0",
     "webpack-dev-server": "^1.14.1",
-    "youtube-iframe": "^1.0.3"
+    "webpack": "^1.12.2",
+    "webpack-vendor-chunk-plugin": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+    
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "prod": "./node_modules/.bin/webpack -p"
+    "prod": "./node_modules/.bin/webpack -p",
+    "eslint": "./node_modules/.bin/eslint blocks/**/*.js"
   },
   "repository": {
     "type": "git",

@@ -16,6 +16,7 @@ class Stages {
   }
   getSteps() {
     const stepsArr = [];
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < this.stepsNum; i++) {
       if (i === this.currentStep - 1) {
         stepsArr.push("@");
@@ -31,8 +32,9 @@ class Stages {
     });
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-stages").each(function () {
   const currentStages = this;
   const el = new Stages(currentStages);
 });
+/* eslint-disable no-unused-vars, func-names */

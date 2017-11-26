@@ -23,17 +23,20 @@ class Slider {
     };
     this.sliderConf.range = (this.sliderType === "pips") ? true : undefined;
   }
-  getSliderSettings(sliderType) {
+  initSliderSettings(sliderType) {
     if (sliderType === "pips") {
-      return { rest: "label", step: 1 };
+      this.sliderSettings = { rest: "label", step: 1 };
+    } else {
+      this.sliderSettings = undefined;
     }
   }
   initSlider() {
-    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.getSliderSettings(this.sliderType));
+    $(this.domEl).slider(this.sliderConf).slider(this.sliderType, this.sliderSettings);
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-slider").each(function () {
   const currentSlider = this;
   const el = new Slider(currentSlider);
 });
+/* eslint-disable no-unused-vars, func-names */

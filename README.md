@@ -18,5 +18,9 @@ npm run dev
 ```
 npm run prod
 ```
+### ESLint
+```
+npm run eslint
+```
 Look at the [result](https://maksimus-prime.github.io/task-two-ui-kit/public/).
 You can look at simple [site](https://maksimus-prime.github.io/task-two-ui-kit/public/main.html) with elements from the UI-KIT as well.

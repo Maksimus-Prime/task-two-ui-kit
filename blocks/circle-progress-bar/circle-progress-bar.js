@@ -22,8 +22,9 @@ class CircleProgressBar {
     });
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-circle-progress-bar__value").each(function () {
   const currentCircleProgressBar = this;
   const el = new CircleProgressBar(currentCircleProgressBar);
 });
+/* eslint-disable no-unused-vars, func-names */
