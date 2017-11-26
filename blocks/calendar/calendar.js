@@ -30,6 +30,7 @@ class Calendar {
   }
   changeDatepickerFunc() {
     const { calendarHeader } = this;
+    /* eslint-disable no-unused-vars, func-names, no-underscore-dangle, no-multi-assign */
     $.datepicker._gotoToday = function (id) {
       const target = $(id);
       const inst = this._getInst(target[0]);
@@ -49,6 +50,7 @@ class Calendar {
       this._notifyChange(inst);
       this._adjustDate(target);
     };
+    /* eslint-disable no-unused-vars, func-names, no-underscore-dangle, no-multi-assign */
   }
 }
 

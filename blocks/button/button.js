@@ -35,8 +35,9 @@ class Button {
     this.effect = $(this.domEl).find(".js-effect");
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-button").each(function () {
   const currentButton = this;
   const el = new Button(currentButton);
 });
+/* eslint-disable no-unused-vars, func-names */

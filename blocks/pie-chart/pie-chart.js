@@ -47,8 +47,9 @@ class PieChart {
     });
   }
 }
-
+/* eslint-disable no-unused-vars, func-names */
 $(".js-pie-chart").each(function () {
   const currentPieChart = this;
   const el = new PieChart(currentPieChart);
 });
+/* eslint-disable no-unused-vars, func-names */

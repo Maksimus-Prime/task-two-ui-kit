@@ -18,6 +18,10 @@
         "quotes": ["error", "double"],
         "indent": ["error", 2],
         "no-unused-vars": "warn",
-        "no-undef": "warn"
+        "no-undef": "warn",
+        "max-len": 0
+    },
+    "globals": {
+        "google": true
     }
 }
