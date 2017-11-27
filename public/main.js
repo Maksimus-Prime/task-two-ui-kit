@@ -11401,6 +11401,7 @@
 	    this.bindMethods = ["findInnerCalendarElements", "changeDatepickerFunc", "initCalendar"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
 	    this.findInnerCalendarElements();
+	    this.changeDatepickerFunc();
 	    this.initCalendar();
 	  }
 
@@ -45609,10 +45610,10 @@
 	    _classCallCheck(this, Slider);
 
 	    this.domEl = domEl;
-	    this.bindMethods = ["initData", "getSliderSettings", "initSlider"];
+	    this.bindMethods = ["initData", "initSliderSettings", "initSlider"];
 	    (0, _es6bindall2.default)(this, this.bindMethods);
 	    this.initData();
-	    this.getSliderSettings(this.sliderType);
+	    this.initSliderSettings(this.sliderType);
 	    this.initSlider();
 	  }
 
