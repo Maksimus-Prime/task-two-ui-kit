@@ -8,6 +8,7 @@ class Calendar {
     this.bindMethods = ["findInnerCalendarElements", "changeDatepickerFunc", "initCalendar"];
     es6bindall(this, this.bindMethods);
     this.findInnerCalendarElements();
+    this.changeDatepickerFunc();
     this.initCalendar();
   }
   findInnerCalendarElements() {

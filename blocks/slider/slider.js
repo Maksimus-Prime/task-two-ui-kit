@@ -7,10 +7,10 @@ import "./../../frontend/vendor/SliderPips/dist/jquery-ui-slider-pips.css";
 class Slider {
   constructor(domEl) {
     this.domEl = domEl;
-    this.bindMethods = ["initData", "getSliderSettings", "initSlider"];
+    this.bindMethods = ["initData", "initSliderSettings", "initSlider"];
     es6bindall(this, this.bindMethods);
     this.initData();
-    this.getSliderSettings(this.sliderType);
+    this.initSliderSettings(this.sliderType);
     this.initSlider();
   }
   initData() {
